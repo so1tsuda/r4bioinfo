@@ -1,5 +1,5 @@
 
-[Welcome to a Little Book of R for Bioinformatics!](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
+# [Welcome to a Little Book of R for Bioinformatics!](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
 By Avril Coghlan  
 
 ## Chapters in this Book
