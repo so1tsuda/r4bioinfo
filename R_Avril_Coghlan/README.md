@@ -13,18 +13,18 @@ By Avril Coghlan
 
 ![http://www.slideshare.net/ChristianFrech/how-to-be-a-bioinformatician](http://image.slidesharecdn.com/how-to-be-a-bioinformatician-public-140426130503-phpapp02/95/how-to-be-a-bioinformatician-2-638.jpg)
 
-- [The five habits of bad bioinformaticians](http://www.opiniomics.org/the-five-habits-of-bad-bioinformaticians/) "Not writing tests"
-- [So you want to be a computational biologist? ](http://www.nature.com/nbt/journal/v31/n11/full/nbt.2740.html) "Create tests, small datasets for which the answer is known, and check that the software or pipeline can reproduce that answer."
 - [Bioinformatics Data Skills: Reproducible and Robust Research With Open Source Tools](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html) "NEVER EVER TRUST YOUR TOOLS (OR DATA)"
+- [So you want to be a computational biologist? ](http://www.nature.com/nbt/journal/v31/n11/full/nbt.2740.html) "Create tests, small datasets for which the answer is known, and check that the software or pipeline can reproduce that answer."
+- [The five habits of bad bioinformaticians](http://www.opiniomics.org/the-five-habits-of-bad-bioinformaticians/) "Not writing tests"
 
 テスト
 
-    library("seqinr") # Loading "seqinr" package
-    x <- s2c("atgc")  # Create small data
-    length(x)         # Length of a DNA sequence
-    table(x)          # Base composition of a DNA sequence
-    GC(x)             # GC Content of DNA
-    count(x, 2)       # Composition of oligomers
+    library("seqinr")  # Loading "seqinr" package
+    x <- s2c("atgc")   # Create small data
+    length(x)          # Length of a DNA sequence
+    table(x)           # Base composition of a DNA sequence
+    GC(x)              # GC Content of DNA
+    count(x, word = 2) # Count oligomers
 
 ----------
 
@@ -124,7 +124,7 @@ GC含量と他の因子（ゲノムサイズ、環境、酸素要求性、窒素
     words(length = 2)  #  dinucleotides 2連続塩基 
     words(length = 3)  # trinucleotides 3連続塩基
 
-    # Composition of oligomers (monomer/dimer/trimer/etc)
+    # Count oligomers (monomer/dimer/trimer/etc)
 	count(dengueseq, 1)
 	count(dengueseq, 2)
 
@@ -143,24 +143,24 @@ SeqinRで配列データを読み込み
 
 DEN-1デング熱ウイルスのゲノム配列を取得する。
 
-    system('curl ftp://ftp.ncbi.nlm.nih.gov/genomes/Viruses/Dengue_virus_1_uid15306/NC_001477.fna > den1.fasta')
-
 	library("seqinr")                           # Load the SeqinR package.
+    # dengue <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/den1.fasta")
+
 	dengue <- read.fasta(file = "den1.fasta")   # Read in the file "den1.fasta".
 	dengueseq <- dengue[[1]]                    # Put the sequence in a vector called "dengueseq".
 
 	dengueseq[452:535]
 
 ### Local variation in GC content
+
+	# GC content of the sequence
+	GC(dengueseq)
+
 GC含量の局所変動は、突然変異バイアスや[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)を示唆する。
 
 [Inferring Horizontal Gene Transfer (HGT)](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
 
 ![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/632px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png)
-
-
-	# GC content of the sequence
-	GC(dengueseq)
 
 non-overlapping windows / overlapping windows
 
