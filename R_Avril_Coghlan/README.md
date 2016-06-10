@@ -302,15 +302,15 @@ M.lepraeとM.ulceransのコリスミ酸リアーゼのタンパク質配列の�
 
 例えば、塩基の一致(match)に+2のスコア、不一致(mismatch)に-1のペナルティ、ギャップ(gap)に-2のペナルティを与える。
 
-以下のアラインメントのスコアは、2 + 2 -1 + 2 -2 - 1 = 2
+以下のアラインメントのスコアは、2 + 2 + (-1) + 2 + (-2) + (-1) = 2
 
-	G A A T T C
-	G A T T - A
+    GAATTC
+    GATT-A
 
-以下のアラインメントのスコアは？  
+以下のアラインメントのスコアは？
 
-	G A A T T C
-	G A - T T A
+    GAATTC
+    GA-TTA
 
 *scoring matrix* (a.k.a. *substitution matrix*)
 
