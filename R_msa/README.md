@@ -28,7 +28,7 @@ Version 1.5.2, May 2, 2016
 
 ### 2 Installation
 
-Bioconductor パッケージ [`msa`](http://bioconductor.org/packages/release/bioc/html/Biostrings.html) のインストールと呼び出し:  
+Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/bioc/html/msa.html) のインストールと呼び出し:  
 
 	source("http://www.bioconductor.org/biocLite.R")
 	biocLite("msa")
@@ -56,7 +56,7 @@ Bioconductor パッケージ [`msa`](http://bioconductor.org/packages/release/bi
 
 ### 6.2 Interfacing to Other Packages
 
-`msaConvert()` converts multiple sequence alignment objects to classes: `alignment` (`seqinr` package) and `align` (`bios2mds` package).
+`msaConvert()` converts multiple sequence alignment objects to other types/classes: `alignment` (used by `seqinr` package) and `align` (used by `bios2mds` package).
 
 	# multiple alignment of Hemoglobin alpha example sequences
 	hemoSeq <- readAAStringSet(system.file("examples/HemoglobinAA.fasta", package="msa"))
