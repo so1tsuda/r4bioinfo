@@ -249,9 +249,9 @@ GC含量の移動プロット
 UniProtのウェブサイトからタンパク質配列を取得
 
 - [Using the UniProt basket | Train online](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional/exploring-uniprotkb-results-page/using-unip)
-![](https://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/7001/documents/screen_shot_2014-11-06_at_15.44.16.png)
+![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.16.png)
 'Add to basket'ボタンを押す。右上の'Basket'ボタンを押し、'Download'ボタンを押す。
-![](https://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/7001/documents/screen_shot_2014-11-06_at_15.44.29.png)
+![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.29.png)
 
 [Mycobacterium leprae（らい菌）](https://ja.wikipedia.org/wiki/らい菌)と[Mycobacterium ulcerans](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)
 の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)タンパク質配列（UniProt登録番号は[Q9CD83](http://www.uniprot.org/uniprot/Q9CD83)と[A0PQ23](http://www.uniprot.org/uniprot/A0PQ23)）をFASTA形式（ファイル名"Q9CD83.fasta"と"A0PQ23.fasta"）で保存。
@@ -293,7 +293,7 @@ M.lepraeとM.ulceransのコリスミ酸リアーゼのタンパク質配列の�
 
 - [アラインメント | 核酸あるいはアミノ酸配列を複数並べ類縁度を可視化](http://bi.biopapyrus.net/seq/alignment.html)
 
-### Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm
+### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 2つのDNA配列間のグローバル・アライメント
 
 [グローバルアラインメントとローカルアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.82.B0.E3.83.AD.E3.83.BC.E3.83.90.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.81.A8.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)
@@ -383,6 +383,12 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 ### Aligning UniProt sequences
 UniProt配列のアライメント
 
+	library("seqinr")
+    leprae <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/Q9CD83.fasta")
+    ulcerans <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/A0PQ23.fasta")
+	lepraeseq <- leprae[[1]]
+	ulceransseq <- ulcerans[[1]]
+
     # convert vectors of characters into strings 文字ベクトルを文字列に変換
 	lepraeseqstring <- c2s(lepraeseq)     # Make a string that contains the sequence in "lepraeseq"
 	ulceransseqstring <- c2s(ulceransseq) # Make a string that contains the sequence in "ulceransseq"
@@ -424,9 +430,14 @@ UniProt配列のアライメント
 
     writePairwiseAlignments(localAlignLepraeUlcerans)
 
-### Calculating the statistical significance of a pairwise global alignment
-
-	> generateSeqsWithMultinomialModel <- function(inputsequence, X)
+### [Calculating the statistical significance of a pairwise global alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#calculating-the-statistical-significance-of-a-pairwise-global-alignment)
 
 ----------
+
+
+
+----------
+
+
+
 
