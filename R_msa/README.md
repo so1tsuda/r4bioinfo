@@ -19,9 +19,9 @@ Last Update: 2016-06-21
 - [msa: an R package for multiple sequence alignment. Bioinformatics. 2015 Dec 15](http://www.ncbi.nlm.nih.gov/pubmed/26315911)  
 - [Bioconductor - msa](https://bioconductor.org/packages/release/bioc/html/msa.html)
 
-
+|:---------|:---------|:---------|
 | [PDF](https://bioconductor.org/packages/release/bioc/vignettes/msa/inst/doc/msa.pdf) Version 1.4.2, May 2, 2016 | [R Script](https://bioconductor.org/packages/release/bioc/vignettes/msa/inst/doc/msa.R) | msa - An R Package for Multiple Sequence Alignment |
-| [PDF](https://bioconductor.org/packages/release/bioc/manuals/msa/man/msa.pdf) | Reference Manual |
+| [PDF](https://bioconductor.org/packages/release/bioc/manuals/msa/man/msa.pdf) |  | Reference Manual |
 
 ----------
 
