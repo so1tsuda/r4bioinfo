@@ -295,7 +295,7 @@ DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを
     GAATTC
     GA-TTA
 
-*scoring matrix* (a.k.a. *substitution matrix*)
+**scoring matrix (a.k.a. substitution matrix)**
 
 Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコアマトリックス(置換行列)](http://bi.biopapyrus.net/seq/score-matrix.html)を作る:  
 
@@ -303,7 +303,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 	sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
 	sigma # Print out the matrix
 
-[Gap penalty](https://en.wikipedia.org/wiki/Gap_penalty)
+[**Gap penalty**](https://en.wikipedia.org/wiki/Gap_penalty)
 
 ギャップの最初の位置には、ギャップ開始ペナルティ(*gap opening penalty*)とギャップ伸長ペナルティ(*gap extension penalty*)を与える。隣接するギャップは一回の挿入・欠失で生じたと考える。
 
