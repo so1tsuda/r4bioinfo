@@ -295,7 +295,7 @@ M.lepraeとM.ulceransのコリスミ酸リアーゼのタンパク質配列の�
     GAATTC
     GA-TTA
 
-**scoring matrix (a.k.a. substitution matrix)**
+**scoring matrix (substitution matrix)**
 
 Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコアマトリックス(置換行列)](http://bi.biopapyrus.net/seq/score-matrix.html)を作る:  
 
