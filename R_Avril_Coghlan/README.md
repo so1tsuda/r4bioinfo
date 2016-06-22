@@ -303,6 +303,10 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 
 ギャップの最初の位置には、ギャップ開始ペナルティ(*gap opening penalty*)とギャップ伸長ペナルティ(*gap extension penalty*)を与える。隣接するギャップは一回の挿入・欠失で生じたと考える。
 
+[Gap penalty](https://en.wikipedia.org/wiki/Gap_penalty)
+
+![https://en.wikipedia.org/wiki/Gap_penalty](https://en.wikipedia.org/wiki/File:Sequence_gaps.JPG)
+
 `pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける:  
 
 	s1 <- "GAATTC"
