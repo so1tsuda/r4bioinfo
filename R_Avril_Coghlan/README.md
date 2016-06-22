@@ -305,7 +305,9 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 
 [Gap penalty](https://en.wikipedia.org/wiki/Gap_penalty)
 
-![https://en.wikipedia.org/wiki/Gap_penalty](https://en.wikipedia.org/wiki/File:Sequence_gaps.JPG)
+![](https://en.wikipedia.org/wiki/File:Sequence_gaps.JPG)
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Sequence_gaps.JPG/339px-Sequence_gaps.JPG)
 
 `pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける:  
 
