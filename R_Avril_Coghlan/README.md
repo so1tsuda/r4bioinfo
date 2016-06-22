@@ -9,25 +9,6 @@ By Avril Coghlan
 
 ----------
 
-## How to be a bioinformatician
-
-![http://www.slideshare.net/ChristianFrech/how-to-be-a-bioinformatician](http://image.slidesharecdn.com/how-to-be-a-bioinformatician-public-140426130503-phpapp02/95/how-to-be-a-bioinformatician-2-638.jpg)
-
-- [Bioinformatics Data Skills: Reproducible and Robust Research With Open Source Tools](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html) "NEVER EVER TRUST YOUR TOOLS (OR DATA)"
-- [So you want to be a computational biologist? ](http://www.nature.com/nbt/journal/v31/n11/full/nbt.2740.html) "Create tests, small datasets for which the answer is known, and check that the software or pipeline can reproduce that answer."
-- [The five habits of bad bioinformaticians](http://www.opiniomics.org/the-five-habits-of-bad-bioinformaticians/) "Not writing tests"
-
-テスト
-
-    library("seqinr")  # Loading "seqinr" package
-    x <- s2c("atgc")   # Create small data
-    length(x)          # Length of a DNA sequence
-    table(x)           # Base composition of a DNA sequence
-    GC(x)              # GC Content of DNA
-    count(x, word = 2) # Count oligomers
-
-----------
-
 ## [DNA Sequence Statistics (1)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter1.html)
 
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
@@ -342,8 +323,10 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 
 - [Aritalab:Lecture/Bioinformatics/Alignment - Metabolomics.JP](http://metabolomics.jp/wiki/Aritalab:Lecture/Bioinformatics/Alignment)
 - [2-1. 配列解析基礎 Basic Sequence Analysis 坊農 秀雅](http://www.iu.a.u-tokyo.ac.jp/~kadota/bioinfo_ngs_sokushu_2014/20140905_2-1_bono.pdf)
-- [Needleman–Wunsch | グローバルアライメントを求めるアルゴリズム](http://bi.biopapyrus.net/seq/needleman–wunsch.html)
 - [置換行列 | スコアマトリックスの作り方](http://bi.biopapyrus.net/seq/score-matrix.html)
+- [Needleman–Wunsch | グローバルアライメントを求めるアルゴリズム](http://bi.biopapyrus.net/seq/needleman–wunsch.html)
+
+![http://bi.biopapyrus.net/seq/needleman–wunsch.html](http://bi.biopapyrus.net/media/nw-005.png)
 
 ### Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm
 2つのタンパク質配列間のグローバル・アライメント
@@ -430,14 +413,8 @@ UniProt配列のアライメント
 
     writePairwiseAlignments(localAlignLepraeUlcerans)
 
+- [Smith-Waterman | ローカルアラインメントを求めるアルゴリズム](http://bi.biopapyrus.net/seq/smith-waterman.html)
+
 ### [Calculating the statistical significance of a pairwise global alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#calculating-the-statistical-significance-of-a-pairwise-global-alignment)
 
 ----------
-
-
-
-----------
-
-
-
-
