@@ -301,6 +301,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 	sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
 	sigma # Print out the matrix
 
+ギャップの最初の位置には、ギャップ開始ペナルティ(*gap opening penalty*)とギャップ伸長ペナルティ(*gap extension penalty*)を与える。隣接するギャップは一回の挿入・欠失で生じたと考える。
+
 `pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける:  
 
 	s1 <- "GAATTC"
@@ -318,8 +320,6 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 
 このアライメントは、4個の一致(match)、1個の不一致(mismatch)、長さ1の1個のギャップ(gap)が含まれているので、スコアは (4\*2)+(1\*-1)+(1\*-10) = -3 となる。  
 【注意】gapOpening = -2, gapExtension = -8 は、ギャップの最初の位置は (-2-8=)-10 のスコアが割り当てられ、ギャップの後続の位置は -8 のスコアが与えられることを意味する。
-
-ギャップの最初の位置には、ギャップ開始ペナルティ(*gap opening penalty*)とギャップ伸長ペナルティ(*gap extension penalty*)を与える。隣接するギャップは一回の挿入・欠失で生じたと考える。
 
 - [Aritalab:Lecture/Bioinformatics/Alignment - Metabolomics.JP](http://metabolomics.jp/wiki/Aritalab:Lecture/Bioinformatics/Alignment)
 - [2-1. 配列解析基礎 Basic Sequence Analysis 坊農 秀雅](http://www.iu.a.u-tokyo.ac.jp/~kadota/bioinfo_ngs_sokushu_2014/20140905_2-1_bono.pdf)
