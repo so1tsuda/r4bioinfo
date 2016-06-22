@@ -281,6 +281,8 @@ M.lepraeとM.ulceransのコリスミ酸リアーゼのタンパク質配列の�
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
 
+DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける。
+
 例えば、塩基の一致(match)に+2のスコア、不一致(mismatch)に-1のペナルティ、ギャップ(gap)に-2のペナルティを与える。
 
 以下のアラインメントのスコアは、2 + 2 + (-1) + 2 + (-2) + (-1) = 2
@@ -376,11 +378,12 @@ UniProt配列のアライメント
 	lepraeseq <- leprae[[1]]
 	ulceransseq <- ulcerans[[1]]
 
-    # convert vectors of characters into strings 文字ベクトルを文字列に変換
+    # 文字ベクトルを文字列に変換 convert vectors of characters into strings
 	lepraeseqstring <- c2s(lepraeseq)     # Make a string that contains the sequence in "lepraeseq"
 	ulceransseqstring <- c2s(ulceransseq) # Make a string that contains the sequence in "ulceransseq"
 
-    # convert strings to uppercase 大文字に変換  
+
+    # 大文字に変換 convert strings to uppercase 
 	lepraeseqstring <- toupper(lepraeseqstring)
 	ulceransseqstring <- toupper(ulceransseqstring)
 	lepraeseqstring # Print out the content of "lepraeseqstring"
