@@ -1,18 +1,18 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2016-06-21  
+Last Update: 2016-06-22  
 
 ----------
+# Multiple sequence alignment
 
-- [シーケンスアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント)
+![https://ja.wikipedia.org/wiki/多重整列](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/RPLP0_90_ClustalW_aln.gif/575px-RPLP0_90_ClustalW_aln.gif)
+
 - [多重整列](https://ja.wikipedia.org/wiki/多重整列) [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment)
 - [マルチプルアライメント](http://bio-info.biz/protein/method_msa.html)
 - [Clustal](https://ja.wikipedia.org/wiki/Clustal)
 - [ClustalWを使い倒す 2011 - 統合TV (togotv)(2011-02-16)](http://togotv.dbcls.jp/20110216.html)
 - [井上 潤：MUSCLE](http://www.geocities.jp/ancientfishtree/MUSCLE.html)
-
-![https://ja.wikipedia.org/wiki/多重整列](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/RPLP0_90_ClustalW_aln.gif/575px-RPLP0_90_ClustalW_aln.gif)
 
 ----------
 
