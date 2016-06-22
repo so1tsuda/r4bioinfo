@@ -10,9 +10,12 @@ Last Update: 2016-06-22
 
 - [多重整列](https://ja.wikipedia.org/wiki/多重整列) [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment)
 - [マルチプルアライメント](http://bio-info.biz/protein/method_msa.html)
-- [Clustal](https://ja.wikipedia.org/wiki/Clustal)
-- [ClustalWを使い倒す 2011 - 統合TV (togotv)(2011-02-16)](http://togotv.dbcls.jp/20110216.html)
-- [井上 潤：MUSCLE](http://www.geocities.jp/ancientfishtree/MUSCLE.html)
+- [ソフトウェア](http://www.nibb.ac.jp/cproom/wiki/index.php/ソフトウェア#.E3.83.9E.E3.83.AB.E3.83.81.E3.83.97.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.A1.E3.83.B3.E3.83.88)
+  - [Bioinformatics Tools for Multiple Sequence Alignment < EMBL-EBI](http://www.ebi.ac.uk/Tools/msa/)
+  - [Clustal](https://ja.wikipedia.org/wiki/Clustal)
+  - [ClustalWを使い倒す 2011 - 統合TV (togotv)(2011-02-16)](http://togotv.dbcls.jp/20110216.html)
+  - [clustalwを利用した系統樹の作成方法 - バイオインフォマティクス初心者の日常](http://sy41211.hatenablog.com/entry/2015/12/15/040041)
+  - [井上 潤：MUSCLE](http://www.geocities.jp/ancientfishtree/MUSCLE.html)
 
 ----------
 
