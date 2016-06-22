@@ -281,7 +281,7 @@ M.lepraeとM.ulceransのコリスミ酸リアーゼのタンパク質配列の�
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
 
-DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける。
+【例題】DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける。
 
 例えば、塩基の一致(match)に+2のスコア、不一致(mismatch)に-1のペナルティ、ギャップ(gap)に-2のペナルティを与える。
 
