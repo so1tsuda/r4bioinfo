@@ -112,7 +112,7 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 # Phylogenetic analyses
 
-![https://ja.wikipedia.org/wiki/系統樹](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tree_of_life_ja.svg/350px-Tree_of_life_ja.svg.png)
+![https://ja.wikipedia.org/wiki/系統樹](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tree_of_life_ja.svg/692px-Tree_of_life_ja.svg.png)
 
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹)
 - [分子系統学](https://ja.wikipedia.org/wiki/分子系統学)
