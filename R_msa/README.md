@@ -84,17 +84,21 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 	hemoSeq <- readAAStringSet(system.file("examples/HemoglobinAA.fasta", package="msa"))
 	hemoAln <- msa(hemoSeq)
 	hemoAln
+
 	# convert the result for later processing with the seqinr package:
 
 	hemoAln2 <- msaConvert(hemoAln, type="seqinr::alignment")
 
-
 	> msaConvert
 	 エラー:  オブジェクト 'msaConvert' がありません 
 
+    解決策
+
+    # write Multiple Sequence Alignments to a file
+    writeXStringSet(unmasked(hemoAln), file="hemoAln.fasta")
+
     library(seqinr)
     hemoAln2 <- read.alignment("hemoAln.fasta", format="fasta", forceToLower=FALSE)
-
 
 	# compute a distance matrix using the dist.alignment() function from the seqinr package:
 	d <- dist.alignment(hemoAln2, "identity")
@@ -135,10 +139,12 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
     # UPGMA (Unweighted Pair Group Method with Arithmetic mean)
     hc <- hclust(d, "average")
     plot(as.phylo(hc))
-    # example(plot.phylo)
 
     # 近隣結合法 NJ (Neighbor-Joining)
     plot(nj(d))
+
+    # Plot Phylogenies
+    example(plot.phylo)
 
 - [微生物の系統樹,どう描くの?(続・生物工学基礎講座-バイオよもやま話-) 飯野 隆夫*・伊藤  隆](https://www.sbj.or.jp/wp-content/uploads/file/sbj/9110/9110_yomoyama.pdf)
 - Rによる系統解析
@@ -159,21 +165,11 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 # ape
 ape: Analyses of Phylogenetics and Evolution
-- [CRAN - Package ape](https://cran.r-project.org/web/packages/ape/index.html)
-  - Reference manual: [ape.pdf](https://cran.r-project.org/web/packages/ape/ape.pdf)
+- [CRAN - Package ape](https://cran.r-project.org/web/packages/ape/index.html) | Reference manual: [ape.pdf](https://cran.r-project.org/web/packages/ape/ape.pdf)
 
 # phangorn
 phangorn: Phylogenetic Analysis in R
 - [CRAN - Package phangorn](https://cran.r-project.org/web/packages/phangorn/index.html)
-
-----------
-
-http://cns-guide.sfc.keio.ac.jp/2015/CNSguide2015.pdf
-CNS サーバにリモートログインする
-Mac からリモートログインする (Mac OS X)
-「ssh [ CNS ログイン名 ]@ccx01.sfc.keio.ac.jp」と打って Return キーを押してください。
-
-- [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
 
 ----------
 
