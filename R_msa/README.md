@@ -116,9 +116,7 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree)
 - [分子系統学](https://ja.wikipedia.org/wiki/分子系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
-- [新しい系統樹では細菌が圧倒的に優勢 | Nature Microbiology | Nature Research](http://www.natureasia.com/ja-jp/life-sci/research/10626)
-
-![http://www.nature.com/articles/nmicrobiol201648](http://www.nature.com/article-assets/npg/nmicrobiol/2016/nmicrobiol201648/images_hires/m685/nmicrobiol201648-f2.jpg)
+- [新しい系統樹では細菌が圧倒的に優勢](http://www.natureasia.com/ja-jp/life-sci/research/10626) [A new view of the tree of life : Nature Microbiology](http://www.nature.com/articles/nmicrobiol201648)
 
 	library(msa)
 
