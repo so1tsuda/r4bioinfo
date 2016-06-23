@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2016-06-22  
+Last Update: 2016-06-23  
 
 ----------
 # Multiple sequence alignment
@@ -42,6 +42,8 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 	library(msa)
 
+    ls("package:msa")
+
 ### 3 msa for the Impatient
 
 	# load amino acid sequences from one of the example files that are supplied with the msa package:
@@ -61,22 +63,66 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 	# creates a PDF file myfirstAlignment.pdf (Figure 1):
 	msaPrettyPrint(myFirstAlignment, output="pdf", showNames="none", showLogo="none", askForOverwrite=FALSE, verbose=FALSE)
 
-### 6.2 Interfacing to Other Packages
 
-`msaConvert()` converts multiple sequence alignment objects to other types/classes: `alignment` (used by `seqinr` package) and `align` (used by `bios2mds` package).
+
+
+----------
+
+# Phylogenetic analyses
+系統解析
+
+	library(msa)
 
 	# multiple alignment of Hemoglobin alpha example sequences
 	hemoSeq <- readAAStringSet(system.file("examples/HemoglobinAA.fasta", package="msa"))
 	hemoAln <- msa(hemoSeq)
 	hemoAln
-	# convert the result for later processing with the seqinr package:
 
-	hemoAln2 <- msaConvert(hemoAln, type="seqinr::alignment")
+    # write Multiple Sequence Alignments to a file
+    writeXStringSet(unmasked(hemoAln), file="hemoAln.fasta")
 
 
 
-> msaConvert
- エラー:  オブジェクト 'msaConvert' がありません 
+May 24, 2016 [Package ‘ape’](https://cran.r-project.org/web/packages/ape/ape.pdf)
+Package phangorn has the function read.aa to read amino acid sequence files in FASTA format.
+
+
+[CRAN - Package phangorn](https://cran.r-project.org/web/packages/phangorn/index.html)
+
+
+    #install.packages('phangorn')
+    library(phangorn)
+    ls("package:ape")
+    aln <- read.aa(file = "hemoAln.fasta", format = "fasta")
+    d <- dist.ml(aln, model="WAG")
+
+    # UPGMA (Unweighted Pair Group Method with Arithmetic mean)
+    hc <- hclust(d, "average")
+    plot(as.phylo(hc))
+    # example(plot.phylo)
+
+    # 近隣結合法 NJ (Neighbor-Joining)
+    plot(nj(d))
+
+
+
+
+- 2016/06/23 [(Rで)塩基配列解析](http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html)
+- 2016/05/25 [(Rで)マイクロアレイデータ解析](http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html)
+
+- readDNAStringSet
+  - [wakuteka/writeXStringset.R](https://gist.github.com/wakuteka/8050846)
+  - [R/Bioconductorでmultifasta形式をsinglefasta形式に変換する - 僕らはRを愛しすぎてる](http://wakuteka.hatenablog.jp/entry/2013/12/20/153421)
+  - Feb 13, 2013 [Biostrings::readDNAStringSetで読み込んだmultifastaファイルの塩基配列部分を抽出する](http://qiita.com/wakuteka/items/5bef7c5e1dfd92c247f2)
+  - [Bioconductor: Genomicデータ解析ツール群 - Watal M. Iwasaki](https://heavywatal.github.io/rstats/bioconductor.html)
+
+- Rによる系統解析
+  - [R - 井上 潤](http://www.geocities.jp/ancientfishtree/R_JI.html)
+  - [系統樹 ape ade4 | Rで系統樹を作成する方法](http://stat.biopapyrus.net/graph/r-phylogenetic-tree.html)
+  - [Rと系統樹(1)](https://www1.doshisha.ac.jp/~mjin/R/42/42.html)
+  - [Rと系統樹(2)](https://www1.doshisha.ac.jp/~mjin/R/43/43.html)
+
+----------
 
 
 ### 4 Functions for Multiple Sequence Alignment in More Detail
@@ -91,6 +137,40 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 	myMuscleAlignment <- msa(mySequences, "Muscle")
 	myMuscleAlignment
+
+### 6.2 Interfacing to Other Packages
+
+`msaConvert()` converts multiple sequence alignment objects to other types/classes: `alignment` (used by `seqinr` package) and `align` (used by `bios2mds` package).
+
+	# multiple alignment of Hemoglobin alpha example sequences
+	hemoSeq <- readAAStringSet(system.file("examples/HemoglobinAA.fasta", package="msa"))
+	hemoAln <- msa(hemoSeq)
+	hemoAln
+	# convert the result for later processing with the seqinr package:
+
+	hemoAln2 <- msaConvert(hemoAln, type="seqinr::alignment")
+
+
+	> msaConvert
+	 エラー:  オブジェクト 'msaConvert' がありません 
+
+
+    library(seqinr)
+    hemoAln2 <- read.alignment("hemoAln.fasta", format="fasta", forceToLower=FALSE)
+
+
+	# compute a distance matrix using the dist.alignment() function from the seqinr package:
+	d <- dist.alignment(hemoAln2, "identity")
+	as.matrix(d)[3:4, 3:4]
+
+	# construct a draft phylogenetic tree using the hclust() function from the stats package:
+	hemoTree <- hclust(d)
+	plot(hemoTree, main="Phylogenetic Tree of Hemoglobin Alpha Sequences", xlab="", sub="")
+
+----------
+
+# Acknowledgements
+I am grateful to Dr. Ulrich Bodenhofer for his technical advice on msa: an R package for multiple sequence alignment.
 
 
 ----------
