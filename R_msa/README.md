@@ -118,6 +118,8 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 - [分子系統学](https://ja.wikipedia.org/wiki/分子系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
 - [新しい系統樹では細菌が圧倒的に優勢](http://www.natureasia.com/ja-jp/life-sci/research/10626) [A new view of the tree of life : Nature Microbiology](http://www.nature.com/articles/nmicrobiol201648)
 
+[ヘモグロビン](https://ja.wikipedia.org/wiki/ヘモグロビン)αサブユニットのタンパク質配列の系統解析
+
 	library(msa)
 
 	# multiple alignment of Hemoglobin alpha example sequences
@@ -130,13 +132,13 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
     #install.packages('phangorn')
     library(phangorn)
-    ls("package:ape")
+    # Read Amino Acid Sequences in a File
     aln <- read.aa(file = "hemoAln.fasta", format = "fasta")
+    # Pairwise Distances from Sequences
     d <- dist.ml(aln, model="WAG")
 
     # UPGMA (Unweighted Pair Group Method with Arithmetic mean)
-    hc <- hclust(d, "average")
-    plot(as.phylo(hc))
+    plot(as.phylo(hclust(d, "average")))
 
     # 近隣結合法 NJ (Neighbor-Joining)
     plot(nj(d))
