@@ -263,12 +263,15 @@ SeqinRでUniProtのタンパク質配列を取得
 ### Comparing two sequences using a dotplot
 [ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)で2つの配列を比較
 
-M.lepraeとM.ulceransのコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
-
-	dotPlot(lepraeseq, ulceransseq)
+両軸に全く同じ配列をとれば、右上がりの対角線が現れる。
+テストデータで確認:  
 
     # Create tests
     x <- s2c("atgc"); par(mfrow=c(2,2)); dotPlot(x,x); dotPlot(x,rev(x)); dotPlot(rep(x,2),rep(x,2))
+
+M.lepraeとM.ulceransのコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
+
+	dotPlot(lepraeseq, ulceransseq)
 
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
 
