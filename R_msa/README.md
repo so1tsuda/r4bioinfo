@@ -28,8 +28,6 @@ Last Update: 2016-06-23
 | [PDF](https://bioconductor.org/packages/release/bioc/vignettes/msa/inst/doc/msa.pdf) | [R Script](https://bioconductor.org/packages/release/bioc/vignettes/msa/inst/doc/msa.R) | msa - An R Package for Multiple Sequence Alignment |
 | [PDF](https://bioconductor.org/packages/release/bioc/manuals/msa/man/msa.pdf) |  | Reference Manual |
 
-----------
-
 ## [An R Package for Multiple Sequence Alignment](http://bioconductor.org/packages/devel/bioc/vignettes/msa/inst/doc/msa.pdf)
 Version 1.5.2, May 2, 2016  
 
@@ -63,68 +61,6 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 	# creates a PDF file myfirstAlignment.pdf (Figure 1):
 	msaPrettyPrint(myFirstAlignment, output="pdf", showNames="none", showLogo="none", askForOverwrite=FALSE, verbose=FALSE)
 
-
-
-
-----------
-
-# Phylogenetic analyses
-系統解析
-
-	library(msa)
-
-	# multiple alignment of Hemoglobin alpha example sequences
-	hemoSeq <- readAAStringSet(system.file("examples/HemoglobinAA.fasta", package="msa"))
-	hemoAln <- msa(hemoSeq)
-	hemoAln
-
-    # write Multiple Sequence Alignments to a file
-    writeXStringSet(unmasked(hemoAln), file="hemoAln.fasta")
-
-
-
-May 24, 2016 [Package ‘ape’](https://cran.r-project.org/web/packages/ape/ape.pdf)
-Package phangorn has the function read.aa to read amino acid sequence files in FASTA format.
-
-
-[CRAN - Package phangorn](https://cran.r-project.org/web/packages/phangorn/index.html)
-
-
-    #install.packages('phangorn')
-    library(phangorn)
-    ls("package:ape")
-    aln <- read.aa(file = "hemoAln.fasta", format = "fasta")
-    d <- dist.ml(aln, model="WAG")
-
-    # UPGMA (Unweighted Pair Group Method with Arithmetic mean)
-    hc <- hclust(d, "average")
-    plot(as.phylo(hc))
-    # example(plot.phylo)
-
-    # 近隣結合法 NJ (Neighbor-Joining)
-    plot(nj(d))
-
-
-
-
-- 2016/06/23 [(Rで)塩基配列解析](http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html)
-- 2016/05/25 [(Rで)マイクロアレイデータ解析](http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html)
-
-- readDNAStringSet
-  - [wakuteka/writeXStringset.R](https://gist.github.com/wakuteka/8050846)
-  - [R/Bioconductorでmultifasta形式をsinglefasta形式に変換する - 僕らはRを愛しすぎてる](http://wakuteka.hatenablog.jp/entry/2013/12/20/153421)
-  - Feb 13, 2013 [Biostrings::readDNAStringSetで読み込んだmultifastaファイルの塩基配列部分を抽出する](http://qiita.com/wakuteka/items/5bef7c5e1dfd92c247f2)
-  - [Bioconductor: Genomicデータ解析ツール群 - Watal M. Iwasaki](https://heavywatal.github.io/rstats/bioconductor.html)
-
-- Rによる系統解析
-  - [R - 井上 潤](http://www.geocities.jp/ancientfishtree/R_JI.html)
-  - [系統樹 ape ade4 | Rで系統樹を作成する方法](http://stat.biopapyrus.net/graph/r-phylogenetic-tree.html)
-  - [Rと系統樹(1)](https://www1.doshisha.ac.jp/~mjin/R/42/42.html)
-  - [Rと系統樹(2)](https://www1.doshisha.ac.jp/~mjin/R/43/43.html)
-
-----------
-
-
 ### 4 Functions for Multiple Sequence Alignment in More Detail
 
 	# call the function msa() with additional arguments
@@ -138,7 +74,9 @@ Package phangorn has the function read.aa to read amino acid sequence files in F
 	myMuscleAlignment <- msa(mySequences, "Muscle")
 	myMuscleAlignment
 
-### 6.2 Interfacing to Other Packages
+### 6 Processing Multiple Alignments
+#### 6.1 Methods Inherited From Biostrings
+#### 6.2 Interfacing to Other Packages
 
 `msaConvert()` converts multiple sequence alignment objects to other types/classes: `alignment` (used by `seqinr` package) and `align` (used by `bios2mds` package).
 
@@ -154,7 +92,6 @@ Package phangorn has the function read.aa to read amino acid sequence files in F
 	> msaConvert
 	 エラー:  オブジェクト 'msaConvert' がありません 
 
-
     library(seqinr)
     hemoAln2 <- read.alignment("hemoAln.fasta", format="fasta", forceToLower=FALSE)
 
@@ -169,9 +106,65 @@ Package phangorn has the function read.aa to read amino acid sequence files in F
 
 ----------
 
-# Acknowledgements
-I am grateful to Dr. Ulrich Bodenhofer for his technical advice on msa: an R package for multiple sequence alignment.
+# Phylogenetic analyses
 
+![https://ja.wikipedia.org/wiki/系統樹](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tree_of_life_ja.svg/350px-Tree_of_life_ja.svg.png)
+
+- [系統樹](https://ja.wikipedia.org/wiki/系統樹)
+- [分子系統学](https://ja.wikipedia.org/wiki/分子系統学)
+- [新しい系統樹では細菌が圧倒的に優勢 | Nature Microbiology | Nature Research](http://www.natureasia.com/ja-jp/life-sci/research/10626)
+
+![http://www.nature.com/articles/nmicrobiol201648](http://www.nature.com/article-assets/npg/nmicrobiol/2016/nmicrobiol201648/images_hires/m685/nmicrobiol201648-f2.jpg)
+
+	library(msa)
+
+	# multiple alignment of Hemoglobin alpha example sequences
+	hemoSeq <- readAAStringSet(system.file("examples/HemoglobinAA.fasta", package="msa"))
+	hemoAln <- msa(hemoSeq)
+	hemoAln
+
+    # write Multiple Sequence Alignments to a file
+    writeXStringSet(unmasked(hemoAln), file="hemoAln.fasta")
+
+    #install.packages('phangorn')
+    library(phangorn)
+    ls("package:ape")
+    aln <- read.aa(file = "hemoAln.fasta", format = "fasta")
+    d <- dist.ml(aln, model="WAG")
+
+    # UPGMA (Unweighted Pair Group Method with Arithmetic mean)
+    hc <- hclust(d, "average")
+    plot(as.phylo(hc))
+    # example(plot.phylo)
+
+    # 近隣結合法 NJ (Neighbor-Joining)
+    plot(nj(d))
+
+- [微生物の系統樹,どう描くの?(続・生物工学基礎講座-バイオよもやま話-) 飯野 隆夫*・伊藤  隆](https://www.sbj.or.jp/wp-content/uploads/file/sbj/9110/9110_yomoyama.pdf)
+- Rによる系統解析
+  - [R - 井上 潤](http://www.geocities.jp/ancientfishtree/R_JI.html)
+  - [系統樹 ape ade4 | Rで系統樹を作成する方法](http://stat.biopapyrus.net/graph/r-phylogenetic-tree.html)
+  - [Rと系統樹(1)](https://www1.doshisha.ac.jp/~mjin/R/42/42.html)
+  - [Rと系統樹(2)](https://www1.doshisha.ac.jp/~mjin/R/43/43.html)
+- 2016/06/23 [(Rで)塩基配列解析](http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html)
+- 2016/05/25 [(Rで)マイクロアレイデータ解析](http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html)
+- http://qa.lifesciencedb.jp/questions/512/rでfastaファイルを読み込む際におすすめのパッケージはありますか
+- readDNAStringSet
+  - [wakuteka/writeXStringset.R](https://gist.github.com/wakuteka/8050846)
+  - [R/Bioconductorでmultifasta形式をsinglefasta形式に変換する - 僕らはRを愛しすぎてる](http://wakuteka.hatenablog.jp/entry/2013/12/20/153421)
+  - Feb 13, 2013 [Biostrings::readDNAStringSetで読み込んだmultifastaファイルの塩基配列部分を抽出する](http://qiita.com/wakuteka/items/5bef7c5e1dfd92c247f2)
+  - [Bioconductor: Genomicデータ解析ツール群 - Watal M. Iwasaki](https://heavywatal.github.io/rstats/bioconductor.html)
+
+----------
+
+# ape
+ape: Analyses of Phylogenetics and Evolution
+- [CRAN - Package ape](https://cran.r-project.org/web/packages/ape/index.html)
+  - Reference manual: [ape.pdf](https://cran.r-project.org/web/packages/ape/ape.pdf)
+
+# phangorn
+phangorn: Phylogenetic Analysis in R
+- [CRAN - Package phangorn](https://cran.r-project.org/web/packages/phangorn/index.html)
 
 ----------
 
@@ -180,10 +173,12 @@ CNS サーバにリモートログインする
 Mac からリモートログインする (Mac OS X)
 「ssh [ CNS ログイン名 ]@ccx01.sfc.keio.ac.jp」と打って Return キーを押してください。
 
-
 - [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
-- http://qa.lifesciencedb.jp/questions/512/rでfastaファイルを読み込む際におすすめのパッケージはありますか
 
+----------
+
+# Acknowledgements
+I am grateful to Dr. Ulrich Bodenhofer for his technical advice on msa: an R package for multiple sequence alignment.
 
 ----------
 
