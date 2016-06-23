@@ -116,7 +116,7 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree)
 - [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
-- [分子系統学](https://ja.wikipedia.org/wiki/分子系統学)
+- [分子系統学](https://ja.wikipedia.org/wiki/分子系統学) [Molecular phylogenetics](https://en.wikipedia.org/wiki/Molecular_phylogenetics)
 
 [ヘモグロビン](https://ja.wikipedia.org/wiki/ヘモグロビン)αサブユニットのタンパク質配列の系統解析
 
@@ -159,12 +159,10 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
   - [R/Bioconductorでmultifasta形式をsinglefasta形式に変換する - 僕らはRを愛しすぎてる](http://wakuteka.hatenablog.jp/entry/2013/12/20/153421)
   - Feb 13, 2013 [Biostrings::readDNAStringSetで読み込んだmultifastaファイルの塩基配列部分を抽出する](http://qiita.com/wakuteka/items/5bef7c5e1dfd92c247f2)
   - [Bioconductor: Genomicデータ解析ツール群 - Watal M. Iwasaki](https://heavywatal.github.io/rstats/bioconductor.html)
-
 - [微生物の系統樹,どう描くの?(続・生物工学基礎講座-バイオよもやま話-) 飯野 隆夫*・伊藤  隆](https://www.sbj.or.jp/wp-content/uploads/file/sbj/9110/9110_yomoyama.pdf)
 - [新しい系統樹では細菌が圧倒的に優勢](http://www.natureasia.com/ja-jp/life-sci/research/10626) [A new view of the tree of life : Nature Microbiology](http://www.nature.com/articles/nmicrobiol201648)
-
-- [棒の手紙](https://ja.wikipedia.org/wiki/チェーンメール#.E6.A3.92.E3.81.AE.E6.89.8B.E7.B4.99) | [これが「棒の手紙」だ！](http://homepage3.nifty.com/hirorin/bonotegami.htm)
 - [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
+- [棒の手紙](https://ja.wikipedia.org/wiki/チェーンメール#.E6.A3.92.E3.81.AE.E6.89.8B.E7.B4.99) | [これが「棒の手紙」だ！](http://homepage3.nifty.com/hirorin/bonotegami.htm)
 
 ----------
 
