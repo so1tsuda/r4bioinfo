@@ -87,10 +87,8 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 	# convert the result for later processing with the seqinr package:
 
-	hemoAln2 <- msaConvert(hemoAln, type="seqinr::alignment")
-
-	> msaConvert
-	 エラー:  オブジェクト 'msaConvert' がありません 
+	#hemoAln2 <- msaConvert(hemoAln, type="seqinr::alignment")
+	エラー:  オブジェクト 'msaConvert' がありません 
 
     解決策
 
@@ -108,17 +106,32 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 	hemoTree <- hclust(d)
 	plot(hemoTree, main="Phylogenetic Tree of Hemoglobin Alpha Sequences", xlab="", sub="")
 
+### 7 Pretty-Printing Multiple Sequence Alignments
+#### 7.1 Consensus Sequence and Sequence Logo
+
+	# consensus sequence
+	msaPrettyPrint(myFirstAlignment, output="asis", y=c(164, 213),
+               subset=c(1:6), showNames="none", showLogo="none",
+               consensusColor="ColdHot", showLegend=FALSE,
+               askForOverwrite=FALSE)
+
+	# consensus sequence — sequence logos
+    msaPrettyPrint(myFirstAlignment, output="pdf", y=c(164, 213),
+               subset=c(1:6), showNames="none", showLogo="top",
+               logoColors="rasmol", shadingMode="similar",
+               showLegend=FALSE, askForOverwrite=FALSE)
+
 ----------
 
 # Phylogenetics
-
-![https://ja.wikipedia.org/wiki/系統樹](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tree_of_life_ja.svg/350px-Tree_of_life_ja.svg.png)
 
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree)
 - [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
 - [分子系統学](https://ja.wikipedia.org/wiki/分子系統学) [Molecular phylogenetics](https://en.wikipedia.org/wiki/Molecular_phylogenetics)
 
-[ヘモグロビン](https://ja.wikipedia.org/wiki/ヘモグロビン)αサブユニットのタンパク質配列の系統解析
+![https://ja.wikipedia.org/wiki/系統樹](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tree_of_life_ja.svg/350px-Tree_of_life_ja.svg.png)
+
+【例題】[ヘモグロビン](https://ja.wikipedia.org/wiki/ヘモグロビン)αサブユニットのタンパク質配列の系統解析
 
 	library(msa)
 
@@ -130,8 +143,8 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
     # write Multiple Sequence Alignments to a file
     writeXStringSet(unmasked(hemoAln), file="hemoAln.fasta")
 
-    #install.packages('phangorn')
-    library(phangorn)
+    #install.packages("phangorn")
+    library(phangorn) # read.aa # dist.ml
     # Read Amino Acid Sequences in a File
     aln <- read.aa(file = "hemoAln.fasta", format = "fasta")
     # Pairwise Distances from Sequences
@@ -151,6 +164,7 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
   - [系統樹 ape ade4 | Rで系統樹を作成する方法](http://stat.biopapyrus.net/graph/r-phylogenetic-tree.html)
   - [Rと系統樹(1)](https://www1.doshisha.ac.jp/~mjin/R/42/42.html)
   - [Rと系統樹(2)](https://www1.doshisha.ac.jp/~mjin/R/43/43.html)
+- [Lab 1: Biostrings in R](https://web.stanford.edu/class/bios221/labs/biostrings/lab_1_biostrings.html)
 - 2016/06/23 [(Rで)塩基配列解析](http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html)
 - 2016/05/25 [(Rで)マイクロアレイデータ解析](http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html)
 - http://qa.lifesciencedb.jp/questions/512/rでfastaファイルを読み込む際におすすめのパッケージはありますか
@@ -162,7 +176,8 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 - [微生物の系統樹,どう描くの?(続・生物工学基礎講座-バイオよもやま話-) 飯野 隆夫*・伊藤  隆](https://www.sbj.or.jp/wp-content/uploads/file/sbj/9110/9110_yomoyama.pdf)
 - [新しい系統樹では細菌が圧倒的に優勢](http://www.natureasia.com/ja-jp/life-sci/research/10626) [A new view of the tree of life : Nature Microbiology](http://www.nature.com/articles/nmicrobiol201648)
 - [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
-- [棒の手紙](https://ja.wikipedia.org/wiki/チェーンメール#.E6.A3.92.E3.81.AE.E6.89.8B.E7.B4.99) | [これが「棒の手紙」だ！](http://homepage3.nifty.com/hirorin/bonotegami.htm)
+- [棒の手紙](https://ja.wikipedia.org/wiki/チェーンメール#.E6.A3.92.E3.81.AE.E6.89.8B.E7.B4.99)
+  - [これが「棒の手紙」だ！](http://homepage3.nifty.com/hirorin/bonotegami.htm)
 
 ----------
 
