@@ -40,7 +40,7 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 	library(msa)
 
-    ls("package:msa")
+    example(msa)
 
 ### 3 msa for the Impatient
 
@@ -131,6 +131,12 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 ![https://ja.wikipedia.org/wiki/系統樹](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tree_of_life_ja.svg/350px-Tree_of_life_ja.svg.png)
 
+【デモ】
+
+    #install.packages("ape")
+    library(ape)
+    example(plot.phylo) # Plot Phylogenies
+
 【例題】[ヘモグロビン](https://ja.wikipedia.org/wiki/ヘモグロビン)αサブユニットのタンパク質配列の系統解析
 
 	library(msa)
@@ -156,9 +162,6 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
     # 近隣結合法 NJ (Neighbor-Joining)
     plot(nj(d))
 
-    # Plot Phylogenies
-    example(plot.phylo)
-
 - Rによる系統解析
   - [R - 井上 潤](http://www.geocities.jp/ancientfishtree/R_JI.html)
   - [系統樹 ape ade4 | Rで系統樹を作成する方法](http://stat.biopapyrus.net/graph/r-phylogenetic-tree.html)
@@ -180,6 +183,8 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
   - [これが「棒の手紙」だ！](http://homepage3.nifty.com/hirorin/bonotegami.htm)
 
 ----------
+
+    ls("package:msa")
 
 # ape
 ape: Analyses of Phylogenetics and Evolution
