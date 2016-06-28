@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2016-06-23  
+Last Update: 2016-06-28  
 
 ----------
 # Multiple sequence alignment
@@ -109,17 +109,16 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 ### 7 Pretty-Printing Multiple Sequence Alignments
 #### 7.1 Consensus Sequence and Sequence Logo
 
-	# consensus sequence
-	msaPrettyPrint(myFirstAlignment, output="asis", y=c(164, 213),
-               subset=c(1:6), showNames="none", showLogo="none",
-               consensusColor="ColdHot", showLegend=FALSE,
-               askForOverwrite=FALSE)
-
 	# consensus sequence — sequence logos
     msaPrettyPrint(myFirstAlignment, output="pdf", y=c(164, 213),
                subset=c(1:6), showNames="none", showLogo="top",
                logoColors="rasmol", shadingMode="similar",
                showLegend=FALSE, askForOverwrite=FALSE)
+
+- [新しい系統樹では細菌が圧倒的に優勢](http://www.natureasia.com/ja-jp/life-sci/research/10626) [A new view of the tree of life : Nature Microbiology](http://www.nature.com/articles/nmicrobiol201648)
+- [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
+- [棒の手紙](https://ja.wikipedia.org/wiki/チェーンメール#.E6.A3.92.E3.81.AE.E6.89.8B.E7.B4.99)
+  - [これが「棒の手紙」だ！](http://homepage3.nifty.com/hirorin/bonotegami.htm)
 
 ----------
 
@@ -177,10 +176,6 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
   - Feb 13, 2013 [Biostrings::readDNAStringSetで読み込んだmultifastaファイルの塩基配列部分を抽出する](http://qiita.com/wakuteka/items/5bef7c5e1dfd92c247f2)
   - [Bioconductor: Genomicデータ解析ツール群 - Watal M. Iwasaki](https://heavywatal.github.io/rstats/bioconductor.html)
 - [微生物の系統樹,どう描くの?(続・生物工学基礎講座-バイオよもやま話-) 飯野 隆夫*・伊藤  隆](https://www.sbj.or.jp/wp-content/uploads/file/sbj/9110/9110_yomoyama.pdf)
-- [新しい系統樹では細菌が圧倒的に優勢](http://www.natureasia.com/ja-jp/life-sci/research/10626) [A new view of the tree of life : Nature Microbiology](http://www.nature.com/articles/nmicrobiol201648)
-- [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
-- [棒の手紙](https://ja.wikipedia.org/wiki/チェーンメール#.E6.A3.92.E3.81.AE.E6.89.8B.E7.B4.99)
-  - [これが「棒の手紙」だ！](http://homepage3.nifty.com/hirorin/bonotegami.htm)
 
 ----------
 
