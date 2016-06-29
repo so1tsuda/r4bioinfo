@@ -17,7 +17,7 @@ Last Update: 2016-06-29
 
 	# 系統解析
 	library(ape)
-	example(plot.phylo) # Plot Phylogenies
+	example(plot.phylo)
 
 # Multiple sequence alignment
 
