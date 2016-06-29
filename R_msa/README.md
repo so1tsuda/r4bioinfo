@@ -8,14 +8,15 @@ Last Update: 2016-06-28
 
 ![https://ja.wikipedia.org/wiki/多重整列](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/RPLP0_90_ClustalW_aln.gif/575px-RPLP0_90_ClustalW_aln.gif)
 
-- [多重整列](https://ja.wikipedia.org/wiki/多重整列) [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment)
-- [マルチプルアライメント](http://bio-info.biz/protein/method_msa.html)
-- [ソフトウェア](http://www.nibb.ac.jp/cproom/wiki/index.php/ソフトウェア#.E3.83.9E.E3.83.AB.E3.83.81.E3.83.97.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.A1.E3.83.B3.E3.83.88)
+- [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) [多重整列](https://ja.wikipedia.org/wiki/多重整列) [マルチプルアライメント](http://bio-info.biz/protein/method_msa.html)
+- [ソフトウェア - 生物情報解析システム](http://www.nibb.ac.jp/cproom/wiki/index.php/ソフトウェア#.E3.83.9E.E3.83.AB.E3.83.81.E3.83.97.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.A1.E3.83.B3.E3.83.88)
   - [Bioinformatics Tools for Multiple Sequence Alignment < EMBL-EBI](http://www.ebi.ac.uk/Tools/msa/)
   - [Clustal](https://ja.wikipedia.org/wiki/Clustal)
-  - [ClustalWを使い倒す 2011 - 統合TV (togotv)(2011-02-16)](http://togotv.dbcls.jp/20110216.html)
   - [clustalwを利用した系統樹の作成方法 - バイオインフォマティクス初心者の日常](http://sy41211.hatenablog.com/entry/2015/12/15/040041)
+  - [ClustalWを使い倒す 2011 - 統合TV (togotv)(2011-02-16)](http://togotv.dbcls.jp/20110216.html)
+  - [MAFFT を使ってマルチプルアラインメントを行う - 統合TV (togotv)(2015-04-13)](http://togotv.dbcls.jp/20150413.html)
   - [井上 潤：MUSCLE](http://www.geocities.jp/ancientfishtree/MUSCLE.html)
+  - [MAFFT - 井上 潤](http://www.geocities.jp/ancientfishtree/MAFFT.html)
 
 ----------
 
@@ -155,11 +156,14 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
     # Pairwise Distances from Sequences
     d <- dist.ml(aln, model="WAG")
 
-    # UPGMA (Unweighted Pair Group Method with Arithmetic mean)
+    # 非加重結合法 UPGMA (Unweighted Pair Group Method with Arithmetic mean)
     plot(as.phylo(hclust(d, "average")))
 
     # 近隣結合法 NJ (Neighbor-Joining)
     plot(nj(d))
+
+- [非加重結合法 UPGMA (Unweighted Pair Group Method with Arithmetic mean)](https://ja.wikipedia.org/wiki/非加重結合法)
+- [近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法)
 
 - Rによる系統解析
   - [R - 井上 潤](http://www.geocities.jp/ancientfishtree/R_JI.html)
