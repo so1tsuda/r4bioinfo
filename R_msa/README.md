@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2016-06-29  
+Last Update: 2016-07-11  
 
 ----------
 
@@ -180,6 +180,11 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 - [非加重結合法 UPGMA (Unweighted Pair Group Method with Arithmetic mean)](https://ja.wikipedia.org/wiki/非加重結合法)
 - [近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法)
 
+- [平成21年度ゲノムリテラシー講座 分子系統解析 講義資料 (PDF)](http://www.jst.go.jp/nbdc/bird/jinzai/literacy/streaming/h21_4_3.pdf)
+
+- [微生物の系統樹,どう描くの?(続・生物工学基礎講座-バイオよもやま話-) 飯野 隆夫*・伊藤  隆](https://www.sbj.or.jp/wp-content/uploads/file/sbj/9110/9110_yomoyama.pdf)
+- [SeaView 使用法](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
+- [FigTree - 井上潤](http://www.geocities.jp/ancientfishtree/FigTree.html)
 - Rによる系統解析
   - [R - 井上 潤](http://www.geocities.jp/ancientfishtree/R_JI.html)
   - [系統樹 ape ade4 | Rで系統樹を作成する方法](http://stat.biopapyrus.net/graph/r-phylogenetic-tree.html)
@@ -194,7 +199,15 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
   - [R/Bioconductorでmultifasta形式をsinglefasta形式に変換する - 僕らはRを愛しすぎてる](http://wakuteka.hatenablog.jp/entry/2013/12/20/153421)
   - Feb 13, 2013 [Biostrings::readDNAStringSetで読み込んだmultifastaファイルの塩基配列部分を抽出する](http://qiita.com/wakuteka/items/5bef7c5e1dfd92c247f2)
   - [Bioconductor: Genomicデータ解析ツール群 - Watal M. Iwasaki](https://heavywatal.github.io/rstats/bioconductor.html)
-- [微生物の系統樹,どう描くの?(続・生物工学基礎講座-バイオよもやま話-) 飯野 隆夫*・伊藤  隆](https://www.sbj.or.jp/wp-content/uploads/file/sbj/9110/9110_yomoyama.pdf)
+
+
+[Special Story：ゲノムから進化を探る研究-BRH - JT生命誌研究館](https://www.brh.co.jp/seimeishi/journal/029/ss_3.html)
+
+Gタンパク質族の分子系統樹。
+
+![](https://www.brh.co.jp/seimeishi/journal/029/img/03-3_1.gif)
+![](https://www.brh.co.jp/seimeishi/journal/029/img/03-3_2.gif)
+
 
 ----------
 
