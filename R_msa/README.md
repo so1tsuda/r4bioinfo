@@ -181,8 +181,9 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 - [近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法)
 
 - [平成21年度ゲノムリテラシー講座 分子系統解析 講義資料 (PDF)](http://www.jst.go.jp/nbdc/bird/jinzai/literacy/streaming/h21_4_3.pdf)
-
+- [授業/H24/進化生物学I/系統樹に関する基本用語 - 千葉大系統分類](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
 - [微生物の系統樹,どう描くの?(続・生物工学基礎講座-バイオよもやま話-) 飯野 隆夫*・伊藤  隆](https://www.sbj.or.jp/wp-content/uploads/file/sbj/9110/9110_yomoyama.pdf)
+- MEGA [分子系統樹作成方法](http://evolgen.biol.se.tmu.ac.jp/MEGA/tree-protocol.htm)
 - [SeaView 使用法](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
 - [FigTree - 井上潤](http://www.geocities.jp/ancientfishtree/FigTree.html)
 - Rによる系統解析
@@ -200,6 +201,7 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
   - Feb 13, 2013 [Biostrings::readDNAStringSetで読み込んだmultifastaファイルの塩基配列部分を抽出する](http://qiita.com/wakuteka/items/5bef7c5e1dfd92c247f2)
   - [Bioconductor: Genomicデータ解析ツール群 - Watal M. Iwasaki](https://heavywatal.github.io/rstats/bioconductor.html)
 
+- [東京都感染症情報センター » インフルエンザウイルスHA遺伝子系統樹（東京都　2015-16年シーズン）](http://idsc.tokyo-eiken.go.jp/diseases/flu/flu/keito2015/)
 - [バックナンバー2006年 | 宮田 隆の進化の話 | これまでのラボ・研究 | 研究 | JT生命誌研究館](https://www.brh.co.jp/research/formerlab/miyata/2006/)
 
 #### [ポリペプチド伸長因子で推定された系統樹](https://www.brh.co.jp/research/formerlab/miyata/2006/post_000001.html)
@@ -214,6 +216,10 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 ![](https://www.brh.co.jp/_old/imgs/katari/shinka/14_zu03.gif)
 
+#### [血小板由来成長因子レセプター（PDGFR）サブファミリーの系統樹](https://www.brh.co.jp/research/formerlab/miyata/2006/post_000002.html)
+
+![](https://www.brh.co.jp/_old/imgs/katari/shinka/17_zu04.gif)
+
 #### [Gタンパク質族の分子系統樹](https://www.brh.co.jp/seimeishi/journal/029/ss_3.html)
 
 ![](https://www.brh.co.jp/seimeishi/journal/029/img/03-3_1.gif)
@@ -223,6 +229,28 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 #### [四足動物の起源](https://www.brh.co.jp/seimeishi/journal/059/from_brh.html)
 
 ![](https://www.brh.co.jp/seimeishi/journal/059/img/from_brh/zu01b.gif)
+
+#### [アクチン遺伝子による分子系統樹](http://park.itc.u-tokyo.ac.jp/pls/research_1.html#1_2)
+
+![](http://park.itc.u-tokyo.ac.jp/pls/image/research_fig01_02.jpg)
+
+#### [ヒトのゲノムにＲＮＡウイルス遺伝子を発見](http://www.jst.go.jp/pr/announce/20100107/)
+
+図１　ボルナウイルスのＮ遺伝子とヒトＥＢＬＮとのアミノ酸配列の比較
+
+![](http://www.jst.go.jp/pr/announce/20100107/icons/zu1.gif)
+
+図２　哺乳類ＥＢＬＮと外来性ボルナウイルスのＮ遺伝子領域を用いた系統樹解析
+
+![](http://www.jst.go.jp/pr/announce/20100107/icons/zu2.gif)
+
+#### 
+
+![]()
+
+#### 
+
+![]()
 
 ----------
 
