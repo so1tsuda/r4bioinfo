@@ -200,15 +200,29 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
   - Feb 13, 2013 [Biostrings::readDNAStringSetで読み込んだmultifastaファイルの塩基配列部分を抽出する](http://qiita.com/wakuteka/items/5bef7c5e1dfd92c247f2)
   - [Bioconductor: Genomicデータ解析ツール群 - Watal M. Iwasaki](https://heavywatal.github.io/rstats/bioconductor.html)
 
+- [バックナンバー2006年 | 宮田 隆の進化の話 | これまでのラボ・研究 | 研究 | JT生命誌研究館](https://www.brh.co.jp/research/formerlab/miyata/2006/)
 
-[Special Story：ゲノムから進化を探る研究-BRH - JT生命誌研究館](https://www.brh.co.jp/seimeishi/journal/029/ss_3.html)
+#### [ポリペプチド伸長因子で推定された系統樹](https://www.brh.co.jp/research/formerlab/miyata/2006/post_000001.html)
 
-Gタンパク質族の分子系統樹。
+![](https://www.brh.co.jp/_old/imgs/katari/shinka/16_zu02.gif)
+
+#### [脊椎動物オプシン族の分子系統樹](https://www.brh.co.jp/research/formerlab/miyata/2006/post_000004.html)
+
+![](https://www.brh.co.jp/_old/imgs/katari/shinka/19-zu01.gif)
+
+#### [重複遺伝子EF-Tu/1aとEF-G/2に基づく超生物界の複合系統樹](https://www.brh.co.jp/research/formerlab/miyata/2005/post_000008.html)
+
+![](https://www.brh.co.jp/_old/imgs/katari/shinka/14_zu03.gif)
+
+#### [Gタンパク質族の分子系統樹](https://www.brh.co.jp/seimeishi/journal/029/ss_3.html)
 
 ![](https://www.brh.co.jp/seimeishi/journal/029/img/03-3_1.gif)
 
 ![](https://www.brh.co.jp/seimeishi/journal/029/img/03-3_2.gif)
 
+#### [四足動物の起源](https://www.brh.co.jp/seimeishi/journal/059/from_brh.html)
+
+![](https://www.brh.co.jp/seimeishi/journal/059/img/from_brh/zu01b.gif)
 
 ----------
 
