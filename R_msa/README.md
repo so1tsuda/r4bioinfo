@@ -206,6 +206,7 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 Gタンパク質族の分子系統樹。
 
 ![](https://www.brh.co.jp/seimeishi/journal/029/img/03-3_1.gif)
+
 ![](https://www.brh.co.jp/seimeishi/journal/029/img/03-3_2.gif)
 
 
