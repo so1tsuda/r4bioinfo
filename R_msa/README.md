@@ -236,21 +236,13 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 #### [ヒトのゲノムにＲＮＡウイルス遺伝子を発見](http://www.jst.go.jp/pr/announce/20100107/)
 
-図１　ボルナウイルスのＮ遺伝子とヒトＥＢＬＮとのアミノ酸配列の比較
-
 ![](http://www.jst.go.jp/pr/announce/20100107/icons/zu1.gif)
 
-図２　哺乳類ＥＢＬＮと外来性ボルナウイルスのＮ遺伝子領域を用いた系統樹解析
+図１　ボルナウイルスのＮ遺伝子とヒトＥＢＬＮとのアミノ酸配列の比較
 
 ![](http://www.jst.go.jp/pr/announce/20100107/icons/zu2.gif)
 
-#### 
-
-![]()
-
-#### 
-
-![]()
+図２　哺乳類ＥＢＬＮと外来性ボルナウイルスのＮ遺伝子領域を用いた系統樹解析
 
 ----------
 
