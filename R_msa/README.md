@@ -32,6 +32,12 @@ Last Update: 2016-07-11
   - [MAFFT を使ってマルチプルアラインメントを行う - 統合TV (togotv)(2015-04-13)](http://togotv.dbcls.jp/20150413.html)
   - [井上 潤：MUSCLE](http://www.geocities.jp/ancientfishtree/MUSCLE.html)
   - [MAFFT - 井上 潤](http://www.geocities.jp/ancientfishtree/MAFFT.html)
+  - [SeaView 使用法](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
+  - [アメリエフのブログ | WebLogoを使ってみよう](http://blog.amelieff.jp/?eid=210264)
+  - [モチーフのロゴ表示(WEBLOGO) - script of bioinformatics](https://sites.google.com/site/scriptofbioinformatics/pei-lie-jie-xi-guan-xi/mochifunorogo-biao-shi-weblogo)
+
+![](http://blog.amelieff.jp/images/weblogo2.png)
+![](https://4b5cf629-a-62cb3a1a-s-sites.googlegroups.com/site/scriptofbioinformatics/pei-lie-jie-xi-guan-xi/mochifunorogo-biao-shi-weblogo/DK2.png)
 
 ----------
 
