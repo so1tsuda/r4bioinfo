@@ -27,7 +27,7 @@ Last Update: 2016-07-27
 
 ----------
 
-# [Similarity indices, ordination, and community analysis tests using the software R](http://ci.nii.ac.jp/naid/110008607838/en)
+## [Similarity indices, ordination, and community analysis tests using the software R](http://ci.nii.ac.jp/naid/110008607838/en)
 土居 秀幸・岡村 寛 (2011) 生物群集解析のための類似度とその応用 : Rを使った類似度の算出、グラフ化、検定
 
 [Rパッケージveganを利用した類似度の計算](http://cse.fra.affrc.go.jp/okamura/program/vegan/)
@@ -141,8 +141,13 @@ Last Update: 2016-07-27
 
 ----------
 
+## 
 
-# References
+
+----------
+
+
+## References
 
 - 日本語
   - vegan
