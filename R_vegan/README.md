@@ -131,15 +131,21 @@ X1 <- c(1,1,2,2) X2 <- c(1,2,2,3)
 adonis(testdata~X1,method="chao") adonis(testdata~X1+X2,method="chao")
 
 
-
 ----------
 
 
-### 
-### 
-### 
+# References
 
-- [生態学におけるordinationとしてのMDS - 統計で迷子になる方法](http://d.hatena.ne.jp/fronori/20140517/1400517061)
-微生物生態学でPCAではなくPCoAを使うのはなぜ？ 
+- 日本語
+ - vegan
+   - 2012-12-05 [random dispersal: Rいろは・第二部：R基本操作編](http://nhkuma.blogspot.jp/2012/12/rr.html)
+   - 2014-05-17 [MDSとその愉快な仲間たち - 統計で迷子になる方法](http://d.hatena.ne.jp/fronori/20140517) 微生物生態学でPCAではなくPCoAを使うのはなぜ？ 
+   - 2010-01-12 [嫌われ者？ Rで多様度](http://sususuuu.blog83.fc2.com/blog-entry-127.html)
+   - 2007-08-22 [多様度指数と類似度｜ぎょうむ日誌](http://ameblo.jp/green-mercenary/entry-10044262910.html)
+ - 2011年02月 [環境科学と生態学のためのR統計 | 共立出版](http://www.kyoritsu-pub.co.jp/bookdetail/9784320057128)
+ - 大垣俊一 [Argonauta 15: 10-22 (2008) 多様度と類似度、分類学的新指標](http://www.mus-nh.city.osaka.jp/iso/argo/nl15/nl15-10-22.pdf)
+ - 大垣俊一 [Argonauta 1: 15-26 (1999) 群集組成の多変量解析](http://www.mus-nh.city.osaka.jp/iso/argo/nl01/nl01-15-26.html)
+ - [夏原由博 (1996) チョウ群集調査データの解析法](http://www.info.human.nagoya-u.ac.jp/~natu/epub/cho.PDF )
+ - 2008.02.18 [生物多様性について１：シャノン＝ウィーバー指標（Shannon-Wiener) | 地中海ブログ](http://blog.archiphoto.info/?eid=569433 )
 
 ----------
