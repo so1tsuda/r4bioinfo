@@ -6,8 +6,16 @@ Last Update: 2016-07-27
 ----------
 
 # vegan
-群集生態学パッケージ
 
+群集生態学パッケージ `vegan` のインストール、呼び出し、デモ:  
+
+    install.packages('vegan')
+
+    library(vegan)
+
+    example(vegan)
+
+## References
 - 2016-06-15 [CRAN - Package vegan](https://cran.r-project.org/web/packages/vegan/index.html)
  - Reference manual: [vegan.pdf](https://cran.r-project.org/web/packages/vegan/vegan.pdf)
  - Vignettes:
@@ -17,14 +25,6 @@ Last Update: 2016-07-27
    - [Partition of Variation](https://cran.r-project.org/web/packages/vegan/vignettes/partitioning.pdf)
 - 2015-06-10 [Multivariate Analysis of Ecological Communities in R: vegan tutorial](http://cc.oulu.fi/~jarioksa/opetus/metodi/vegantutor.pdf)
 - 2013-01-04 <http://vegan.r-forge.r-project.org>
-
-群集生態学パッケージ [`vegan`](https://cran.r-project.org/web/packages/vegan/index.html) のインストール:  
-
-    install.packages('vegan')
-
-パッケージの呼び出し:  
-
-    library(vegan)
 
 ----------
 
