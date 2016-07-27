@@ -15,7 +15,6 @@ Last Update: 2016-07-27
 
     example(vegan)
 
-## References
 - 2016-06-15 [CRAN - Package vegan](https://cran.r-project.org/web/packages/vegan/index.html)
   - Reference manual: [vegan.pdf](https://cran.r-project.org/web/packages/vegan/vegan.pdf)
   - Vignettes:
@@ -29,7 +28,7 @@ Last Update: 2016-07-27
 ----------
 
 # [Similarity indices, ordination, and community analysis tests using the software R](http://ci.nii.ac.jp/naid/110008607838/en)
-生物群集解析のための類似度とその応用 : Rを使った類似度の算出、グラフ化、検定
+土居 秀幸・岡村 寛 (2011) 生物群集解析のための類似度とその応用 : Rを使った類似度の算出、グラフ化、検定
 
 [Rパッケージveganを利用した類似度の計算](http://cse.fra.affrc.go.jp/okamura/program/vegan/)
 
