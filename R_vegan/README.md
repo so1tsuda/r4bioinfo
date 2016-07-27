@@ -116,19 +116,28 @@ Last Update: 2016-07-27
 
 
 	# 類似度指数の検定
+
 	# データをenv1に入力
 	env1 <- matrix(c(0,0.15,0.86,0.05,0.15,0,0.97,0.02,0.86,0.97,0,0.94,0.05,0.02,0.94,0),nrow=4,ncol=4) 
 	env2 <- env1[c(3,2,4,1),c(3,2,4,1)]
+
 	# Mantel test
-	env1 <- as.dist(env1) env2 <- as.dist(env2)
+	env1 <- as.dist(env1)
+	env2 <- as.dist(env2)
 	chao1 <- vegdist(testdata,method="chao")
-	cor(as.numeric(chao1),as.numeric(env1)) cor(as.numeric(chao1),as.numeric(env2))
-	mantel(chao1,env1) mantel(chao1,env2)
+	cor(as.numeric(chao1),as.numeric(env1))
+	cor(as.numeric(chao1),as.numeric(env2))
+	mantel(chao1,env1)
+	mantel(chao1,env2)
+
 	# ANOSIM
 	anosim(chao1,c(1,1,2,2))
+
 	# NPMANOVA (PERMANOVA)
-	X1 <- c(1,1,2,2) X2 <- c(1,2,2,3)
-	adonis(testdata~X1,method="chao") adonis(testdata~X1+X2,method="chao")
+	X1 <- c(1,1,2,2)
+	X2 <- c(1,2,2,3)
+	adonis(testdata~X1,method="chao")
+	adonis(testdata~X1+X2,method="chao")
 
 
 ----------
