@@ -1,22 +1,20 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2016-06-21  
+Last Update: 2016-07-27  
 
 ----------
 
 # R for Bioinformatics
 R言語を用いたバイオインフォマティクス
 
-    R_Avril_Coghlan/: Avril Coghlan () Welcome to a Little Book of R for Bioinformatics!
-    R_msa/: an R package for multiple sequence alignment.
-    R_Wim_Krijnen.md: Wim P. Krijnen (2009) Applied Statistics for Bioinformatics using R
+- [R_Avril_Coghlan: Avril Coghlan - Welcome to a Little Book of R for Bioinformatics!](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
+- [R_msa: an R package for multiple sequence alignment.](https://github.com/haruosuz/r4bioinfo/tree/master/R_msa)
+- R_Wim_Krijnen.md: Wim P. Krijnen (2009) Applied Statistics for Bioinformatics using R
 
 ----------
 
-----------
-
-# R packages
+## R packages
 
 [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
 
