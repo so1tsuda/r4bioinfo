@@ -155,5 +155,11 @@ Last Update: 2016-07-27
   - 大垣俊一 [Argonauta 1: 15-26 (1999) 群集組成の多変量解析](http://www.mus-nh.city.osaka.jp/iso/argo/nl01/nl01-15-26.html)
   - [夏原由博 (1996) チョウ群集調査データの解析法](http://www.info.human.nagoya-u.ac.jp/~natu/epub/cho.PDF )
   - 2008.02.18 [生物多様性について１：シャノン＝ウィーバー指標（Shannon-Wiener) | 地中海ブログ](http://blog.archiphoto.info/?eid=569433 )
+  - [論文の紹介： 生物多様性を進化系統学的な尺度で測る (情報：農業と環境 No.83 2007.3)](http://www.niaes.affrc.go.jp/magazine/083/mgzn08304.html)
+
+- https://ja.wikipedia.org/wiki/遺伝的多様性
+- https://ja.wikipedia.org/wiki/バイオアッセイ
+- https://ja.wikipedia.org/wiki/保全生態学
+
 
 ----------
