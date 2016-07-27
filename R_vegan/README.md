@@ -11,10 +11,10 @@ Last Update: 2016-07-27
 - 2016-06-15 [CRAN - Package vegan](https://cran.r-project.org/web/packages/vegan/index.html)
  - Reference manual: [vegan.pdf](https://cran.r-project.org/web/packages/vegan/vegan.pdf)
  - Vignettes:
-  - [Design decisions and implementation](https://cran.r-project.org/web/packages/vegan/vignettes/decision-vegan.pdf)
-  - [Diversity analysis](https://cran.r-project.org/web/packages/vegan/vignettes/diversity-vegan.pdf)
-  - [Introduction to ordination](https://cran.r-project.org/web/packages/vegan/vignettes/intro-vegan.pdf)
-  - [Partition of Variation](https://cran.r-project.org/web/packages/vegan/vignettes/partitioning.pdf)
+   - [Design decisions and implementation](https://cran.r-project.org/web/packages/vegan/vignettes/decision-vegan.pdf)
+   - [Diversity analysis](https://cran.r-project.org/web/packages/vegan/vignettes/diversity-vegan.pdf)
+   - [Introduction to ordination](https://cran.r-project.org/web/packages/vegan/vignettes/intro-vegan.pdf)
+   - [Partition of Variation](https://cran.r-project.org/web/packages/vegan/vignettes/partitioning.pdf)
 - 2015-06-10 [Multivariate Analysis of Ecological Communities in R: vegan tutorial](http://cc.oulu.fi/~jarioksa/opetus/metodi/vegantutor.pdf)
 - 2013-01-04 [vegan](http://vegan.r-forge.r-project.org)
 
