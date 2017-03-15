@@ -140,6 +140,9 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 - [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
 - [棒の手紙](https://ja.wikipedia.org/wiki/チェーンメール#.E6.A3.92.E3.81.AE.E6.89.8B.E7.B4.99)
   - [これが「棒の手紙」だ！](http://homepage3.nifty.com/hirorin/bonotegami.htm)
+- [北村雄一のホームページ](http://www5b.biglobe.ne.jp/~hilihili/index.html)
+ - [系統トップ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop.html)
+  - [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
 
 ----------
 
