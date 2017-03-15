@@ -45,10 +45,8 @@ Last Update: 2016-07-11
 - [Bioconductor - msa](https://bioconductor.org/packages/release/bioc/html/msa.html)
 
 
-あああ
 
-
-| Version | 1.4.2 ||
+| Version | 1.4.2 | あああああ |
 |:---------|:---------|:---------|
 | [PDF](https://bioconductor.org/packages/release/bioc/vignettes/msa/inst/doc/msa.pdf) | [R Script](https://bioconductor.org/packages/release/bioc/vignettes/msa/inst/doc/msa.R) | msa - An R Package for Multiple Sequence Alignment |
 | [PDF](https://bioconductor.org/packages/release/bioc/manuals/msa/man/msa.pdf) |  | Reference Manual |
