@@ -6,14 +6,14 @@ Last Update: 2017-04-01
 ----------
 
 # phytools
-phytools: Phylogenetic Tools for Comparative Biology (and Other Things)
+phytools: Phylogenetic Tools for Comparative Biology (and Other Things)  
 by Liam J. Revell
 
 - [CRAN - Package phytools](https://cran.r-project.org/web/packages/phytools/index.html)
 - https://github.com/liamrevell/phytools
 - blog [Phylogenetic Tools for Comparative Biology](http://blog.phytools.org)
-- 論文 15 December 2011 [phytools: an R package for phylogenetic comparative biology (and other things) - Revell - 2011 - Methods in Ecology and Evolution - Wiley Online Library](http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.00169.x/abstract)  
-- 動画 December 15, 2011 [Introduction to phytools and phangorn: Phylogenetics tools for R - YouTube](https://www.youtube.com/watch?v=_oEvbcmyVDQ) Liam Revell
+- 論文 [Revell (2011) Methods in Ecology and Evolution. "phytools: an R package for phylogenetic comparative biology (and other things)"](http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.00169.x/abstract)  
+- 動画 2011-12-15 [Introduction to phytools and phangorn: Phylogenetics tools for R - YouTube](https://www.youtube.com/watch?v=_oEvbcmyVDQ)
 
 ----------
 
@@ -157,21 +157,28 @@ Rの"phylo"オブジェクト
 	rr.interactive<-reroot(tree,interactive=TRUE)
 	plotTree(rr.interactive)
 
-
 ### Comparing trees
 
-### 
+	## check if tree & rt.all are equal
+	all.equal(tree,rt.all)
 
+	## check if tree & rr.67 are equal
+	all.equal(tree,rr.67)
 
+	## check if unrooted tree & rr.67 are equal
+	all.equal(unroot(tree),unroot(rr.67)) ## this is a bug
 
+### Multiple trees
 
+	anolis.trees<-c(anolis.tree,anolis.noPR,pr.clade,pr.tree)
+	print(anolis.trees,details=TRUE)
 
-### 
-
-----------
-
-## 
-
+	## round the edge lengths of the tree to 1 digits
+	anolis.trees<-roundBranches(anolis.trees,digits=1)
+	## write to file
+	write.tree(anolis.trees,file="example.trees")
+	## this is what it looks like:
+	cat(readLines("example.trees"),sep="\n")
 
 ----------
 
