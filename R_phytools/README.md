@@ -7,11 +7,11 @@ Last Update: 2017-04-01
 
 # phytools
 phytools: Phylogenetic Tools for Comparative Biology (and Other Things)  
-by Liam J. Revell
+by [Liam J. Revell](https://github.com/liamrevell)
 
 - [CRAN - Package phytools](https://cran.r-project.org/web/packages/phytools/index.html)
 - https://github.com/liamrevell/phytools
-- blog [Phylogenetic Tools for Comparative Biology](http://blog.phytools.org)
+- ブログ [blog](http://blog.phytools.org)
 - 論文 [Revell (2011) Methods in Ecology and Evolution. "phytools: an R package for phylogenetic comparative biology (and other things)"](http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.00169.x/abstract)  
 - 動画 2011-12-15 [Introduction to phytools and phangorn: Phylogenetics tools for R - YouTube](https://www.youtube.com/watch?v=_oEvbcmyVDQ)
 
@@ -158,6 +158,8 @@ Rの"phylo"オブジェクト
 	plotTree(rr.interactive)
 
 ### Comparing trees
+系統樹の比較  
+ノードを回転させても系統樹は等しい。系統樹の根の位置を変えた(re-rooted)系統樹は等しくないが、無根化される(unrooted)と等しい。
 
 	## check if tree & rt.all are equal
 	all.equal(tree,rt.all)
@@ -169,6 +171,7 @@ Rの"phylo"オブジェクト
 	all.equal(unroot(tree),unroot(rr.67)) ## this is a bug
 
 ### Multiple trees
+複数の系統樹をクラス`"multiPhylo"`のオブジェクトとして格納する。これは単にクラス`"phylo"`のオブジェクトのリストである。
 
 	anolis.trees<-c(anolis.tree,anolis.noPR,pr.clade,pr.tree)
 	print(anolis.trees,details=TRUE)
@@ -179,6 +182,9 @@ Rの"phylo"オブジェクト
 	write.tree(anolis.trees,file="example.trees")
 	## this is what it looks like:
 	cat(readLines("example.trees"),sep="\n")
+
+https://cran.r-project.org/web/views/Phylogenetics.html
+CRAN Task View: Phylogenetics, Especially Comparative Methods
 
 ----------
 
