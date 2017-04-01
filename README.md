@@ -1,15 +1,17 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2016-07-27  
+Last Update: 2017-04-01
 
 ----------
 
 # R for Bioinformatics
 R言語を用いたバイオインフォマティクス
 
-- [R_Avril_Coghlan: Avril Coghlan - Welcome to a Little Book of R for Bioinformatics!](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
-- [R_msa: an R package for multiple sequence alignment.](https://github.com/haruosuz/r4bioinfo/tree/master/R_msa)
+- [Avril Coghlan - Welcome to a Little Book of R for Bioinformatics!](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
+- [msa: an R package for multiple sequence alignment.](https://github.com/haruosuz/r4bioinfo/tree/master/R_msa)
+- [phytools: Phylogenetic Tools for Comparative Biology (and Other Things)](https://github.com/haruosuz/r4bioinfo/tree/master/R_phytools)
+- [vegan: Community Ecology Package](https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan)
 - R_Wim_Krijnen.md: Wim P. Krijnen (2009) Applied Statistics for Bioinformatics using R
 
 ----------
@@ -22,6 +24,11 @@ R言語を用いたバイオインフォマティクス
 
     install.packages('seqinr')
 
+進化系統解析パッケージ [`ape`](https://cran.r-project.org/web/packages/ape/index.html), [`phangorn`](https://cran.r-project.org/web/packages/phangorn/index.html) をインストールする:  
+
+    install.packages('ape')
+    install.packages('phangorn')
+
 ネットワーク分析パッケージ [igraph](http://igraph.org) のインストール:  
 
     install.packages('igraph')
@@ -32,26 +39,36 @@ R言語を用いたバイオインフォマティクス
 
     install.packages('vegan')
 
-Bioconductor パッケージ [`Biostrings`](http://bioconductor.org/packages/release/bioc/html/Biostrings.html) のインストール:  
+Bioconductor パッケージ [`Biostrings`](http://bioconductor.org/packages/release/bioc/html/Biostrings.html), [`msa`](https://bioconductor.org/packages/release/bioc/html/msa.html)のインストール:  
 
     source('https://bioconductor.org/biocLite.R')
     biocLite('Biostrings')
+    biocLite('msa')
 
 パッケージの呼び出し:  
 
     library(seqinr)
+    library(ape)
+    library(phangorn)
     library(igraph)
     library(vegan)
     library(Biostrings)
+    library(msa)
 
 Rのバージョンとパッケージを確認:  
 
     sessionInfo()
 
     # R version 3.3.0 (2016-05-03)
-
     # other attached packages:
-    Biostrings_2.40.1    vegan_2.3-5    igraph_1.0.1    seqinr_3.1-3    ade4_1.7-4      
+    seqinr_3.1-3
+    ade4_1.7-4
+    ape_3.5
+    phangorn_2.0.4
+    igraph_1.0.1
+    vegan_2.3-5
+    msa_1.4.2
+    Biostrings_2.40.1
 
 ----------
 
