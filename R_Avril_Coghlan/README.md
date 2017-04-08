@@ -3,9 +3,61 @@
 By Avril Coghlan  
 
 ## Chapters in this Book
+- How to install R and a Brief Introduction to R
 - [DNA Sequence Statistics (1)](#dna-sequence-statistics-1)
 - [DNA Sequence Statistics (2)](#dna-sequence-statistics-2)
 - [Pairwise Sequence Alignment](#pairwise-sequence-alignment)
+
+----------
+
+## How to install R and a Brief Introduction to R
+
+### Running R
+[R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
+
+![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
+
+Rを終了:  
+
+	quit()
+
+### A brief introduction to R
+
+	2*3
+	10-3
+	x <- 2*3
+	x
+
+	myvector <- c(8, 6, 9, 10, 5)
+	myvector
+	myvector[4]
+
+	mylist <- list(name="Fred", wife="Mary", myvector)
+	mylist
+	mylist[[2]]
+	mylist[[3]]
+	mylist$wife
+	attributes(mylist)
+
+	mynames <- c("Mary", "John", "Ann", "Sinead", "Joe", "Mary", "Jim", "John", "Simon")
+	table(mynames)
+	mytable <- table(mynames)
+	mytable[[4]]
+	mytable[["John"]]
+	log10(100)
+	help("log10")
+	help.search("deviation")
+	RSiteSearch("deviation")
+
+	mean(myvector)
+
+	myfunction <- function(x) { return(20 + (x*x)) }
+	myfunction(10)
+	myfunction(25)
+
+	q()
+
+### Links and Further Reading
 
 ----------
 
@@ -408,11 +460,6 @@ UniProt配列のアライメント
 
     writePairwiseAlignments(globalAlignLepraeUlcerans)
     writePairwiseAlignments(globalAlignLepraeUlcerans, file="~/Desktop/aln.txt")
-
-[ウェブサイト](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)から
-`printPairwiseAlignment`関数をコピペして、以下の通り実行:  
-
-	printPairwiseAlignment(globalAlignLepraeUlcerans, 60)
 
 ### Pairwise local alignment of protein sequences using the Smith-Waterman algorithm
 2つのタンパク質配列間のローカル・アライメント
