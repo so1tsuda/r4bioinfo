@@ -3,7 +3,8 @@
 By Avril Coghlan  
 
 ## Chapters in this Book
-- How to install R and a Brief Introduction to R
+目次
+- [How to install R and a Brief Introduction to R](#how-to-install-r-and-a-brief-introduction-to-r)
 - [DNA Sequence Statistics (1)](#dna-sequence-statistics-1)
 - [DNA Sequence Statistics (2)](#dna-sequence-statistics-2)
 - [Pairwise Sequence Alignment](#pairwise-sequence-alignment)
@@ -11,6 +12,7 @@ By Avril Coghlan
 ----------
 
 ## How to install R and a Brief Introduction to R
+R言語入門
 
 ### Running R
 [R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
@@ -23,37 +25,74 @@ Rを終了:
 
 ### A brief introduction to R
 
+[簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)
+
 	2*3
 	10-3
+
+変数の代入
+
 	x <- 2*3
 	x
 
+[ベクトル](http://stat.biopapyrus.net/vector/vector.html)の要素は全て同じ型（例えば、数値か文字列）でなければならない。
+
 	myvector <- c(8, 6, 9, 10, 5)
 	myvector
+
+[ベクトル要素へのアクセス](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)  
+インデックス（添字）  
+
 	myvector[4]
+
+[リスト](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)で異なる型のデータをまとめられる。
 
 	mylist <- list(name="Fred", wife="Mary", myvector)
 	mylist
+
+`[[ ]]`はリスト内の要素（ベクトル）を取り出す。
+
 	mylist[[2]]
 	mylist[[3]]
-	mylist$wife
-	attributes(mylist)
 
-	mynames <- c("Mary", "John", "Ann", "Sinead", "Joe", "Mary", "Jim", "John", "Simon")
-	table(mynames)
-	mytable <- table(mynames)
-	mytable[[4]]
-	mytable[["John"]]
+リストの要素に名前が付けられている場合、`$`記号でアクセスする。
+
+	mylist$wife
+
+`table()`関数
+
+    mybases <- c("A", "C", "G", "T", "A")
+    table(mybases)
+    mytable <- table(mybases)
+    mytable
+    mytable[[1]]
+    mytable[["A"]]
+
+数学関数（例 `sqrt(), round(), log()`）
+
 	log10(100)
+
+[ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
+
 	help("log10")
+
+標準偏差 standard deviation を計算する関数を探す
+
 	help.search("deviation")
 	RSiteSearch("deviation")
 
+ベクトルの値の平均
+
 	mean(myvector)
+
+[関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
+[関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)  
 
 	myfunction <- function(x) { return(20 + (x*x)) }
 	myfunction(10)
 	myfunction(25)
+
+終了
 
 	q()
 
@@ -64,14 +103,6 @@ Rを終了:
 ## [DNA Sequence Statistics (1)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter1.html)
 
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
-
-細菌のGC含量とゲノムサイズ
-
-![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Inferring_horizontal_gene_transfer_average_GC_content.svg/400px-Inferring_horizontal_gene_transfer_average_GC_content.svg.png)
-
-[GC含量や系統樹に基づく水平遺伝子伝播 Horizontal Gene Transfer (HGT) の予測](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
-
-![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/632px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png)
 
 ### Using R for Bioinformatics
 ### R packages for bioinformatics: Bioconductor and SeqinR
@@ -149,8 +180,6 @@ DNA配列の塩基組成
 
 ![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Inferring_horizontal_gene_transfer_average_GC_content.svg/400px-Inferring_horizontal_gene_transfer_average_GC_content.svg.png)
 
-GC含量と他の因子（ゲノムサイズ、環境、酸素要求性、窒素利用能、温度）の相関 ([Hildebrand F et al., 2010](http://www.ncbi.nlm.nih.gov/pubmed/20838593))
-
 ### DNA words
 連続塩基
 
@@ -189,11 +218,7 @@ DEN-1デング熱ウイルスのゲノム配列を取得する。
 	# GC content of the sequence
 	GC(dengueseq)
 
-GC含量の局所変動は、突然変異バイアスや[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)を示唆する。
-
-[Inferring Horizontal Gene Transfer (HGT)](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
-
-![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Inferring_horizontal_gene_transfer_conceptual_overview.svg/632px-Inferring_horizontal_gene_transfer_conceptual_overview.svg.png)
+GC含量の局所変動は、変異バイアスや[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)を示唆
 
 non-overlapping windows / overlapping windows
 
@@ -252,18 +277,6 @@ GC含量の移動プロット
 
     # Create tests
     x <- s2c("atgc"); rho(x, wordsize = 2)
-
-[イネの遺伝子の発現に係わるCpGアイランド様ゲノム領域](http://www.naro.affrc.go.jp/project/results/laboratory/nics/2005/nics05-10.html)
-
-![http://www.naro.affrc.go.jp/project/results/laboratory/nics/2005/nics05-10.html](http://www.naro.affrc.go.jp/project/results/nic05010-z1.gif)
-
-[CpG アイランド](https://ja.wikipedia.org/wiki/CpG_アイランド)([CpG site](https://en.wikipedia.org/wiki/CpG_site))のCpG配列は遺伝子発現中は[メチル化](https://ja.wikipedia.org/wiki/メチル化)されていない。
-
-![https://en.wikipedia.org/wiki/CpG_site](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Cytosine_becomes_thymine.png/400px-Cytosine_becomes_thymine.png)
-
-[微生物群集（メタゲノム配列）の解析](http://bioinfo.ie.niigata-u.ac.jp/?PEMS)
-
-![http://bioinfo.ie.niigata-u.ac.jp/?PEMS](http://bioinfo.ie.niigata-u.ac.jp/?plugin=ref&page=PEMS&src=Fig2.png)
 
 ----------
 
