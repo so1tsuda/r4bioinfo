@@ -84,6 +84,7 @@ Rのバージョンとパッケージを確認:
 
     library("seqinr")  # Loading "seqinr" package
     x <- s2c("atgc")   # Create small data
+    x
     length(x)          # Length of a DNA sequence
     table(x)           # Base composition of a DNA sequence
     GC(x)              # GC Content of DNA
