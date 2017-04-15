@@ -30,16 +30,6 @@ Last Update: 2017-04-15
 	Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
 
 ----------
-## mxnet
-
-インストール
-https://github.com/dmlc/mxnet/tree/master/R-package#installation
-
-	install.packages("drat", repos="https://cran.rstudio.com")
-	drat:::addRepo("dmlc")
-	install.packages("mxnet")
-
-----------
 ## 2017-02-06
 https://www.r-bloggers.com/deep-learning-in-r-2/
 Deep Learning in R | R-bloggers
@@ -148,6 +138,59 @@ TJO (@TJO_datasci) | Twitter
 http://tjo.hatenablog.com/entry/2016/03/29/180000
 Deep Learningライブラリ{mxnet}のR版でConvolutional Neural Networkをサクッと試してみた（追記3件あり） - 六本木で働くデータサイエンティストのブログ
 
+インストール
+https://github.com/dmlc/mxnet/tree/master/R-package#installation
+
+	# Installation
+	install.packages("drat", repos="https://cran.rstudio.com")
+	drat:::addRepo("dmlc")
+	install.packages("mxnet")
+	library(mxnet)
+
+データセットの準備
+
+	# Data preparation
+	train<-read.csv('https://github.com/ozt-ca/tjo.hatenablog.samples/raw/master/r_samples/public_lib/jp/mnist_reproduced/short_prac_train.csv')
+	test<-read.csv('https://github.com/ozt-ca/tjo.hatenablog.samples/raw/master/r_samples/public_lib/jp/mnist_reproduced/short_prac_test.csv')
+	train<-data.matrix(train)
+	test<-data.matrix(test)
+	train.x<-train[,-1]
+	train.y<-train[,1]
+	train.x<-t(train.x/255)
+	test_org<-test
+	test<-test[,-1]
+	test<-t(test/255)
+	table(train.y)
+
+Deep Neural Network (DNN)で試してみる
+
+	# Deep NN
+	data <- mx.symbol.Variable("data")
+	fc1 <- mx.symbol.FullyConnected(data, name="fc1", num_hidden=128)
+	act1 <- mx.symbol.Activation(fc1, name="relu1", act_type="relu")
+	fc2 <- mx.symbol.FullyConnected(act1, name="fc2", num_hidden=64)
+	act2 <- mx.symbol.Activation(fc2, name="relu2", act_type="relu")
+	fc3 <- mx.symbol.FullyConnected(act2, name="fc3", num_hidden=10)
+	softmax <- mx.symbol.SoftmaxOutput(fc3, name="sm")
+	devices <- mx.cpu()
+	mx.set.seed(0)
+	model <- mx.model.FeedForward.create(softmax, X=train.x, y=train.y,
+	 ctx=devices, num.round=10, array.batch.size=100,
+	 learning.rate=0.07, momentum=0.9,  eval.metric=mx.metric.accuracy,
+	 initializer=mx.init.uniform(0.07),
+	 epoch.end.callback=mx.callback.log.train.metric(100))
+
+	preds <- predict(model, test, ctx=devices)
+	dim(preds)
+	pred.label <- max.col(t(preds)) - 1
+	table(pred.label)
+	head(pred.label)
+	table(test_org[,1],pred.label)
+	sum(diag(table(test_org[,1],pred.label)))/1000
+
+Convolutional Neural Network (CNN)で試してみる
+
+
 
 ## 2014-12-06
 https://www.slideshare.net/takashijozaki1/japan-r2014-tjo
@@ -157,10 +200,16 @@ Deep Learningと他の分類器をRで比べてみよう in Japan.R 2014
 http://tjo.hatenablog.com/entry/2014/10/23/230847
 H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)：まずは決定境界を描く - 六本木で働くデータサイエンティストのブログ
 
+    system("curl -O https://raw.githubusercontent.com/ozt-ca/tjo.hatenablog.samples/master/r_samples/public_lib/jp/conflict_sample.txt")
+
     library(h2o)
+
+いつもの多変量データで手っ取り早くh2o.deeplearningを試してみる
+
 	localH2O <- h2o.init(ip = "localhost", port = 54321, startH2O = TRUE, nthreads=-1)
+
     # http://labo.utsubo.tokyo/2016/07/28/rのh2oでエラー対応法/
-    cfData<-h2o.importFile(path="https://raw.githubusercontent.com/ozt-ca/tjo.hatenablog.samples/master/r_samples/public_lib/jp/conflict_sample.txt")
+    cfData<-h2o.importFile(path="conflict_sample.txt")
     head(cfData)
 
 	res.err.dl<-rep(0,100)
@@ -179,6 +228,25 @@ H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)�
 	 }
 
 	sum(res.err.dl)
+
+なお、svm{e1071}で同じことをやった結果がこちら。
+
+    install.packages("e1071")
+
+	library(e1071)
+	d<-read.table("conflict_sample.txt", header=TRUE, quote="\"")
+	res.err.svm<-rep(0,100)
+	numlist<-sample(3000,100,replace=F)
+	for(i in 1:100){
+	 cf.train <- d[-numlist[i],]
+	 cf.test <- d[numlist[i],]
+	 res.svm <- svm(cv~.,cf.train)
+	 pred.svm <- predict(res.svm,newdata=cf.test[,-8])
+	 res.err.svm[i] <- ifelse(pred.svm==cf.test[,8], 0, 1)
+	}
+	sum(res.err.svm)
+
+途中
 
 ----------
 ## Acknowledgements
@@ -254,8 +322,6 @@ https://www.ncbi.nlm.nih.gov/pubmed/27115650
 Methods Mol Biol. 2016;1415:509-31. doi: 10.1007/978-1-4939-3572-7_26.
 Big Data, Evolution, and Metagenomes: Predicting Disease from Gut Microbiota Codon Usage Profiles.
 Fabijanić M1, Vlahoviček K2.
-
-
 
 
 ----------
