@@ -67,8 +67,6 @@ http://keiku.hatenablog.jp/entry/2016/03/31/172456
 Deep Learningライブラリ「MXNet」のR版をKaggle Otto Challengeで実践してみた - Think more, try less
 
 
-
-
 ----------
 ## 2015-10-14
 https://gist.github.com/HirofumiYashima/99e00a36c79910aad616
@@ -89,7 +87,6 @@ Rで一行でディープラーニング - 盆栽日記
 
 	Error in h2o.init(ip = "localhost", port = 54321, startH2O = TRUE) : 
 	  H2O failed to start, stopping execution.
-
 
 ----------
 ## TJO
@@ -133,6 +130,12 @@ Error in h2o.init(ip = "localhost", port = 54321, startH2O = TRUE, nthreads = -1
 ----------
 ## References
 
+![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4965871/bin/MSB-12-878-g001.jpg)
+
+https://www.oreilly.com/ideas/deep-learning-meets-genome-biology
+Deep learning meets genome biology - O'Reilly Media
+By David Beyer April 27, 2016
+
 
 Review
 https://www.ncbi.nlm.nih.gov/pubmed/27474269
@@ -159,5 +162,12 @@ http://wiki.lifesciencedb.jp/mw/BH14.14/MachineLearning
 https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26330328/
 KAKEN — ディープラーニングを用いた大規模配列データからの階層的特徴抽出
 研究期間 (年度)	2014-04-01 – 2017-03-31
+
+http://miyake.bpe.es.osaka-u.ac.jp/ban_da_ji_chu_gong_san_zhai_yan_jiu_shi/yan_jiu_nei_ronggenomuinfomatikkusu.html
+深層学習（ディープラーニング）
+ゲノムインフォマティックスへの応用 　
+
+http://www.johokiko.co.jp/seminar_chemical/ai_deeplearning.php
+機械学習・ディープラーニング・人工知能：関連セミナー、書籍
 
 ----------
