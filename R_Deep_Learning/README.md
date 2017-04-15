@@ -49,8 +49,12 @@ Deep Learning in R | R-bloggers
 http://qiita.com/mwmsnn/items/6ca48a3b8292211c1acd
 MXNetR で Autoencoder を作ってみる - Qiita
 
+パッケージの読み込みとシード固定
+
 	library(mxnet)
 	mx.set.seed(0)
+
+データセットを読み込む
 
     system("curl -O https://raw.githubusercontent.com/sbussmann/kaggle-mnist/master/Data/train.csv")
 
@@ -71,18 +75,19 @@ MXNetR で Autoencoder を作ってみる - Qiita
 	test.x <- t(test[, -1]/ 255)
 	test.y <- test[,  1]
 
-途中
+Autoencoder を作る
+エンコードする
+各層の学習を行う
+10クラス分類器を定義する
+Fine-tuning を行う
+予測結果を確認する
+
+Done.
 
 ----------
 ## 2016-08-14
 http://www.r-tutor.com/deep-learning/introduction
 Deep Learning in R | R Tutorial
-
-	library(rpud)
-
-	> install.packages("rpud")
-	Warning message:
-	package ‘rpud’ is not available (for R version 3.3.3) 
 
 
 
@@ -101,20 +106,8 @@ Installing GPU Packages | R Tutorial
 	R CMD INSTALL rpudplus_0.6.1.tgz
 	R CMD INSTALL rpud_0.6.1_src.tgz
 
-	# Package Dependency
-	install.packages(c("coda", "SparseM"))
-	install.packages("ggplot2")
-
-
-
-> 	library(rpud)
-Error in dyn.load(file, DLLpath = DLLpath, ...) : 
-  unable to load shared object '/Library/Frameworks/R.framework/Versions/3.3/Resources/library/rpud/libs/rpud.so':
-  dlopen(/Library/Frameworks/R.framework/Versions/3.3/Resources/library/rpud/libs/rpud.so, 6): Library not loaded: /usr/local/cuda/lib/libcuda.dylib
-  Referenced from: /Library/Frameworks/R.framework/Versions/3.3/Resources/library/rpud/libs/rpud.so
-  Reason: image not found
-Error: package or namespace load failed for ‘rpud’
-
+configure: error: "cannot find nvcc; check CUDA install"
+ERROR: configuration failed for package ‘rpud’
 
 ----------
 ## 2015-10-14
