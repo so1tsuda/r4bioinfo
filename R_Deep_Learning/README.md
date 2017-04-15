@@ -134,8 +134,6 @@ https://www.oreilly.com/ideas/deep-learning-meets-genome-biology
 Deep learning meets genome biology - O'Reilly Media
 By David Beyer April 27, 2016
 
-![](https://d3tdunqjn7n0wj.cloudfront.net/720x480/a_genome_alignment_of_eight_yersinia_isolates-a416682ed0dbec613227a26953c6cccb.jpg)
-
 Review
 https://www.ncbi.nlm.nih.gov/pubmed/27474269
 Mol Syst Biol. 2016 Jul 29;12(7):878. doi: 10.15252/msb.20156651.
