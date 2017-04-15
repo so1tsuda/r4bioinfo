@@ -16,6 +16,19 @@ Last Update: 2017-04-15
 - [](#)
 
 ----------
+## Execution environment
+
+	> sessionInfo()
+	R version 3.3.3 (2017-03-06)
+	Platform: x86_64-apple-darwin13.4.0 (64-bit)
+	Running under: OS X Mavericks 10.9.5
+
+	$java -version
+	java version "1.8.0_121"
+	Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+	Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
+
+----------
 ## mxnet
 
 インストール
@@ -65,6 +78,39 @@ Deep Learning in R | R Tutorial
 	Warning message:
 	package ‘rpud’ is not available (for R version 3.3.3) 
 
+
+
+http://www.r-tutor.com/content/download
+Download | R Tutorial
+
+	curl -O http://www.r-tutor.com/sites/default/files/rpud/rpux_0.6.1_mac.tgz
+
+http://www.r-tutor.com/gpu-computing/rpud-installation
+Installing GPU Packages | R Tutorial
+
+	# Mac OS X
+	tar xf rpux_0.6.1_mac.tgz 
+	cd rpux_0.6.1_mac
+	R CMD INSTALL rpud_0.6.1.tgz 
+	R CMD INSTALL rpudplus_0.6.1.tgz
+	R CMD INSTALL rpud_0.6.1_src.tgz
+
+	# Package Dependency
+	install.packages(c("coda", "SparseM"))
+	install.packages("ggplot2")
+
+
+
+> 	library(rpud)
+Error in dyn.load(file, DLLpath = DLLpath, ...) : 
+  unable to load shared object '/Library/Frameworks/R.framework/Versions/3.3/Resources/library/rpud/libs/rpud.so':
+  dlopen(/Library/Frameworks/R.framework/Versions/3.3/Resources/library/rpud/libs/rpud.so, 6): Library not loaded: /usr/local/cuda/lib/libcuda.dylib
+  Referenced from: /Library/Frameworks/R.framework/Versions/3.3/Resources/library/rpud/libs/rpud.so
+  Reason: image not found
+Error: package or namespace load failed for ‘rpud’
+
+
+
 ----------
 ## 2016-03-31
 http://keiku.hatenablog.jp/entry/2016/03/31/172456
@@ -81,6 +127,15 @@ R言語 で Deep Learning と 従来型 機械学習 7 手法 分類問題 エ�
 	library(h2o)
 
 ----------
+## 2015-07-22
+http://shinya131-note.hatenablog.jp/entry/2015/07/22/220657
+RでH2O failed to start, stopping execution.が発生した - 機略戦記
+
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+jdk-8u121-macosx-x64.dmg
+インストールして問題解決
+
+----------
 ## 2014-05-03
 http://d.hatena.ne.jp/dichika/20140503/p1
 Rで一行でディープラーニング - 盆栽日記
@@ -89,8 +144,8 @@ Rで一行でディープラーニング - 盆栽日記
 
 	> localH2O = h2o.init(ip = "localhost", port = 54321, startH2O = TRUE)
 
-	Error in h2o.init(ip = "localhost", port = 54321, startH2O = TRUE) : 
-	  H2O failed to start, stopping execution.
+
+
 
 ----------
 ## TJO
@@ -110,23 +165,31 @@ Deep Learningと他の分類器をRで比べてみよう in Japan.R 2014
 http://tjo.hatenablog.com/entry/2014/10/23/230847
 H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)：まずは決定境界を描く - 六本木で働くデータサイエンティストのブログ
 
-    library("h2o")
+    library(h2o)
+	localH2O <- h2o.init(ip = "localhost", port = 54321, startH2O = TRUE, nthreads=-1)
+    # http://labo.utsubo.tokyo/2016/07/28/rのh2oでエラー対応法/
+    cfData<-h2o.importFile(path="https://raw.githubusercontent.com/ozt-ca/tjo.hatenablog.samples/master/r_samples/public_lib/jp/conflict_sample.txt")
+    head(cfData)
 
-まず、h2oをJava VM上で起動させます。当たり前ですが、Java VMが入ってないと動かないので入れてない人は事前にインストールしておきましょう*4。
+	res.err.dl<-rep(0,100)
+	numlist<-sample(3000,100,replace=F)
+	for(i in 1:100){
+	 cf.train <- cfData[-numlist[i],]
+	 cf.test <- cfData[numlist[i],]
+	 #res.dl <- h2o.deeplearning(x = 1:7, y = 8, data = cf.train, activation = "Tanh",hidden=rep(20,2))
+    res.dl <- h2o.deeplearning(x = 1:7, y = 8, training_frame = cf.train, activation = "Tanh",hidden=rep(20,2))
+	 pred.dl <- h2o.predict(object=res.dl,newdata=cf.test[,-8])
+	 
+	 pred.dl.df <- as.data.frame(pred.dl)
+	 test.dl.df <- as.data.frame(cf.test)
+	 
+	 res.err.dl[i] <- ifelse(as.character(pred.dl.df[1,1])==as.character(test.dl.df[1,8]),0,1)
+	 }
 
-	> 	localH2O <- h2o.init(ip = "localhost", port = 54321, startH2O = TRUE, nthreads=-1)
-
-Error in h2o.init(ip = "localhost", port = 54321, startH2O = TRUE, nthreads = -1) : 
-  H2O failed to start, stopping execution.
+sum(res.err.dl)
 
 
-----------
-## Execution environment
 
-	> sessionInfo()
-	R version 3.3.3 (2017-03-06)
-	Platform: x86_64-apple-darwin13.4.0 (64-bit)
-	Running under: OS X Mavericks 10.9.5
 
 ----------
 ## Acknowledgements
@@ -137,6 +200,11 @@ Error in h2o.init(ip = "localhost", port = 54321, startH2O = TRUE, nthreads = -1
 https://www.oreilly.com/ideas/deep-learning-meets-genome-biology
 Deep learning meets genome biology - O'Reilly Media
 By David Beyer April 27, 2016
+
+Written Apr 10, 2016
+https://www.quora.com/What-are-the-best-packages-for-deep-learning-in-R
+What are the best packages for deep learning in R? - Quora
+
 
 Review
 https://www.ncbi.nlm.nih.gov/pubmed/27474269
@@ -197,5 +265,8 @@ https://www.ncbi.nlm.nih.gov/pubmed/27115650
 Methods Mol Biol. 2016;1415:509-31. doi: 10.1007/978-1-4939-3572-7_26.
 Big Data, Evolution, and Metagenomes: Predicting Disease from Gut Microbiota Codon Usage Profiles.
 Fabijanić M1, Vlahoviček K2.
+
+
+
 
 ----------
