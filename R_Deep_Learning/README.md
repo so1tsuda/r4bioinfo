@@ -130,18 +130,26 @@ Error in h2o.init(ip = "localhost", port = 54321, startH2O = TRUE, nthreads = -1
 ----------
 ## References
 
-![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4965871/bin/MSB-12-878-g001.jpg)
-
 https://www.oreilly.com/ideas/deep-learning-meets-genome-biology
 Deep learning meets genome biology - O'Reilly Media
 By David Beyer April 27, 2016
 
+![](https://d3tdunqjn7n0wj.cloudfront.net/720x480/a_genome_alignment_of_eight_yersinia_isolates-a416682ed0dbec613227a26953c6cccb.jpg)
 
 Review
 https://www.ncbi.nlm.nih.gov/pubmed/27474269
 Mol Syst Biol. 2016 Jul 29;12(7):878. doi: 10.15252/msb.20156651.
 Deep learning for computational biology.
 Angermueller C1, Pärnamaa T2, Parts L3, Stegle O4.
+
+![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4965871/bin/MSB-12-878-g001.jpg)
+
+https://www.ncbi.nlm.nih.gov/pubmed/27473064
+Brief Bioinform. 2016 Jul 29. pii: bbw068. [Epub ahead of print]
+Deep learning in bioinformatics.
+Min S, Lee B, Yoon S.
+
+![](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bib/PAP/10.1093_bib_bbw068/2/m_bbw068f2p.jpeg?Expires=1492322095&Signature=LOpu6w596BlzZDCGwFWgdvjrxhuxHH85riIE89loM93Yu2cQY5NRtJlOlbE-7Kckm5uEm8U7GBWNHOnrDaR4PpfjWfEuEU1pXJ~7HreLn1p6kfJOPD1QFV8TmrtWuBM0Or88Fo8r7CPtZxNBJcJMHURozGWPhb-anDAvNgPP7TATnkNQ8LPeDxWeyqWbEaj9xTHkIOZd4YM2nONdyAhhtglrbcp4BdeRcAan2uxj9A9MOmRj~okxDwGeBcxwXKj9J0SLmQUmtds46D-HQpStpB7JEqChBKj0zpx7jDLNydXfa4XeUk2Ua0a5Dz3166~s54hr6tuOfDchNHtCvw7f6Q__&Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q)
 
 https://www.ncbi.nlm.nih.gov/pubmed/27018908
 PLoS Comput Biol. 2016 Mar 28;12(3):e1004845. doi: 10.1371/journal.pcbi.1004845. eCollection 2016.
