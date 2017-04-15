@@ -13,8 +13,9 @@ Last Update: 2017-04-15
 - [2017-02-06](#2017-02-06) Deep Learning in R | R-bloggers
 - [2017-01-03](#2017-01-03) MXNetR で Autoencoder を作ってみる - Qiita
 - [2016-08-14](#2016-08-14) Deep Learning in R | R Tutorial
-- [2016-03-29](#2016-03-29) Deep Learningライブラリ{mxnet}のR版でConvolutional Neural Networkをサクッと試してみた（追記3件あり）
+- [2016-03-29](#2016-03-29) Deep Learningライブラリ{mxnet}のR版でConvolutional Neural Networkをサクッと試してみた
 - [2014-10-23](#2014-10-23) H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)：まずは決定境界を描く
+- [2016-03-31](#2016-03-31) Deep Learningライブラリ「MXNet」のR版をKaggle Otto Challengeで実践してみた
 - [](#)
 
 ----------
@@ -99,6 +100,16 @@ Installing GPU Packages | R Tutorial
 
 configure: error: "cannot find nvcc; check CUDA install"
 ERROR: configuration failed for package ‘rpud’
+
+----------
+## 2016-03-31
+http://keiku.hatenablog.jp/entry/2016/03/31/172456
+Deep Learningライブラリ「MXNet」のR版をKaggle Otto Challengeで実践してみた - Think more, try less
+
+
+
+
+
 
 ----------
 ## 2015-10-14
@@ -191,7 +202,7 @@ Deep Neural Network (DNN)で試してみる
 
 Convolutional Neural Network (CNN)で試してみる
 
-
+途中
 
 ## 2014-12-06
 https://www.slideshare.net/takashijozaki1/japan-r2014-tjo
@@ -255,6 +266,10 @@ H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)�
 ----------
 ## References
 
+http://blog.revolutionanalytics.com/2017/02/deep-learning-in-r.html
+A comparison of deep learning packages for R
+February 13, 2017
+
 https://www.oreilly.com/ideas/deep-learning-meets-genome-biology
 Deep learning meets genome biology - O'Reilly Media
 By David Beyer April 27, 2016
@@ -283,6 +298,10 @@ https://www.ncbi.nlm.nih.gov/pubmed/27018908
 PLoS Comput Biol. 2016 Mar 28;12(3):e1004845. doi: 10.1371/journal.pcbi.1004845. eCollection 2016.
 Deep Learning for Population Genetic Inference.
 Sheehan S1,2, Song YS2,3,4,5,6.
+
+https://followthedata.wordpress.com/tag/deep-learning/
+List of deep learning implementations in biology
+2015-12-21
 
 https://www.ncbi.nlm.nih.gov/pubmed/26213851
 Nat Biotechnol. 2015 Aug;33(8):831-8. doi: 10.1038/nbt.3300. Epub 2015 Jul 27.
