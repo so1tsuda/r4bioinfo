@@ -13,7 +13,17 @@ Last Update: 2017-04-15
 - [2017-02-06](#2017-02-06) Deep Learning in R | R-bloggers
 - [2017-01-03](#2017-01-03) MXNetR で Autoencoder を作ってみる - Qiita
 - [2016-08-14](#2016-08-14) Deep Learning in R | R Tutorial
+
+- [2014-10-23](#2014-10-23) H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)：まずは決定境界を描く
 - [](#)
+
+
+
+## 
+http://tjo.hatenablog.com/entry/2014/10/23/230847
+
+
+
 
 ----------
 ## Execution environment
@@ -110,7 +120,6 @@ Error in dyn.load(file, DLLpath = DLLpath, ...) :
 Error: package or namespace load failed for ‘rpud’
 
 
-
 ----------
 ## 2016-03-31
 http://keiku.hatenablog.jp/entry/2016/03/31/172456
@@ -176,8 +185,8 @@ H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)�
 	for(i in 1:100){
 	 cf.train <- cfData[-numlist[i],]
 	 cf.test <- cfData[numlist[i],]
-	 #res.dl <- h2o.deeplearning(x = 1:7, y = 8, data = cf.train, activation = "Tanh",hidden=rep(20,2))
-    res.dl <- h2o.deeplearning(x = 1:7, y = 8, training_frame = cf.train, activation = "Tanh",hidden=rep(20,2))
+	 # http://labo.utsubo.tokyo/2016/07/28/rのh2oでエラー対応法/
+     res.dl <- h2o.deeplearning(x = 1:7, y = 8, training_frame = cf.train, activation = "Tanh",hidden=rep(20,2))
 	 pred.dl <- h2o.predict(object=res.dl,newdata=cf.test[,-8])
 	 
 	 pred.dl.df <- as.data.frame(pred.dl)
@@ -186,10 +195,7 @@ H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)�
 	 res.err.dl[i] <- ifelse(as.character(pred.dl.df[1,1])==as.character(test.dl.df[1,8]),0,1)
 	 }
 
-sum(res.err.dl)
-
-
-
+	sum(res.err.dl)
 
 ----------
 ## Acknowledgements
