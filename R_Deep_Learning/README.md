@@ -13,17 +13,8 @@ Last Update: 2017-04-15
 - [2017-02-06](#2017-02-06) Deep Learning in R | R-bloggers
 - [2017-01-03](#2017-01-03) MXNetR で Autoencoder を作ってみる - Qiita
 - [2016-08-14](#2016-08-14) Deep Learning in R | R Tutorial
-
 - [2014-10-23](#2014-10-23) H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)：まずは決定境界を描く
 - [](#)
-
-
-
-## 
-http://tjo.hatenablog.com/entry/2014/10/23/230847
-
-
-
 
 ----------
 ## Execution environment
@@ -61,21 +52,26 @@ MXNetR で Autoencoder を作ってみる - Qiita
 	library(mxnet)
 	mx.set.seed(0)
 
-    system("curl -O https://raw.githubusercontent.com/nybbles/kaggle/master/train.csv")
+    system("curl -O https://raw.githubusercontent.com/sbussmann/kaggle-mnist/master/Data/train.csv")
 
 	# KaggleからダウンロードしたMNISTデータを読み込む
 	rawdata <- read.csv("train.csv", header = T)
 	rawdata <- as.matrix(rawdata)
 
+	# 訓練データとテストデータに分ける
+	# http://qiita.com/7of9/items/da049f2a32d53c2e381e
+	# http://yukiyanai.github.io/jp/classes/rm1/contents/R/uncertainty.html
+	train.index <- sample(x = 1:nrow(rawdata), size = 30000, replace = TRUE)
+	train <- rawdata[train.index, ]
+	test <- rawdata[-train.index, ]
 
-> # 訓練データとテストデータに分ける
-> train.index <- sample(x = 1:nrow(rawdata), size = 30000)
-Error in sample.int(length(x), size, replace, prob) : 
-  cannot take a sample larger than the population when 'replace = FALSE'
-> train <- rawdata[train.index, ]
-Error: object 'train.index' not found
-> test <- rawdata[-train.index, ]
-Error: object 'train.index' not found
+	# データとラベルに分ける。転置しているのは、colmajor形式にするため
+	train.x <- t(train[, -1]/ 255)
+	train.y <- train[,  1]
+	test.x <- t(test[, -1]/ 255)
+	test.y <- test[,  1]
+
+途中
 
 ----------
 ## 2016-08-14
@@ -118,12 +114,6 @@ Error in dyn.load(file, DLLpath = DLLpath, ...) :
   Referenced from: /Library/Frameworks/R.framework/Versions/3.3/Resources/library/rpud/libs/rpud.so
   Reason: image not found
 Error: package or namespace load failed for ‘rpud’
-
-
-----------
-## 2016-03-31
-http://keiku.hatenablog.jp/entry/2016/03/31/172456
-Deep Learningライブラリ「MXNet」のR版をKaggle Otto Challengeで実践してみた - Think more, try less
 
 
 ----------
