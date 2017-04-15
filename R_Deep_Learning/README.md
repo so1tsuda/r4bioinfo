@@ -32,6 +32,12 @@ https://github.com/haruosuz/DS4GD
 DATA SCIENCE FOR GENOME DYNAMICS [DS2] GENOME INFORMATICS
 https://github.com/haruosuz/DS4GD/tree/master/2017
 
+メタゲノムのコドン使用
+https://www.ncbi.nlm.nih.gov/pubmed/27115650
+Methods Mol Biol. 2016;1415:509-31. doi: 10.1007/978-1-4939-3572-7_26.
+Big Data, Evolution, and Metagenomes: Predicting Disease from Gut Microbiota Codon Usage Profiles.
+Fabijanić M1, Vlahoviček K2.
+
 ----------
 ## mxnet
 
