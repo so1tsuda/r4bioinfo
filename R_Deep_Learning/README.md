@@ -27,6 +27,11 @@ Min S, Lee B, Yoon S.
 
 https://github.com/haruosuz/plasmids
 
+https://github.com/haruosuz/DS4GD
+生命動態のデータサイエンス
+DATA SCIENCE FOR GENOME DYNAMICS [DS2] GENOME INFORMATICS
+https://github.com/haruosuz/DS4GD/tree/master/2017
+
 ----------
 ## mxnet
 
