@@ -28,12 +28,13 @@ R言語入門
 	2*3
 	10-3
 
-変数の代入
+[オブジェクトと代入（付値）](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/05.html)
 
 	x <- 2*3
 	x
 
-[ベクトル](http://stat.biopapyrus.net/vector/vector.html)の要素は全て同じ型（例えば、数値か文字列）でなければならない。
+[ベクトル](http://stat.biopapyrus.net/vector/vector.html)  
+ベクトルの作成は関数`c()`を用いる。
 
 	myvector <- c(8, 6, 9, 10, 5)
 	myvector
@@ -43,7 +44,9 @@ R言語入門
 
 	myvector[4]
 
-[リスト](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)で異なる型のデータをまとめられる。
+[リスト](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)  
+リストは異なる型（数値や文字列）のデータをまとめられる。
+リストの作成は関数`list()`を用いる。
 
 	mylist <- list(name="Fred", wife="Mary", myvector)
 	mylist
@@ -69,7 +72,6 @@ R言語入門
 [簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
 関数
 
-    sqrt(100)
 	log10(100)
 
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
