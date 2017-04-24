@@ -11,17 +11,13 @@ By Avril Coghlan
 
 ----------
 
-## How to install R and a Brief Introduction to R
+## [How to install R and a Brief Introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html)
 R言語入門
 
 ### Running R
-[R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
-
 ![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
 
-Rを終了:  
-
-	quit()
+[R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
 
 ### A brief introduction to R
 
@@ -74,7 +70,8 @@ Rを終了:
 
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 
-	help("log10")
+    help(log10)
+    ?log10
 
 標準偏差 standard deviation を計算する関数を探す
 
@@ -92,11 +89,18 @@ Rを終了:
 	myfunction(10)
 	myfunction(25)
 
-終了
+Rを終了:  
 
+    quit()
 	q()
 
 ### Links and Further Reading
+- [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
+- [統合TV | 【R】に関係する講習会資料・番組](http://togotv.dbcls.jp/ja/tags.html?tag=R)
+- [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
+
+- [Rのダウンロードとライブラリのインストール - 日経BigData](http://business.nikkeibp.co.jp/atclbdt/15/recipe/102500016/)
+- [Rの初歩](https://oku.edu.mie-u.ac.jp/~okumura/stat/first.html)
 
 ----------
 
