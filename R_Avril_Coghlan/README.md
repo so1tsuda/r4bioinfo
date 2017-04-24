@@ -15,13 +15,15 @@ By Avril Coghlan
 R言語入門
 
 ### Running R
-![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
 
 [R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
+
+![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
 
 ### A brief introduction to R
 
 [簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)
+演算子
 
 	2*3
 	10-3
@@ -64,14 +66,15 @@ R言語入門
     mytable[[1]]
     mytable[["A"]]
 
-数学関数（例 `sqrt(), round(), log()`）
+[簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)
+関数
 
+    sqrt(100)
 	log10(100)
 
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 
-    help(log10)
-    ?log10
+	help(log10)
 
 標準偏差 standard deviation を計算する関数を探す
 
