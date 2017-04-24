@@ -137,7 +137,7 @@ DEN-1デング熱ウイルスのゲノム配列
 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
 
 ### Retrieving genome sequence data using SeqinR
-パッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)でゲノム配列データを取得
+ゲノム配列データを取得
 
     #choosebank("refseqViruses")
     #query2 <- query("query2","AC=NC_001477")
