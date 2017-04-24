@@ -22,7 +22,7 @@ R言語入門
 
 ### A brief introduction to R
 
-[簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)
+[簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
 演算子
 
 	2*3
@@ -66,7 +66,7 @@ R言語入門
     mytable[[1]]
     mytable[["A"]]
 
-[簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)
+[簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
 関数
 
     sqrt(100)
@@ -101,7 +101,6 @@ Rを終了:
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
 - [統合TV | 【R】に関係する講習会資料・番組](http://togotv.dbcls.jp/ja/tags.html?tag=R)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
-
 - [Rのダウンロードとライブラリのインストール - 日経BigData](http://business.nikkeibp.co.jp/atclbdt/15/recipe/102500016/)
 - [Rの初歩](https://oku.edu.mie-u.ac.jp/~okumura/stat/first.html)
 
@@ -115,9 +114,11 @@ Rを終了:
 ### R packages for bioinformatics: Bioconductor and SeqinR
 [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
 
-SeqinRパッケージのインストールと呼び出し:  
+パッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)のインストール:  
 
-    #install.packages('seqinr')
+    install.packages("seqinr")
+
+[パッケージ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)`seqinr`を呼び出す:  
 
 	library("seqinr")
 
@@ -136,7 +137,7 @@ DEN-1デング熱ウイルスのゲノム配列
 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
 
 ### Retrieving genome sequence data using SeqinR
-SeqinRでゲノム配列データを取得
+パッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)でゲノム配列データを取得
 
     #choosebank("refseqViruses")
     #query2 <- query("query2","AC=NC_001477")
