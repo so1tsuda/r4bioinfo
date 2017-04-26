@@ -130,15 +130,18 @@ Rを終了:
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
 ### The NCBI sequence database
+[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース
 
 ### Retrieving genome sequence data via the NCBI website
+NCBIウェブサイトでゲノム配列データの検索
 
 ![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
 
-DEN-1デング熱ウイルスのゲノム配列
 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
+DEN-1デング熱ウイルスのゲノム配列
 
 ### Retrieving genome sequence data using SeqinR
+Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)を用いて、
 ゲノム配列データを取得
 
     #choosebank("refseqViruses")
@@ -209,9 +212,53 @@ DNA配列の塩基組成
 ## [DNA Sequence Statistics (2)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter2.html)
 
 ### A little more introduction to R
+続・R言語入門
+
+	x <- 100
+	log10(x)
+	myvector <- c(30,16,303,99,11,111)
+	mean(myvector)
+	myvector[3]
+
+[Rで繰り返しを含む数列の生成（rep関数、seq関数）](http://tips-r.blogspot.jp/2014/05/repseq.html)
+
+	seq(1, 100, by = 1)
+	seq(1, 100, by = 2)
+
+[30. 繰り返し文](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)  
+for による繰り返し
+
+	for (i in 1:10) { print (i*i) }
+
+	avector <- c(2, 9, 100, 133)
+	for (i in avector) { print (i*i) }
+
+	for (i in seq(1, 10, by = 2)) { print (i*i) }
+
+[48. とりあえず plot()](R-Source)
+
+	myvector1 <- c(10, 15, 22, 35, 43)
+	myvector2 <- c(3, 3.2, 3.9, 4.1, 5.2)
+	plot(myvector1, myvector2, xlab="myvector1", ylab="myvector2")
+	plot(myvector1, myvector2, xlab="myvector1", ylab="myvector2", type="b")
+
+[関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
+[関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)  
+
+	myfunction <- function(x) { return(20 + (x*x)) }
+	myfunction(10)
+	myfunction(25)
+	myfunction
+
+[コメント](http://yusuke-memo.blogspot.jp/2009/10/r.html)  
+＃の後がコメント行となる。
+
+	x <- 100
+	log10(x) # Finds the log to the base 10 of variable x.
 
 ### Reading sequence data with SeqinR
-SeqinRで配列データを読み込み
+Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)で
+配列データを読み込み
 
 DEN-1デング熱ウイルスのゲノム配列を取得する。
 
@@ -224,11 +271,10 @@ DEN-1デング熱ウイルスのゲノム配列を取得する。
 	dengueseq[452:535]
 
 ### Local variation in GC content
+GC含量の局所変動は、変異バイアスや[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)を示唆
 
 	# GC content of the sequence
 	GC(dengueseq)
-
-GC含量の局所変動は、変異バイアスや[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)を示唆
 
 non-overlapping windows / overlapping windows
 
