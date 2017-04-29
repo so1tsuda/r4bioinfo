@@ -10,6 +10,7 @@ Last Update: 2017-04-15
 
 ## Table of Contents
 - [References](#references)
+- [2017-04](#2017-04) RでDeep Learning
 - [2017-01-03](#2017-01-03) MXNetR で Autoencoder を作ってみる - Qiita
 - [2016-08-14](#2016-08-14) Deep Learning in R | R Tutorial
 - [2016-03-29](#2016-03-29) Deep Learningライブラリ{mxnet}のR版でConvolutional Neural Networkをサクッと試してみた
@@ -38,11 +39,10 @@ O'Reilly Japan - ゼロから作るDeep Learning
 https://github.com/oreilly-japan/deep-learning-from-scratch
 oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』のリポジトリ
 
+	git clone https://github.com/oreilly-japan/deep-learning-from-scratch
+
 ## 2017-04
 http://touch-sp.hatenablog.com/archive/2017/4
-2017-04-01から1ヶ月間の記事一覧 - パソコン関連もろもろ
-
-	git clone https://github.com/oreilly-japan/deep-learning-from-scratch
 
 ## 2017-04-17
 http://touch-sp.hatenablog.com/entry/2017/04/17/115423
