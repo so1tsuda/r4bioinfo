@@ -249,8 +249,7 @@ H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)�
 
 なお、svm{e1071}で同じことをやった結果がこちら。
 
-    install.packages("e1071")
-
+    #install.packages("e1071")
 	library(e1071)
 	d<-read.table("conflict_sample.txt", header=TRUE, quote="\"")
 	res.err.svm<-rep(0,100)
@@ -264,7 +263,25 @@ H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)�
 	}
 	sum(res.err.svm)
 
-途中
+なお、単一の試行でベタっと比べてconfusion matrix書いてみた結果が以下。
+
+	d.dl.pred<-h2o.predict(object=d.dl,newdata=cfData[,-8])
+
+> 	d.dl.pred<-h2o.predict(object=d.dl,newdata=cfData[,-8])
+Error in paste0("Predictions/models/", object@model_id, "/frames/", h2o.getId(newdata)) : 
+  object 'd.dl' not found
+
+    # object=d.dl -> object=res.dl に修正したが、これで正しい？
+    d.dl.pred<-h2o.predict(object=res.dl,newdata=cfData[,-8])
+
+	d.dl.pred.df<-as.data.frame(d.dl.pred)
+	table(d$cv,as.character(d.dl.pred.df[,1]))
+
+	d.svm<-svm(cv~.,d)
+	d.svm.pred<-predict(d.svm,newdata=d[,-8])
+	table(d$cv,d.svm.pred)
+
+途中。一応、動いている
 
 ----------
 
@@ -283,6 +300,15 @@ A Deep Learning Approach to DNA Sequence Classification | SpringerLink
 June 23 - 24, 2016 
 http://dl.acm.org/citation.cfm?id=2983489
 Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
+
+
+https://www.oreilly.co.jp/books/9784873117584/
+O'Reilly Japan - ゼロから作るDeep Learning 
+
+https://github.com/oreilly-japan/deep-learning-from-scratch
+oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』のリポジトリ
+
+
 
 
 2017-03-07
