@@ -32,9 +32,14 @@ Last Update: 2017-04-15
 	Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
 
 ----------
-## 2017-02-06
-https://www.r-bloggers.com/deep-learning-in-r-2/
-Deep Learning in R | R-bloggers
+
+http://touch-sp.hatenablog.com/archive/2017/4
+
+## 2017-04-17
+RでDeep Learning（１）
+
+
+
 
 ----------
 ## 2017-01-03
@@ -108,10 +113,11 @@ Deep Learningライブラリ「MXNet」のR版をKaggle Otto Challengeで実践�
 
 
 
-
-
-
 ----------
+## 2017-04-02
+http://qiita.com/HirofumiYashima/items/91c7d5d42cba7084966f
+【 Deep neural network の 代替モデル を 標榜 】DeepForestモデル の python & R言語 実装コード事例 - Qiita
+
 ## 2015-10-14
 https://gist.github.com/HirofumiYashima/99e00a36c79910aad616
 http://qiita.com/HirofumiYashima/items/68d56cfbab2834c1febb
@@ -261,10 +267,31 @@ H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)�
 途中
 
 ----------
+
+----------
 ## Acknowledgements
 
 ----------
 ## References
+
+Author:	Riccardo Rizzo
+
+First Online: 31 July 2016
+http://link.springer.com/chapter/10.1007/978-3-319-44332-4_10
+A Deep Learning Approach to DNA Sequence Classification | SpringerLink
+
+June 23 - 24, 2016 
+http://dl.acm.org/citation.cfm?id=2983489
+Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
+
+
+2017-03-07
+http://www.rblog.uni-freiburg.de/2017/02/07/deep-learning-in-r/
+Deep Learning in R – R Blog
+
+2017-02-06
+https://www.r-bloggers.com/deep-learning-in-r-2/
+Deep Learning in R | R-bloggers
 
 http://blog.revolutionanalytics.com/2017/02/deep-learning-in-r.html
 A comparison of deep learning packages for R
