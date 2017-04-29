@@ -17,14 +17,6 @@ Last Update: 2017-04-15
 - [2016-03-31](#2016-03-31) Deep Learningライブラリ「MXNet」のR版をKaggle Otto Challengeで実践してみた
 - [](#)
 
-
-https://www.oreilly.co.jp/books/9784873117584/
-O'Reilly Japan - ゼロから作るDeep Learning 
-
-https://github.com/oreilly-japan/deep-learning-from-scratch
-oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』のリポジトリ
-
-
 ----------
 ## Execution environment
 
@@ -39,6 +31,12 @@ oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』
 	Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
 
 ----------
+
+https://www.oreilly.co.jp/books/9784873117584/
+O'Reilly Japan - ゼロから作るDeep Learning 
+
+https://github.com/oreilly-japan/deep-learning-from-scratch
+oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』のリポジトリ
 
 ## 2017-04
 http://touch-sp.hatenablog.com/archive/2017/4
@@ -61,7 +59,6 @@ RでDeep Learning（２）
 pp73 [O'Reilly Japan - ゼロから作るDeep Learning](https://www.oreilly.co.jp/books/9784873117584/)
 
 https://github.com/oreilly-japan/deep-learning-from-scratch/blob/master/dataset/mnist.py
-
 
 ----------
 ## 2017-01-03
@@ -107,7 +104,6 @@ Done.
 ## 2016-08-14
 http://www.r-tutor.com/deep-learning/introduction
 Deep Learning in R | R Tutorial
-
 
 
 http://www.r-tutor.com/content/download
@@ -165,8 +161,6 @@ Rで一行でディープラーニング - 盆栽日記
 	library(h2o)
 
 	> localH2O = h2o.init(ip = "localhost", port = 54321, startH2O = TRUE)
-
-
 
 
 ----------
@@ -303,7 +297,7 @@ Error in paste0("Predictions/models/", object@model_id, "/frames/", h2o.getId(ne
 	d.svm.pred<-predict(d.svm,newdata=d[,-8])
 	table(d$cv,d.svm.pred)
 
-途中。一応、動いている
+途中
 
 ----------
 
