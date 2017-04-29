@@ -10,13 +10,20 @@ Last Update: 2017-04-15
 
 ## Table of Contents
 - [References](#references)
-- [2017-02-06](#2017-02-06) Deep Learning in R | R-bloggers
 - [2017-01-03](#2017-01-03) MXNetR で Autoencoder を作ってみる - Qiita
 - [2016-08-14](#2016-08-14) Deep Learning in R | R Tutorial
 - [2016-03-29](#2016-03-29) Deep Learningライブラリ{mxnet}のR版でConvolutional Neural Networkをサクッと試してみた
 - [2014-10-23](#2014-10-23) H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)：まずは決定境界を描く
 - [2016-03-31](#2016-03-31) Deep Learningライブラリ「MXNet」のR版をKaggle Otto Challengeで実践してみた
 - [](#)
+
+
+https://www.oreilly.co.jp/books/9784873117584/
+O'Reilly Japan - ゼロから作るDeep Learning 
+
+https://github.com/oreilly-japan/deep-learning-from-scratch
+oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』のリポジトリ
+
 
 ----------
 ## Execution environment
@@ -33,12 +40,27 @@ Last Update: 2017-04-15
 
 ----------
 
+## 2017-04
 http://touch-sp.hatenablog.com/archive/2017/4
+2017-04-01から1ヶ月間の記事一覧 - パソコン関連もろもろ
+
+	git clone https://github.com/oreilly-japan/deep-learning-from-scratch
 
 ## 2017-04-17
+http://touch-sp.hatenablog.com/entry/2017/04/17/115423
 RでDeep Learning（１）
 
+    library(magrittr); ?'%>%'
 
+## 2017-04-18
+http://touch-sp.hatenablog.com/entry/2017/04/18/005737
+RでDeep Learning（２）
+
+  cannot open file 'network_W1.csv': No such file or directory
+
+pp73 [O'Reilly Japan - ゼロから作るDeep Learning](https://www.oreilly.co.jp/books/9784873117584/)
+
+https://github.com/oreilly-japan/deep-learning-from-scratch/blob/master/dataset/mnist.py
 
 
 ----------
@@ -302,12 +324,6 @@ http://dl.acm.org/citation.cfm?id=2983489
 Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
 
 
-https://www.oreilly.co.jp/books/9784873117584/
-O'Reilly Japan - ゼロから作るDeep Learning 
-
-https://github.com/oreilly-japan/deep-learning-from-scratch
-oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』のリポジトリ
-
 
 
 
@@ -367,9 +383,14 @@ O'Reilly Japan - ゼロから作るDeep Learning
 http://wiki.lifesciencedb.jp/mw/BH14.14/MachineLearning
 ディープラーニング・機械学習などを活用した大量データ処理
 
+佐藤 賢二
 https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26330328/
 KAKEN — ディープラーニングを用いた大規模配列データからの階層的特徴抽出
 研究期間 (年度)	2014-04-01 – 2017-03-31
+
+https://www.scirp.org/journal/PaperInformation.aspx?PaperID=65923
+JBiSE> Vol.9 No.5, April 2016
+DNA Sequence Classification by Convolutional Neural Network
 
 http://miyake.bpe.es.osaka-u.ac.jp/ban_da_ji_chu_gong_san_zhai_yan_jiu_shi/yan_jiu_nei_ronggenomuinfomatikkusu.html
 深層学習（ディープラーニング）
