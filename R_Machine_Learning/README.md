@@ -20,14 +20,7 @@ Last Update: 2017-04-29
 
 ## [JIN'S PAGE](http://mjin.doshisha.ac.jp/R/)
 
-Chap_31
-Rとカーネル法
-Chap_32
-Rと集団学習
-
 ### [Rとカーネル法・サポートベクターマシン](http://mjin.doshisha.ac.jp/R/Chap_31/31.html)
-
-1．カーネル法とは
 
 カーネル主成分分析 (KPCA; kernel principal component analysis)
 
@@ -39,8 +32,6 @@ Rと集団学習
 	plot(pcv(iris.kpc1), col=as.integer(iris[,5]))
 
 サポートベクターマシン (SVM: Support Vector Machine) 
-
-4　その他
 
 	attach(cars)
 	plot(speed, dist)
@@ -98,8 +89,8 @@ Rと集団学習
 ----------
 ## References
 
-
 https://matome.naver.jp/odai/2145718453057572201
-R言語で機械学習　人工知能 - NAVER まとめ 
+R言語で機械学習　人工知能 - NAVER まとめ
+https://matome.naver.jp/odai/2145718453057572201?&page=3
 
 ----------
