@@ -127,33 +127,39 @@ Rを終了:
 
 
 ### FASTA format
-[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式
+**[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式**
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
 ### The NCBI sequence database
-[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース
+**[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース**
 
 ![http://www.ddbj.nig.ac.jp/insdc/insdc-j.html](http://www.ddbj.nig.ac.jp/wp-content/uploads/insdc_shoukai550_20130515.gif)  
 
 - [INSDC - DDBJ/EBI/NCBI国際塩基配列データベース](http://www.ddbj.nig.ac.jp/insdc/insdc-j.html)  
- - 米国 [National Centre for Biotechnology Information (NCBI)](http://www.ncbi.nlm.nih.gov)  
- - 欧州 [European Bioinformatics Institute (EBI)](http://www.ebi.ac.uk)  
- - 日本 [DNA Data Bank of Japan (DDBJ)](http://www.ddbj.nig.ac.jp/index-j.html)  
+  - 米国 [National Centre for Biotechnology Information (NCBI)](http://www.ncbi.nlm.nih.gov)  
+  - 欧州 [European Bioinformatics Institute (EBI)](http://www.ebi.ac.uk)  
+  - 日本 [DNA Data Bank of Japan (DDBJ)](http://www.ddbj.nig.ac.jp/index-j.html)  
 
-NCBIデータベースの配列データを参照するためにユニークな識別子（アクセッション）が割り当てられている。例えば、[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)とされる[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルス DEN-1、DEN-2、DEN-3、DEN-4 のDNA配列のNCBIアクセッションは NC_001477、NC_001474、NC_001475、NC_002640 である。
+NCBIデータベースの配列データを参照するためにユニークな識別子（アクセッション）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルス DEN-1、DEN-2、DEN-3、DEN-4 のDNA配列のNCBIアクセッションは NC_001477、NC_001474、NC_001475、NC_002640 である。
 
 ![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
 
+- デング熱ウイルスのゲノム配列
+  - DEN-1 [NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
+  - DEN-2 [NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474)
+  - DEN-3 [NC_001475](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475)
+  - DEN-4 [NC_002640](http://www.ncbi.nlm.nih.gov/nuccore/NC_002640)
+
 
 ### Retrieving genome sequence data via the NCBI website
-NCBIウェブサイトでゲノム配列データの検索
+**NCBIウェブサイトでゲノム配列データの検索**
 
 DEN-1デング熱ウイルスのDNA配列を検索するには、[NCBIウェブサイト](https://www.ncbi.nlm.nih.gov)にアクセスし、ウェブページ上部の検索ボックスにNCBIアクセッション [ NC_001477 ] を入力して、"Search"ボタンを押す:  
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image0.png)
 
-検索結果ページの例は以下の通り。
+以下は検索結果ページの例:  
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image1.png)
 
@@ -165,15 +171,14 @@ DEN-1デング熱ウイルスのDNA配列を検索するには、[NCBIウェブ�
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image3.png)
 
-- デング熱ウイルスのゲノム配列
- - DEN-1 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
- - DEN-2 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474)
- - DEN-3 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475)
- - DEN-4 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_002640)
+DNA配列データをFASTA形式ファイルとしてダウンロードするには、ウェブページの右上にある"Send"をクリックし、メニューで"File"を選択し、"Format"メニューから"FASTA"を選択し、"Create file"をクリックする。
+
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image4.png)
+
+ファイル名"sequence.fasta.txt"を（例えば、"den1.fasta"に）変更する。
 
 ### Retrieving genome sequence data using SeqinR
-Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)を用いて、
-ゲノム配列データを取得
+**Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)を用いて、ゲノム配列データを取得**
 
     #choosebank("refseqViruses")
     #query2 <- query("query2","AC=NC_001477")
