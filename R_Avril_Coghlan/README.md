@@ -111,7 +111,11 @@ Rを終了:
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
 
 ### Using R for Bioinformatics
+**R言語を用いたバイオインフォマティクス**
+
 ### R packages for bioinformatics: Bioconductor and SeqinR
+**バイオインフォマティクスのためのRパッケージ：BioconductorとSeqinR**
+
 [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
 
 パッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)のインストール:  
@@ -202,6 +206,8 @@ DNA配列データをFASTA形式ファイルとしてダウンロードするに
 
 変数`dengue`は[リスト](http://stat.biopapyrus.net/vector/list.html)。リストの1番目の要素を代入した
 変数`dengueseq`は塩基配列を含む[ベクトル](http://stat.biopapyrus.net/vector/vector.html)
+
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
 ### Length of a DNA sequence
 **DNA配列の長さ**
