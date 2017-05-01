@@ -106,6 +106,7 @@ Rを終了:
 ----------
 
 ## [DNA Sequence Statistics (1)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter1.html)
+**DNA配列の統計 (1)**
 
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
 
@@ -163,10 +164,7 @@ DEN-1デング熱ウイルスのDNA配列を検索するには、[NCBIウェブ�
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image1.png)
 
-例えば、"PubMed"には科学論文の要約、"Nucleotide"にはDNA/RNA配列データ、"Protein"にはタンパク質配列データが含まれる。
-
-    Nucleotide	1	DNA and RNA sequences
-
+例えば、"PubMed"データベースには科学論文の要約が、"Nucleotide"にはDNA/RNA配列データが、"Protein"にはタンパク質配列データが含まれる。
 "Nucleotide"をクリックすると、NC_001477の配列データに移動する。
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image3.png)
@@ -185,7 +183,7 @@ DNA配列データをFASTA形式ファイルとしてダウンロードするに
     #dengueseq <- getSequence(query2$req[[1]])
 
 ### Writing sequence data out as a FASTA file
-配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す
+**配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
 
     library("seqinr")
     dengue <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/den1.fasta")
@@ -194,7 +192,7 @@ DNA配列データをFASTA形式ファイルとしてダウンロードするに
 	write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
 
 ### Reading sequence data into R
-配列データをRに読み込む
+**配列データをRに読み込む**
 
 `read.fasta()`関数でFASTA形式ファイル（den1.fasta）を読み込む:  
 
@@ -206,19 +204,19 @@ DNA配列データをFASTA形式ファイルとしてダウンロードするに
 変数`dengueseq`は塩基配列を含む[ベクトル](http://stat.biopapyrus.net/vector/vector.html)
 
 ### Length of a DNA sequence
-DNA配列の長さ
+**DNA配列の長さ**
 
 	length(dengueseq)
 
 ### Base composition of a DNA sequence
-DNA配列の塩基組成
+**DNA配列の塩基組成**
 
 	table(dengueseq)
 
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
 
 ### GC Content of DNA
-[GC含量](https://ja.wikipedia.org/wiki/GC含量)
+**DNAの[GC含量](https://ja.wikipedia.org/wiki/GC含量)**
 (G+C)/(A+T+G+C)
 
     (2240+2770)/(3426+2240+2770+2299)
@@ -230,7 +228,7 @@ DNA配列の塩基組成
 ![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Inferring_horizontal_gene_transfer_average_GC_content.svg/400px-Inferring_horizontal_gene_transfer_average_GC_content.svg.png)
 
 ### DNA words
-連続塩基
+**連続塩基**
 
     words(length = 2)  #  dinucleotides 2連続塩基 
     words(length = 3)  # trinucleotides 3連続塩基
@@ -246,9 +244,10 @@ DNA配列の塩基組成
 ----------
 
 ## [DNA Sequence Statistics (2)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter2.html)
+**DNA配列の統計 (2)**
 
 ### A little more introduction to R
-続・R言語入門
+**続・R言語入門**
 
 	x <- 100
 	log10(x)
