@@ -146,15 +146,15 @@ Rを終了:
   - 欧州 [European Bioinformatics Institute (EBI)](http://www.ebi.ac.uk)  
   - 日本 [DNA Data Bank of Japan (DDBJ)](http://www.ddbj.nig.ac.jp/index-j.html)  
 
-NCBIデータベースの配列データを参照するためにユニークな識別子（アクセッション）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルス DEN-1、DEN-2、DEN-3、DEN-4 のDNA配列のNCBIアクセッションは NC_001477、NC_001474、NC_001475、NC_002640 である。
-
-![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
+NCBIデータベースの配列データを参照するためにユニークな識別子（アクセッション）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションは以下の通り。
 
 - デング熱ウイルスのゲノム配列
   - DEN-1 [NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
   - DEN-2 [NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474)
   - DEN-3 [NC_001475](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475)
   - DEN-4 [NC_002640](http://www.ncbi.nlm.nih.gov/nuccore/NC_002640)
+
+![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
 
 
 ### Retrieving genome sequence data via the NCBI website
