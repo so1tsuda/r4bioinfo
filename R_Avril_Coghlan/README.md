@@ -250,6 +250,8 @@ DNA配列データをFASTA形式ファイルとしてダウンロードするに
 	denguetable[[3]]
 	denguetable[["g"]]
 
+![https://www.ncbi.nlm.nih.gov/pubmed/10430917](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/bin/pq1692140001.jpg)
+
 ----------
 
 ## [DNA Sequence Statistics (2)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter2.html)
