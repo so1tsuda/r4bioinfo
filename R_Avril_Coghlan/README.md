@@ -134,39 +134,42 @@ Rを終了:
 ### The NCBI sequence database
 [NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース
 
-[INSDC - DDBJ/EBI/NCBI国際塩基配列データベース](http://www.ddbj.nig.ac.jp/insdc/insdc-j.html)  
-
 ![http://www.ddbj.nig.ac.jp/insdc/insdc-j.html](http://www.ddbj.nig.ac.jp/wp-content/uploads/insdc_shoukai550_20130515.gif)  
 
-米国 [National Centre for Biotechnology Information (NCBI)](http://www.ncbi.nlm.nih.gov)  
-欧州 [European Bioinformatics Institute (EBI)](http://www.ebi.ac.uk)  
-日本 [DNA Data Bank of Japan (DDBJ)](http://www.ddbj.nig.ac.jp/index-j.html)  
+- [INSDC - DDBJ/EBI/NCBI国際塩基配列データベース](http://www.ddbj.nig.ac.jp/insdc/insdc-j.html)  
+ - 米国 [National Centre for Biotechnology Information (NCBI)](http://www.ncbi.nlm.nih.gov)  
+ - 欧州 [European Bioinformatics Institute (EBI)](http://www.ebi.ac.uk)  
+ - 日本 [DNA Data Bank of Japan (DDBJ)](http://www.ddbj.nig.ac.jp/index-j.html)  
 
-![http://www.quizbiology.com/2013/05/bioinformatics-mcq-quiz.html](http://lh5.ggpht.com/-RVDAcMLXpPQ/UaLVfpoguLI/AAAAAAAAGdw/n8DEk4aPAIg/Bioinformatics%252520Resources%25255B11%25255D.png)
+NCBIデータベースの配列データを参照するためにユニークな識別子（アクセッション）が割り当てられている。例えば、[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)とされる[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルス DEN-1、DEN-2、DEN-3、DEN-4 のDNA配列のNCBIアクセッションは NC_001477、NC_001474、NC_001475、NC_002640 である。
 
-NCBIデータベースの配列レコードを参照するためにユニークな識別子（アクセッション）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルス DEN-1、DEN-2、DEN-3、DEN-4 のDNA配列のNCBIアクセッションは、NC_001477、NC_001474、NC_001475、NC_002640である。
+![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
 
 
 ### Retrieving genome sequence data via the NCBI website
 NCBIウェブサイトでゲノム配列データの検索
 
-DEN-1[デング熱](https://ja.wikipedia.org/wiki/デング熱)ウイルスのDNA配列を検索するには、[NCBIウェブサイト](https://www.ncbi.nlm.nih.gov)にアクセスし、ウェブページ上部の検索ボックスにNCBIアクセッション [ NC_001477 ] を入力して、"Search"ボタンを押す:  
+DEN-1デング熱ウイルスのDNA配列を検索するには、[NCBIウェブサイト](https://www.ncbi.nlm.nih.gov)にアクセスし、ウェブページ上部の検索ボックスにNCBIアクセッション [ NC_001477 ] を入力して、"Search"ボタンを押す:  
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image0.png)
 
-検索結果ページの例は以下の通り。例えば、"PubMed"には科学論文の要約が含まれ、"Nucleotide"にはDNAとRNA配列データが含まれ、"Protein"にはタンパク質配列データが含まれる。
+検索結果ページの例は以下の通り。
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image1.png)
 
+例えば、"PubMed"には科学論文の要約、"Nucleotide"にはDNA/RNA配列データ、"Protein"にはタンパク質配列データが含まれる。
+
     Nucleotide	1	DNA and RNA sequences
+
+"Nucleotide"をクリックすると、NC_001477の配列データに移動する。
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image3.png)
 
-
-![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
-
-[Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
-DEN-1デング熱ウイルスのゲノム配列
+- デング熱ウイルスのゲノム配列
+ - DEN-1 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
+ - DEN-2 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474)
+ - DEN-3 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475)
+ - DEN-4 [Dengue virus 1, complete genome](http://www.ncbi.nlm.nih.gov/nuccore/NC_002640)
 
 ### Retrieving genome sequence data using SeqinR
 Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)を用いて、
