@@ -195,6 +195,8 @@ DNA配列データをFASTA形式ファイルとしてダウンロードするに
 
 	write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
 
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
+
 ### Reading sequence data into R
 **配列データをRに読み込む**
 
@@ -209,8 +211,6 @@ DNA配列データをFASTA形式ファイルとしてダウンロードするに
 以下のコマンドは、塩基配列の最初の50塩基を出力する:  
 
 	dengueseq[1:50]
-
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
 ### Length of a DNA sequence
 **DNA配列の長さ**
