@@ -272,14 +272,19 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 〆切日時	2017-5-8 23:59:00
 
 課題のタイトル: DNA配列解析
+
 課題の内容
+
 ftp://ftp.ncbi.nlm.nih.gov/genomes/GENOME_REPORTS/viruses.txt
 ウイルスのDNA配列データをNCBIウェブサイトで検索し、DNA配列の長さ、塩基組成、GC含量を計算する。
 
 【回答例】
 2017-05-02にNCBIウェブサイト (https://www.ncbi.nlm.nih.gov) で"Dengue virus 1"を検索し、DNA配列をFASTA形式ファイルで保存した。配列データをRに読み込み、DNA配列の長さ、塩基組成、GC含量を計算した。
+
 DNA配列の長さ: 10735
+
 GC含量: 0.4666977
+
 塩基組成: 
   a    c    g    t 
 3426 2240 2770 2299 
