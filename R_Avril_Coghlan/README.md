@@ -173,11 +173,13 @@ DEN-1デング熱ウイルスのDNA配列を検索するには、[NCBIウェブ�
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image3.png)
 
-DNA配列データをFASTA形式ファイルとしてダウンロードするには、ウェブページの右上にある"Send"をクリックし、メニューで"File"を選択し、"Format"メニューから"FASTA"を選択し、"Create file"をクリックする。
+DNA配列データをFASTA形式ファイルで保存するには、ウェブページの右上にある"Send"をクリックし、メニューで"File"を選択し、"Format"メニューから"FASTA"を選択し、"Create file"をクリックする。
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image4.png)
 
 ファイル名"sequence.fasta.txt"を（例えば、"den1.fasta"に）変更する。
+
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
 ### Retrieving genome sequence data using SeqinR
 **Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)を用いて、ゲノム配列データを取得**
@@ -194,8 +196,6 @@ DNA配列データをFASTA形式ファイルとしてダウンロードするに
     dengueseq <- dengue[[1]]
 
 	write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
-
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
 ### Reading sequence data into R
 **配列データをRに読み込む**
@@ -246,11 +246,21 @@ DNA配列データをFASTA形式ファイルとしてダウンロードするに
 	count(dengueseq, 1)
 	count(dengueseq, 2)
 
+    count(s2c("atg"), 2)
+    help(count)
+
 	denguetable <- count(dengueseq,1)
 	denguetable[[3]]
 	denguetable[["g"]]
 
-![https://www.ncbi.nlm.nih.gov/pubmed/10430917](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/bin/pq1692140001.jpg)
+### Summary
+
+	length()
+	table()
+	GC()
+	count()
+
+### Links and Further Reading
 
 ----------
 
