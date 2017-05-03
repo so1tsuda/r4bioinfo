@@ -146,7 +146,7 @@ Rを終了:
   - 欧州 [European Bioinformatics Institute (EBI)](http://www.ebi.ac.uk)  
   - 日本 [DNA Data Bank of Japan (DDBJ)](http://www.ddbj.nig.ac.jp/index-j.html)  
 
-配列データにはユニークな識別子（アクセッション）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションは以下の通り。
+配列データにはユニークな識別子（アクセッション）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションは以下:  
 
 - デング熱ウイルスのゲノム配列
   - DEN-1 [NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
@@ -177,7 +177,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image4.png)
 
-ファイル名"sequence.fasta.txt"を（例えば、"den1.fasta"に）変更する。
+ダウンロード後、ファイル名"sequence.fasta.txt"を（例えば、"den1.fasta"に）変更する。
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
@@ -247,12 +247,14 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     words(length = 2)  #  dinucleotides 2連続塩基 
     words(length = 3)  # trinucleotides 3連続塩基
 
+`count`関数で連続塩基のカウント
+
     # Count oligomers (monomer/dimer/trimer/etc)
+    help(count)
+    count(s2c("atg"), 2)
+
 	count(dengueseq, 1)
 	count(dengueseq, 2)
-
-    count(s2c("atg"), 2)
-    help(count)
 
 	denguetable <- count(dengueseq,1)
 	denguetable[[3]]
