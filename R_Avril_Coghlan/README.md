@@ -160,7 +160,7 @@ Rを終了:
 ### Retrieving genome sequence data via the NCBI website
 **NCBIウェブサイトでゲノム配列データの検索**
 
-DEN-1デング熱ウイルスのDNA配列を検索するには、[NCBIウェブサイト](https://www.ncbi.nlm.nih.gov)にアクセスし、ウェブページ上部の検索ボックスにNCBIアクセッション [ NC_001477 ] を入力して、"Search"ボタンを押す:  
+DEN-1デング熱ウイルスのDNA配列を検索するには、NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) にアクセスし、ウェブページ上部の検索ボックスにNCBIアクセッション [ NC_001477 ] を入力して、"Search"ボタンを押す:  
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image0.png)
 
@@ -168,7 +168,7 @@ DEN-1デング熱ウイルスのDNA配列を検索するには、[NCBIウェブ�
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image1.png)
 
-例えば、"PubMed"データベースには科学論文の要約が、"Nucleotide"にはDNA/RNA配列データが、"Protein"にはタンパク質配列データが含まれる。
+例えば、"PubMed"データベースには科学論文の要約が、"Nucleotide"にはDNA/RNA配列データが、"Protein"にはタンパク質配列データが含まれる。  
 "Nucleotide"をクリックすると、NC_001477の配列データに移動する。
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image3.png)
@@ -291,6 +291,27 @@ GC含量: 0.4666977
   a    c    g    t 
 3426 2240 2770 2299 
 
+----------
+
+[分子生物学](https://ja.wikibooks.org/wiki/分子生物学)  
+
+RNAとDNA、それぞれの核酸塩基
+
+![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Difference_DNA_RNA-EN.svg/400px-Difference_DNA_RNA-EN.svg.png)
+
+DNAの複製 (replication)   
+転写 (transcription)：DNAからRNAへ  
+翻訳 (translation)：RNAからタンパク質へ  
+
+![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/6/68/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg)
+
+[アミノ酸の性質](http://www.jalview.org/help/html/misc/aaproperties.html)
+
+![http://www.jalview.org/help/html/misc/aaproperties.html](http://www.jalview.org/help/html/misc/properties.gif)
+
+[アミノ酸使用と転写量の相関](https://www.nig.ac.jp/labs/EvoGen/research/yeast.html)
+
+![https://www.nig.ac.jp/labs/EvoGen/research/yeast.html](https://www.nig.ac.jp/labs/EvoGen/img/aa_usage_90c.jpg)
 
 ----------
 
