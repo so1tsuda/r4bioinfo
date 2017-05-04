@@ -1,20 +1,24 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-04-29
+Last Update: 2017-05-05
 
 ----------
 
 # phangorn
-[phangorn: Phylogenetic Analysis in R](https://www.ncbi.nlm.nih.gov/pubmed/21169378)
+phangorn: Phylogenetic Analysis in R
 
+- 論文 [Schliep KP. Bioinformatics. 2011 Feb 15;27(4):592-3.](https://www.ncbi.nlm.nih.gov/pubmed/21169378)
 - [CRAN - Package phangorn](https://cran.r-project.org/web/packages/phangorn/index.html)
-Reference manual:	phangorn.pdf
-Vignettes:	Ancestral Sequence Reconstruction
-Constructing phylogenetic trees
-Advanced features
-IntertwiningTreesAndNetworks
-Splits and Networx
+ - Reference manual:	phangorn.pdf
+ - Vignettes:	
+   - Ancestral Sequence Reconstruction
+   - Constructing phylogenetic trees
+   - Advanced features
+   - IntertwiningTreesAndNetworks
+   - Splits and Networx
+
+----------
 
 	#install.packages("phangorn")
 	packageVersion("phangorn")
