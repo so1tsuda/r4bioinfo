@@ -9,7 +9,10 @@ Last Update: 2017-04-01
 R言語を用いたバイオインフォマティクス
 
 - [Avril Coghlan - Welcome to a Little Book of R for Bioinformatics!](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
+- [R for Deep Learning](https://github.com/haruosuz/r4bioinfo/tree/master/R_Deep_Learning)
+- [R for Machine Learning](https://github.com/haruosuz/r4bioinfo/tree/master/R_Machine_Learning)
 - [msa: an R package for multiple sequence alignment.](https://github.com/haruosuz/r4bioinfo/tree/master/R_msa)
+- [phangorn: Phylogenetic Analysis in R](https://github.com/haruosuz/r4bioinfo/tree/master/R_phangorn)
 - [phytools: Phylogenetic Tools for Comparative Biology (and Other Things)](https://github.com/haruosuz/r4bioinfo/tree/master/R_phytools)
 - [vegan: Community Ecology Package](https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan)
 - R_Wim_Krijnen.md: Wim P. Krijnen (2009) Applied Statistics for Bioinformatics using R
@@ -71,24 +74,61 @@ Rのバージョンとパッケージを確認:
     Biostrings_2.40.1
 
 ----------
+# References
+## 日本語
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html
+(Rで)マイクロアレイデータ解析
 
-## How to be a bioinformatician
+http://www.trifields.jp/r-cran-task-view-statistical-genetics-733
+R言語 CRAN Task View：統計遺伝学 | トライフィールズ
+Version:	2017-03-22
 
-![http://www.slideshare.net/ChristianFrech/how-to-be-a-bioinformatician](http://image.slidesharecdn.com/how-to-be-a-bioinformatician-public-140426130503-phpapp02/95/how-to-be-a-bioinformatician-2-638.jpg)
+http://www.geocities.jp/ancientfishtree/R_JI.html
+R - 井上 潤
+2015 年 6 月 8 日　改訂
 
-- [Bioinformatics Data Skills: Reproducible and Robust Research With Open Source Tools](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch01.html) "NEVER EVER TRUST YOUR TOOLS (OR DATA)"
-- [So you want to be a computational biologist? ](http://www.nature.com/nbt/journal/v31/n11/full/nbt.2740.html) "Create tests, small datasets for which the answer is known, and check that the software or pipeline can reproduce that answer."
-- [The five habits of bad bioinformaticians](http://www.opiniomics.org/the-five-habits-of-bad-bioinformaticians/) "Not writing tests"
+http://qa.lifesciencedb.jp/questions/512/rでfastaファイルを読み込む際におすすめのパッケージはありますか
 
-テスト
+### 驚異のアニヲタ社会復帰への道
+http://d.hatena.ne.jp/MikuHatsune/20131214/1387003786
+Rの初心者向けコード(生物系)
+2013-12-14
 
-    library("seqinr")  # Loading "seqinr" package
-    x <- s2c("atgc")   # Create small data
-    x
-    length(x)          # Length of a DNA sequence
-    table(x)           # Base composition of a DNA sequence
-    GC(x)              # GC Content of DNA
-    count(x, word = 2) # Count oligomers
+http://d.hatena.ne.jp/MikuHatsune/20130621/1371803603
+Ka/Ks (dN/dS) の計算
+2013-06-21
+
+http://d.hatena.ne.jp/MikuHatsune/20130404/1365068708
+塩基配列上での変異とアミノ酸置換
+2013-04-04
+
+### A springtail's sigh/ウェブリブログ
+http://tullbergia.at.webry.info/201108/article_1.html
+phred互換の配列のクオリティファイルをR上で扱う： read.qual
+2011/08/29
+
+http://tullbergia.at.webry.info/201007/article_4.html
+fastaファイルを一つにまとめる in R
+2010/07/29
+
+## 英語
+https://www.biostars.org/p/539/
+Recommend Your Favorite Introductory "R In Bioinformatics" Books And Resources
+
+http://pop-gen.eu/wordpress/statistics-in-bioinformatics-using-r
+Statistics in Bioinformatics using R | Population Genetics and Bioinformatics
+
+http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html
+Welcome to a Little Book of R for Bioinformatics! — Bioinformatics 0.1 documentation
+
+http://faculty.washington.edu/kenrice/bigr/
+R for large data & bioinformatics
+28 November 2013 to 29 November 2013
+Instructors: Thomas Lumley and Ken Rice
+
+https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf
+Applied Statistics for Bioinformatics using RWim P. Krijnen
+November 10, 2009
 
 ----------
 
