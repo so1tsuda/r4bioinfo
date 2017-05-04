@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2016-07-11  
+Last Update: 2017-03-15
 
 ----------
 
@@ -14,10 +14,14 @@ Last Update: 2016-07-11
 	# 多重配列アライメント
 	library(msa)
 	example(msa)
+    ls("package:msa")
 
 	# 系統解析
 	library(ape)
 	example(plot.phylo)
+
+
+----------
 
 # Multiple sequence alignment
 
@@ -249,73 +253,8 @@ Bioconductor パッケージ [`msa`](https://bioconductor.org/packages/release/b
 
 ----------
 
-    ls("package:msa")
-
-# ape
-ape: Analyses of Phylogenetics and Evolution
-- [CRAN - Package ape](https://cran.r-project.org/web/packages/ape/index.html) | Reference manual: [ape.pdf](https://cran.r-project.org/web/packages/ape/ape.pdf)
-
-# phangorn
-phangorn: Phylogenetic Analysis in R
-- [CRAN - Package phangorn](https://cran.r-project.org/web/packages/phangorn/index.html)
-
-----------
-
 # Acknowledgements
 I am grateful to Dr. Ulrich Bodenhofer for his technical advice on msa: an R package for multiple sequence alignment.
-
-----------
-
-# [SeqinR](https://cran.r-project.org/web/packages/seqinr/index.html)
-
-配列解析
-
-    # Loading seqinr package
-    library(seqinr)
-    # list the data sets in the "seqinr" package
-    data(package = "seqinr")
-    # A toy example of amino-acid counts in three proteins
-    data(toyaa)
-    # A toy example of codon counts in three coding sequences
-    data(toycodon)
-    # Fragment of the E. coli chromosome
-    example(m16j)
-    # 999 coding sequences from E. coli
-    data(ec999)
-    # to plot genetic code as in textbooks
-    tablecode()
-    # to translate coding sequences into proteins
-    getTrans(ec999)
-    # utility data for seqinr
-    SEQINR.UTIL
-    # To Get Some Protein Statistics
-    example(AAstat)
-    # Dot Plot Comparison of two sequences
-    example(dotPlot)
-
-2016-06-01  
-
-[分子生物学](https://ja.wikibooks.org/wiki/分子生物学)  
-
-![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Difference_DNA_RNA-EN.svg/400px-Difference_DNA_RNA-EN.svg.png)
-
-RNAとDNA、それぞれの核酸塩基
-
-![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/6/68/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg)
-
-DNAの複製 (replication)   
-転写 (transcription)：DNAからRNAへ  
-翻訳 (translation)：RNAからタンパク質へ  
-
-![http://www.tokresource.org/tok_classes/biobiobio/biomenu/transcription_translation/](http://www.tokresource.org/tok_classes/biobiobio/biomenu/transcription_translation/rna-transcription.jpg)
-
-![http://www.jalview.org/help/html/misc/aaproperties.html](http://www.jalview.org/help/html/misc/properties.gif)
-
-[アミノ酸の性質](http://www.jalview.org/help/html/misc/aaproperties.html)
-
-![https://www.nig.ac.jp/labs/EvoGen/research/yeast.html](https://www.nig.ac.jp/labs/EvoGen/img/aa_usage_90c.jpg)
-
-[アミノ酸使用と転写量の相関](https://www.nig.ac.jp/labs/EvoGen/research/yeast.html)
 
 ----------
 
