@@ -399,6 +399,19 @@ GC含量の移動プロット
 
 ![https://en.wikipedia.org/wiki/K-mer](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/K-mer-example.png/440px-K-mer-example.png)
 
+[previous chapter](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
+
+	count(dengueseq, 2)
+
+ρ(xy) = fxy/(fx*fy),
+
+	count(dengueseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
+	2770/(3426+2240+2770+2299) # Get fG
+	2240/(3426+2240+2770+2299) # Get fC
+	count(dengueseq, 2) # Get the number of occurrences of 2-nucleotide DNA words
+	500/(1108+720+890+708+901+523+261+555+976+500+787+507+440+497+832+529) # Get fGC
+	0.04658096/(0.2580345*0.2086633) # Get rho(GC)
+
 2連続塩基組成（観測値/期待値）を計算する:  
 
     ( af1 <- count(dengueseq, 1) ) # absolute frequencies of 1-mer
@@ -413,6 +426,8 @@ GC含量の移動プロット
 
     # Create tests
     x <- s2c("atgc"); rho(x, wordsize = 2)
+
+### Summary
 
 ----------
 
