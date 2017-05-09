@@ -338,7 +338,7 @@ for による繰り返し
 	x <- 100
 	log10(x) # Finds the log to the base 10 of variable x.
 
-### Reading sequence data with SeqinR
+### [Reading sequence data with SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#reading-sequence-data-with-seqinr)
 Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)で
 配列データを読み込み
 
@@ -352,15 +352,13 @@ DEN-1デング熱ウイルスのゲノム配列を取得する。
 
 	dengueseq[452:535]
 
-### Local variation in GC content
+### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
 GC含量の局所変動は、変異バイアスや[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)を示唆
 
 	# GC content of the sequence
 	GC(dengueseq)
 
-non-overlapping windows / overlapping windows
-
-### A sliding window analysis of GC content
+### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
 GC含量の移動解析
 
 	GC(dengueseq[1:2000])      # 塩基配列の 1-2000 番目のGC含量
@@ -370,14 +368,14 @@ GC含量の移動解析
 	GC(dengueseq[8001:10000])  # 塩基配列の 8001-10000 番目のGC含量
 	GC(dengueseq[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
 
-### A sliding window plot of GC content
+### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
 GC含量の移動プロット
 
 `for`ループを使う。異なる範囲（windowsize: 2000, 3000, 300 塩基）のプロットを作成する。
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P2_image3.png)
 
-[ウェブサイト](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter2.html)から
+[ウェブサイト](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)から
 `slidingwindowplot`関数をコピペして、以下の通り実行:  
 
 	slidingwindowplot(3000, dengueseq)
@@ -396,7 +394,7 @@ GC含量の移動プロット
 - [ベクトルの一定範囲に関数を適用しながら逐次計算していく（ローリング処理）](http://d.hatena.ne.jp/teramonagi/20100831/1283261344)
 - [Mean of a sliding window in R - Cross Validated ](http://stats.stackexchange.com/questions/3051/mean-of-a-sliding-window-in-r)
 
-### Over-represented and under-represented DNA words
+### [Over-represented and under-represented DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#over-represented-and-under-represented-dna-words)
 連続塩基組成 [Genomic signature](https://en.wikipedia.org/wiki/Genomic_signature) / [k-mer](https://en.wikipedia.org/wiki/K-mer)
 
 ![https://en.wikipedia.org/wiki/K-mer](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/K-mer-example.png/440px-K-mer-example.png)
