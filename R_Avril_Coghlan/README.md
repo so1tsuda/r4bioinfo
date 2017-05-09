@@ -269,6 +269,11 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 ### Links and Further Reading
 
+“Analyzing Sequences” in the book Applied statistics for bioinformatics using R by Krijnen (cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)
+
+### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#exercises)
+演習
+
 ----------
 下記の通り、第4回課題を登録しました。New assignment #4 is registered.
 〆切日時	2017-5-8 23:59:00
@@ -304,14 +309,6 @@ DNAの複製 (replication)
 翻訳 (translation)：RNAからタンパク質へ  
 
 ![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/6/68/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg)
-
-[アミノ酸の性質](http://www.jalview.org/help/html/misc/aaproperties.html)
-
-![http://www.jalview.org/help/html/misc/aaproperties.html](http://www.jalview.org/help/html/misc/properties.gif)
-
-[アミノ酸使用と転写量の相関](https://www.nig.ac.jp/labs/EvoGen/research/yeast.html)
-
-![https://www.nig.ac.jp/labs/EvoGen/research/yeast.html](https://www.nig.ac.jp/labs/EvoGen/img/aa_usage_90c.jpg)
 
 ----------
 
