@@ -333,8 +333,7 @@ for による繰り返し
 	myfunction(25)
 	myfunction
 
-[コメント](http://yusuke-memo.blogspot.jp/2009/10/r.html)  
-＃の後がコメント行となる。
+＃の後が[コメント](http://yusuke-memo.blogspot.jp/2009/10/r.html)行となる。
 
 	x <- 100
 	log10(x) # Finds the log to the base 10 of variable x.
@@ -346,9 +345,9 @@ Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.
 DEN-1デング熱ウイルスのゲノム配列を取得する。
 
 	library("seqinr")                           # Load the SeqinR package.
-    # dengue <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/den1.fasta")
-
+    # system('curl -L "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text" > den1.fasta')
 	dengue <- read.fasta(file = "den1.fasta")   # Read in the file "den1.fasta".
+    # dengue <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/den1.fasta")
 	dengueseq <- dengue[[1]]                    # Put the sequence in a vector called "dengueseq".
 
 	dengueseq[452:535]
