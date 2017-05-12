@@ -11,6 +11,20 @@ By Avril Coghlan
 
 ----------
 
+[分子生物学](https://ja.wikibooks.org/wiki/分子生物学)  
+
+RNAとDNA、それぞれの核酸塩基
+
+![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Difference_DNA_RNA-EN.svg/400px-Difference_DNA_RNA-EN.svg.png)
+
+DNAの複製 (replication)   
+転写 (transcription)：DNAからRNAへ  
+翻訳 (translation)：RNAからタンパク質へ  
+
+![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/6/68/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg)
+
+----------
+
 ## [How to install R and a Brief Introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html)
 R言語入門
 
@@ -20,7 +34,7 @@ R言語入門
 
 ![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
 
-### A brief introduction to R
+### [A brief introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#a-brief-introduction-to-r)
 
 [簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
 演算子
@@ -102,6 +116,11 @@ Rを終了:
 ### Links and Further Reading
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
+- [統合TV | 【R】に関係する講習会資料・番組](http://togotv.dbcls.jp/ja/tags.html?tag=R)
+- [Rのダウンロードとライブラリのインストール - 日経BigData](http://business.nikkeibp.co.jp/atclbdt/15/recipe/102500016/)
+- [Rの初歩](https://oku.edu.mie-u.ac.jp/~okumura/stat/first.html)
+- [続・わしの頁](http://nfunao.web.fc2.com)
+- [Rや統計を学ぶために有用なページまとめ（暫定版） - NAVER まとめ](https://matome.naver.jp/odai/2137370667209004001)
 
 ----------
 
@@ -273,21 +292,6 @@ Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinfor
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#exercises)
 演習
-
-
-----------
-
-[分子生物学](https://ja.wikibooks.org/wiki/分子生物学)  
-
-RNAとDNA、それぞれの核酸塩基
-
-![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Difference_DNA_RNA-EN.svg/400px-Difference_DNA_RNA-EN.svg.png)
-
-DNAの複製 (replication)   
-転写 (transcription)：DNAからRNAへ  
-翻訳 (translation)：RNAからタンパク質へ  
-
-![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/6/68/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg)
 
 ----------
 
