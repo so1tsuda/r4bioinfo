@@ -460,9 +460,8 @@ DNAの複製 (replication)
 
 ----------
 
-
 ## Annotation of promoter sequences
-プロモーター配列のアノテーション
+[プロモーター](https://ja.wikipedia.org/wiki/プロモーター)配列のアノテーション
 
 ### Part 1 Loading sequences and counting k-mers
 配列の読み込みと塩基のカウント
@@ -485,6 +484,8 @@ DNAの複製 (replication)
 
 Let's compute the frequency of the four letters now, that will be handy for later.
 
+4文字の頻度を計算:
+
 	nuc.count = table(yeastseqs)
 
 	nuc.freq = nuc.count/ sum(nuc.count)
@@ -493,16 +494,17 @@ Let's compute the frequency of the four letters now, that will be handy for late
 
 	nuc.freq
 
-https://en.wikipedia.org/wiki/Chargaff%27s_rules
-https://kotobank.jp/word/シャルガフの法則-789047
-[シャルガフの経験則](https://ja.wikipedia.org/wiki/エルヴィン・シャルガフ#.E3.82.B7.E3.83.A3.E3.83.AB.E3.82.AC.E3.83.95.E3.81.AE.E7.B5.8C.E9.A8.93.E5.89.87)
+DNA中のアデニン（A）の数とチミン（T）の数が等しく、シトシン（C）の数とグアニン（G）の数が等しい。
+
+- [シャルガフの法則 Chargaff's rule](https://kotobank.jp/word/シャルガフの法則-789047)
+- [シャルガフの経験則](https://ja.wikipedia.org/wiki/エルヴィン・シャルガフ#.E3.82.B7.E3.83.A3.E3.83.AB.E3.82.AC.E3.83.95.E3.81.AE.E7.B5.8C.E9.A8.93.E5.89.87)
 
 ### Part 2 Detect promoter sequences
 プロモーター配列の検出
 
-http://www.lcqb.upmc.fr/hrichard/sequences/regulatory_seq_PHO.fasta
-
 We define the function expectedFreq accordingly
+
+関数`expectedFreq`を定義する:  
 
 	expectedFreq <- function(w, nfreq, len){
 	  eF = 1
@@ -510,43 +512,48 @@ We define the function expectedFreq accordingly
 	  for (c in s2c(w)){
 	    eF = eF * nfreq[c]
 	    }
-	  eF = eF(len - k + 1)
+	  eF = eF*(len - k + 1)
 	  return(eF)
 	}
-​
+
 Let's read the sequences for PHO:
 
-
-
+[PHO](http://www.lcqb.upmc.fr/hrichard/sequences/regulatory_seq_PHO.fasta)の配列を読み込む:  
 
 	pho = read.fasta(file = "http://www.lcqb.upmc.fr/hrichard/sequences/regulatory_seq_PHO.fasta")
-​	
+	
 	phoseqs = c()
 	for (i in 1:length(pho)){
 	    phoseqs = c(phoseqs, pho[[i]]) 
 	}
-​	
+	
 	pho.length = length(phoseqs)
+	
+	cat("Length:", pho.length)
 
 We can now compute the number of occurrences for all words of length 4, and compare with the expected count
 
+4連続塩基の出現回数(観測度数)を計算し、期待度数と比較する:  
+
 	pho.count4 = count(phoseqs, 4)
-​	
+	
 	##To get the same names for the expected counts
 	pho.exp4 = pho.count4
-​	
+	
 	for (i in 1:length(pho.exp4)){
 	  word = names(pho.exp4)[i]
 	  pho.exp4[i] = expectedFreq(word, nuc.freq, pho.length)
 	}
-​
+	
 	#
 	plot( as.vector(pho.exp4), as.vector(pho.count4), 
 	      pch = 19, col = "blue", cex =0.7, 
 	      xlab = "Expected count", ylab = "Oberved count")
 	abline(a = 0, b =1, col = "red")
-​
+
 The points above the diagonal are observed more often than expected. Let's look how the 25 most overrepresented correspond to the PHO motif.
+
+対角より上の点は期待されるより高頻度に観測されたもの。PHOモチーフで高頻度に観測された上位25を確認する:  
 
 	pho.sig4 = pho.count4 / pho.exp4
 	##Check the distribution
@@ -557,8 +564,6 @@ The points above the diagonal are observed more often than expected. Let's look 
 ​	
 	cat(overrep.words4, sep = "\n")
 ​
-
-
 ----------
 
 ## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
