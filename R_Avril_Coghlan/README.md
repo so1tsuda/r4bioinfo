@@ -407,11 +407,11 @@ GC含量の移動プロット
 
 	count(dengueseq, 2)
 
-[ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の観測値/期待値を測定する。2連続塩基の場合、ρは次の通り計算される:  
+[ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を測定する。2連続塩基の場合、ρ値は次の通り計算される:  
 
 ρ(xy) = fxy/(fx*fy),
 
-ここで"fxy", "fx", "fy"は、DNA配列中の文字列"xy", "x", "y"の頻度である。
+ここで、"fxy", "fx", "fy"は、DNA配列中の文字列"xy", "x", "y"の頻度である。
 例えば、2連続塩基"GC"のρ値の計算式は ρ(GC) = fGC/(fG * fC) で、"fGC", "fG", "fC"は、DNA配列中の文字列"GC", "G", "C"の頻度である:  
 
 	count(dengueseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
@@ -421,7 +421,7 @@ GC含量の移動プロット
 	500/(1108+720+890+708+901+523+261+555+976+500+787+507+440+497+832+529) # Get fGC
 	0.04658096/(0.2580345*0.2086633) # Get rho(GC)
 
-2連続塩基組成（観測値/期待値）を計算する:  
+2連続塩基 "aa" "ac" "ag" "at" "ca" "cc" "cg" "ct" "ga" "gc" "gg" "gt" "ta" "tc" "tg" "tt" のρ値（観測値/期待値）を計算する:  
 
     ( af1 <- count(dengueseq, 1) ) # absolute frequencies of 1-mer
     ( rf1 <- af1 / sum(af1) )      # relative frequencies of 1-mer
