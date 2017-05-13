@@ -117,10 +117,14 @@ Rを終了:
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
 - [統合TV | 【R】に関係する講習会資料・番組](http://togotv.dbcls.jp/ja/tags.html?tag=R)
-- [Rのダウンロードとライブラリのインストール - 日経BigData](http://business.nikkeibp.co.jp/atclbdt/15/recipe/102500016/)
 - [Rの初歩](https://oku.edu.mie-u.ac.jp/~okumura/stat/first.html)
-- [続・わしの頁](http://nfunao.web.fc2.com)
 - [Rや統計を学ぶために有用なページまとめ（暫定版） - NAVER まとめ](https://matome.naver.jp/odai/2137370667209004001)
+ - [続・わしの頁](http://nfunao.web.fc2.com)
+- [01.セットアップ・参考文献](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/01.html)
+- [R のインストール - RjpWiki](http://www.okadajp.org/RWiki/?R%20のインストール)
+- [Rのダウンロードとライブラリのインストール - 日経BigData](http://business.nikkeibp.co.jp/atclbdt/15/recipe/102500016/)
+- 2015-11-17 Windows版[R言語のインストールと動作確認](http://qiita.com/do_m_gatoru/items/f09ec198aa13f8aac68e)
+- [Windows用Rガイド](https://oku.edu.mie-u.ac.jp/~okumura/stat/R-win.html)
 
 ----------
 
