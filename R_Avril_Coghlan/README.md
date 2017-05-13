@@ -11,20 +11,6 @@ By Avril Coghlan
 
 ----------
 
-[分子生物学](https://ja.wikibooks.org/wiki/分子生物学)  
-
-RNAとDNA、それぞれの核酸塩基
-
-![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Difference_DNA_RNA-EN.svg/400px-Difference_DNA_RNA-EN.svg.png)
-
-DNAの複製 (replication)   
-転写 (transcription)：DNAからRNAへ  
-翻訳 (translation)：RNAからタンパク質へ  
-
-![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/6/68/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg)
-
-----------
-
 ## [How to install R and a Brief Introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html)
 R言語入門
 
@@ -457,6 +443,121 @@ http://dl.acm.org/citation.cfm?id=2983489
 Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
 
 ### Summary
+
+----------
+
+## [分子生物学](https://ja.wikibooks.org/wiki/分子生物学)  
+
+RNAとDNA、それぞれの核酸塩基
+
+![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Difference_DNA_RNA-EN.svg/400px-Difference_DNA_RNA-EN.svg.png)
+
+DNAの複製 (replication)   
+転写 (transcription)：DNAからRNAへ  
+翻訳 (translation)：RNAからタンパク質へ  
+
+![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/6/68/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg)
+
+----------
+
+
+## Annotation of promoter sequences
+プロモーター配列のアノテーション
+
+### Part 1 Loading sequences and counting k-mers
+配列の読み込みと塩基のカウント
+
+	library(seqinr)
+	yeast <- read.fasta(file = "http://www.lcqb.upmc.fr/hrichard/sequences/yeast_s_cerevisae_genomic_chr1-4.fna")
+	
+	##Chr1 pos 1 to 100
+	
+	##let's put all chromosome together
+	yeastseqs = c()
+	##Length of the chromosomes
+	for (i in 1:length(yeast)){
+	    cat("Chromosome", i, ":", length(yeast[[i]]), "\n")
+	    yeastseqs = c(yeastseqs, yeast[[i]])
+	}
+	
+	cat("total length:", length(yeastseqs) )
+	##we want to compute the frequency of each nucleotide
+
+Let's compute the frequency of the four letters now, that will be handy for later.
+
+	nuc.count = table(yeastseqs)
+
+	nuc.freq = nuc.count/ sum(nuc.count)
+
+	nuc.count
+
+	nuc.freq
+
+https://en.wikipedia.org/wiki/Chargaff%27s_rules
+https://kotobank.jp/word/シャルガフの法則-789047
+[シャルガフの経験則](https://ja.wikipedia.org/wiki/エルヴィン・シャルガフ#.E3.82.B7.E3.83.A3.E3.83.AB.E3.82.AC.E3.83.95.E3.81.AE.E7.B5.8C.E9.A8.93.E5.89.87)
+
+### Part 2 Detect promoter sequences
+プロモーター配列の検出
+
+http://www.lcqb.upmc.fr/hrichard/sequences/regulatory_seq_PHO.fasta
+
+We define the function expectedFreq accordingly
+
+	expectedFreq <- function(w, nfreq, len){
+	  eF = 1
+	  k = length(w)
+	  for (c in s2c(w)){
+	    eF = eF * nfreq[c]
+	    }
+	  eF = eF(len - k + 1)
+	  return(eF)
+	}
+​
+Let's read the sequences for PHO:
+
+
+
+
+	pho = read.fasta(file = "http://www.lcqb.upmc.fr/hrichard/sequences/regulatory_seq_PHO.fasta")
+​	
+	phoseqs = c()
+	for (i in 1:length(pho)){
+	    phoseqs = c(phoseqs, pho[[i]]) 
+	}
+​	
+	pho.length = length(phoseqs)
+
+We can now compute the number of occurrences for all words of length 4, and compare with the expected count
+
+	pho.count4 = count(phoseqs, 4)
+​	
+	##To get the same names for the expected counts
+	pho.exp4 = pho.count4
+​	
+	for (i in 1:length(pho.exp4)){
+	  word = names(pho.exp4)[i]
+	  pho.exp4[i] = expectedFreq(word, nuc.freq, pho.length)
+	}
+​
+	#
+	plot( as.vector(pho.exp4), as.vector(pho.count4), 
+	      pch = 19, col = "blue", cex =0.7, 
+	      xlab = "Expected count", ylab = "Oberved count")
+	abline(a = 0, b =1, col = "red")
+​
+The points above the diagonal are observed more often than expected. Let's look how the 25 most overrepresented correspond to the PHO motif.
+
+	pho.sig4 = pho.count4 / pho.exp4
+	##Check the distribution
+	hist(pho.sig4, br =40)
+​	
+	sorted.sig4 = sort(pho.sig4, decreasing = TRUE)
+	overrep.words4 = names(sorted.sig4[1:20])
+​	
+	cat(overrep.words4, sep = "\n")
+​
+
 
 ----------
 
