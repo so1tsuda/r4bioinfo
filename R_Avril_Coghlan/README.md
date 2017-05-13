@@ -441,6 +441,21 @@ GC含量の移動プロット
     # Create tests
     x <- s2c("atgc"); rho(x, wordsize = 2)
 
+ゲノムの2連続塩基組成
+[Genome signature (dinucleotide relative abundances) of genomes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
+
+![https://www.ncbi.nlm.nih.gov/pubmed/10430917](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/bin/pq1692140001.jpg)
+
+Author:	Riccardo Rizzo
+
+First Online: 31 July 2016
+http://link.springer.com/chapter/10.1007/978-3-319-44332-4_10
+A Deep Learning Approach to DNA Sequence Classification | SpringerLink
+
+June 23 - 24, 2016 
+http://dl.acm.org/citation.cfm?id=2983489
+Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
+
 ### Summary
 
 ----------
