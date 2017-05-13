@@ -7,6 +7,7 @@ By Avril Coghlan
 - [How to install R and a Brief Introduction to R](#how-to-install-r-and-a-brief-introduction-to-r)
 - [DNA Sequence Statistics (1)](#dna-sequence-statistics-1)
 - [DNA Sequence Statistics (2)](#dna-sequence-statistics-2)
+- [Annotation of promoter sequences](#annotation-of-promoter-sequences)
 - [Pairwise Sequence Alignment](#pairwise-sequence-alignment)
 
 ----------
@@ -462,6 +463,12 @@ DNAの複製 (replication)
 
 ## Annotation of promoter sequences
 [プロモーター](https://ja.wikipedia.org/wiki/プロモーター)配列のアノテーション
+
+### Introduction
+
+ゲノム配列の以下の2つの情報を調べる:  
+1. プロモーター配列中の[転写因子結合部位](https://ja.wikipedia.org/wiki/転写因子#.E8.BB.A2.E5.86.99.E5.9B.A0.E5.AD.90.E7.B5.90.E5.90.88.E9.A0.98.E5.9F.9F)の検出
+2. ゲノム中の遺伝子のアノテーション
 
 ### Part 1 Loading sequences and counting k-mers
 配列の読み込みと塩基のカウント
