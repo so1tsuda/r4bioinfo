@@ -7,7 +7,6 @@ By Avril Coghlan
 - [How to install R and a Brief Introduction to R](#how-to-install-r-and-a-brief-introduction-to-r)
 - [DNA Sequence Statistics (1)](#dna-sequence-statistics-1)
 - [DNA Sequence Statistics (2)](#dna-sequence-statistics-2)
-- [Annotation of promoter sequences](#annotation-of-promoter-sequences)
 - [Pairwise Sequence Alignment](#pairwise-sequence-alignment)
 
 ----------
@@ -157,7 +156,7 @@ Rを終了:
   - 欧州 [European Bioinformatics Institute (EBI)](http://www.ebi.ac.uk)  
   - 日本 [DNA Data Bank of Japan (DDBJ)](http://www.ddbj.nig.ac.jp/index-j.html)  
 
-配列データにはユニークな識別子（アクセッション）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションは以下:  
+配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションは以下:  
 
 - デング熱ウイルスのゲノム配列
   - DEN-1 [NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
@@ -166,7 +165,6 @@ Rを終了:
   - DEN-4 [NC_002640](http://www.ncbi.nlm.nih.gov/nuccore/NC_002640)
 
 ![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
-
 
 ### Retrieving genome sequence data via the NCBI website
 **NCBIウェブサイトでゲノム配列データの検索**
@@ -399,7 +397,7 @@ GC含量の移動プロット
 
 	count(dengueseq, 2)
 
-[ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を測定する。2連続塩基の場合、ρ値は次の通り計算される:  
+[ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を計算する。2連続塩基の場合、ρ値は次の通り計算される:  
 
 ρ(xy) = fxy/(fx*fy),
 
@@ -433,143 +431,7 @@ GC含量の移動プロット
 
 ![https://www.ncbi.nlm.nih.gov/pubmed/10430917](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/bin/pq1692140001.jpg)
 
-Author:	Riccardo Rizzo
-
-First Online: 31 July 2016
-http://link.springer.com/chapter/10.1007/978-3-319-44332-4_10
-A Deep Learning Approach to DNA Sequence Classification | SpringerLink
-
-June 23 - 24, 2016 
-http://dl.acm.org/citation.cfm?id=2983489
-Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
-
 ### Summary
-
-----------
-
-## [分子生物学](https://ja.wikibooks.org/wiki/分子生物学)  
-
-RNAとDNA、それぞれの核酸塩基
-
-![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Difference_DNA_RNA-EN.svg/400px-Difference_DNA_RNA-EN.svg.png)
-
-DNAの複製 (replication)   
-転写 (transcription)：DNAからRNAへ  
-翻訳 (translation)：RNAからタンパク質へ  
-
-![https://ja.wikibooks.org/wiki/分子生物学](https://upload.wikimedia.org/wikipedia/commons/6/68/Central_Dogma_of_Molecular_Biochemistry_with_Enzymes.jpg)
-
-----------
-
-## Annotation of promoter sequences
-[プロモーター](https://ja.wikipedia.org/wiki/プロモーター)配列のアノテーション
-
-### Introduction
-
-ゲノム配列の以下の2つの情報を調べる:  
-1. プロモーター配列中の[転写因子結合部位](https://ja.wikipedia.org/wiki/転写因子#.E8.BB.A2.E5.86.99.E5.9B.A0.E5.AD.90.E7.B5.90.E5.90.88.E9.A0.98.E5.9F.9F)の検出
-2. ゲノム中の遺伝子のアノテーション
-
-### Part 1 Loading sequences and counting k-mers
-配列の読み込みと塩基のカウント
-
-	library(seqinr)
-	yeast <- read.fasta(file = "http://www.lcqb.upmc.fr/hrichard/sequences/yeast_s_cerevisae_genomic_chr1-4.fna")
-	
-	##Chr1 pos 1 to 100
-	
-	##let's put all chromosome together
-	yeastseqs = c()
-	##Length of the chromosomes
-	for (i in 1:length(yeast)){
-	    cat("Chromosome", i, ":", length(yeast[[i]]), "\n")
-	    yeastseqs = c(yeastseqs, yeast[[i]])
-	}
-	
-	cat("total length:", length(yeastseqs) )
-	##we want to compute the frequency of each nucleotide
-
-Let's compute the frequency of the four letters now, that will be handy for later.
-
-4文字の頻度を計算:
-
-	nuc.count = table(yeastseqs)
-
-	nuc.freq = nuc.count/ sum(nuc.count)
-
-	nuc.count
-
-	nuc.freq
-
-DNA中のアデニン（A）の数とチミン（T）の数が等しく、シトシン（C）の数とグアニン（G）の数が等しい。
-
-- [シャルガフの法則 Chargaff's rule](https://kotobank.jp/word/シャルガフの法則-789047)
-- [シャルガフの経験則](https://ja.wikipedia.org/wiki/エルヴィン・シャルガフ#.E3.82.B7.E3.83.A3.E3.83.AB.E3.82.AC.E3.83.95.E3.81.AE.E7.B5.8C.E9.A8.93.E5.89.87)
-
-### Part 2 Detect promoter sequences
-プロモーター配列の検出
-
-We define the function expectedFreq accordingly
-
-関数`expectedFreq`を定義する:  
-
-	expectedFreq <- function(w, nfreq, len){
-	  eF = 1
-	  k = length(w)
-	  for (c in s2c(w)){
-	    eF = eF * nfreq[c]
-	    }
-	  eF = eF*(len - k + 1)
-	  return(eF)
-	}
-
-Let's read the sequences for PHO:
-
-[PHO](http://www.lcqb.upmc.fr/hrichard/sequences/regulatory_seq_PHO.fasta)の配列を読み込む:  
-
-	pho = read.fasta(file = "http://www.lcqb.upmc.fr/hrichard/sequences/regulatory_seq_PHO.fasta")
-	
-	phoseqs = c()
-	for (i in 1:length(pho)){
-	    phoseqs = c(phoseqs, pho[[i]]) 
-	}
-	
-	pho.length = length(phoseqs)
-	
-	cat("Length:", pho.length)
-
-We can now compute the number of occurrences for all words of length 4, and compare with the expected count
-
-4連続塩基の出現回数(観測度数)を計算し、期待度数と比較する:  
-
-	pho.count4 = count(phoseqs, 4)
-	
-	##To get the same names for the expected counts
-	pho.exp4 = pho.count4
-	
-	for (i in 1:length(pho.exp4)){
-	  word = names(pho.exp4)[i]
-	  pho.exp4[i] = expectedFreq(word, nuc.freq, pho.length)
-	}
-	
-	#
-	plot( as.vector(pho.exp4), as.vector(pho.count4), 
-	      pch = 19, col = "blue", cex =0.7, 
-	      xlab = "Expected count", ylab = "Oberved count")
-	abline(a = 0, b =1, col = "red")
-
-The points above the diagonal are observed more often than expected. Let's look how the 25 most overrepresented correspond to the PHO motif.
-
-対角線より上の点は、期待されるより高頻度に観測されるもの。PHOモチーフで高頻度に観測された上位25を確認する:  
-
-	pho.sig4 = pho.count4 / pho.exp4
-	##Check the distribution
-	hist(pho.sig4, br =40)
-	
-	sorted.sig4 = sort(pho.sig4, decreasing = TRUE)
-	overrep.words4 = names(sorted.sig4[1:20])
-	
-	cat(overrep.words4, sep = "\n")
 
 ----------
 
