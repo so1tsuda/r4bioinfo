@@ -553,7 +553,7 @@ We can now compute the number of occurrences for all words of length 4, and comp
 
 The points above the diagonal are observed more often than expected. Let's look how the 25 most overrepresented correspond to the PHO motif.
 
-対角より上の点は期待されるより高頻度に観測されたもの。PHOモチーフで高頻度に観測された上位25を確認する:  
+対角線より上の点は、期待されるより高頻度に観測されるもの。PHOモチーフで高頻度に観測された上位25を確認する:  
 
 	pho.sig4 = pho.count4 / pho.exp4
 	##Check the distribution
