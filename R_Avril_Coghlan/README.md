@@ -558,10 +558,10 @@ The points above the diagonal are observed more often than expected. Let's look 
 	pho.sig4 = pho.count4 / pho.exp4
 	##Check the distribution
 	hist(pho.sig4, br =40)
-​
+	
 	sorted.sig4 = sort(pho.sig4, decreasing = TRUE)
 	overrep.words4 = names(sorted.sig4[1:20])
-
+	
 	cat(overrep.words4, sep = "\n")
 
 ----------
