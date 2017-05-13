@@ -407,7 +407,13 @@ GC含量の移動プロット
 
 	count(dengueseq, 2)
 
+[ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の出現頻度を測定する。2連続塩基の場合、ρは次の通り計算される:  
+
 ρ(xy) = fxy/(fx*fy),
+
+ここで`fxy`, `fx`, `fy`は、DNA配列中の文字列`xy`, `x`, `y`の頻度である。例えば、2連続塩基`TA`のρ値の計算式は ρ(TA) = fTA/(fT* fA)で、`fTA`, `fT`, `fA`は、DNA配列中の文字列`TA`, `T`, `A`の頻度である。
+
+2連続塩基`GC`のρ値の計算式は ρ(GC) = fGC/(fG * fC) で、`fGC`, `fG`, `fC`は、DNA配列中の文字列`GC`, `G`, `C`の頻度:  
 
 	count(dengueseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
 	2770/(3426+2240+2770+2299) # Get fG
