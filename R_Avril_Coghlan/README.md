@@ -448,6 +448,7 @@ GC含量の移動プロット
 
 ## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
 **[ペアワイズシーケンスアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)**
+
 2配列間でのアラインメント
 
 ![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
@@ -550,9 +551,14 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 
 [**Gap penalty**](https://en.wikipedia.org/wiki/Gap_penalty)
 
-ギャップの最初の位置には、ギャップ開始ペナルティ(*gap opening penalty*)とギャップ伸長ペナルティ(*gap extension penalty*)を与える。隣接するギャップは一回の挿入・欠失で生じたと考える。
+![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Sequence_gaps.JPG/339px-Sequence_gaps.JPG)
+ギャップの最初の位置には、
+ギャップ（挿入・欠失）開始時のペナルティ(*gap opening penalty*)と
+ギャップ（挿入）継続時のペナルティ(*gap extension penalty*)を与える。
+隣接するギャップは一回の挿入・欠失で生じたと考える。
+
+- [ClustalW ヘルプ | DDBJ](http://www.ddbj.nig.ac.jp/search/help/clustalwhelp-j.html)
 
 `pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける:  
 
