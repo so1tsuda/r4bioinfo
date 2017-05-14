@@ -2,8 +2,8 @@
 # [Welcome to a Little Book of R for Bioinformatics!](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
 By Avril Coghlan  
 
-## Chapters in this Book
-目次
+## [Chapters in this Book](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/index.html#chapters-in-this-book)
+**目次**
 - [How to install R and a Brief Introduction to R](#how-to-install-r-and-a-brief-introduction-to-r)
 - [DNA Sequence Statistics (1)](#dna-sequence-statistics-1)
 - [DNA Sequence Statistics (2)](#dna-sequence-statistics-2)
@@ -327,7 +327,7 @@ for による繰り返し
 	myfunction(25)
 	myfunction
 
-＃の後が[コメント](http://yusuke-memo.blogspot.jp/2009/10/r.html)行となる。
+`＃`の後が[コメント](http://yusuke-memo.blogspot.jp/2009/10/r.html)行となる。
 
 	x <- 100
 	log10(x) # Finds the log to the base 10 of variable x.
@@ -433,12 +433,22 @@ GC含量の移動プロット
 
 ### Summary
 
+	seq()
+	print()
+	plot()
+	numeric()
+	function()
+
+### Links and Further Reading
+
+### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#exercises)
+演習
+
 ----------
 
 ## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
-[シーケンスアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント)
-
-2つのタンパク質配列アラインメント
+**[ペアワイズシーケンスアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)**
+2配列間でのアラインメント
 
 ![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
 
@@ -446,30 +456,38 @@ GC含量の移動プロット
 
 ![http://www.bbc.co.uk/education/guides/zc499j6/revision/2](http://a.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
 
-### Retrieving a UniProt protein sequence via the UniProt website
-UniProtのウェブサイトからタンパク質配列を取得
+### [UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
+[UniProt](https://ja.wikipedia.org/wiki/Swiss-Prot)
+
+### [Viewing the UniProt webpage for a protein sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-the-uniprot-webpage-for-a-protein-sequence)
+
+### [Retrieving a UniProt protein sequence via the UniProt website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-via-the-uniprot-website)
+**UniProtのウェブサイトからタンパク質配列を取得**
 
 - [Using the UniProt basket | Train online](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional/exploring-uniprotkb-results-page/using-unip)
 ![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.16.png)  
 'Add to basket'ボタンを押す。右上の'Basket'ボタンを押し、'Download'ボタンを押す。
 ![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.29.png)
 
-[Mycobacterium leprae（らい菌）](https://ja.wikipedia.org/wiki/らい菌)と[Mycobacterium ulcerans](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)
-の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)タンパク質配列（UniProt登録番号は[Q9CD83](http://www.uniprot.org/uniprot/Q9CD83)と[A0PQ23](http://www.uniprot.org/uniprot/A0PQ23)）をFASTA形式（ファイル名"Q9CD83.fasta"と"A0PQ23.fasta"）で保存。
+[Mycobacterium leprae（らい菌）](https://ja.wikipedia.org/wiki/らい菌)と
+[Mycobacterium ulcerans](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)
+の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)タンパク質配列（UniProt登録番号は[Q9CD83](http://www.uniprot.org/uniprot/Q9CD83)と[A0PQ23](http://www.uniprot.org/uniprot/A0PQ23)）をFASTA形式（ファイル名"Q9CD83.fasta"と"A0PQ23.fasta"）で保存する。
 
 `read.fasta()`関数で、FASTAファイルをRに読み込む:  
 
 	library("seqinr")
-    leprae <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/Q9CD83.fasta")
-    ulcerans <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/A0PQ23.fasta")
-	#leprae <- read.fasta(file = "Q9CD83.fasta")
-	#ulcerans <- read.fasta(file = "A0PQ23.fasta")
+    # system("curl -O http://www.uniprot.org/uniprot/Q9CD83.fasta")
+    # system("curl -O http://www.uniprot.org/uniprot/A0PQ23.fasta")
+	leprae <- read.fasta(file = "Q9CD83.fasta")
+	ulcerans <- read.fasta(file = "A0PQ23.fasta")
 	lepraeseq <- leprae[[1]]
 	ulceransseq <- ulcerans[[1]]
 	lepraeseq # Display the contents of the vector "lepraeseq"
 
-### Retrieving a UniProt protein sequence using SeqinR
-SeqinRでUniProtのタンパク質配列を取得
+[How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
+
+### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
+**SeqinRでUniProtのタンパク質配列を取得**
 
 	library("seqinr")
 	choosebank("swissprot")
@@ -480,14 +498,18 @@ SeqinRでUniProtのタンパク質配列を取得
 	closebank()
 	lepraeseq # Display the contents of "lepraeseq"
 
-### Comparing two sequences using a dotplot
-[ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)で2つの配列を比較
+### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
+**[ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)で2つの配列を比較**
 
 両軸に全く同じ配列をとれば、右上がりの対角線が現れる。
 テストデータで確認:  
 
     # Create tests
-    x <- s2c("atgc"); par(mfrow=c(2,2)); dotPlot(x,x); dotPlot(x,rev(x)); dotPlot(rep(x,2),rep(x,2))
+    x <- s2c("atgc")
+    par(mfrow=c(2,2))
+    dotPlot(x,x)
+    dotPlot(x,rev(x))
+    dotPlot(rep(x,2),rep(x,2))
 
 M.lepraeとM.ulceransのコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 
@@ -498,7 +520,7 @@ M.lepraeとM.ulceransのコリスミ酸リアーゼのタンパク質配列の�
 - [アラインメント | 核酸あるいはアミノ酸配列を複数並べ類縁度を可視化](http://bi.biopapyrus.net/seq/alignment.html)
 
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
-2つのDNA配列間のグローバル・アライメント
+**2つのDNA配列間のグローバル・アライメント**
 
 [**グローバルアラインメントとローカルアラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.82.B0.E3.83.AD.E3.83.BC.E3.83.90.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.81.A8.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)
 
@@ -557,8 +579,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 
 ![http://bi.biopapyrus.net/seq/needleman–wunsch.html](http://bi.biopapyrus.net/media/nw-005.png)
 
-### Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm
-2つのタンパク質配列間のグローバル・アライメント
+### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
+**2つのタンパク質配列間のグローバル・アライメント**
 
 置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM)
 
@@ -592,8 +614,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 - [バイオインフォマティクス-ゲノム配列から機能解析へ-第3章3.4節配列アラインメントにおけるスコア行列とギャップペナルティの使用方法](http://qiita.com/kino-tohoku/items/d4e0441e7ed6222106fa)
 - [Bioinformaticsのお勉強: BLASTの置換行列を取ってきた☆](http://kappa-bioinformatics.blogspot.jp/2011/02/blast.html)
 
-### Aligning UniProt sequences
-UniProt配列のアライメント
+### [Aligning UniProt sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#aligning-uniprot-sequences)
+**UniProt配列のアライメント**
 
 	library("seqinr")
     leprae <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/Q9CD83.fasta")
@@ -623,14 +645,14 @@ UniProt配列のアライメント
 	subject: [1] MLAVLPEKREMTECHLSDEEIRKLNRDLRILIATN...FEDNSREEPIRHQRS--VGT-SA-R---SGRSICT 
 	score: 627 
 
-### Viewing a long pairwise alignment
-2つの配列間のアライメントの表示と出力
+### [Viewing a long pairwise alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-a-long-pairwise-alignment)
+**2つの配列間のアライメントの表示と出力**
 
     writePairwiseAlignments(globalAlignLepraeUlcerans)
     writePairwiseAlignments(globalAlignLepraeUlcerans, file="~/Desktop/aln.txt")
 
-### Pairwise local alignment of protein sequences using the Smith-Waterman algorithm
-2つのタンパク質配列間のローカル・アライメント
+### [Pairwise local alignment of protein sequences using the Smith-Waterman algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-local-alignment-of-protein-sequences-using-the-smith-waterman-algorithm)
+**2つのタンパク質配列間のローカル・アライメント**
 
 	localAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,
 	substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
@@ -641,5 +663,7 @@ UniProt配列のアライメント
 - [Smith-Waterman | ローカルアラインメントを求めるアルゴリズム](http://bi.biopapyrus.net/seq/smith-waterman.html)
 
 ### [Calculating the statistical significance of a pairwise global alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#calculating-the-statistical-significance-of-a-pairwise-global-alignment)
+**ペアワイズグローバルアラインメントの統計的有意性の計算**
+
 
 ----------
