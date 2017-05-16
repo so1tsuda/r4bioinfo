@@ -149,10 +149,6 @@ Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/relea
 
     library(Biostrings)
 
-Rのバージョンとパッケージの確認:  
-
-    sessionInfo()
-
 ### FASTA format
 **[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式**
 
@@ -565,7 +561,7 @@ GC含量の移動プロット
     GAATTC
     GATT-A
 
-以下のアラインメントのスコアは、2 + 2 + (-2) + 2 + 2 + (-1) = 5
+以下のアラインメントのスコアは?
 
     GAATTC
     GA-TTA
@@ -577,6 +573,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 	library(Biostrings)
 	sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
 	sigma # Print out the matrix
+
+[核酸塩基コード](http://www.ddbj.nig.ac.jp/sub/code-j.html#nucleotide-1)
 
 [**Gap penalty**](https://en.wikipedia.org/wiki/Gap_penalty)
 
