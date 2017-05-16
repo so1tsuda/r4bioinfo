@@ -208,8 +208,9 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 [作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)の変更と確認:  
 
-    setwd("~")
     getwd()
+    setwd("~")
+    setwd("~/Downloads/")
 
 ### Reading sequence data into R
 **配列データをRに読み込む**
@@ -429,8 +430,6 @@ GC含量の移動プロット
 ゲノムの2連続塩基組成
 [Genome signature (dinucleotide relative abundances) of genomes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
 
-![https://www.ncbi.nlm.nih.gov/pubmed/10430917](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/bin/pq1692140001.jpg)
-
 ### Summary
 
 	seq()
@@ -464,21 +463,30 @@ GC含量の移動プロット
 
 ### [Viewing the UniProt webpage for a protein sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-the-uniprot-webpage-for-a-protein-sequence)
 
-[Mycobacterium leprae（らい菌）](https://ja.wikipedia.org/wiki/らい菌)の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)(chorismate lyase)タンパク質配列を検索するには、UniProtウェブサイト (http://www.uniprot.org) にアクセスし、ウェブページ上部の検索ボックスにUniProt accession [ [Q9CD83](http://www.uniprot.org/uniprot/Q9CD83) ] を入力して、"Search"ボタンを押す:  
+[*Mycobacterium leprae*（らい菌）](https://ja.wikipedia.org/wiki/らい菌)の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)（chorismate lyase）タンパク質配列を検索するには、UniProtウェブサイト (http://www.uniprot.org) にアクセスし、ウェブページ上部の検索ボックスにUniProt accession [ [Q9CD83](http://www.uniprot.org/uniprot/Q9CD83) ] を入力して、"Search"ボタンを押す:  
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image0.png)
 
 ### [Retrieving a UniProt protein sequence via the UniProt website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-via-the-uniprot-website)
 **UniProtのウェブサイトからタンパク質配列を取得**
 
-- [Using the UniProt basket | Train online](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional/exploring-uniprotkb-results-page/using-unip)
-![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.16.png)  
-'Add to basket'ボタンを押す。右上の'Basket'ボタンを押し、'Download'ボタンを押す。
-![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.29.png)
+[ハンセン病（Leprosy）](https://ja.wikipedia.org/wiki/ハンセン病)の原因菌[*Mycobacterium leprae*（らい菌）](https://ja.wikipedia.org/wiki/らい菌)と
+[ブルーリ潰瘍（Buruli ulcer）](https://ja.wikipedia.org/wiki/ブルーリ潰瘍)の原因菌[*Mycobacterium ulcerans*](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)
+の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)タンパク質配列（UniProt accession は[Q9CD83](http://www.uniprot.org/uniprot/Q9CD83)と[A0PQ23](http://www.uniprot.org/uniprot/A0PQ23)）をFASTA形式（ファイル名"Q9CD83.fasta"と"A0PQ23.fasta"）で保存する。
 
-[Mycobacterium leprae（らい菌）](https://ja.wikipedia.org/wiki/らい菌)と
-[Mycobacterium ulcerans](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)
-の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)タンパク質配列（UniProt登録番号は[Q9CD83](http://www.uniprot.org/uniprot/Q9CD83)と[A0PQ23](http://www.uniprot.org/uniprot/A0PQ23)）をFASTA形式（ファイル名"Q9CD83.fasta"と"A0PQ23.fasta"）で保存する。
+- [Using the UniProt basket | Train online](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional/exploring-uniprotkb-results-page/using-unip)
+
+![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.16.png)  
+
+'Add to basket'ボタンを押す。右上の'Basket'ボタンを押し、'Download'ボタンを押す。
+
+![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.29.png)  
+
+[作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)の変更と確認:  
+
+    getwd()
+    setwd("~")
+    setwd("~/Downloads/")
 
 `read.fasta()`関数で、FASTAファイルをRに読み込む:  
 
@@ -506,10 +514,13 @@ GC含量の移動プロット
 	lepraeseq # Display the contents of "lepraeseq"
 
 ### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
-**[ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)で2つの配列を比較**
+**ドットプロットで2つの配列を比較**
 
+タンパク質のアミノ酸配列や核酸の塩基配列の[相同性 (homology)](https://ja.wikipedia.org/wiki/相同)（共通の祖先に由来すること）は、配列類似性に基づいて判断される。
+[ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)とは、2本の配列を比較するためのグラフである。
 両軸に全く同じ配列をとれば、右上がりの対角線が現れる。
-テストデータで確認:  
+
+テストデータで確認する:  
 
     # Create tests
     x <- s2c("atgc")
