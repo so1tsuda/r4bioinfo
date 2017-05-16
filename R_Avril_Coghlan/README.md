@@ -140,6 +140,18 @@ Rを終了:
 
 	help("library")
 
+Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/release/bioc/html/Biostrings.html)のインストール:  
+
+    #source("https://bioconductor.org/biocLite.R")
+    #biocLite("Biostrings")
+
+`Biostrings`パッケージの呼び出し:  
+
+    library(Biostrings)
+
+Rのバージョンとパッケージの確認:  
+
+    sessionInfo()
 
 ### FASTA format
 **[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式**
@@ -529,7 +541,7 @@ GC含量の移動プロット
     dotPlot(x,rev(x))
     dotPlot(rep(x,2),rep(x,2))
 
-M.lepraeとM.ulceransのコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
+*M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 
 	dotPlot(lepraeseq, ulceransseq)
 
