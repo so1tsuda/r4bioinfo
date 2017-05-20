@@ -1,23 +1,28 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-04-29
+Last Update: 2017-05-20
 
 ----------
 
 # Machine Learning
 [機械学習](https://ja.wikipedia.org/wiki/機械学習)
 
+## Table of Contents
+- [TJO](#TJO)
+  - [2015-11-26](#2015-11-26) ヒトの直感的理解は単変量モデルまで、直感を超えたければ多変量モデルへ
+- [JIN'S PAGE](#jins-page)
+  - [Chap_31](#Chap_31) Rとカーネル法
+  - [Chap_32](#Chap_32) Rと集団学習
+
 ----------
 ## Execution environment
 
 
 ----------
-## TJO
-https://twitter.com/tjo_datasci
-TJO (@TJO_datasci) | Twitter
+## [TJO](https://twitter.com/tjo_datasci)
 
-## 2015-11-26
+### 2015-11-26
 http://tjo.hatenablog.com/entry/2015/11/26/190000
 ヒトの直感的理解は単変量モデルまで、直感を超えたければ多変量モデルへ
 
@@ -48,7 +53,8 @@ TJO on Twitter: "前にも書いたネタだけど「機械学習で取り組む
 
 ## [JIN'S PAGE](http://mjin.doshisha.ac.jp/R/)
 
-### [Rとカーネル法・サポートベクターマシン](http://mjin.doshisha.ac.jp/R/Chap_31/31.html)
+### [Chap_31](http://mjin.doshisha.ac.jp/R/Chap_31/31.html)
+Rとカーネル法
 
 カーネル主成分分析 (KPCA; kernel principal component analysis)
 
@@ -58,7 +64,8 @@ TJO on Twitter: "前にも書いたネタだけど「機械学習で取り組む
 サポートベクターマシン (SVM: Support Vector Machine) 
 
 
-### [Rと集団学習](http://mjin.doshisha.ac.jp/R/Chap_32/32.html)
+### [Chap_32](http://mjin.doshisha.ac.jp/R/Chap_32/32.html)
+Rと集団学習
 
 集団学習 (ensemble learning)  
 
