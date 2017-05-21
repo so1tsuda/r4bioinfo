@@ -21,7 +21,15 @@ Last Update: 2017-04-15
 ----------
 ## Execution environment
 
+    > sessionInfo()
+    R version 3.3.3 (2017-03-06)
+    Platform: x86_64-apple-darwin13.4.0 (64-bit)
+    Running under: OS X Mavericks 10.9.5
 
+    $java -version
+    java version "1.8.0_121"
+    Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+    Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
 
 ----------
 
