@@ -21,15 +21,7 @@ Last Update: 2017-04-15
 ----------
 ## Execution environment
 
-	> sessionInfo()
-	R version 3.3.3 (2017-03-06)
-	Platform: x86_64-apple-darwin13.4.0 (64-bit)
-	Running under: OS X Mavericks 10.9.5
 
-	$java -version
-	java version "1.8.0_121"
-	Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
-	Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
 
 ----------
 
@@ -39,7 +31,6 @@ O'Reilly Japan - ゼロから作るDeep Learning
 https://github.com/oreilly-japan/deep-learning-from-scratch
 oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』のリポジトリ
 
-	git clone https://github.com/oreilly-japan/deep-learning-from-scratch
 
 ## 2017-04
 http://touch-sp.hatenablog.com/archive/2017/4
@@ -67,29 +58,13 @@ MXNetR で Autoencoder を作ってみる - Qiita
 
 パッケージの読み込みとシード固定
 
-	library(mxnet)
-	mx.set.seed(0)
 
 データセットを読み込む
 
     system("curl -O https://raw.githubusercontent.com/sbussmann/kaggle-mnist/master/Data/train.csv")
 
-	# KaggleからダウンロードしたMNISTデータを読み込む
-	rawdata <- read.csv("train.csv", header = T)
-	rawdata <- as.matrix(rawdata)
 
-	# 訓練データとテストデータに分ける
-	# http://qiita.com/7of9/items/da049f2a32d53c2e381e
-	# http://yukiyanai.github.io/jp/classes/rm1/contents/R/uncertainty.html
-	train.index <- sample(x = 1:nrow(rawdata), size = 30000, replace = TRUE)
-	train <- rawdata[train.index, ]
-	test <- rawdata[-train.index, ]
 
-	# データとラベルに分ける。転置しているのは、colmajor形式にするため
-	train.x <- t(train[, -1]/ 255)
-	train.y <- train[,  1]
-	test.x <- t(test[, -1]/ 255)
-	test.y <- test[,  1]
 
 Autoencoder を作る
 エンコードする
@@ -109,17 +84,10 @@ Deep Learning in R | R Tutorial
 http://www.r-tutor.com/content/download
 Download | R Tutorial
 
-	curl -O http://www.r-tutor.com/sites/default/files/rpud/rpux_0.6.1_mac.tgz
 
 http://www.r-tutor.com/gpu-computing/rpud-installation
 Installing GPU Packages | R Tutorial
 
-	# Mac OS X
-	tar xf rpux_0.6.1_mac.tgz 
-	cd rpux_0.6.1_mac
-	R CMD INSTALL rpud_0.6.1.tgz 
-	R CMD INSTALL rpudplus_0.6.1.tgz
-	R CMD INSTALL rpud_0.6.1_src.tgz
 
 configure: error: "cannot find nvcc; check CUDA install"
 ERROR: configuration failed for package ‘rpud’
@@ -141,8 +109,6 @@ https://gist.github.com/HirofumiYashima/99e00a36c79910aad616
 http://qiita.com/HirofumiYashima/items/68d56cfbab2834c1febb
 R言語 で Deep Learning と 従来型 機械学習 7 手法 分類問題 エラー率比較　～ H2O パッケージ編 - Qiita
 
-	install.packages("h2o", repos=(c("http://s3.amazonaws.com/h2o-release/h2o/master/1542/R", getOption("repos"))))
-	library(h2o)
 
 ----------
 ## 2015-07-22
@@ -158,9 +124,7 @@ jdk-8u121-macosx-x64.dmg
 http://d.hatena.ne.jp/dichika/20140503/p1
 Rで一行でディープラーニング - 盆栽日記
 
-	library(h2o)
 
-	> localH2O = h2o.init(ip = "localhost", port = 54321, startH2O = TRUE)
 
 
 ----------
@@ -175,52 +139,13 @@ Deep Learningライブラリ{mxnet}のR版でConvolutional Neural Networkをサ�
 インストール
 https://github.com/dmlc/mxnet/tree/master/R-package#installation
 
-	# Installation
-	install.packages("drat", repos="https://cran.rstudio.com")
-	drat:::addRepo("dmlc")
-	install.packages("mxnet")
-	library(mxnet)
 
 データセットの準備
 
-	# Data preparation
-	train<-read.csv('https://github.com/ozt-ca/tjo.hatenablog.samples/raw/master/r_samples/public_lib/jp/mnist_reproduced/short_prac_train.csv')
-	test<-read.csv('https://github.com/ozt-ca/tjo.hatenablog.samples/raw/master/r_samples/public_lib/jp/mnist_reproduced/short_prac_test.csv')
-	train<-data.matrix(train)
-	test<-data.matrix(test)
-	train.x<-train[,-1]
-	train.y<-train[,1]
-	train.x<-t(train.x/255)
-	test_org<-test
-	test<-test[,-1]
-	test<-t(test/255)
-	table(train.y)
 
 Deep Neural Network (DNN)で試してみる
 
-	# Deep NN
-	data <- mx.symbol.Variable("data")
-	fc1 <- mx.symbol.FullyConnected(data, name="fc1", num_hidden=128)
-	act1 <- mx.symbol.Activation(fc1, name="relu1", act_type="relu")
-	fc2 <- mx.symbol.FullyConnected(act1, name="fc2", num_hidden=64)
-	act2 <- mx.symbol.Activation(fc2, name="relu2", act_type="relu")
-	fc3 <- mx.symbol.FullyConnected(act2, name="fc3", num_hidden=10)
-	softmax <- mx.symbol.SoftmaxOutput(fc3, name="sm")
-	devices <- mx.cpu()
-	mx.set.seed(0)
-	model <- mx.model.FeedForward.create(softmax, X=train.x, y=train.y,
-	 ctx=devices, num.round=10, array.batch.size=100,
-	 learning.rate=0.07, momentum=0.9,  eval.metric=mx.metric.accuracy,
-	 initializer=mx.init.uniform(0.07),
-	 epoch.end.callback=mx.callback.log.train.metric(100))
 
-	preds <- predict(model, test, ctx=devices)
-	dim(preds)
-	pred.label <- max.col(t(preds)) - 1
-	table(pred.label)
-	head(pred.label)
-	table(test_org[,1],pred.label)
-	sum(diag(table(test_org[,1],pred.label)))/1000
 
 Convolutional Neural Network (CNN)で試してみる
 
@@ -240,48 +165,20 @@ H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)�
 
 いつもの多変量データで手っ取り早くh2o.deeplearningを試してみる
 
-	localH2O <- h2o.init(ip = "localhost", port = 54321, startH2O = TRUE, nthreads=-1)
 
     # http://labo.utsubo.tokyo/2016/07/28/rのh2oでエラー対応法/
     cfData<-h2o.importFile(path="conflict_sample.txt")
     head(cfData)
 
-	res.err.dl<-rep(0,100)
-	numlist<-sample(3000,100,replace=F)
-	for(i in 1:100){
-	 cf.train <- cfData[-numlist[i],]
-	 cf.test <- cfData[numlist[i],]
-	 # http://labo.utsubo.tokyo/2016/07/28/rのh2oでエラー対応法/
      res.dl <- h2o.deeplearning(x = 1:7, y = 8, training_frame = cf.train, activation = "Tanh",hidden=rep(20,2))
-	 pred.dl <- h2o.predict(object=res.dl,newdata=cf.test[,-8])
-	 
-	 pred.dl.df <- as.data.frame(pred.dl)
-	 test.dl.df <- as.data.frame(cf.test)
-	 
-	 res.err.dl[i] <- ifelse(as.character(pred.dl.df[1,1])==as.character(test.dl.df[1,8]),0,1)
-	 }
 
-	sum(res.err.dl)
 
 なお、svm{e1071}で同じことをやった結果がこちら。
 
     #install.packages("e1071")
-	library(e1071)
-	d<-read.table("conflict_sample.txt", header=TRUE, quote="\"")
-	res.err.svm<-rep(0,100)
-	numlist<-sample(3000,100,replace=F)
-	for(i in 1:100){
-	 cf.train <- d[-numlist[i],]
-	 cf.test <- d[numlist[i],]
-	 res.svm <- svm(cv~.,cf.train)
-	 pred.svm <- predict(res.svm,newdata=cf.test[,-8])
-	 res.err.svm[i] <- ifelse(pred.svm==cf.test[,8], 0, 1)
-	}
-	sum(res.err.svm)
 
 なお、単一の試行でベタっと比べてconfusion matrix書いてみた結果が以下。
 
-	d.dl.pred<-h2o.predict(object=d.dl,newdata=cfData[,-8])
 
 > 	d.dl.pred<-h2o.predict(object=d.dl,newdata=cfData[,-8])
 Error in paste0("Predictions/models/", object@model_id, "/frames/", h2o.getId(newdata)) : 
@@ -290,12 +187,7 @@ Error in paste0("Predictions/models/", object@model_id, "/frames/", h2o.getId(ne
     # object=d.dl -> object=res.dl に修正したが、これで正しい？
     d.dl.pred<-h2o.predict(object=res.dl,newdata=cfData[,-8])
 
-	d.dl.pred.df<-as.data.frame(d.dl.pred)
-	table(d$cv,as.character(d.dl.pred.df[,1]))
 
-	d.svm<-svm(cv~.,d)
-	d.svm.pred<-predict(d.svm,newdata=d[,-8])
-	table(d$cv,d.svm.pred)
 
 途中
 
