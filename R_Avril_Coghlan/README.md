@@ -7,6 +7,7 @@ By Avril Coghlan
 - [How to install R and a Brief Introduction to R](#how-to-install-r-and-a-brief-introduction-to-r)
 - [DNA Sequence Statistics (1)](#dna-sequence-statistics-1)
 - [DNA Sequence Statistics (2)](#dna-sequence-statistics-2)
+- [Sequence Databases]()
 - [Pairwise Sequence Alignment](#pairwise-sequence-alignment)
 
 ----------
@@ -453,6 +454,42 @@ GC含量の移動プロット
 
 ----------
 
+## [Sequence Databases](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html)
+**配列データベース**
+
+### The NCBI Sequence Database
+
+### [Querying the NCBI Database via R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#querying-the-ncbi-database-via-r)
+**Rを介してNCBIデータベースを照会する**
+
+	library("seqinr") # Load the SeqinR R package
+	choosebank()      # List all the sub-databases in ACNUC
+
+	choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
+	choosebank("refseq") # Specify that we want to search the 'refseq' ACNUC sub-database
+    # query("RefSeqBact", "SP=Bacteria")
+    #Error in query("RefSeqBact", "SP=Bacteria") : 
+    #  invalid request:"unknown species at (^): \"SP
+	closebank()
+
+	choosebank("genbank")
+    #> 	query("SchistosomamRNA", "SP=Schistosoma mansoni AND M=mrna")
+    #Error in readLines(socket, n = nelem, ok = FALSE) : 
+    #  too few lines read in readLines
+    #In addition: Warning message:
+    #In readLines(socket, n = nelem, ok = FALSE) :
+    #  incomplete final line found on '->pbil.univ-lyon1.fr:5558'
+	closebank()
+
+#### [Example: finding the sequence for the DEN-1 Dengue virus genome](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#example-finding-the-sequence-for-the-den-1-dengue-virus-genome)
+**例：DEN-1デングウイルスゲノムの配列を取得**
+
+	choosebank("refseqViruses")
+    Dengue1 <- query("Dengue1", "AC=NC_001477")
+
+
+----------
+
 ## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
 **[ペアワイズシーケンスアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)**
 
@@ -543,8 +580,6 @@ GC含量の移動プロット
 
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
 
-- [アラインメント | 核酸あるいはアミノ酸配列を複数並べ類縁度を可視化](http://bi.biopapyrus.net/seq/alignment.html)
-
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アライメント**
 
@@ -568,7 +603,7 @@ GC含量の移動プロット
 
 **scoring matrix (substitution matrix)**
 
-Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコアマトリックス(置換行列)](http://bi.biopapyrus.net/seq/score-matrix.html)を作る:  
+Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコアマトリックス(置換行列)を作る:  
 
 	library(Biostrings)
 	sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
@@ -605,12 +640,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 このアライメントは、4個の一致(match)、1個の不一致(mismatch)、長さ1の1個のギャップ(gap)が含まれているので、スコアは (4\*2)+(1\*-1)+(1\*-10) = -3 となる。  
 【注意】gapOpening = -2, gapExtension = -8 は、ギャップの最初の位置は (-2-8=)-10 のスコアが割り当てられ、ギャップの後続の位置は -8 のスコアが与えられることを意味する。
 
-- [Aritalab:Lecture/Bioinformatics/Alignment - Metabolomics.JP](http://metabolomics.jp/wiki/Aritalab:Lecture/Bioinformatics/Alignment)
-- [2-1. 配列解析基礎 Basic Sequence Analysis 坊農 秀雅](http://www.iu.a.u-tokyo.ac.jp/~kadota/bioinfo_ngs_sokushu_2014/20140905_2-1_bono.pdf)
-- [置換行列 | スコアマトリックスの作り方](http://bi.biopapyrus.net/seq/score-matrix.html)
-- [Needleman–Wunsch | グローバルアライメントを求めるアルゴリズム](http://bi.biopapyrus.net/seq/needleman–wunsch.html)
-
-![http://bi.biopapyrus.net/seq/needleman–wunsch.html](http://bi.biopapyrus.net/media/nw-005.png)
+![https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html](http://bi.biopapyrus.net/media/nw-005.png)
 
 ### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
 **2つのタンパク質配列間のグローバル・アライメント**
@@ -693,10 +723,23 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数で[スコア�
 
     writePairwiseAlignments(localAlignLepraeUlcerans)
 
-- [Smith-Waterman | ローカルアラインメントを求めるアルゴリズム](http://bi.biopapyrus.net/seq/smith-waterman.html)
-
 ### [Calculating the statistical significance of a pairwise global alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#calculating-the-statistical-significance-of-a-pairwise-global-alignment)
 **ペアワイズグローバルアラインメントの統計的有意性の計算**
+
+
+### Summary
+
+### Links and Further Reading
+
+- [2-1. 配列解析基礎 Basic Sequence Analysis 坊農 秀雅](http://www.iu.a.u-tokyo.ac.jp/~kadota/bioinfo_ngs_sokushu_2014/20140905_2-1_bono.pdf)
+- [Aritalab:Lecture/Bioinformatics/Alignment - Metabolomics.JP](http://metabolomics.jp/wiki/Aritalab:Lecture/Bioinformatics/Alignment)
+- [置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
+- [アラインメント | 核酸あるいはアミノ酸配列を複数並べ類縁度を可視化](https://bi.biopapyrus.jp/seq/alignment/)
+- [Needleman–Wunsch | グローバルアライメントを求めるアルゴリズム](https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html)
+- [Smith-Waterman | ローカルアラインメントを求めるアルゴリズム](https://bi.biopapyrus.jp/seq/alignment/smith-waterman.html)
+
+### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#exercises)
+演習
 
 
 ----------
