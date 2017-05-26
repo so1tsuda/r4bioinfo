@@ -24,16 +24,80 @@ Last Update: 2017-05-26
 ## [r-phylo](https://www.r-phylo.org)
 ### [DataTreeManipulation](http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation)
 
+	library(ape)
+	library(geiger)
 
     geotree <- read.nexus("http://www.r-phylo.org/w/images/0/02/Geospiza.nex")
     geodata <- read.table("http://www.r-phylo.org/w/images/5/5c/Geospiza.txt")
 
 How do I designate a specific taxon to be the root of my phylogeny?
 
+    # 根 root
     plot.phylo(geotree)
     plot.phylo(root(geotree, "fusca"))
     plot.phylo(ladderize(root(geotree, "fusca"), right = TRUE))
     plot.phylo(ladderize(root(geotree, "fusca"), right = FALSE))
+
+How can I resolve polytomies in my phylogeny?
+
+How can I collapse very short branches into polytomies?
+
+    # 多分岐 polytomy 
+	collapsedgeotree <- di2multi(geotree, 0.03)
+
+    par(mfrow=c(1,2))
+    plot.phylo(geotree)
+    plot.phylo(collapsedgeotree)
+
+How can I see the length of the branches in my phylogeny?
+
+    # 枝長
+	geotree$edge.length
+
+How can I change the lengths of the branches in my phylogeny?
+
+    compute.brlen(geotree, method="Grafen")$edge.length
+    compute.brlen(geotree, 1)$edge.length
+    compute.brlen(geotree, c(1, 2))$edge.length
+
+How can I see the list of taxa represented in my phylogeny?
+
+	 geotree$tip.label
+
+How can I verify that the taxa listed in my data table match those at the tips of my phylogeny?
+
+	library(geiger)
+
+	name.check(geotree, geodata)
+	geotree <- drop.tip(geotree, "olivacea")
+    name.check(geotree, geodata)
+
+Is there a shorthand way to refer to a specific list of taxa (for example, all members of a particular clade)?
+
+	cladeA = c("pauper", "psittacula", "parvulus")
+    cladeA <- tips(geotree, 26)
+	mrca(geotree)["pauper", "psittacula"]
+    cladeA <- tips(geotree, mrca(geotree)["pauper", "psittacula"])
+
+How can I remove taxa from my phylogeny?
+
+    par(mfrow=c(1,2))
+    plot.phylo(geotree)
+    plot.phylo(drop.tip(geotree, cladeA))
+
+How can I see a plot of my phylogeny?
+
+	plot.phylo(geotree)
+	help(plot.phylo)
+    example(plot.phylo)
+
+How can I identify all the branches belonging to a particular subclade?
+
+
+
+
+
+
 
 
 
@@ -43,16 +107,19 @@ How do I designate a specific taxon to be the root of my phylogeny?
 
 Package のインストール
 
+	install.packages("ape")
 
 ape: newick tree を描く
 
-    system("curl -O http://www.geocities.jp/ancientfishtree/NewFiles/drawTree_fol.tar.gz
+    system("
+            curl -O http://www.geocities.jp/ancientfishtree/NewFiles/drawTree_fol.tar.gz
             tar xvzf drawTree_fol.tar.gz
             find drawTree_fol
             ")
 
     setwd(paste0(getwd(),"/drawTree_fol"))
 
+	source('drawTree.R')
 
 ![](http://www.geocities.jp/ancientfishtree/NewFiles/drawTreeR.jpg)
 
@@ -65,6 +132,8 @@ ape: node number を確認する
 
 **系統樹データの読み込み**
 
+	#install.packages("ape", dependencies = TRUE)
+	#install.packages("ade4", dependencies = TRUE)
 
     packageVersion("ape")
 
@@ -76,12 +145,30 @@ ape: node number を確認する
     library(ade4)
     ls("package:ade4")
 
+	# ape パッケージを利用して読み込む
+	library(ape)
 
+	# newick フォーマットの読み込み
+	nw <- read.tree("https://stat.biopapyrus.net/data/newick-format.txt")	
+	# nexus フォーマットの読み込み
+	nx <- read.nexus("https://stat.biopapyrus.net/data/nexus-format.txt")
 
+	# データの読み込み
+	tree <- read.tree("https://stat.biopapyrus.net/data/newick-format.txt")
+	# データの書き込み
+	write.tree(tree, file="new.tre")    # newick フォーマット
+	write.nexus(tree, file="new.nex")   # nexus フォーマット
 
+	# ade4 パッケージを利用して読み込む
+	library(ade4)
+	# ファイルを 1 行ずつ読んで、 newick2phylog で変換
+	fh <- file("https://stat.biopapyrus.net/data/newick-format.txt", "r")
+	tree <- newick2phylog(readLines(fh, 1))
 
 **ape を利用した系統樹作成**
 
+	library(ape)
+	tree <- read.tree("https://stat.biopapyrus.net/data/newick-format.txt")
     plot(tree)
 
 ![](https://stat.biopapyrus.net/media/r/ape-plot-basis.png)
@@ -90,21 +177,47 @@ ape: node number を確認する
     ?edgelabels
     example(edgelabels)
 
+	# Sample 1
+	plot(tree, main = "Sample 1")
     edgelabels(text = tree$edge.length)
 
+	# Sample 2
+	# 最後の枝のみに距離情報をつける場合
+	plot(tree, main = "Sample 2")
+	
+	# 葉を持つ枝を特定して距離情報を代入する
+	lastEdgeLabel <- tree$edge.length * as.numeric(tree$edge[,1] > tree$edge[,2])
+	lastEdgeLabel <- ifelse(lastEdgeLabel == 0, NA, lastEdgeLabel)
+	lastEdgeLabel[1] <- tree$edge.length[1]
+	edgelabels(lastEdgeLabel, frame="none", bg="none")
 
 ![](https://stat.biopapyrus.net/media/r/ape-plot-edgelabel.png)
 
+	plot(tree)
     nodelabels()
 
+	# ノードが右上がりになるようにソート（逆はright = FALSEを指定）
+	tree.sort <- ladderize(tree, right = TRUE)
 
+	plot(tree.sort, type = "phylogram")
 
+	# 横軸の追加
+	axisPhylo()
+	
+	# スケールバーの追加
+	add.scale.bar(length=0.05)
 
 ![](https://stat.biopapyrus.net/media/r/ape-plot-sortscale.png)
 
+	plot(tree, y.lim = c(-0.5, tree$Nnode + 1))
+	add.scale.bar(x=0, y = 0, length = 0.05)
 
 **ade4 を利用した系統樹作成**
 
+	# ade4パッケージの利用
+	library(ade4)
+	fh <- file("https://stat.biopapyrus.net/data/newick-format.txt", "r")
+	tree <- newick2phylog(readLines(fh, 1))
     plot(tree)
 
     help(plot.phylog)
@@ -122,6 +235,10 @@ ape: node number を確認する
 2．系統樹の推定 (距離法)
 (1)　距離
 
+	library(ape)
+	data(woodmouse)
+	str(woodmouse)
+	base.freq(woodmouse)
 
 ### [Chap_43](http://mjin.doshisha.ac.jp/R/Chap_43/43.html)
 **Rと系統樹(2)**
@@ -129,6 +246,12 @@ ape: node number を確認する
 1．系統樹のデザインと操作
 (1)　先端のデザイン
 
+	library(ape);data(woodmouse);
+	wood.dist<-dist.dna(woodmouse)
+	wood.tr<-nj(wood.dist)
+	lab<-c(rep(10,3),rep(11,2),rep(12,3), rep(13,7))　#印の番号を作成する
+	plot(wood.tr, "c", FALSE, font = 1, label.offset = 2,x.lim = 20, no.margin = TRUE)
+	tiplabels(pch =lab,col =lab, adj = 1.5, cex = 2)
 
 ----------
 ## Execution environment
@@ -144,17 +267,24 @@ ape: node number を確認する
 ----------
 ## References
 
-https://www.r-phylo.org
-Comparative Phylogenetics in R
+http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH18%2F進化生物学I%2F系統推定の基本用語
+第２-４回授業：系統推定の基本用語 †
+系統樹は通常、二分岐で表現される。多分岐（またはポリトミー polytomyと呼ぶ）の系統関係が意味するものは、
 
-http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation
-HowTo/DataTreeManipulation - Comparative Phylogenetics in R
+https://ww1.fukuoka-edu.ac.jp/~fukuhara/keitai/9-1.html
+9-1. 被子植物の系統樹と分類
+- 系統樹では、分岐点を「節」[node]、節と節とを結ぶ線を「枝」[branch]という。節ではふたまたに分岐する(二分岐)する場合も、3つ以上に分岐(多分岐[polytomy])することもある。
 
-  library(ape)
-  library(geiger)
+http://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-methods-845
+R言語 CRAN Task View：系統学、特に比較方法 | トライフィールズ
+- apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
+- geigerは、分類群の重複セットに木やデータを整理することができます。
 
-
-
+https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
+田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法"
+生物学における系統樹の必要性
+系統関係=サンプル間の非依存性を考慮して統計解析を行うことでこのような問題を解決しようとする手法があり、系統的独立比較法などと呼ばれている (Felsenstein, 1985; Grafen, 1989)。
+系統樹上での生物間のパスの長さの和=系統的多様性で置き換えることで解決しようという研究が徐々に増えてきている (Faith, 1992; Forest et al., 2007)。
 
 ----------
 
