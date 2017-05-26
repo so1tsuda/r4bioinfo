@@ -9,6 +9,8 @@ Last Update: 2017-05-26
 [系統樹](https://ja.wikipedia.org/wiki/系統樹)
 
 ## Table of Contents
+- [Comparative Phylogenetics in R](#r-phylo)
+  - [HowTo/DataTreeManipulation](#DataTreeManipulation)
 - [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
   - [R](http://www.geocities.jp/ancientfishtree/R_JI.html)
 - [biopapyrus](#biopapyrus)
@@ -16,6 +18,24 @@ Last Update: 2017-05-26
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
+
+----------
+
+## [r-phylo](https://www.r-phylo.org)
+### [DataTreeManipulation](http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation)
+
+
+    geotree <- read.nexus("http://www.r-phylo.org/w/images/0/02/Geospiza.nex")
+    geodata <- read.table("http://www.r-phylo.org/w/images/5/5c/Geospiza.txt")
+
+How do I designate a specific taxon to be the root of my phylogeny?
+
+    plot.phylo(geotree)
+    plot.phylo(root(geotree, "fusca"))
+    plot.phylo(ladderize(root(geotree, "fusca"), right = TRUE))
+    plot.phylo(ladderize(root(geotree, "fusca"), right = FALSE))
+
+
 
 ----------
 ## [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
@@ -33,6 +53,8 @@ ape: newick tree を描く
 
     setwd(paste0(getwd(),"/drawTree_fol"))
 
+
+![](http://www.geocities.jp/ancientfishtree/NewFiles/drawTreeR.jpg)
 
 ape: node number を確認する
 
@@ -121,6 +143,18 @@ ape: node number を確認する
 
 ----------
 ## References
+
+https://www.r-phylo.org
+Comparative Phylogenetics in R
+
+http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation
+HowTo/DataTreeManipulation - Comparative Phylogenetics in R
+
+  library(ape)
+  library(geiger)
+
+
+
 
 ----------
 
