@@ -93,13 +93,34 @@ How can I see a plot of my phylogeny?
 
 How can I identify all the branches belonging to a particular subclade?
 
+	geotree$edge
 
+    geotree$edge[which.edge(geotree, cladeA), ]
 
+How can I identify the node representing the most recent common ancestor of a pair of taxa?
 
+	mrca(geotree)["pauper", "parvulus"]
 
+	geotree$node.label<-((length(geotree$tip)+1):((length(geotree$tip)*2)-1))
+    plot(geotree, show.node.label=TRUE)
 
+How do I calculate the patristic distance between two taxa?
+2つの分類群間の距離を計算
 
+	cophenetic(geotree)["pallida", "conirostris"]
+	cophenetic(geotree)
 
+How do I calculate the patristic distance between two internal nodes or an internal node and a tip?
+
+	dist.nodes(geotree)
+	dist.nodes(geotree)[15, 20]
+    geotree$tip.label
+	dist.nodes(geotree)[1, 15]
+
+How do I calculate the distance from an internal node to the tips of an ultrametric phylogeny?
+
+	branching.times(geotree)
+    geotree$node.label
 
 ----------
 ## [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
@@ -225,6 +246,10 @@ ape: node number を確認する
     example(plot.phylog)
 
 
+
+
+
+
 ----------
 ## [JIN'S PAGE](http://mjin.doshisha.ac.jp/R/)
 
@@ -267,6 +292,35 @@ ape: node number を確認する
 ----------
 ## References
 
+
+http://www.cis.doshisha.ac.jp/mjin/R/42/42.html
+Rと系統樹(1)
+
+http://www.cis.doshisha.ac.jp/mjin/R/43/43.html
+Rと系統樹(2)
+
+### ape
+https://sites.google.com/site/adversariaoftekijima/r/ape
+ape - 日々草(TEKの備忘録)
+takayuki kijima, 2015/04/25 16:23
+
+http://lecture.ecc.u-tokyo.ac.jp/~aiwata/biostat_basic/2013/text4lec4_2.pdf
+バイオスタティスティクス基礎論 第4回 講義テキスト
+岩田洋佳
+パッケージ ape 
+
+### patristic distance
+http://dendropy.readthedocs.io/en/latest/tutorial/treestats.html#patristic-distances
+3.3. Tree Statistics, Metrics, and Calculations — DendroPy Phylogenetic Computing Library v3.12.1
+
+### Grafen
+https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
+田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法"
+生物学における系統樹の必要性
+系統関係=サンプル間の非依存性を考慮して統計解析を行うことでこのような問題を解決しようとする手法があり、系統的独立比較法などと呼ばれている (Felsenstein, 1985; Grafen, 1989)。
+系統樹上での生物間のパスの長さの和=系統的多様性で置き換えることで解決しようという研究が徐々に増えてきている (Faith, 1992; Forest et al., 2007)。
+
+### polytomy
 http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH18%2F進化生物学I%2F系統推定の基本用語
 第２-４回授業：系統推定の基本用語 †
 系統樹は通常、二分岐で表現される。多分岐（またはポリトミー polytomyと呼ぶ）の系統関係が意味するものは、
@@ -279,12 +333,6 @@ http://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-me
 R言語 CRAN Task View：系統学、特に比較方法 | トライフィールズ
 - apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
 - geigerは、分類群の重複セットに木やデータを整理することができます。
-
-https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
-田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法"
-生物学における系統樹の必要性
-系統関係=サンプル間の非依存性を考慮して統計解析を行うことでこのような問題を解決しようとする手法があり、系統的独立比較法などと呼ばれている (Felsenstein, 1985; Grafen, 1989)。
-系統樹上での生物間のパスの長さの和=系統的多様性で置き換えることで解決しようという研究が徐々に増えてきている (Faith, 1992; Forest et al., 2007)。
 
 ----------
 
