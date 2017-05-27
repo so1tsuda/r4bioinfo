@@ -15,13 +15,6 @@ Last Update: 2017-05-20
   - [Chap_31](#chap_31) Rとカーネル法
   - [Chap_32](#chap_32) Rと集団学習
 
-## Execution environment
-
-    > sessionInfo()
-    R version 3.3.3 (2017-03-06)
-    Platform: x86_64-apple-darwin13.4.0 (64-bit)
-    Running under: OS X Mavericks 10.9.5
-
 ----------
 ## [TJO](https://twitter.com/tjo_datasci)
 
@@ -102,6 +95,14 @@ Rと集団学習
 
 
 ----------
+## Execution environment
+
+    > sessionInfo()
+    R version 3.3.3 (2017-03-06)
+    Platform: x86_64-apple-darwin13.4.0 (64-bit)
+    Running under: OS X Mavericks 10.9.5
+
+----------
 ## Acknowledgements
 
 ----------
@@ -110,6 +111,36 @@ Rと集団学習
 https://matome.naver.jp/odai/2145718453057572201
 R言語で機械学習　人工知能 - NAVER まとめ
 https://matome.naver.jp/odai/2145718453057572201?&page=3
+
+### antibiotic resistance
+抗生物質耐性
+
+5 Jul 2016
+https://arxiv.org/abs/1607.01224
+Machine Learning for Antimicrobial Resistance
+
+https://www.extremetech.com/extreme/221812-machine-learning-offers-hope-in-fight-against-antibiotic-resistance
+Machine learning offers hope in fight against antibiotic resistance - ExtremeTech
+January 26, 2016
+
+https://www.ncbi.nlm.nih.gov/pubmed/27297683
+Sci Rep. 2016 Jun 14;6:27930. 
+Antimicrobial Resistance Prediction in PATRIC and RAST.
+- we custom built AdaBoost (adaptive boosting) machine learning classifiers for identifying carbapenem resistance in Acinetobacter baumannii, methicillin resistance in Staphylococcus aureus, and beta-lactam and co-trimoxazole resistance in Streptococcus pneumoniae with accuracies ranging from 88-99%.
+
+https://www.ncbi.nlm.nih.gov/pubmed/28425484
+Sci Rep. 2017 Apr 20;7:46327.
+Mycobacterium tuberculosis resistance prediction and lineage classification from genome sequencing: comparison of automated analysis tools.
+
+----------
+
+メタゲノムのコドン使用
+https://www.ncbi.nlm.nih.gov/pubmed/27115650
+Methods Mol Biol. 2016;1415:509-31.
+Big Data, Evolution, and Metagenomes: Predicting Disease from Gut Microbiota Codon Usage Profiles.
+- combined with machine learning, to classify human gut microbiome samples according to the pathological condition diagnosed in the human host.
+KEYWORDS:
+Cirrhosis; Enrichment analysis; Human metagenome; Random forests; Translational optimization; Variable selection
 
 ----------
 
