@@ -79,21 +79,6 @@ Rと集団学習
     head(spam.rf$err.rate) # OOB(out-of-bag)
 
 
-### [Chap_42](http://mjin.doshisha.ac.jp/R/Chap_42/42.html)
-**Rと系統樹(1)**
-
-1．系統樹
-2．系統樹の推定 (距離法)
-(1)　距離
-
-
-### [Chap_43](http://mjin.doshisha.ac.jp/R/Chap_43/43.html)
-**Rと系統樹(2)**
-
-1．系統樹のデザインと操作
-(1)　先端のデザイン
-
-
 ----------
 ## Execution environment
 
