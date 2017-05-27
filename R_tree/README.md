@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-05-26
+Last Update: 2017-05-30
 
 ----------
 
@@ -10,11 +10,11 @@ Last Update: 2017-05-26
 
 ----------
 ## Table of Contents
-- [2017-05-27](#2017-05-27)
+- [2017-05-30](#2017-05-30)
 - [Comparative Phylogenetics in R](#r-phylo)
   - [HowTo/DataTreeManipulation](#DataTreeManipulation)
-- [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
-  - [R](http://www.geocities.jp/ancientfishtree/R_JI.html)
+- [Jun Inoue](#jun-inoue)
+  - [R_JI](#r_ji)
 - [biopapyrus](#biopapyrus)
   - [2015-05-04](#2015-05-04) 系統樹 ape ade4 | Rで系統樹を作成する方法
 - [JIN'S PAGE](#jins-page)
@@ -22,14 +22,26 @@ Last Update: 2017-05-26
   - [Chap_43](#chap_43) Rと系統樹(2)
 
 ----------
-## 2017-05-27
+## 2017-05-30
 
 ### [Analysis of Phylogenetics and Evolution with R](https://github.com/haruosuz/books/tree/master/aper)
 
-https://github.com/haruosuz/DS4GD/blob/master/2017/CaseStudy.md
-https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan
+### SeqinR package
+
+[パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
+
+パッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)のインストール:  
+
+    install.packages("seqinr")
+
+[パッケージ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)`seqinr`を呼び出す:  
+
+    library("seqinr")
 
 ### Retrieving sequence data using R
+
+http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html
+はじけじゅ
 
 カモノハシ（AJ311679）、ネズミ （X00686）、 ヒト（M10098）、 ニワトリ（AF173612）
 の配列をFASTA形式ファイルで取得:
@@ -56,20 +68,18 @@ https://www.ncbi.nlm.nih.gov/books/NBK25499/table/chapter4.T._valid_values_of__r
 Table 1 – Valid values of &retmode and &rettype for EFetch (null = empty string)
 
 | Record Type | &rettype | &retmode |
-|:------:|:----:|:----:|:--------------:|
+|:-----------:|:--------:|:--------:|
 | FASTA | fasta | text | 
 | GenBank flat file with full sequence (contigs) | gbwithparts | text |
 | CDS protein FASTA | fasta_cds_aa | text |
-db = nuccore
 
+    db = nuccore
     "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=fasta&retmode=text"
     "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=gbwithparts&retmode=text"
     "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=fasta_cds_aa&retmode=text"
 
-http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html
-はじけじゅ
-作成：仲田崇志
-更新：2008年03月07日
+https://github.com/haruosuz/DS4GD/blob/master/2017/CaseStudy.md
+https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan
 
 ----------
 
@@ -176,7 +186,8 @@ How do I calculate the distance from an internal node to the tips of an ultramet
 
 ----------
 ## [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
-### [R](http://www.geocities.jp/ancientfishtree/R_JI.html)
+### [R_JI](http://www.geocities.jp/ancientfishtree/R_JI.html)
+**R - 井上 潤**
 
 Package のインストール
 
@@ -296,11 +307,6 @@ ape: node number を確認する
     help(plot.phylog)
     ?plot.phylog
     example(plot.phylog)
-
-
-
-
-
 
 ----------
 ## [JIN'S PAGE](http://mjin.doshisha.ac.jp/R/)
