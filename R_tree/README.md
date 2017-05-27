@@ -26,6 +26,8 @@ Last Update: 2017-05-30
 
 ### [Analysis of Phylogenetics and Evolution with R](https://github.com/haruosuz/books/tree/master/aper)
 
+![](https://static-content.springer.com/cover/book/978-1-4614-1743-9.jpg)
+
 ### SeqinR package
 
 [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
@@ -34,7 +36,7 @@ Last Update: 2017-05-30
 
     install.packages("seqinr")
 
-[パッケージ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)`seqinr`を呼び出す:  
+[パッケージ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)`seqinr`の呼び出し:  
 
     library("seqinr")
 
@@ -77,9 +79,6 @@ Table 1 – Valid values of &retmode and &rettype for EFetch (null = empty strin
     "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=fasta&retmode=text"
     "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=gbwithparts&retmode=text"
     "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=fasta_cds_aa&retmode=text"
-
-https://github.com/haruosuz/DS4GD/blob/master/2017/CaseStudy.md
-https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan
 
 ----------
 
