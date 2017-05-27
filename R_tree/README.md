@@ -83,6 +83,18 @@ Table 1 – Valid values of &retmode and &rettype for EFetch (null = empty strin
 ----------
 
 ## [r-phylo](https://www.r-phylo.org)
+Comparative Phylogenetics in R
+
+http://www.r-phylo.org/wiki/HowTo/Table_of_Contents
+
+### [GettingStarted](http://www.r-phylo.org/wiki/HowTo/GettingStarted)
+http://www.r-phylo.org/wiki/HowTo/GettingStarted
+
+	install.packages("ape")
+	install.packages("geiger")
+
+	update.packages()
+
 ### [DataTreeManipulation](http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation)
 
 	library(ape)
@@ -109,16 +121,14 @@ How do I designate a specific taxon to be the root of my phylogeny?
 
 How can I resolve polytomies in my phylogeny?
 
-
-    example(multi2di)
-
+    ?multi2di
 
 How can I collapse very short branches into polytomies?  
 非常に短い枝を多分岐(polytomy)にする
 
 	collapsedgeotree <- di2multi(geotree, 0.03)
 
-    par(mfrow=c(2,2))
+    par(mfrow=c(1,2))
     plot.phylo(geotree)
     plot.phylo(collapsedgeotree)
 
@@ -127,17 +137,20 @@ How can I see the length of the branches in my phylogeny?
 
 	geotree$edge.length
 
-How can I change the lengths of the branches in my phylogeny?
+How can I change the lengths of the branches in my phylogeny?  
+系統樹の枝長を変える
 
     compute.brlen(geotree, method="Grafen")$edge.length
     compute.brlen(geotree, 1)$edge.length
     compute.brlen(geotree, c(1, 2))$edge.length
 
-How can I see the list of taxa represented in my phylogeny?
+How can I see the list of taxa represented in my phylogeny?  
+系統樹の生物群を表示
 
 	 geotree$tip.label
 
-How can I verify that the taxa listed in my data table match those at the tips of my phylogeny?
+How can I verify that the taxa listed in my data table match those at the tips of my phylogeny?  
+系統樹とデータ表に含まれる生物群が一致することを確認
 
 	library(geiger)
 
@@ -145,7 +158,8 @@ How can I verify that the taxa listed in my data table match those at the tips o
 	geotree <- drop.tip(geotree, "olivacea")
     name.check(geotree, geodata)
 
-Is there a shorthand way to refer to a specific list of taxa (for example, all members of a particular clade)?
+Is there a shorthand way to refer to a specific list of taxa (for example, all members of a particular clade)?  
+生物群のリスト（例えば、特定のクレードの全メンバー）を参照する
 
 	cladeA = c("pauper", "psittacula", "parvulus")
     cladeA <- tips(geotree, 26)
@@ -159,7 +173,8 @@ How can I remove taxa from my phylogeny?
     plot.phylo(geotree)
     plot.phylo(drop.tip(geotree, cladeA))
 
-How can I identify all the branches belonging to a particular subclade?
+How can I identify all the branches belonging to a particular subclade?  
+あるクレードに属する全ての枝を特定する
 
 	geotree$edge
 
