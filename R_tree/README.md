@@ -8,7 +8,9 @@ Last Update: 2017-05-26
 # Tree
 [系統樹](https://ja.wikipedia.org/wiki/系統樹)
 
+----------
 ## Table of Contents
+- [2017-05-27](#2017-05-27)
 - [Comparative Phylogenetics in R](#r-phylo)
   - [HowTo/DataTreeManipulation](#DataTreeManipulation)
 - [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
@@ -18,6 +20,56 @@ Last Update: 2017-05-26
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
+
+----------
+## 2017-05-27
+
+### [Analysis of Phylogenetics and Evolution with R](https://github.com/haruosuz/books/tree/master/aper)
+
+https://github.com/haruosuz/DS4GD/blob/master/2017/CaseStudy.md
+https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan
+
+### Retrieving sequence data using R
+
+カモノハシ（AJ311679）、ネズミ （X00686）、 ヒト（M10098）、 ニワトリ（AF173612）
+の配列をFASTA形式ファイルで取得:
+
+    ACCESSIONs <- c("AJ311679", "X00686", "M10098", "AF173612")
+
+    #install.packages("seqinr")
+    library("seqinr") # Load the SeqinR package.
+
+    # Retrieving sequence data using SeqinR
+    eutils.ncbi.fasta <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), strip.desc = TRUE)[[1]]
+    ld <- lapply(ACCESSIONs, eutils.ncbi.fasta)
+
+    # Writing sequence data out as a FASTA file
+    write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) (.+)", "\\2_\\1", getAnnot(ld)), sep="_"), file.out=paste0("hs_",format(Sys.time(), "%Y-%m-%d"),".fasta") )
+
+http://www.ncbi.nlm.nih.gov/books/NBK25501/?term=Entrez%20Programming%20Utilities
+Entrez Programming Utilities - Books - NCBI 
+
+https://www.ncbi.nlm.nih.gov/books/NBK25499/ 
+The E-utilities In-Depth: Parameters, Syntax and More - Entrez Programming Utilities Help - NCBI Bookshelf
+
+https://www.ncbi.nlm.nih.gov/books/NBK25499/table/chapter4.T._valid_values_of__retmode_and/?report=objectonly
+Table 1 – Valid values of &retmode and &rettype for EFetch (null = empty string)
+
+| Record Type | &rettype | &retmode |
+|:------:|:----:|:----:|:--------------:|
+| FASTA | fasta | text | 
+| GenBank flat file with full sequence (contigs) | gbwithparts | text |
+| CDS protein FASTA | fasta_cds_aa | text |
+db = nuccore
+
+    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=fasta&retmode=text"
+    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=gbwithparts&retmode=text"
+    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=fasta_cds_aa&retmode=text"
+
+http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html
+はじけじゅ
+作成：仲田崇志
+更新：2008年03月07日
 
 ----------
 
@@ -277,32 +329,6 @@ ape: node number を確認する
 	lab<-c(rep(10,3),rep(11,2),rep(12,3), rep(13,7))　#印の番号を作成する
 	plot(wood.tr, "c", FALSE, font = 1, label.offset = 2,x.lim = 20, no.margin = TRUE)
 	tiplabels(pch =lab,col =lab, adj = 1.5, cex = 2)
-
-----------
-## 
-
-https://github.com/haruosuz/DS4GD/blob/master/2017/CaseStudy.md
-https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan
-
-http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html
-はじけじゅ
-作成：仲田崇志
-更新：2008年03月07日
-
-カモノハシ（AJ311679）、ネズミ （X00686）、 ヒト（M10098）、 ニワトリ（AF173612）
-の配列をFASTA形式ファイルで取得するRコマンド例
-
-    ACCESSIONs <- c("AJ311679", "X00686", "M10098", "AF173612")
-
-    #install.packages("seqinr")
-    library("seqinr") # Load the SeqinR package.
-
-    # Retrieving sequence data using SeqinR
-    eutils.ncbi.fasta <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), strip.desc = TRUE)[[1]]
-    ld <- lapply(ACCESSIONs, eutils.ncbi.fasta)
-
-    # Writing sequence data out as a FASTA file
-    write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) (.+)", "\\2_\\1", getAnnot(ld)), sep="_"), file.out=paste0("hs_",format(Sys.time(), "%Y-%m-%d"),".fasta") )
 
 ----------
 ## Execution environment
