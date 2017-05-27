@@ -91,9 +91,17 @@ Table 1 – Valid values of &retmode and &rettype for EFetch (null = empty strin
     geotree <- read.nexus("http://www.r-phylo.org/w/images/0/02/Geospiza.nex")
     geodata <- read.table("http://www.r-phylo.org/w/images/5/5c/Geospiza.txt")
 
-How do I designate a specific taxon to be the root of my phylogeny?
+How can I see a plot of my phylogeny?  
+系統樹の作図
 
-    # 根 root
+	plot.phylo(geotree)
+	help(plot.phylo)
+    example(plot.phylo)
+
+How do I designate a specific taxon to be the root of my phylogeny?  
+外群(outgroup)を指定して系統樹に根(root)をつける
+
+    par(mfrow=c(2,2))
     plot.phylo(geotree)
     plot.phylo(root(geotree, "fusca"))
     plot.phylo(ladderize(root(geotree, "fusca"), right = TRUE))
@@ -101,18 +109,22 @@ How do I designate a specific taxon to be the root of my phylogeny?
 
 How can I resolve polytomies in my phylogeny?
 
-How can I collapse very short branches into polytomies?
 
-    # 多分岐 polytomy 
+    example(multi2di)
+
+
+How can I collapse very short branches into polytomies?  
+非常に短い枝を多分岐(polytomy)にする
+
 	collapsedgeotree <- di2multi(geotree, 0.03)
 
-    par(mfrow=c(1,2))
+    par(mfrow=c(2,2))
     plot.phylo(geotree)
     plot.phylo(collapsedgeotree)
 
-How can I see the length of the branches in my phylogeny?
+How can I see the length of the branches in my phylogeny?  
+系統樹の枝長
 
-    # 枝長
 	geotree$edge.length
 
 How can I change the lengths of the branches in my phylogeny?
@@ -140,17 +152,12 @@ Is there a shorthand way to refer to a specific list of taxa (for example, all m
 	mrca(geotree)["pauper", "psittacula"]
     cladeA <- tips(geotree, mrca(geotree)["pauper", "psittacula"])
 
-How can I remove taxa from my phylogeny?
+How can I remove taxa from my phylogeny?  
+系統樹から生物群を除去
 
     par(mfrow=c(1,2))
     plot.phylo(geotree)
     plot.phylo(drop.tip(geotree, cladeA))
-
-How can I see a plot of my phylogeny?
-
-	plot.phylo(geotree)
-	help(plot.phylo)
-    example(plot.phylo)
 
 How can I identify all the branches belonging to a particular subclade?
 
@@ -165,8 +172,8 @@ How can I identify the node representing the most recent common ancestor of a pa
 	geotree$node.label<-((length(geotree$tip)+1):((length(geotree$tip)*2)-1))
     plot(geotree, show.node.label=TRUE)
 
-How do I calculate the patristic distance between two taxa?
-2つの分類群間の距離を計算
+How do I calculate the patristic distance between two taxa?  
+2つの生物群間の距離を計算
 
 	cophenetic(geotree)["pallida", "conirostris"]
 	cophenetic(geotree)
