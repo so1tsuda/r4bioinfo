@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-04-15
+Last Update: 2017-05-27
 
 ----------
 
@@ -19,19 +19,6 @@ Last Update: 2017-04-15
 - [](#)
 
 ----------
-## Execution environment
-
-    > sessionInfo()
-    R version 3.3.3 (2017-03-06)
-    Platform: x86_64-apple-darwin13.4.0 (64-bit)
-    Running under: OS X Mavericks 10.9.5
-
-    $java -version
-    java version "1.8.0_121"
-    Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
-    Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
-
-----------
 
 https://www.oreilly.co.jp/books/9784873117584/
 O'Reilly Japan - ゼロから作るDeep Learning 
@@ -39,6 +26,8 @@ O'Reilly Japan - ゼロから作るDeep Learning
 https://github.com/oreilly-japan/deep-learning-from-scratch
 oreilly-japan/deep-learning-from-scratch: 『ゼロから作る Deep Learning』のリポジトリ
 
+
+----------
 
 ## 2017-04
 http://touch-sp.hatenablog.com/archive/2017/4
@@ -88,7 +77,6 @@ Done.
 http://www.r-tutor.com/deep-learning/introduction
 Deep Learning in R | R Tutorial
 
-
 http://www.r-tutor.com/content/download
 Download | R Tutorial
 
@@ -131,7 +119,6 @@ jdk-8u121-macosx-x64.dmg
 ## 2014-05-03
 http://d.hatena.ne.jp/dichika/20140503/p1
 Rで一行でディープラーニング - 盆栽日記
-
 
 
 
@@ -200,6 +187,17 @@ Error in paste0("Predictions/models/", object@model_id, "/frames/", h2o.getId(ne
 途中
 
 ----------
+## Execution environment
+
+    > sessionInfo()
+    R version 3.3.3 (2017-03-06)
+    Platform: x86_64-apple-darwin13.4.0 (64-bit)
+    Running under: OS X Mavericks 10.9.5
+
+    $java -version
+    java version "1.8.0_121"
+    Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+    Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
 
 ----------
 ## Acknowledgements
@@ -216,8 +214,6 @@ A Deep Learning Approach to DNA Sequence Classification | SpringerLink
 June 23 - 24, 2016 
 http://dl.acm.org/citation.cfm?id=2983489
 Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
-
-
 
 
 
@@ -246,30 +242,26 @@ Review
 https://www.ncbi.nlm.nih.gov/pubmed/27474269
 Mol Syst Biol. 2016 Jul 29;12(7):878. doi: 10.15252/msb.20156651.
 Deep learning for computational biology.
-Angermueller C1, Pärnamaa T2, Parts L3, Stegle O4.
 
 ![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4965871/bin/MSB-12-878-g001.jpg)
 
 https://www.ncbi.nlm.nih.gov/pubmed/27473064
-Brief Bioinform. 2016 Jul 29. pii: bbw068. [Epub ahead of print]
+Brief Bioinform. 2016 Jul 29. pii: bbw068.
 Deep learning in bioinformatics.
-Min S, Lee B, Yoon S.
 
 ![](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bib/PAP/10.1093_bib_bbw068/2/m_bbw068f2p.jpeg?Expires=1492322095&Signature=LOpu6w596BlzZDCGwFWgdvjrxhuxHH85riIE89loM93Yu2cQY5NRtJlOlbE-7Kckm5uEm8U7GBWNHOnrDaR4PpfjWfEuEU1pXJ~7HreLn1p6kfJOPD1QFV8TmrtWuBM0Or88Fo8r7CPtZxNBJcJMHURozGWPhb-anDAvNgPP7TATnkNQ8LPeDxWeyqWbEaj9xTHkIOZd4YM2nONdyAhhtglrbcp4BdeRcAan2uxj9A9MOmRj~okxDwGeBcxwXKj9J0SLmQUmtds46D-HQpStpB7JEqChBKj0zpx7jDLNydXfa4XeUk2Ua0a5Dz3166~s54hr6tuOfDchNHtCvw7f6Q__&Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q)
 
 https://www.ncbi.nlm.nih.gov/pubmed/27018908
-PLoS Comput Biol. 2016 Mar 28;12(3):e1004845. doi: 10.1371/journal.pcbi.1004845. eCollection 2016.
+PLoS Comput Biol. 2016 Mar 28;12(3):e1004845.
 Deep Learning for Population Genetic Inference.
-Sheehan S1,2, Song YS2,3,4,5,6.
 
 https://followthedata.wordpress.com/tag/deep-learning/
 List of deep learning implementations in biology
 2015-12-21
 
 https://www.ncbi.nlm.nih.gov/pubmed/26213851
-Nat Biotechnol. 2015 Aug;33(8):831-8. doi: 10.1038/nbt.3300. Epub 2015 Jul 27.
+Nat Biotechnol. 2015 Aug;33(8):831-8.
 Predicting the sequence specificities of DNA- and RNA-binding proteins by deep learning.
-Alipanahi B1, Delong A2, Weirauch MT3, Frey BJ4.
 
 https://www.oreilly.co.jp/books/9784873117584/
 O'Reilly Japan - ゼロから作るDeep Learning
@@ -307,9 +299,7 @@ https://github.com/haruosuz/DS4GD/tree/master/2017
 
 メタゲノムのコドン使用
 https://www.ncbi.nlm.nih.gov/pubmed/27115650
-Methods Mol Biol. 2016;1415:509-31. doi: 10.1007/978-1-4939-3572-7_26.
+Methods Mol Biol. 2016;1415:509-31.
 Big Data, Evolution, and Metagenomes: Predicting Disease from Gut Microbiota Codon Usage Profiles.
-Fabijanić M1, Vlahoviček K2.
-
 
 ----------
