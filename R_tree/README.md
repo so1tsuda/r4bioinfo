@@ -109,7 +109,10 @@ Table 1 – Valid values of &retmode and &rettype for EFetch (null = empty strin
 ## [r-phylo](https://www.r-phylo.org)
 Comparative Phylogenetics in R
 
-http://www.r-phylo.org/wiki/HowTo/Table_of_Contents
+Phylogenetic comparative methods
+系統比較法
+
+- [HowTo/Table of Contents](https://www.r-phylo.org/wiki/HowTo/Table_of_Contents)
 
 ### [GettingStarted](http://www.r-phylo.org/wiki/HowTo/GettingStarted)
 http://www.r-phylo.org/wiki/HowTo/GettingStarted
@@ -119,22 +122,35 @@ http://www.r-phylo.org/wiki/HowTo/GettingStarted
 
 	update.packages()
 
-### [DataTreeManipulation](http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation)
+### [DataTreeManipulation](https://www.r-phylo.org/wiki/HowTo/DataTreeManipulation)
+
+![https://ja.wikipedia.org/wiki/ガラパゴスフィンチ属](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Geospiza_fuliginosa_976.jpg/250px-Geospiza_fuliginosa_976.jpg)
+
+パッケージ`ape`をロードし、
+[ガラパゴスフィンチ属（Geospiza）](https://ja.wikipedia.org/wiki/ガラパゴスフィンチ属)の系統樹([Geospiza.nex](https://www.r-phylo.org/w/images/0/02/Geospiza.nex))とデータ表([Geospiza.txt](http://www.r-phylo.org/w/images/5/5c/Geospiza.txt))を読み込む:  
 
 	library(ape)
-	library(geiger)
 
     geotree <- read.nexus("http://www.r-phylo.org/w/images/0/02/Geospiza.nex")
     geodata <- read.table("http://www.r-phylo.org/w/images/5/5c/Geospiza.txt")
 
-How can I see a plot of my phylogeny?  
-系統樹の作図
+    str(geotree)
+
+How can I see a plot of my phylogeny?
+
+系統樹の表示
 
 	plot.phylo(geotree)
 	help(plot.phylo)
-    example(plot.phylo)
 
-How do I designate a specific taxon to be the root of my phylogeny?  
+How can I see the list of taxa represented in my phylogeny?
+
+系統樹の生物群を表示
+
+	 geotree$tip.label
+
+How do I designate a specific taxon to be the root of my phylogeny?
+
 外群(outgroup)を指定して系統樹に根(root)をつける
 
     par(mfrow=c(2,2))
@@ -143,37 +159,36 @@ How do I designate a specific taxon to be the root of my phylogeny?
     plot.phylo(ladderize(root(geotree, "fusca"), right = TRUE))
     plot.phylo(ladderize(root(geotree, "fusca"), right = FALSE))
 
-How can I resolve polytomies in my phylogeny?
+How can I see the length of the branches in my phylogeny?
 
-    ?multi2di
-
-How can I collapse very short branches into polytomies?  
-非常に短い枝を多分岐(polytomy)にする
-
-	collapsedgeotree <- di2multi(geotree, 0.03)
-
-    par(mfrow=c(1,2))
-    plot.phylo(geotree)
-    plot.phylo(collapsedgeotree)
-
-How can I see the length of the branches in my phylogeny?  
-系統樹の枝長
+系統樹の枝長を表示
 
 	geotree$edge.length
 
-How can I change the lengths of the branches in my phylogeny?  
+How can I change the lengths of the branches in my phylogeny?
+
 系統樹の枝長を変える
 
     compute.brlen(geotree, method="Grafen")$edge.length
     compute.brlen(geotree, 1)$edge.length
     compute.brlen(geotree, c(1, 2))$edge.length
 
-How can I see the list of taxa represented in my phylogeny?  
-系統樹の生物群を表示
+How can I collapse very short branches into polytomies?
 
-	 geotree$tip.label
+非常に短い枝を多分岐(polytomy)にする
 
-How can I verify that the taxa listed in my data table match those at the tips of my phylogeny?  
+    collapsedgeotree <- di2multi(geotree, tol = 0.03) # tolerance
+
+    par(mfrow=c(1,2))
+    plot.phylo(geotree)
+    plot.phylo(collapsedgeotree)
+
+How can I resolve polytomies in my phylogeny?
+
+    ?multi2di
+
+How can I verify that the taxa listed in my data table match those at the tips of my phylogeny?
+
 系統樹とデータ表に含まれる生物群が一致することを確認
 
 	library(geiger)
@@ -183,11 +198,14 @@ How can I verify that the taxa listed in my data table match those at the tips o
     name.check(geotree, geodata)
 
 Is there a shorthand way to refer to a specific list of taxa (for example, all members of a particular clade)?  
-生物群のリスト（例えば、特定のクレードの全メンバー）を参照する
+生物群のリスト（例えば、特定のクレードの全メンバー）を参照
+
+    plot.phylo(geotree)
+    nodelabels()
 
 	cladeA = c("pauper", "psittacula", "parvulus")
-    cladeA <- tips(geotree, 26)
-	mrca(geotree)["pauper", "psittacula"]
+    # ‘node.leaves’ is being deprecated: use ‘tips’ instead
+    tips(geotree, 24)
     cladeA <- tips(geotree, mrca(geotree)["pauper", "psittacula"])
 
 How can I remove taxa from my phylogeny?  
@@ -197,8 +215,9 @@ How can I remove taxa from my phylogeny?
     plot.phylo(geotree)
     plot.phylo(drop.tip(geotree, cladeA))
 
-How can I identify all the branches belonging to a particular subclade?  
-あるクレードに属する全ての枝を特定する
+How can I identify all the branches belonging to a particular subclade?
+
+特定のクレードに属する全ての枝（branch, edge）を特定
 
 	geotree$edge
 
@@ -206,18 +225,23 @@ How can I identify all the branches belonging to a particular subclade?
 
 How can I identify the node representing the most recent common ancestor of a pair of taxa?
 
+生物群の[最近共通祖先(MRCA)](https://ja.wikipedia.org/wiki/最も近い共通祖先)を表す節（分岐点、node）を特定
+
 	mrca(geotree)["pauper", "parvulus"]
 
 	geotree$node.label<-((length(geotree$tip)+1):((length(geotree$tip)*2)-1))
     plot(geotree, show.node.label=TRUE)
 
 How do I calculate the patristic distance between two taxa?  
-2つの生物群間の距離を計算
+2つの生物群間の系統経路距離(patristic distance)を計算
 
 	cophenetic(geotree)["pallida", "conirostris"]
 	cophenetic(geotree)
 
 How do I calculate the patristic distance between two internal nodes or an internal node and a tip?
+
+2つの内部ノードまたは内部ノードとチップの間のパトリスの距離をどのように計算するのですか？
+
 
 	dist.nodes(geotree)
 	dist.nodes(geotree)[15, 20]
@@ -253,6 +277,10 @@ ape: newick tree を描く
 ![](http://www.geocities.jp/ancientfishtree/NewFiles/drawTreeR.jpg)
 
 ape: node number を確認する
+
+http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_node_representing_the_most_recent_common_ancestor_of_a_pair_of_taxa.3F
+
+![](http://www.geocities.jp/ancientfishtree/NewFiles/nodeLabeler.jpg)
 
 ----------
 ## [biopapyrus](https://biopapyrus.jp)
@@ -412,17 +440,6 @@ http://lecture.ecc.u-tokyo.ac.jp/~aiwata/biostat_basic/2013/text4lec4_2.pdf
 岩田洋佳
 パッケージ ape 
 
-### patristic distance
-http://dendropy.readthedocs.io/en/latest/tutorial/treestats.html#patristic-distances
-3.3. Tree Statistics, Metrics, and Calculations — DendroPy Phylogenetic Computing Library v3.12.1
-
-### Grafen
-https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
-田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法"
-生物学における系統樹の必要性
-系統関係=サンプル間の非依存性を考慮して統計解析を行うことでこのような問題を解決しようとする手法があり、系統的独立比較法などと呼ばれている (Felsenstein, 1985; Grafen, 1989)。
-系統樹上での生物間のパスの長さの和=系統的多様性で置き換えることで解決しようという研究が徐々に増えてきている (Faith, 1992; Forest et al., 2007)。
-
 ### polytomy
 http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH18%2F進化生物学I%2F系統推定の基本用語
 第２-４回授業：系統推定の基本用語 †
@@ -436,6 +453,45 @@ http://www.trifields.jp/r-cran-task-view-phylogenetics-especially-comparative-me
 R言語 CRAN Task View：系統学、特に比較方法 | トライフィールズ
 - apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
 - geigerは、分類群の重複セットに木やデータを整理することができます。
+
+### Grafen
+https://www.ncbi.nlm.nih.gov/pubmed/2575770
+Philos Trans R Soc Lond B Biol Sci. 1989 Dec 21;326(1233):119-57.
+The phylogenetic regression.
+Grafen A1.
+
+https://www.mail-archive.com/r-sig-phylo@r-project.org/msg00850.html
+Re: [R-sig-phylo] Ultrametricize?
+
+https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
+田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法"
+生物学における系統樹の必要性
+系統関係=サンプル間の非依存性を考慮して統計解析を行うことでこのような問題を解決しようとする手法があり、系統的独立比較法などと呼ばれている (Felsenstein, 1985; Grafen, 1989)。
+系統樹上での生物間のパスの長さの和=系統的多様性で置き換えることで解決しようという研究が徐々に増えてきている (Faith, 1992; Forest et al., 2007)。
+
+### patristic distance
+http://dendropy.readthedocs.io/en/latest/tutorial/treestats.html#patristic-distances
+
+http://leeswijzer.org/diary2003-09.html
+〈patristic distance〉の訳語は【系図的距離】でキマリです．
+経路距離〈path-length distance〉あるいは樹距離〈tree distance〉という，より通りのよい名称で知られている概念と一致するように思われる．
+グラフとしての樹の上で定義される距離が patristic distance ということ． 
+
+http://leeswijzer.tumblr.com
+系統経路距離（patristic distance）
+
+http://leeswijzer.org/diary2014-04.html
+Patristic distance は事前に推定した言語系統樹に沿って計算した． 
+
+http://cse.naro.affrc.go.jp/minaka/files/KawakitaHandout.pdf
+経路距離
+Patristic distance
+
+http://feynmanino.watson.jp/4500_model-organisms.html
+「patristic distance」は、２つの種の「（教父的な（？））系統経路距離」というテクニカルタームだそうです。何故「教父」なのか？、といえば、「系図」は父系の「lexicon」だから、なのだそうです。
+
+http://bioinf.mind.meiji.ac.jp/lab/index.php?itemid=12
+patristic distance 推定距離 
 
 ----------
 
