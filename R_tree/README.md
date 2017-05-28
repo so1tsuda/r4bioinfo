@@ -46,12 +46,10 @@ Rを終了:
 
 パッケージのインストール:  
 
-    install.packages("seqinr")
     install.packages("ape")
 
 パッケージの呼び出し:  
 
-    library(seqinr)
     library(ape)
 
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
@@ -71,7 +69,8 @@ Rを終了:
     ACCESSIONs <- c("AJ311679", "X00686", "M10098", "AF173612")
 
     # Load SeqinR package
-    library("seqinr")
+    #install.packages("seqinr")
+    library(seqinr)
 
     # Retrieving sequence data using SeqinR
     eutils.ncbi.fasta <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), strip.desc = TRUE)[[1]]
