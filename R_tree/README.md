@@ -70,8 +70,8 @@ Rを終了:
 
     ACCESSIONs <- c("AJ311679", "X00686", "M10098", "AF173612")
 
-    #install.packages("seqinr")
-    library("seqinr") # Load the SeqinR package.
+    # Load SeqinR package
+    library("seqinr")
 
     # Retrieving sequence data using SeqinR
     eutils.ncbi.fasta <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), strip.desc = TRUE)[[1]]
@@ -79,6 +79,10 @@ Rを終了:
 
     # Writing sequence data out as a FASTA file
     write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) (.+)", "\\2_\\1", getAnnot(ld)), sep="_"), file.out=paste0("hs_",format(Sys.time(), "%Y-%m-%d"),".fasta") )
+
+    # Check Directory
+    getwd()
+    dir()
 
 http://www.ncbi.nlm.nih.gov/books/NBK25501/?term=Entrez%20Programming%20Utilities
 Entrez Programming Utilities - Books - NCBI 
