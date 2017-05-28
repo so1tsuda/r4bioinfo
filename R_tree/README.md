@@ -28,17 +28,36 @@ Last Update: 2017-05-30
 
 ![](https://static-content.springer.com/cover/book/978-1-4614-1743-9.jpg)
 
-### SeqinR package
+### Working with Data in R
+
+[R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
+
+![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
+
+Rを終了:  
+
+    quit()
+    q()
+
+## R packages
 
 [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
 
-パッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)のインストール:  
+パッケージのインストール:  
 
-    install.packages("seqinr")
+    install.packages('seqinr')
+    install.packages('ape')
 
-[パッケージ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)`seqinr`の呼び出し:  
+パッケージの呼び出し:  
 
-    library("seqinr")
+    library(seqinr)
+    library(ape)
+
+[ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
+
+    help(plot.phylo)
+    ?plot.phylo
+    example(plot.phylo)
 
 ### Retrieving sequence data using R
 
@@ -59,6 +78,8 @@ http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html
 
     # Writing sequence data out as a FASTA file
     write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) (.+)", "\\2_\\1", getAnnot(ld)), sep="_"), file.out=paste0("hs_",format(Sys.time(), "%Y-%m-%d"),".fasta") )
+
+    system('grep "^>" *.fasta')
 
 http://www.ncbi.nlm.nih.gov/books/NBK25501/?term=Entrez%20Programming%20Utilities
 Entrez Programming Utilities - Books - NCBI 
