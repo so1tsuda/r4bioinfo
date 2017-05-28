@@ -117,21 +117,18 @@ http://www.r-phylo.org/wiki/HowTo/GettingStarted
 
     str(geotree)
 
-How can I see a plot of my phylogeny?
-
+How can I see a plot of my phylogeny?  
 系統樹の表示
 
 	plot.phylo(geotree)
 	help(plot.phylo)
 
-How can I see the list of taxa represented in my phylogeny?
-
+How can I see the list of taxa represented in my phylogeny?  
 系統樹の生物群を表示
 
 	 geotree$tip.label
 
-How do I designate a specific taxon to be the root of my phylogeny?
-
+How do I designate a specific taxon to be the root of my phylogeny?  
 外群(outgroup)を指定して系統樹に根(root)をつける
 
     par(mfrow=c(2,2))
@@ -140,14 +137,12 @@ How do I designate a specific taxon to be the root of my phylogeny?
     plot.phylo(ladderize(root(geotree, "fusca"), right = TRUE))
     plot.phylo(ladderize(root(geotree, "fusca"), right = FALSE))
 
-How can I see the length of the branches in my phylogeny?
-
+How can I see the length of the branches in my phylogeny?  
 系統樹の枝長を表示
 
 	geotree$edge.length
 
-How can I change the lengths of the branches in my phylogeny?
-
+How can I change the lengths of the branches in my phylogeny?  
 系統樹の枝長を変更
 
     # ultrametricize
@@ -155,8 +150,7 @@ How can I change the lengths of the branches in my phylogeny?
     compute.brlen(geotree, method = 1)$edge.length
     compute.brlen(geotree, method = c(1, 2))$edge.length
 
-How can I collapse very short branches into polytomies?
-
+How can I collapse very short branches into polytomies?  
 非常に短い枝を多分岐(polytomy)に変更
 
     collapsedgeotree <- di2multi(geotree, tol = 0.03) # tolerance
@@ -169,8 +163,7 @@ How can I resolve polytomies in my phylogeny?
 
     ?multi2di
 
-How can I verify that the taxa listed in my data table match those at the tips of my phylogeny?
-
+How can I verify that the taxa listed in my data table match those at the tips of my phylogeny?  
 系統樹([Geospiza.nex](https://www.r-phylo.org/w/images/0/02/Geospiza.nex))とデータ表([Geospiza.txt](http://www.r-phylo.org/w/images/5/5c/Geospiza.txt))に含まれる生物群が一致するか確認
 
 	library(geiger)
@@ -197,32 +190,28 @@ How can I remove taxa from my phylogeny?
     plot.phylo(geotree)
     plot.phylo(drop.tip(geotree, cladeA))
 
-How can I identify all the branches belonging to a particular subclade?
-
-特定のクレードに属する全ての枝（branch, edge）を特定
+How can I identify all the branches belonging to a particular subclade?  
+特定のクレードに属する全ての枝 (branch, edge) を特定
 
 	geotree$edge
 
     geotree$edge[which.edge(geotree, cladeA), ]
 
-How can I identify the node representing the most recent common ancestor of a pair of taxa?
-
-生物群の[最近共通祖先(MRCA)](https://ja.wikipedia.org/wiki/最も近い共通祖先)を表す節（分岐点、node）を特定
+How can I identify the node representing the most recent common ancestor of a pair of taxa?  
+生物群の[最近共通祖先 (MRCA) ](https://ja.wikipedia.org/wiki/最も近い共通祖先)を表す節 (分岐点、node) を特定
 
 	mrca(geotree)["pauper", "parvulus"]
 
 	geotree$node.label<-((length(geotree$tip)+1):((length(geotree$tip)*2)-1))
     plot(geotree, show.node.label=TRUE)
 
-How do I calculate the patristic distance between two taxa?
-
+How do I calculate the patristic distance between two taxa?  
 2つの生物群間の系統経路距離 (patristic distance) を計算
 
 	cophenetic(geotree)["pallida", "conirostris"]
 	cophenetic(geotree)
 
-How do I calculate the patristic distance between two internal nodes or an internal node and a tip?
-
+How do I calculate the patristic distance between two internal nodes or an internal node and a tip?  
 2つの内部節 (internal node) または 内部節と末端節 (OTU) の間の距離を計算
 
 	dist.nodes(geotree)
@@ -230,9 +219,8 @@ How do I calculate the patristic distance between two internal nodes or an inter
     geotree$tip.label
 	dist.nodes(geotree)[1, 15]
 
-How do I calculate the distance from an internal node to the tips of an ultrametric phylogeny?
-
-内部節から超距離(ultrametric)系統樹の末端節 (OTU) までの距離を計算
+How do I calculate the distance from an internal node to the tips of an ultrametric phylogeny?  
+超距離(ultrametric)系統樹の内部節から末端節 (OTU) までの距離を計算
 
 	branching.times(geotree)
 
