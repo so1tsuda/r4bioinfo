@@ -64,9 +64,7 @@ Rを終了:
 
 ### Retrieving sequence data using R
 
-http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html
-はじけじゅ
-
+[はじけじゅ](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html)の例  
 カモノハシ（AJ311679）、ネズミ （X00686）、 ヒト（M10098）、 ニワトリ（AF173612）
 の配列をFASTA形式ファイルで取得:
 
