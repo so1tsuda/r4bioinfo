@@ -40,7 +40,6 @@ Last Update: 2017-05-30
 Rを終了:  
 
     quit()
-    q()
 
 ## R packages
 
@@ -57,7 +56,6 @@ Rを終了:
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 
     help(plot.phylo)
-    ?plot.phylo
 
     example(plot.phylo)
     example(nodelabels)
