@@ -167,15 +167,16 @@ How can I see the length of the branches in my phylogeny?
 
 How can I change the lengths of the branches in my phylogeny?
 
-系統樹の枝長を変える
+系統樹の枝長を変更
 
+    # ultrametricize
     compute.brlen(geotree, method="Grafen")$edge.length
-    compute.brlen(geotree, 1)$edge.length
-    compute.brlen(geotree, c(1, 2))$edge.length
+    compute.brlen(geotree, method = 1)$edge.length
+    compute.brlen(geotree, method = c(1, 2))$edge.length
 
 How can I collapse very short branches into polytomies?
 
-非常に短い枝を多分岐(polytomy)にする
+非常に短い枝を多分岐(polytomy)に変更
 
     collapsedgeotree <- di2multi(geotree, tol = 0.03) # tolerance
 
@@ -189,7 +190,7 @@ How can I resolve polytomies in my phylogeny?
 
 How can I verify that the taxa listed in my data table match those at the tips of my phylogeny?
 
-系統樹とデータ表に含まれる生物群が一致することを確認
+系統樹([Geospiza.nex](https://www.r-phylo.org/w/images/0/02/Geospiza.nex))とデータ表([Geospiza.txt](http://www.r-phylo.org/w/images/5/5c/Geospiza.txt))に含まれる生物群が一致するか確認
 
 	library(geiger)
 
@@ -232,16 +233,16 @@ How can I identify the node representing the most recent common ancestor of a pa
 	geotree$node.label<-((length(geotree$tip)+1):((length(geotree$tip)*2)-1))
     plot(geotree, show.node.label=TRUE)
 
-How do I calculate the patristic distance between two taxa?  
-2つの生物群間の系統経路距離(patristic distance)を計算
+How do I calculate the patristic distance between two taxa?
+
+2つの生物群間の系統経路距離 (patristic distance) を計算
 
 	cophenetic(geotree)["pallida", "conirostris"]
 	cophenetic(geotree)
 
 How do I calculate the patristic distance between two internal nodes or an internal node and a tip?
 
-2つの内部ノードまたは内部ノードとチップの間のパトリスの距離をどのように計算するのですか？
-
+2つの内部節 (internal node) または 内部節と末端節 (OTU) の間の距離を計算
 
 	dist.nodes(geotree)
 	dist.nodes(geotree)[15, 20]
@@ -250,8 +251,9 @@ How do I calculate the patristic distance between two internal nodes or an inter
 
 How do I calculate the distance from an internal node to the tips of an ultrametric phylogeny?
 
+内部節から超距離(ultrametric)系統樹の末端節 (OTU) までの距離を計算
+
 	branching.times(geotree)
-    geotree$node.label
 
 ----------
 ## [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
@@ -443,7 +445,10 @@ http://lecture.ecc.u-tokyo.ac.jp/~aiwata/biostat_basic/2013/text4lec4_2.pdf
 ### polytomy
 http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH18%2F進化生物学I%2F系統推定の基本用語
 第２-４回授業：系統推定の基本用語 †
-系統樹は通常、二分岐で表現される。多分岐（またはポリトミー polytomyと呼ぶ）の系統関係が意味するものは、
+- 分類群 (taxon, 複数形はtaxa)　名称の与えられた、生物群。
+- 末端節 (ターミナルノード、terminal node; 外部節 external nodeともいう）はそれに続く枝を持たない節。末端節はOTUs(オーティーユー、操作的分類単位 Operational Taxonomic Units）を示す。
+- 内部節（インターナルノード、internal node) は末端でない節。HTUs (エイチティーユー、仮想的分類単位 Hypothetical taxonomic units）を示す。
+- 系統樹は通常、二分岐で表現される。多分岐（またはポリトミー polytomyと呼ぶ）の系統関係が意味するものは、
 
 https://ww1.fukuoka-edu.ac.jp/~fukuhara/keitai/9-1.html
 9-1. 被子植物の系統樹と分類
@@ -454,20 +459,35 @@ R言語 CRAN Task View：系統学、特に比較方法 | トライフィール�
 - apeは、ランダムに、polytomiesを解決し、ブランチの長さを作成し、ツリーのサイズやその他のプロパティに関する情報を取得するための、より多くの機能を備えています。
 - geigerは、分類群の重複セットに木やデータを整理することができます。
 
-### Grafen
+### ultrametric
+https://en.wikipedia.org/wiki/Distance_matrices_in_phylogeny
+- it assumes an ultrametric tree in which the distances from the root to every branch tip are equal.
+- UPGMA assumes an ultrametric tree (a tree where all the path-lengths from the root to the tips are equal). 
+
+https://ja.wikipedia.org/wiki/超距離空間
+ultra­metric space
+超距離はまた、UPGMAやWPGMAを使った系統樹の構成や分類学において利用されている[6]。
+
+http://www.alife.cs.is.nagoya-u.ac.jp/~ari/stuff/papers/ipsjz08-meme.pdf
+Ultrametric(Additive Metric のうち,進化􏰀度一定の場合に生成される距離空間)
+
+http://cse.naro.affrc.go.jp/minaka/files/phylogenetics.html
+第７章では，距離行列からの系統推定を中心に，超計量（ultrametric）やスプリット分割が論じられる．
+
+https://www.mail-archive.com/r-sig-phylo@r-project.org/msg00850.html
+Re: [R-sig-phylo] Ultrametricize?
+
 https://www.ncbi.nlm.nih.gov/pubmed/2575770
 Philos Trans R Soc Lond B Biol Sci. 1989 Dec 21;326(1233):119-57.
 The phylogenetic regression.
 Grafen A1.
-
-https://www.mail-archive.com/r-sig-phylo@r-project.org/msg00850.html
-Re: [R-sig-phylo] Ultrametricize?
 
 https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
 田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法"
 生物学における系統樹の必要性
 系統関係=サンプル間の非依存性を考慮して統計解析を行うことでこのような問題を解決しようとする手法があり、系統的独立比較法などと呼ばれている (Felsenstein, 1985; Grafen, 1989)。
 系統樹上での生物間のパスの長さの和=系統的多様性で置き換えることで解決しようという研究が徐々に増えてきている (Faith, 1992; Forest et al., 2007)。
+
 
 ### patristic distance
 http://dendropy.readthedocs.io/en/latest/tutorial/treestats.html#patristic-distances
