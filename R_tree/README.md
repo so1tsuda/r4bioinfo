@@ -58,6 +58,10 @@ Rを終了:
     help(plot.phylo)
     ?plot.phylo
     example(plot.phylo)
+    example(nodelabels)
+
+example(AAstat)
+
 
 ### Retrieving sequence data using R
 
