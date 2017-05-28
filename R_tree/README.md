@@ -15,7 +15,7 @@ Last Update: 2017-05-30
 - [Comparative Phylogenetics in R](#r-phylo)
   - [HowTo/DataTreeManipulation](#DataTreeManipulation)
 - [Jun Inoue](#jun-inoue)
-  - [R_JI](#r_ji)
+  - [R_JI](#r_ji) R - 井上 潤
 - [biopapyrus](#biopapyrus)
   - [2015-05-04](#2015-05-04) 系統樹 ape ade4 | Rで系統樹を作成する方法
 - [JIN'S PAGE](#jins-page)
@@ -108,7 +108,7 @@ http://www.r-phylo.org/wiki/HowTo/GettingStarted
 ![https://ja.wikipedia.org/wiki/ガラパゴスフィンチ属](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Geospiza_fuliginosa_976.jpg/250px-Geospiza_fuliginosa_976.jpg)
 
 パッケージ`ape`をロードし、
-[ガラパゴスフィンチ属（Geospiza）](https://ja.wikipedia.org/wiki/ガラパゴスフィンチ属)の系統樹([Geospiza.nex](https://www.r-phylo.org/w/images/0/02/Geospiza.nex))とデータ表([Geospiza.txt](http://www.r-phylo.org/w/images/5/5c/Geospiza.txt))を読み込む:  
+[ガラパゴスフィンチ属](https://ja.wikipedia.org/wiki/ガラパゴスフィンチ属)の系統樹([Geospiza.nex](https://www.r-phylo.org/w/images/0/02/Geospiza.nex))とデータ表([Geospiza.txt](http://www.r-phylo.org/w/images/5/5c/Geospiza.txt))を読み込む:  
 
 	library(ape)
 
@@ -118,7 +118,7 @@ http://www.r-phylo.org/wiki/HowTo/GettingStarted
     str(geotree)
 
 How can I see a plot of my phylogeny?  
-系統樹の表示
+系統樹を図示
 
 	plot.phylo(geotree)
 	help(plot.phylo)
@@ -245,13 +245,9 @@ ape: newick tree を描く
 
 	source('drawTree.R')
 
-![](http://www.geocities.jp/ancientfishtree/NewFiles/drawTreeR.jpg)
-
 ape: node number を確認する
 
 http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_node_representing_the_most_recent_common_ancestor_of_a_pair_of_taxa.3F
-
-![](http://www.geocities.jp/ancientfishtree/NewFiles/nodeLabeler.jpg)
 
 ----------
 ## [biopapyrus](https://biopapyrus.jp)
