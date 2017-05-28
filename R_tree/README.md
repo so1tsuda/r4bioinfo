@@ -9,6 +9,7 @@ Last Update: 2017-05-30
 [系統樹](https://ja.wikipedia.org/wiki/系統樹)
 
 ----------
+
 ## Table of Contents
 - [2017-05-30](#2017-05-30)
 - [Comparative Phylogenetics in R](#r-phylo)
@@ -28,7 +29,7 @@ Last Update: 2017-05-30
 
 ![](https://static-content.springer.com/cover/book/978-1-4614-1743-9.jpg)
 
-### Working with Data in R
+### Running R
 
 [R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
 
@@ -45,8 +46,8 @@ Rを終了:
 
 パッケージのインストール:  
 
-    install.packages('seqinr')
-    install.packages('ape')
+    install.packages("seqinr")
+    install.packages("ape")
 
 パッケージの呼び出し:  
 
@@ -57,11 +58,9 @@ Rを終了:
 
     help(plot.phylo)
     ?plot.phylo
+
     example(plot.phylo)
     example(nodelabels)
-
-example(AAstat)
-
 
 ### Retrieving sequence data using R
 
@@ -82,8 +81,6 @@ http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html
 
     # Writing sequence data out as a FASTA file
     write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) (.+)", "\\2_\\1", getAnnot(ld)), sep="_"), file.out=paste0("hs_",format(Sys.time(), "%Y-%m-%d"),".fasta") )
-
-    system('grep "^>" *.fasta')
 
 http://www.ncbi.nlm.nih.gov/books/NBK25501/?term=Entrez%20Programming%20Utilities
 Entrez Programming Utilities - Books - NCBI 
