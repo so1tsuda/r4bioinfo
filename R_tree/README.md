@@ -83,26 +83,6 @@ Rを終了:
     getwd()
     dir()
 
-http://www.ncbi.nlm.nih.gov/books/NBK25501/?term=Entrez%20Programming%20Utilities
-Entrez Programming Utilities - Books - NCBI 
-
-https://www.ncbi.nlm.nih.gov/books/NBK25499/ 
-The E-utilities In-Depth: Parameters, Syntax and More - Entrez Programming Utilities Help - NCBI Bookshelf
-
-https://www.ncbi.nlm.nih.gov/books/NBK25499/table/chapter4.T._valid_values_of__retmode_and/?report=objectonly
-Table 1 – Valid values of &retmode and &rettype for EFetch (null = empty string)
-
-| Record Type | &rettype | &retmode |
-|:-----------:|:--------:|:--------:|
-| FASTA | fasta | text | 
-| GenBank flat file with full sequence (contigs) | gbwithparts | text |
-| CDS protein FASTA | fasta_cds_aa | text |
-
-    db = nuccore
-    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=fasta&retmode=text"
-    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=gbwithparts&retmode=text"
-    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=fasta_cds_aa&retmode=text"
-
 ----------
 
 ## [r-phylo](https://www.r-phylo.org)
@@ -424,7 +404,6 @@ http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_no
 ----------
 ## References
 
-
 http://www.cis.doshisha.ac.jp/mjin/R/42/42.html
 Rと系統樹(1)
 
@@ -440,6 +419,28 @@ http://lecture.ecc.u-tokyo.ac.jp/~aiwata/biostat_basic/2013/text4lec4_2.pdf
 バイオスタティスティクス基礎論 第4回 講義テキスト
 岩田洋佳
 パッケージ ape 
+
+### eutils.ncbi
+
+http://www.ncbi.nlm.nih.gov/books/NBK25501/?term=Entrez%20Programming%20Utilities
+Entrez Programming Utilities - Books - NCBI 
+
+https://www.ncbi.nlm.nih.gov/books/NBK25499/ 
+The E-utilities In-Depth: Parameters, Syntax and More - Entrez Programming Utilities Help - NCBI Bookshelf
+
+https://www.ncbi.nlm.nih.gov/books/NBK25499/table/chapter4.T._valid_values_of__retmode_and/?report=objectonly
+Table 1 – Valid values of &retmode and &rettype for EFetch (null = empty string)
+
+| Record Type | &rettype | &retmode |
+|:-----------:|:--------:|:--------:|
+| FASTA | fasta | text | 
+| GenBank flat file with full sequence (contigs) | gbwithparts | text |
+| CDS protein FASTA | fasta_cds_aa | text |
+
+    db = nuccore
+    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=fasta&retmode=text"
+    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=gbwithparts&retmode=text"
+    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=$ACCESSION&rettype=fasta_cds_aa&retmode=text"
 
 ### polytomy
 http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH18%2F進化生物学I%2F系統推定の基本用語
