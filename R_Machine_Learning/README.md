@@ -117,6 +117,10 @@ https://www.ncbi.nlm.nih.gov/pubmed/28425484
 Sci Rep. 2017 Apr 20;7:46327.
 Mycobacterium tuberculosis resistance prediction and lineage classification from genome sequencing: comparison of automated analysis tools.
 
+https://www.ncbi.nlm.nih.gov/pubmed/26686880
+Nat Commun. 2015 Dec 21;6:10063. 
+Rapid antibiotic-resistance predictions from genome sequence data for Staphylococcus aureus and Mycobacterium tuberculosis.
+
 ----------
 
 メタゲノムのコドン使用
