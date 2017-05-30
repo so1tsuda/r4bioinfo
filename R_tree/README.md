@@ -41,6 +41,9 @@ Rを終了:
 
     quit()
 
+- [Rの初歩](https://oku.edu.mie-u.ac.jp/~okumura/stat/first.html)
+y（はい）と答えた場合，作業スペースの内容がRの作業ディレクトリ（working directory）の .RData というファイルに保存され，次回の起動時に自動的に読み込まれます。
+
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
 
 [作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)の変更と確認:  
