@@ -49,9 +49,13 @@ Rを終了:
 
     install.packages("ape")
 
+    install.packages("seqinr")
+
 パッケージの呼び出し:  
 
     library(ape)
+
+    library(seqinr)
 
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 
@@ -96,7 +100,10 @@ Phylogenetic comparative methods
 ### [GettingStarted](http://www.r-phylo.org/wiki/HowTo/GettingStarted)
 http://www.r-phylo.org/wiki/HowTo/GettingStarted
 
+	install.packages("ape")
+	install.packages("geiger")
 
+	update.packages()
 
 ### [DataTreeManipulation](https://www.r-phylo.org/wiki/HowTo/DataTreeManipulation)
 
@@ -105,6 +112,7 @@ http://www.r-phylo.org/wiki/HowTo/GettingStarted
 パッケージ`ape`をロードし、
 [ガラパゴスフィンチ属](https://ja.wikipedia.org/wiki/ガラパゴスフィンチ属)の系統樹([Geospiza.nex](https://www.r-phylo.org/w/images/0/02/Geospiza.nex))とデータ表([Geospiza.txt](http://www.r-phylo.org/w/images/5/5c/Geospiza.txt))を読み込む:  
 
+	library(ape)
 
     geotree <- read.nexus("http://www.r-phylo.org/w/images/0/02/Geospiza.nex")
     geodata <- read.table("http://www.r-phylo.org/w/images/5/5c/Geospiza.txt")
@@ -114,10 +122,13 @@ http://www.r-phylo.org/wiki/HowTo/GettingStarted
 How can I see a plot of my phylogeny?  
 系統樹を図示
 
+	plot.phylo(geotree)
+	help(plot.phylo)
 
 How can I see the list of taxa represented in my phylogeny?  
 系統樹の生物群を表示
 
+	 geotree$tip.label
 
 How do I designate a specific taxon to be the root of my phylogeny?  
 外群(outgroup)を指定して系統樹に根(root)をつける
@@ -131,6 +142,7 @@ How do I designate a specific taxon to be the root of my phylogeny?
 How can I see the length of the branches in my phylogeny?  
 系統樹の枝長を表示
 
+	geotree$edge.length
 
 How can I change the lengths of the branches in my phylogeny?  
 系統樹の枝長を変更
@@ -156,7 +168,10 @@ How can I resolve polytomies in my phylogeny?
 How can I verify that the taxa listed in my data table match those at the tips of my phylogeny?  
 系統樹([Geospiza.nex](https://www.r-phylo.org/w/images/0/02/Geospiza.nex))とデータ表([Geospiza.txt](http://www.r-phylo.org/w/images/5/5c/Geospiza.txt))に含まれる生物群が一致するか確認
 
+	library(geiger)
 
+	name.check(geotree, geodata)
+	geotree <- drop.tip(geotree, "olivacea")
     name.check(geotree, geodata)
 
 Is there a shorthand way to refer to a specific list of taxa (for example, all members of a particular clade)?  
@@ -165,6 +180,7 @@ Is there a shorthand way to refer to a specific list of taxa (for example, all m
     plot.phylo(geotree)
     nodelabels()
 
+	cladeA = c("pauper", "psittacula", "parvulus")
     # ‘node.leaves’ is being deprecated: use ‘tips’ instead
     tips(geotree, 24)
     cladeA <- tips(geotree, mrca(geotree)["pauper", "psittacula"])
@@ -179,27 +195,36 @@ How can I remove taxa from my phylogeny?
 How can I identify all the branches belonging to a particular subclade?  
 特定のクレードに属する全ての枝 (branch, edge) を特定
 
+	geotree$edge
 
     geotree$edge[which.edge(geotree, cladeA), ]
 
 How can I identify the node representing the most recent common ancestor of a pair of taxa?  
-生物群の[最近共通祖先 (MRCA) ](https://ja.wikipedia.org/wiki/最も近い共通祖先)を表す節 (分岐点、node) を特定
+生物群の[最近共通祖先 (MRCA) ](https://ja.wikipedia.org/wiki/最も近い共通祖先)を表す節 (分岐点, node) を特定
 
+	mrca(geotree)["pauper", "parvulus"]
 
+	geotree$node.label<-((length(geotree$tip)+1):((length(geotree$tip)*2)-1))
     plot(geotree, show.node.label=TRUE)
 
 How do I calculate the patristic distance between two taxa?  
-2つの生物群間の系統経路距離 (patristic distance) を計算
+2つの生物群間の[系統経路距離 (patristic distance) ](http://leeswijzer.org/diary2003-09.html#22)を計算
 
+	cophenetic(geotree)["pallida", "conirostris"]
+	cophenetic(geotree)
 
 How do I calculate the patristic distance between two internal nodes or an internal node and a tip?  
 2つの内部節 (internal node) または 内部節と末端節 (OTU) の間の距離を計算
 
+	dist.nodes(geotree)
+	dist.nodes(geotree)[15, 20]
     geotree$tip.label
+	dist.nodes(geotree)[1, 15]
 
 How do I calculate the distance from an internal node to the tips of an ultrametric phylogeny?  
-超距離(ultrametric)系統樹の内部節から末端節 (OTU) までの距離を計算
+超距離 (ultrametric) 系統樹の内部節から末端節 (OTU) までの距離を計算
 
+	branching.times(geotree)
 
 ----------
 ## [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
@@ -208,17 +233,17 @@ How do I calculate the distance from an internal node to the tips of an ultramet
 
 Package のインストール
 
+	install.packages("ape")
 
 ape: newick tree を描く
 
-    system("
-            curl -O http://www.geocities.jp/ancientfishtree/NewFiles/drawTree_fol.tar.gz
+    system("curl -O http://www.geocities.jp/ancientfishtree/NewFiles/drawTree_fol.tar.gz
             tar xvzf drawTree_fol.tar.gz
-            find drawTree_fol
-            ")
+            find drawTree_fol")
 
-    setwd(paste0(getwd(),"/drawTree_fol"))
+    setwd("./drawTree_fol")
 
+	source('drawTree.R')
 
 ape: node number を確認する
 
@@ -231,6 +256,8 @@ http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_no
 
 **系統樹データの読み込み**
 
+	#install.packages("ape", dependencies = TRUE)
+	#install.packages("ade4", dependencies = TRUE)
 
     packageVersion("ape")
 
@@ -244,12 +271,33 @@ http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_no
 
 ape パッケージを利用して読み込む
 
+	library(ape)
+	
+	# newick フォーマットの読み込み
+	nw <- read.tree("https://stat.biopapyrus.net/data/newick-format.txt")
+	
+	# nexus フォーマットの読み込み
+	nx <- read.nexus("https://stat.biopapyrus.net/data/nexus-format.txt")
+	
+	# データの読み込み
+	tree <- read.tree("https://stat.biopapyrus.net/data/newick-format.txt")
+	
+	# データの書き込み
+	write.tree(tree, file="new.tre")    # newick フォーマット
+	write.nexus(tree, file="new.nex")   # nexus フォーマット
 
 ade4 パッケージを利用して読み込む
 
+	library(ade4)
+	
+	# ファイルを 1 行ずつ読んで、 newick2phylog で変換
+	fh <- file("https://stat.biopapyrus.net/data/newick-format.txt", "r")
+	tree <- newick2phylog(readLines(fh, 1))
 
 **ape を利用した系統樹作成**
 
+	library(ape)
+	tree <- read.tree("https://stat.biopapyrus.net/data/newick-format.txt")
     plot(tree)
 
 ![](https://stat.biopapyrus.net/media/r/ape-plot-basis.png)
@@ -257,20 +305,51 @@ ade4 パッケージを利用して読み込む
     help(edgelabels)
     ?edgelabels
     example(edgelabels)
+	
+	# Sample 1
+	plot(tree, main = "Sample 1")
     edgelabels(text = tree$edge.length)
+	
+	# Sample 2
+	# 最後の枝のみに距離情報をつける場合
+	plot(tree, main = "Sample 2")
+	
+	# 葉を持つ枝を特定して距離情報を代入する
+	lastEdgeLabel <- tree$edge.length * as.numeric(tree$edge[,1] > tree$edge[,2])
+	lastEdgeLabel <- ifelse(lastEdgeLabel == 0, NA, lastEdgeLabel)
+	lastEdgeLabel[1] <- tree$edge.length[1]
+	edgelabels(lastEdgeLabel, frame="none", bg="none")
 
 ![](https://stat.biopapyrus.net/media/r/ape-plot-edgelabel.png)
 
+	plot(tree)
     nodelabels()
 
+	# ノードが右上がりになるようにソート（逆はright = FALSEを指定）
+	tree.sort <- ladderize(tree, right = TRUE)
+	
+	plot(tree.sort, type = "phylogram")
+	
+	# 横軸の追加
+	axisPhylo()
+	
+	# スケールバーの追加
+	add.scale.bar(length=0.05)
 
 ![](https://stat.biopapyrus.net/media/r/ape-plot-sortscale.png)
 
+	plot(tree, y.lim = c(-0.5, tree$Nnode + 1))
+	add.scale.bar(x=0, y = 0, length = 0.05)
 
 ![](https://stat.biopapyrus.net/media/r/ape-plot-scaleadjust.png)
 
 **ade4 を利用した系統樹作成**
 
+	# ade4パッケージの利用
+	library(ade4)
+	fh <- file("https://stat.biopapyrus.net/data/newick-format.txt", "r")
+	tree <- newick2phylog(readLines(fh, 1))
+	
     plot(tree)
 
     example(plot.phylog)
@@ -287,31 +366,49 @@ ade4 パッケージを利用して読み込む
 
 (1)　距離
 
+	library(ape)
+	data(woodmouse)
+	str(woodmouse)
+	base.freq(woodmouse)
 
     b.f <- sapply(woodmouse,base.freq)
     barplot(b.f, las=2, legend.text = rownames(b.f))
 
 ![](http://mjin.doshisha.ac.jp/R/Chap_42/image2.jpg)
 
+	dist.dna(woodmouse[1:5,])
+	dist.dna(woodmouse[1:5,],model="GG95")
 
     ?dist.gene
 
 (2)　UPGMA系統樹
 
+	wm.d<-dist.dna(woodmouse)
+	wm.hc<-hclust(wm.d,"average")
+	wm.phy<-as.phylo(wm.hc)
+	plot(wm.phy)
 
 ![](http://mjin.doshisha.ac.jp/R/Chap_42/image12.jpg)
 
 (3)　関数 plot.phylo
 
     par(mfrow=c(2,2))
+	plot(wm.phy,type="c")	　#図(a)
+	plot(wm.phy,type="c",use.edge.length = FALSE) 　#図(b)
+	plot(wm.phy,type="r")	　#図(c)
+	plot(wm.phy,type="u",use.edge.length = FALSE,lab4ut="axial")	　#図(d)
 
 ![](http://mjin.doshisha.ac.jp/R/Chap_42/image13.jpg)
 
 (4)　近隣結合法 (NJ: Neighbor-Joining)
 
+	wm.d<-dist.dna(woodmouse)
+	wm.nj<-nj(wm.d)
+	plot(wm.nj)
 
 ![](http://mjin.doshisha.ac.jp/R/Chap_42/image14.jpg)
 
+	plot(wm.nj,type="u",use.edge.length = FALSE,lab4ut="axial")
 
 ![](http://mjin.doshisha.ac.jp/R/Chap_42/image15.jpg)
 
@@ -323,6 +420,12 @@ ade4 パッケージを利用して読み込む
 1．系統樹のデザインと操作
 (1)　先端のデザイン
 
+	library(ape);data(woodmouse);
+	wood.dist<-dist.dna(woodmouse)
+	wood.tr<-nj(wood.dist)
+	lab<-c(rep(10,3),rep(11,2),rep(12,3), rep(13,7))　#印の番号を作成する
+	plot(wood.tr, "c", FALSE, font = 1, label.offset = 2,x.lim = 20, no.margin = TRUE)
+	tiplabels(pch =lab,col =lab, adj = 1.5, cex = 2)
 
 ----------
 ## Execution environment
@@ -350,7 +453,8 @@ ape - 日々草(TEKの備忘録)
 takayuki kijima, 2015/04/25 16:23
 
 http://lecture.ecc.u-tokyo.ac.jp/~aiwata/biostat_basic/2013/text4lec4_2.pdf
-バイオスタティスティクス基礎論 第4回 講義テキスト岩田洋佳
+バイオスタティスティクス基礎論 第4回 講義テキスト
+岩田洋佳
 パッケージ ape 
 
 ### eutils.ncbi
@@ -419,8 +523,6 @@ https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJap
 田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法"
 生物学における系統樹の必要性
 系統関係=サンプル間の非依存性を考慮して統計解析を行うことでこのような問題を解決しようとする手法があり、系統的独立比較法などと呼ばれている (Felsenstein, 1985; Grafen, 1989)。
-系統樹上での生物間のパスの長さの和=系統的多様性で置き換えることで解決しようという研究が徐々に増えてきている (Faith, 1992; Forest et al., 2007)。
-
 
 ### patristic distance
 http://dendropy.readthedocs.io/en/latest/tutorial/treestats.html#patristic-distances
