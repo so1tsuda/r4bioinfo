@@ -41,6 +41,22 @@ Rを終了:
 
     quit()
 
+- [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
+
+[作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)の変更と確認:  
+
+    # Get Working Directory
+    getwd()
+
+    # Set Working Directory
+    setwd("~/Desktop/R_Lessons/")
+
+    # Get Working Directory
+    getwd()
+
+    # List the Files in a Directory
+    dir()
+
 ## R packages
 
 [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
