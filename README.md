@@ -14,7 +14,7 @@ R言語を用いたバイオインフォマティクス
 - [msa: an R package for multiple sequence alignment.](https://github.com/haruosuz/r4bioinfo/tree/master/R_msa)
 - [phangorn: Phylogenetic Analysis in R](https://github.com/haruosuz/r4bioinfo/tree/master/R_phangorn)
 - [phytools: Phylogenetic Tools for Comparative Biology (and Other Things)](https://github.com/haruosuz/r4bioinfo/tree/master/R_phytools)
-- [Phylogenetic tree](https://github.com/haruosuz/r4bioinfo/tree/master/R_tree)
+- [tree](https://github.com/haruosuz/r4bioinfo/tree/master/R_tree)
 - [vegan: Community Ecology Package](https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan)
 - R_Wim_Krijnen.md: Wim P. Krijnen (2009) Applied Statistics for Bioinformatics using R
 
@@ -75,10 +75,28 @@ Rのバージョンとパッケージを確認:
     Biostrings_2.40.1
 
 ----------
+
 # References
+
+- [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
+- [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
+  - [01.セットアップ・参考文献](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/01.html)
+- [統合TV | 【R】に関係する講習会資料・番組](http://togotv.dbcls.jp/ja/tags.html?tag=R)
+  - 2017-05-12 [統合TV | 生命科学系DB・ツール使い倒し系チャンネル | RStudioでRを直感的に使おう MacOS版 2017](http://togotv.dbcls.jp/ja/20170512.html)
+- [Rの初歩](https://oku.edu.mie-u.ac.jp/~okumura/stat/first.html)
+- [Rや統計を学ぶために有用なページまとめ（暫定版） - NAVER まとめ](https://matome.naver.jp/odai/2137370667209004001)
+- [続・わしの頁](http://nfunao.web.fc2.com)
+- [R のインストール - RjpWiki](http://www.okadajp.org/RWiki/?R%20のインストール)
+- [Rのダウンロードとライブラリのインストール - 日経BigData](http://business.nikkeibp.co.jp/atclbdt/15/recipe/102500016/)
+- 2015-11-17 Windows版[R言語のインストールと動作確認](http://qiita.com/do_m_gatoru/items/f09ec198aa13f8aac68e)
+- [Windows用Rガイド](https://oku.edu.mie-u.ac.jp/~okumura/stat/R-win.html)
+
 ## 日本語
 http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html
 (Rで)マイクロアレイデータ解析
+
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html
+(Rで)塩基配列解析
 
 http://www.trifields.jp/r-cran-task-view-statistical-genetics-733
 R言語 CRAN Task View：統計遺伝学 | トライフィールズ
@@ -122,10 +140,18 @@ Statistics in Bioinformatics using R | Population Genetics and Bioinformatics
 http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html
 Welcome to a Little Book of R for Bioinformatics! — Bioinformatics 0.1 documentation
 
+https://eeob-biodata.github.io/R-Data-Skills/
+R Data Skills for Bioinformatics: Welcome to the R part of the BCB546 course!
+Adapted by DV Lavrov (ISU). © 2016 Software Carpentry
+
 http://faculty.washington.edu/kenrice/bigr/
 R for large data & bioinformatics
 28 November 2013 to 29 November 2013
 Instructors: Thomas Lumley and Ken Rice
+
+https://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/
+Using the R SeqinR package
+Posted on May 9, 2013
 
 https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf
 Applied Statistics for Bioinformatics using RWim P. Krijnen
