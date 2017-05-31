@@ -47,17 +47,6 @@ Rを終了:
 `.RData`
 `.Rhistory`
 
-[作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)の変更と確認:  
-
-    # Set Working Directory
-    setwd("~/Desktop/R_Lessons/")
-
-    # Get Working Directory
-    getwd()
-
-    # List the Files in a Directory
-    dir()
-
 ## R packages
 
 [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
@@ -82,9 +71,11 @@ Rを終了:
     example(nodelabels)
 
 ### Retrieving sequence data using R
-[はじけじゅ](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html)の例  
+[はじけじゅ](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html)の例：
 カモノハシ（AJ311679）、ネズミ （X00686）、 ヒト（M10098）、 ニワトリ（AF173612）
-の配列をFASTA形式ファイルで取得する。
+の配列をFASTA形式ファイル
+[seq_20170531.fasta](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/seq_20170531.fasta)
+として保存する。
 
 [作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)にファイル
 [get_fasta.R](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/get_fasta.R)
@@ -92,13 +83,21 @@ Rを終了:
 [Accession_List.txt](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/Accession_List.txt)
 を保存する。
 
-以下の(1),(2)の何れかを実行すると、FASTA形式ファイル
-[seq_20170531.fasta](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/seq_20170531.fasta)
-が出力される。
+[作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)の変更と確認:  
+
+    # Set Working Directory
+    setwd("~/Desktop/R_Lessons/")
+
+    # Get Working Directory
+    getwd()
+
+    # List the Files in a Directory
+    dir()
+
+以下の(1)と(2)の何れかを実行する。
 
 (1) Rコンソールで[`source()`](http://www.yukun.info/blog/2008/09/r-read-source-file.html)を実行する:  
 
-    #setwd("~/projects/r4bioinfo/R_tree/examples")
     source("get_fasta.R")
 
 (2) ターミナルで[`Rscript`](https://stat.biopapyrus.net/dev/commandline.html)
