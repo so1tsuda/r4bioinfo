@@ -92,20 +92,17 @@ Rを終了:
 [Accession_List.txt](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/Accession_List.txt)
 を保存する。
 
-以下の何れかを実行すると、FASTA形式ファイル
+以下の(1),(2)の何れかを実行すると、FASTA形式ファイル
 [seq_20170531.fasta](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/seq_20170531.fasta)
 が出力される。
 
-[Rで統計: *.Rソースファイルの読み込みと実行 – source()関数](http://www.yukun.info/blog/2008/09/r-read-source-file.html)
-
-Rコンソールで以下のコマンドを実行する:  
+(1) Rコンソールで[`source()`](http://www.yukun.info/blog/2008/09/r-read-source-file.html)を実行する:  
 
     #setwd("~/projects/r4bioinfo/R_tree/examples")
     source("get_fasta.R")
 
-[Rバッチモード | コマンドラインで予め準備したファイルを読み込んで実行する](https://stat.biopapyrus.net/dev/commandline.html)
-
-[ターミナル](http://techacademy.jp/magazine/5155)で以下のコマンドを実行する:  
+(2) ターミナルで[`Rscript`](https://stat.biopapyrus.net/dev/commandline.html)
+を実行する:  
 
     Rscript --vanilla get_fasta.R
 
