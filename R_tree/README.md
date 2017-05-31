@@ -30,6 +30,7 @@ Last Update: 2017-05-30
 ![](https://static-content.springer.com/cover/book/978-1-4614-1743-9.jpg)
 
 ### Running R
+- [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
 
 [R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
 
@@ -42,14 +43,11 @@ Rを終了:
     quit()
 
 - [Rの初歩](https://oku.edu.mie-u.ac.jp/~okumura/stat/first.html)
-y（はい）と答えた場合，作業スペースの内容がRの作業ディレクトリ（working directory）の .RData というファイルに保存され，次回の起動時に自動的に読み込まれます。
-
-- [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
+終了のしかた
+`.RData`
+`.Rhistory`
 
 [作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)の変更と確認:  
-
-    # Get Working Directory
-    getwd()
 
     # Set Working Directory
     setwd("~/Desktop/R_Lessons/")
@@ -84,27 +82,28 @@ y（はい）と答えた場合，作業スペースの内容がRの作業ディ
     example(nodelabels)
 
 ### Retrieving sequence data using R
-
 [はじけじゅ](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html)の例  
 カモノハシ（AJ311679）、ネズミ （X00686）、 ヒト（M10098）、 ニワトリ（AF173612）
-の配列をFASTA形式ファイルで取得:
+の配列をFASTA形式ファイルで取得する。
 
-    ACCESSIONs <- c("AJ311679", "X00686", "M10098", "AF173612")
+[作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)に下記ファイルを保存する。
+[get_fasta.R](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/get_fasta.R)
+[Accession_List.txt](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/Accession_List.txt)
 
-    # Load SeqinR package
-    #install.packages("seqinr")
-    library(seqinr)
+以下の何れかを実行すると、FASTA形式ファイル[seq_20170531.fasta](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/seq_20170531.fasta)が出力される。
 
-    # Retrieving sequence data using SeqinR
-    eutils.ncbi.fasta <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), strip.desc = TRUE)[[1]]
-    ld <- lapply(ACCESSIONs, eutils.ncbi.fasta)
+[Rで統計: *.Rソースファイルの読み込みと実行 – source()関数](http://www.yukun.info/blog/2008/09/r-read-source-file.html)
 
-    # Writing sequence data out as a FASTA file
-    write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) (.+)", "\\2_\\1", getAnnot(ld)), sep="_"), file.out=paste0("hs_",format(Sys.time(), "%Y-%m-%d"),".fasta") )
+Rコンソールで以下のコマンドを実行する:  
 
-    # Check Directory
-    getwd()
-    dir()
+    #setwd("~/projects/r4bioinfo/R_tree/examples")
+    source("get_fasta.R")
+
+[Rバッチモード | コマンドラインで予め準備したファイルを読み込んで実行する](https://stat.biopapyrus.net/dev/commandline.html)
+
+[ターミナル](http://techacademy.jp/magazine/5155)で以下のコマンドを実行する:  
+
+    Rscript --vanilla get_fasta.R
 
 ----------
 
