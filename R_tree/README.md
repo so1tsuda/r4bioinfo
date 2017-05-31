@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-05-30
+Last Update: 2017-05-31
 
 ----------
 
@@ -86,11 +86,15 @@ Rを終了:
 カモノハシ（AJ311679）、ネズミ （X00686）、 ヒト（M10098）、 ニワトリ（AF173612）
 の配列をFASTA形式ファイルで取得する。
 
-[作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)に下記ファイルを保存する。
+[作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)にファイル
 [get_fasta.R](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/get_fasta.R)
+と
 [Accession_List.txt](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/Accession_List.txt)
+を保存する。
 
-以下の何れかを実行すると、FASTA形式ファイル[seq_20170531.fasta](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/seq_20170531.fasta)が出力される。
+以下の何れかを実行すると、FASTA形式ファイル
+[seq_20170531.fasta](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/seq_20170531.fasta)
+が出力される。
 
 [Rで統計: *.Rソースファイルの読み込みと実行 – source()関数](http://www.yukun.info/blog/2008/09/r-read-source-file.html)
 
