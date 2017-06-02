@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-05-20
+Last Update: 2017-05-31
 
 ----------
 
@@ -14,6 +14,45 @@ Last Update: 2017-05-20
 - [JIN'S PAGE](#jins-page)
   - [Chap_31](#chap_31) Rとカーネル法
   - [Chap_32](#chap_32) Rと集団学習
+
+----------
+
+http://qiita.com/tags/はじパタ
+
+https://www.slideshare.net/Prunus1350/1-23146712
+はじめてのパターン認識 第1章 by @Prunus1350 #はじパタパターン認識
+Published on Jun 18, 2013
+
+----------
+
+## KuboBook
+https://twitter.com/KuboBook
+http://hosho.ees.hokudai.ac.jp/~kubo/ce/IwanamiBook.html
+
+[目次](http://hosho.ees.hokudai.ac.jp/~kubo/log/2012/img01/kuboTOC20120116.pdf)
+
+    curl -O http://hosho.ees.hokudai.ac.jp/~kubo/stat/iwanamibook/kubobook_2012.zip
+    #wget http://hosho.ees.hokudai.ac.jp/~kubo/stat/iwanamibook/jags/jags.zip
+
+### 2
+確率分布と統計モデルの最尤推定
+
+#### 2.1
+例題:種子数の統計モデリング
+
+
+#### 2.2
+データと確率分布の対応関係をながめる
+
+plot.data.R:prob <- dpois(y, lambda = 3.56)
+
+    hist(data, breaks = seq(-0.5, 9.5, 1)); lines(y, 50 * prob, type = "b")
+
+#### 2.3
+ポアソン分布とは何か?
+
+
+
 
 ----------
 ## [TJO](https://twitter.com/tjo_datasci)
@@ -41,9 +80,6 @@ TJO on Twitter: "前にも書いたネタだけど「機械学習で取り組む
 
 
 実は多変量モデルこそがヒトの暗黙知としての「学習」に対応するのかも？
-
-
-
 
 ----------
 
