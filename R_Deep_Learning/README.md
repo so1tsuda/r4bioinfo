@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-05-27
+Last Update: 2017-06-03
 
 ----------
 
@@ -205,7 +205,56 @@ Error in paste0("Predictions/models/", object@model_id, "/frames/", h2o.getId(ne
 ----------
 ## References
 
-Author:	Riccardo Rizzo
+### Review
+https://www.ncbi.nlm.nih.gov/pubmed/27474269
+Mol Syst Biol. 2016 Jul 29;12(7):878. doi: 10.15252/msb.20156651.
+Deep learning for computational biology.
+
+![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4965871/bin/MSB-12-878-g001.jpg)
+
+https://www.ncbi.nlm.nih.gov/pubmed/27473064
+Brief Bioinform. 2016 Jul 29. pii: bbw068.
+Deep learning in bioinformatics.
+
+![](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bib/PAP/10.1093_bib_bbw068/2/m_bbw068f2p.jpeg?Expires=1492322095&Signature=LOpu6w596BlzZDCGwFWgdvjrxhuxHH85riIE89loM93Yu2cQY5NRtJlOlbE-7Kckm5uEm8U7GBWNHOnrDaR4PpfjWfEuEU1pXJ~7HreLn1p6kfJOPD1QFV8TmrtWuBM0Or88Fo8r7CPtZxNBJcJMHURozGWPhb-anDAvNgPP7TATnkNQ8LPeDxWeyqWbEaj9xTHkIOZd4YM2nONdyAhhtglrbcp4BdeRcAan2uxj9A9MOmRj~okxDwGeBcxwXKj9J0SLmQUmtds46D-HQpStpB7JEqChBKj0zpx7jDLNydXfa4XeUk2Ua0a5Dz3166~s54hr6tuOfDchNHtCvw7f6Q__&Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q)
+
+https://www.ncbi.nlm.nih.gov/pubmed/27007977
+Mol Pharm. 2016 May 2;13(5):1445-54. doi: 10.1021/acs.molpharmaceut.5b00982. Epub 2016 Mar 29.
+Applications of Deep Learning in Biomedicine.
+Mamoshina P1, Vieira A2, Putin E1, Zhavoronkov A1.
+
+![](http://pubs.acs.org/appl/literatum/publisher/achs/journals/content/mpohbp/2016/mpohbp.2016.13.issue-5/acs.molpharmaceut.5b00982/20160426/images/medium/mp-2015-00982c_0005.gif)
+
+https://www.ncbi.nlm.nih.gov/pubmed/27018908
+PLoS Comput Biol. 2016 Mar 28;12(3):e1004845.
+Deep Learning for Population Genetic Inference.
+
+https://followthedata.wordpress.com/tag/deep-learning/
+List of deep learning implementations in biology
+2015-12-21
+
+https://www.ncbi.nlm.nih.gov/pubmed/26213851
+Nat Biotechnol. 2015 Aug;33(8):831-8.
+Predicting the sequence specificities of DNA- and RNA-binding proteins by deep learning.
+
+### Microbiome
+https://www.hpcwire.com/2017/01/25/ucsd-venter-leverage-ml-study-microbiome/
+UCSD/Venter Institute Leverage ML to Study the Microbiome
+January 25, 2017
+http://lsmarr.calit2.net/repository/IEEE_BigData_KEGGs_CAMERA_READY.pdf
+Using Machine Learning to Identify Major Shifts in Human Gut Microbiome Protein Family Abundance in Diseasehttp://alifar76.github.io/cnn-microbiome/
+Convolutional Neural Networks and Microbiome: An exploratory analysis – Ali A. Faruqi
+JULY 04, 2016
+
+http://alifar76.github.io/diagnostic-platform/
+Diagnosis through deep learning: Using TensorFlow with microbiome data – Ali A. Faruqi
+JUNE 27, 2016
+
+https://arxiv.org/abs/1512.00397
+A New Approach for Scalable Analysis of Microbial Communities
+(Submitted on 1 Dec 2015)
+
+### Riccardo Rizzo
 
 First Online: 31 July 2016
 http://link.springer.com/chapter/10.1007/978-3-319-44332-4_10
@@ -215,7 +264,7 @@ June 23 - 24, 2016
 http://dl.acm.org/citation.cfm?id=2983489
 Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
 
-
+### R
 
 2017-03-07
 http://www.rblog.uni-freiburg.de/2017/02/07/deep-learning-in-r/
@@ -237,32 +286,7 @@ Written Apr 10, 2016
 https://www.quora.com/What-are-the-best-packages-for-deep-learning-in-R
 What are the best packages for deep learning in R? - Quora
 
-
-Review
-https://www.ncbi.nlm.nih.gov/pubmed/27474269
-Mol Syst Biol. 2016 Jul 29;12(7):878. doi: 10.15252/msb.20156651.
-Deep learning for computational biology.
-
-![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4965871/bin/MSB-12-878-g001.jpg)
-
-https://www.ncbi.nlm.nih.gov/pubmed/27473064
-Brief Bioinform. 2016 Jul 29. pii: bbw068.
-Deep learning in bioinformatics.
-
-![](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bib/PAP/10.1093_bib_bbw068/2/m_bbw068f2p.jpeg?Expires=1492322095&Signature=LOpu6w596BlzZDCGwFWgdvjrxhuxHH85riIE89loM93Yu2cQY5NRtJlOlbE-7Kckm5uEm8U7GBWNHOnrDaR4PpfjWfEuEU1pXJ~7HreLn1p6kfJOPD1QFV8TmrtWuBM0Or88Fo8r7CPtZxNBJcJMHURozGWPhb-anDAvNgPP7TATnkNQ8LPeDxWeyqWbEaj9xTHkIOZd4YM2nONdyAhhtglrbcp4BdeRcAan2uxj9A9MOmRj~okxDwGeBcxwXKj9J0SLmQUmtds46D-HQpStpB7JEqChBKj0zpx7jDLNydXfa4XeUk2Ua0a5Dz3166~s54hr6tuOfDchNHtCvw7f6Q__&Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q)
-
-https://www.ncbi.nlm.nih.gov/pubmed/27018908
-PLoS Comput Biol. 2016 Mar 28;12(3):e1004845.
-Deep Learning for Population Genetic Inference.
-
-https://followthedata.wordpress.com/tag/deep-learning/
-List of deep learning implementations in biology
-2015-12-21
-
-https://www.ncbi.nlm.nih.gov/pubmed/26213851
-Nat Biotechnol. 2015 Aug;33(8):831-8.
-Predicting the sequence specificities of DNA- and RNA-binding proteins by deep learning.
-
+### Japanese
 https://www.oreilly.co.jp/books/9784873117584/
 O'Reilly Japan - ゼロから作るDeep Learning
 
@@ -287,19 +311,5 @@ http://www.johokiko.co.jp/seminar_chemical/ai_deeplearning.php
 
 http://sssslide.com/speakerdeck.com/ktnyt/nekodemowakarushen-ceng-xue-xi-ru-men
 ねこでもわかる深層学習入門byktnyt (2017/02/04)
-
-----------
-
-https://github.com/haruosuz/plasmids
-
-https://github.com/haruosuz/DS4GD
-生命動態のデータサイエンス
-DATA SCIENCE FOR GENOME DYNAMICS [DS2] GENOME INFORMATICS
-https://github.com/haruosuz/DS4GD/tree/master/2017
-
-メタゲノムのコドン使用
-https://www.ncbi.nlm.nih.gov/pubmed/27115650
-Methods Mol Biol. 2016;1415:509-31.
-Big Data, Evolution, and Metagenomes: Predicting Disease from Gut Microbiota Codon Usage Profiles.
 
 ----------
