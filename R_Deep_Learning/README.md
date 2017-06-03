@@ -9,16 +9,17 @@ Last Update: 2017-06-03
 [ディープラーニング](https://ja.wikipedia.org/wiki/ディープラーニング)
 
 ## Table of Contents
-- [References](#references)
 - [2017-04](#2017-04) RでDeep Learning
 - [2017-01-03](#2017-01-03) MXNetR で Autoencoder を作ってみる - Qiita
 - [2016-08-14](#2016-08-14) Deep Learning in R | R Tutorial
 - [2016-03-29](#2016-03-29) Deep Learningライブラリ{mxnet}のR版でConvolutional Neural Networkをサクッと試してみた
 - [2014-10-23](#2014-10-23) H2OのRパッケージ{h2o}でお手軽にDeep Learningを実践してみる(1)：まずは決定境界を描く
 - [2016-03-31](#2016-03-31) Deep Learningライブラリ「MXNet」のR版をKaggle Otto Challengeで実践してみた
-- [](#)
+- [References](#references)
 
 ----------
+
+![](https://www.oreilly.co.jp/books/images/picture978-4-87311-758-4.gif)
 
 https://www.oreilly.co.jp/books/9784873117584/
 O'Reilly Japan - ゼロから作るDeep Learning 
@@ -205,15 +206,27 @@ Error in paste0("Predictions/models/", object@model_id, "/frames/", h2o.getId(ne
 ----------
 ## References
 
-### Riccardo Rizzo
+### R
 
-First Online: 31 July 2016
-http://link.springer.com/chapter/10.1007/978-3-319-44332-4_10
-A Deep Learning Approach to DNA Sequence Classification | SpringerLink
+2017-03-07
+http://www.rblog.uni-freiburg.de/2017/02/07/deep-learning-in-r/
+Deep Learning in R – R Blog
 
-June 23 - 24, 2016 
-http://dl.acm.org/citation.cfm?id=2983489
-Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
+2017-02-06
+https://www.r-bloggers.com/deep-learning-in-r-2/
+Deep Learning in R | R-bloggers
+
+February 13, 2017
+http://blog.revolutionanalytics.com/2017/02/deep-learning-in-r.html
+A comparison of deep learning packages for R
+
+By David Beyer April 27, 2016
+https://www.oreilly.com/ideas/deep-learning-meets-genome-biology
+Deep learning meets genome biology - O'Reilly Media
+
+Written Apr 10, 2016
+https://www.quora.com/What-are-the-best-packages-for-deep-learning-in-R
+What are the best packages for deep learning in R? - Quora
 
 ### Review
 
@@ -265,32 +278,17 @@ Diagnosis through deep learning: Using TensorFlow with microbiome data – Ali A
 https://arxiv.org/abs/1512.00397
 A New Approach for Scalable Analysis of Microbial Communities
 
-### R
+### Riccardo Rizzo
 
-2017-03-07
-http://www.rblog.uni-freiburg.de/2017/02/07/deep-learning-in-r/
-Deep Learning in R – R Blog
+First Online: 31 July 2016
+http://link.springer.com/chapter/10.1007/978-3-319-44332-4_10
+A Deep Learning Approach to DNA Sequence Classification | SpringerLink
 
-2017-02-06
-https://www.r-bloggers.com/deep-learning-in-r-2/
-Deep Learning in R | R-bloggers
-
-February 13, 2017
-http://blog.revolutionanalytics.com/2017/02/deep-learning-in-r.html
-A comparison of deep learning packages for R
-
-By David Beyer April 27, 2016
-https://www.oreilly.com/ideas/deep-learning-meets-genome-biology
-Deep learning meets genome biology - O'Reilly Media
-
-Written Apr 10, 2016
-https://www.quora.com/What-are-the-best-packages-for-deep-learning-in-R
-What are the best packages for deep learning in R? - Quora
+June 23 - 24, 2016 
+http://dl.acm.org/citation.cfm?id=2983489
+Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
 
 ### Japanese
-
-https://www.oreilly.co.jp/books/9784873117584/
-O'Reilly Japan - ゼロから作るDeep Learning
 
 http://wiki.lifesciencedb.jp/mw/BH14.14/MachineLearning
 ディープラーニング・機械学習などを活用した大量データ処理
