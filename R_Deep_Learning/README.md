@@ -205,9 +205,20 @@ Error in paste0("Predictions/models/", object@model_id, "/frames/", h2o.getId(ne
 ----------
 ## References
 
+### Riccardo Rizzo
+
+First Online: 31 July 2016
+http://link.springer.com/chapter/10.1007/978-3-319-44332-4_10
+A Deep Learning Approach to DNA Sequence Classification | SpringerLink
+
+June 23 - 24, 2016 
+http://dl.acm.org/citation.cfm?id=2983489
+Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
+
 ### Review
+
 https://www.ncbi.nlm.nih.gov/pubmed/27474269
-Mol Syst Biol. 2016 Jul 29;12(7):878. doi: 10.15252/msb.20156651.
+Mol Syst Biol. 2016 Jul 29;12(7):878. 
 Deep learning for computational biology.
 
 ![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4965871/bin/MSB-12-878-g001.jpg)
@@ -219,7 +230,7 @@ Deep learning in bioinformatics.
 ![](https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/bib/PAP/10.1093_bib_bbw068/2/m_bbw068f2p.jpeg?Expires=1492322095&Signature=LOpu6w596BlzZDCGwFWgdvjrxhuxHH85riIE89loM93Yu2cQY5NRtJlOlbE-7Kckm5uEm8U7GBWNHOnrDaR4PpfjWfEuEU1pXJ~7HreLn1p6kfJOPD1QFV8TmrtWuBM0Or88Fo8r7CPtZxNBJcJMHURozGWPhb-anDAvNgPP7TATnkNQ8LPeDxWeyqWbEaj9xTHkIOZd4YM2nONdyAhhtglrbcp4BdeRcAan2uxj9A9MOmRj~okxDwGeBcxwXKj9J0SLmQUmtds46D-HQpStpB7JEqChBKj0zpx7jDLNydXfa4XeUk2Ua0a5Dz3166~s54hr6tuOfDchNHtCvw7f6Q__&Key-Pair-Id=APKAIUCZBIA4LVPAVW3Q)
 
 https://www.ncbi.nlm.nih.gov/pubmed/27007977
-Mol Pharm. 2016 May 2;13(5):1445-54. doi: 10.1021/acs.molpharmaceut.5b00982. Epub 2016 Mar 29.
+Mol Pharm. 2016 May 2;13(5):1445-54. 
 Applications of Deep Learning in Biomedicine.
 Mamoshina P1, Vieira A2, Putin E1, Zhavoronkov A1.
 
@@ -238,31 +249,21 @@ Nat Biotechnol. 2015 Aug;33(8):831-8.
 Predicting the sequence specificities of DNA- and RNA-binding proteins by deep learning.
 
 ### Microbiome
+
+January 25, 2017
 https://www.hpcwire.com/2017/01/25/ucsd-venter-leverage-ml-study-microbiome/
 UCSD/Venter Institute Leverage ML to Study the Microbiome
-January 25, 2017
 http://lsmarr.calit2.net/repository/IEEE_BigData_KEGGs_CAMERA_READY.pdf
-Using Machine Learning to Identify Major Shifts in Human Gut Microbiome Protein Family Abundance in Diseasehttp://alifar76.github.io/cnn-microbiome/
+Using Machine Learning to Identify Major Shifts in Human Gut Microbiome Protein Family Abundance in DiseaseJULY 04, 2016http://alifar76.github.io/cnn-microbiome/
 Convolutional Neural Networks and Microbiome: An exploratory analysis – Ali A. Faruqi
-JULY 04, 2016
 
+JUNE 27, 2016
 http://alifar76.github.io/diagnostic-platform/
 Diagnosis through deep learning: Using TensorFlow with microbiome data – Ali A. Faruqi
-JUNE 27, 2016
 
+1 Dec 2015
 https://arxiv.org/abs/1512.00397
 A New Approach for Scalable Analysis of Microbial Communities
-(Submitted on 1 Dec 2015)
-
-### Riccardo Rizzo
-
-First Online: 31 July 2016
-http://link.springer.com/chapter/10.1007/978-3-319-44332-4_10
-A Deep Learning Approach to DNA Sequence Classification | SpringerLink
-
-June 23 - 24, 2016 
-http://dl.acm.org/citation.cfm?id=2983489
-Classification Experiments of DNA Sequences by Using a Deep Neural Network and Chaos Game Representation
 
 ### R
 
@@ -274,32 +275,33 @@ Deep Learning in R – R Blog
 https://www.r-bloggers.com/deep-learning-in-r-2/
 Deep Learning in R | R-bloggers
 
+February 13, 2017
 http://blog.revolutionanalytics.com/2017/02/deep-learning-in-r.html
 A comparison of deep learning packages for R
-February 13, 2017
 
+By David Beyer April 27, 2016
 https://www.oreilly.com/ideas/deep-learning-meets-genome-biology
 Deep learning meets genome biology - O'Reilly Media
-By David Beyer April 27, 2016
 
 Written Apr 10, 2016
 https://www.quora.com/What-are-the-best-packages-for-deep-learning-in-R
 What are the best packages for deep learning in R? - Quora
 
 ### Japanese
+
 https://www.oreilly.co.jp/books/9784873117584/
 O'Reilly Japan - ゼロから作るDeep Learning
 
 http://wiki.lifesciencedb.jp/mw/BH14.14/MachineLearning
 ディープラーニング・機械学習などを活用した大量データ処理
 
+研究期間 (年度)	2014-04-01 – 2017-03-31
 佐藤 賢二
 https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26330328/
 KAKEN — ディープラーニングを用いた大規模配列データからの階層的特徴抽出
-研究期間 (年度)	2014-04-01 – 2017-03-31
 
-https://www.scirp.org/journal/PaperInformation.aspx?PaperID=65923
 JBiSE> Vol.9 No.5, April 2016
+https://www.scirp.org/journal/PaperInformation.aspx?PaperID=65923
 DNA Sequence Classification by Convolutional Neural Network
 
 http://miyake.bpe.es.osaka-u.ac.jp/ban_da_ji_chu_gong_san_zhai_yan_jiu_shi/yan_jiu_nei_ronggenomuinfomatikkusu.html
