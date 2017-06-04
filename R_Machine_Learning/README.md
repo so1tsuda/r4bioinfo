@@ -25,7 +25,7 @@ Published on Jun 18, 2013
 
 ----------
 
-## KuboBook
+# KuboBook
 https://twitter.com/KuboBook
 http://hosho.ees.hokudai.ac.jp/~kubo/ce/IwanamiBook.html
 
@@ -34,30 +34,54 @@ http://hosho.ees.hokudai.ac.jp/~kubo/ce/IwanamiBook.html
     curl -O http://hosho.ees.hokudai.ac.jp/~kubo/stat/iwanamibook/kubobook_2012.zip
     #wget http://hosho.ees.hokudai.ac.jp/~kubo/stat/iwanamibook/jags/jags.zip
 
-### 2
+## 2
 確率分布と統計モデルの最尤推定
 
-#### 2.1
+### 2.1
 例題:種子数の統計モデリング
 
 
-#### 2.2
+### 2.2
 データと確率分布の対応関係をながめる
 
 plot.data.R:prob <- dpois(y, lambda = 3.56)
 
     hist(data, breaks = seq(-0.5, 9.5, 1)); lines(y, 50 * prob, type = "b")
 
-#### 2.3
+### 2.3
 ポアソン分布とは何か?
 
+### 2.4
+ポアソン分布のパラメーターの最尤推定
+
+
+#### 2.4.1
+擬似乱数と最尤推定値のばらつき
+
+
+### 2.5 統計モデルの要点:乱数発生・推定・予測
+#### 2.5.1 データ解析における推定・予測の役割
+### 2.6 確率分布の選びかた
+#### 2.6.1 もっと複雑な確率分布が必要か?
+#### 2.7 この章のまとめと参考文献
+
+## 3一般化線形モデル (GLM): ポアソン回帰
+### 3.1 例題:個体ごとに平均種子数が異なる場合
+
+$find . -name "data3a.csv"
+./lrtest/data3a.csv
+./poisson/data3a.csv
 
 
 
+### 3.2 観測されたデータの概要を調べる ................. 41### 3.3 統計モデリングの前にデータを図示する ............. 44### 3.4 ポアソン回帰の統計モデル..................... 46#### 3.4.1 線形予測子と対数リンク関数
+
+3.4.2 あてはめとあてはまりの良さ ............... 49 3.4.3 ポアソン回帰モデルによる予測 .............. 543.5 説明変数が因子型の統計モデル .................. 553.6 説明変数が数量型+因子型の統計モデル............. 58 3. 6. 1 対数リンク関数のわかりやすさ: かけ算される効果 . . . 593. 7 「何でも正規分布」「何でも直線」には無理がある . . . . . . . . 62 3.8 この章のまとめと参考文献..................... 65
 ----------
-## [TJO](https://twitter.com/tjo_datasci)
 
-### 2015-11-26
+# [TJO](https://twitter.com/tjo_datasci)
+
+## 2015-11-26
 http://tjo.hatenablog.com/entry/2015/11/26/190000
 ヒトの直感的理解は単変量モデルまで、直感を超えたければ多変量モデルへ
 
@@ -83,9 +107,9 @@ TJO on Twitter: "前にも書いたネタだけど「機械学習で取り組む
 
 ----------
 
-## [JIN'S PAGE](http://mjin.doshisha.ac.jp/R/)
+# [JIN'S PAGE](http://mjin.doshisha.ac.jp/R/)
 
-### [Chap_31](http://mjin.doshisha.ac.jp/R/Chap_31/31.html)
+## [Chap_31](http://mjin.doshisha.ac.jp/R/Chap_31/31.html)
 Rとカーネル法
 
 カーネル主成分分析 (KPCA; kernel principal component analysis)
@@ -96,7 +120,7 @@ Rとカーネル法
 サポートベクターマシン (SVM: Support Vector Machine) 
 
 
-### [Chap_32](http://mjin.doshisha.ac.jp/R/Chap_32/32.html)
+## [Chap_32](http://mjin.doshisha.ac.jp/R/Chap_32/32.html)
 Rと集団学習
 
 集団学習 (ensemble learning)  
@@ -116,6 +140,7 @@ Rと集団学習
 
 
 ----------
+
 ## Execution environment
 
     > sessionInfo()
@@ -124,9 +149,11 @@ Rと集団学習
     Running under: OS X Mavericks 10.9.5
 
 ----------
+
 ## Acknowledgements
 
 ----------
+
 ## References
 
 https://matome.naver.jp/odai/2145718453057572201
