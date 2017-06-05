@@ -482,17 +482,26 @@ GC含量の移動プロット
 	choosebank("refseqViruses")
     Dengue1 <- query("Dengue1", "AC=NC_001477")
 
-
 ----------
 
 ## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
 **2つの配列間でのアラインメント**
+
+**[ペアワイズシーケンスアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)**
+
+![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
+
+塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
+
+![http://www.bbc.co.uk/education/guides/zc499j6/revision/2](http://a.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
 
 ### [UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
 
 [Swiss-Prot](https://ja.wikipedia.org/wiki/Swiss-Prot) タンパク質データベース
 
 ### [Viewing the UniProt webpage for a protein sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-the-uniprot-webpage-for-a-protein-sequence)
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Mycobacterium_leprae.jpeg/200px-Mycobacterium_leprae.jpeg)
 
 [*Mycobacterium leprae*（らい菌）](https://ja.wikipedia.org/wiki/らい菌)の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)（chorismate lyase）タンパク質配列を検索するには、UniProtウェブサイト (http://www.uniprot.org) にアクセスし、ウェブページ上部の検索ボックスにUniProt accession [ [Q9CD83](http://www.uniprot.org/uniprot/Q9CD83) ] を入力して、"Search"ボタンを押す:  
 
@@ -569,14 +578,6 @@ GC含量の移動プロット
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アライメント**
 
-**[ペアワイズシーケンスアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)**
-
-![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
-
-塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
-
-![http://www.bbc.co.uk/education/guides/zc499j6/revision/2](http://a.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
-
 [**グローバルアラインメントとローカルアラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.82.B0.E3.83.AD.E3.83.BC.E3.83.90.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.81.A8.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
@@ -624,7 +625,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 			gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 	globalAligns1s2 # Print out the optimal alignment and its score
 
-結果は以下の通り:  
+出力結果:
 
 	Global PairwiseAlignmentsSingleSubject (1 of 1)
 	pattern: [1] GAATTC 
@@ -657,7 +658,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 				gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 	globalAligns3s4
 
-結果は以下の通り:  
+出力結果:
 
 	Global PairwiseAlignmentsSingleSubject (1 of 1)
 	pattern: [1] P---AWHEAE 
@@ -674,7 +675,15 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Aligning UniProt sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#aligning-uniprot-sequences)
 **UniProt配列のアライメント**
 
-    #　文字ベクトルを文字列に変換
+    library("seqinr")
+    leprae <- read.fasta(file = "Q9CD83.fasta")
+    ulcerans <- read.fasta(file = "A0PQ23.fasta")
+    #leprae <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")
+    #ulcerans <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")
+    lepraeseq <- leprae[[1]]
+    ulceransseq <- ulcerans[[1]]
+
+    # 文字ベクトルを文字列に変換
     # convert vectors of characters into strings
 	lepraeseqstring <- c2s(lepraeseq)     # Make a string that contains the sequence in "lepraeseq"
 	ulceransseqstring <- c2s(ulceransseq) # Make a string that contains the sequence in "ulceransseq"
@@ -691,7 +700,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 	globalAlignLepraeUlcerans # Print out the optimal global alignment and its score
 
-結果は以下の通り:  
+出力結果:
 
 	Global PairwiseAlignmentsSingleSubject (1 of 1)
 	pattern: [1] MT-----NR--T---LSREEIRKLDRDLRILVATN...FQDTPREELDRCQYSNDIDTRSGDRFVLHGRVFKN 
