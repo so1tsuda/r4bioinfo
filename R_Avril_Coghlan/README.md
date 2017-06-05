@@ -604,11 +604,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 	sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
 	sigma # Print out the matrix
 
-[核酸塩基コード](http://www.ddbj.nig.ac.jp/sub/code-j.html#nucleotide-1)
-
 [**Gap penalty**](https://en.wikipedia.org/wiki/Gap_penalty)
-
-![](https://upload.wikimedia.org/wikipedia/commons/4/4b/Global-local-alignment.png)
 
 ギャップの最初の位置には、
 ギャップ（挿入・欠失）開始時のペナルティ(*gap opening penalty*)と
@@ -729,10 +725,22 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Calculating the statistical significance of a pairwise global alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#calculating-the-statistical-significance-of-a-pairwise-global-alignment)
 **ペアワイズグローバルアラインメントの統計的有意性の計算**
 
-### Summary
+### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#summary)
+
+	data()
+	?toupper
+
+    library("seqinr")
+    ?c2s
+
+    library(Biostrings)
+	nucleotideSubstitutionMatrix()
+    ?pairwiseAlignment
 
 ### Links and Further Reading
-
+- [配列の記載に用いる略号 | DDBJ](http://www.ddbj.nig.ac.jp/sub/code-j.html)
+  - [核酸塩基コード](http://www.ddbj.nig.ac.jp/sub/code-j.html#nucleotide-1)
+  - [アミノ酸コード](http://www.ddbj.nig.ac.jp/sub/code-j.html#amino-1)
 - [2-1. 配列解析基礎 Basic Sequence Analysis 坊農 秀雅](http://www.iu.a.u-tokyo.ac.jp/~kadota/bioinfo_ngs_sokushu_2014/20140905_2-1_bono.pdf)
 - [Aritalab:Lecture/Bioinformatics/Alignment - Metabolomics.JP](http://metabolomics.jp/wiki/Aritalab:Lecture/Bioinformatics/Alignment)
 - [置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
@@ -742,5 +750,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#exercises)
 演習
+
+
 
 ----------
