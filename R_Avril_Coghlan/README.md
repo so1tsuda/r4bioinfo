@@ -101,18 +101,10 @@ Rを終了:
 	q()
 
 ### Links and Further Reading
-- [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
-- [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
-  - [01.セットアップ・参考文献](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/01.html)
-- [統合TV | 【R】に関係する講習会資料・番組](http://togotv.dbcls.jp/ja/tags.html?tag=R)
-  - 2017-05-12 [統合TV | 生命科学系DB・ツール使い倒し系チャンネル | RStudioでRを直感的に使おう MacOS版 2017](http://togotv.dbcls.jp/ja/20170512.html)
-- [Rの初歩](https://oku.edu.mie-u.ac.jp/~okumura/stat/first.html)
-- [Rや統計を学ぶために有用なページまとめ（暫定版） - NAVER まとめ](https://matome.naver.jp/odai/2137370667209004001)
-- [続・わしの頁](http://nfunao.web.fc2.com)
-- [R のインストール - RjpWiki](http://www.okadajp.org/RWiki/?R%20のインストール)
-- [Rのダウンロードとライブラリのインストール - 日経BigData](http://business.nikkeibp.co.jp/atclbdt/15/recipe/102500016/)
-- 2015-11-17 Windows版[R言語のインストールと動作確認](http://qiita.com/do_m_gatoru/items/f09ec198aa13f8aac68e)
-- [Windows用Rガイド](https://oku.edu.mie-u.ac.jp/~okumura/stat/R-win.html)
+
+https://cran.r-project.org/doc/contrib/Lemon-kickstart/
+
+https://cran.r-project.org/doc/manuals/R-intro.html
 
 ----------
 
@@ -195,7 +187,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image4.png)
 
-ダウンロード後、ファイル名"sequence.fasta.txt"を（例えば、"den1.fasta"に）変更する。
+ダウンロード後、ファイル名 "sequence.fasta.txt" を "den1.fasta" に変更する。
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
@@ -403,8 +395,6 @@ GC含量の移動プロット
 
 ![https://en.wikipedia.org/wiki/K-mer](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/K-mer-example.png/440px-K-mer-example.png)
 
-[previous chapter](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
-
 	count(dengueseq, 2)
 
 [ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を計算する。2連続塩基の場合、ρ値は次の通り計算される:  
@@ -412,7 +402,12 @@ GC含量の移動プロット
 ρ(xy) = fxy/(fx*fy),
 
 ここで、"fxy", "fx", "fy"は、DNA配列中の文字列"xy", "x", "y"の頻度である。
-例えば、2連続塩基"GC"のρ値の計算式は ρ(GC) = fGC/(fG * fC) で、"fGC", "fG", "fC"は、DNA配列中の文字列"GC", "G", "C"の頻度である:  
+
+例えば、2連続塩基"GC"のρ値の計算式は:  
+
+ρ(GC) = fGC/(fG * fC)
+
+ここで、"fGC", "fG", "fC"は、DNA配列中の文字列"GC", "G", "C"の頻度である。
 
 	count(dengueseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
 	2770/(3426+2240+2770+2299) # Get fG
@@ -491,20 +486,11 @@ GC含量の移動プロット
 ----------
 
 ## [Pairwise Sequence Alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html)
-**[ペアワイズシーケンスアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)**
-
-2配列間でのアラインメント
-
-![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
-
-塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
-
-![http://www.bbc.co.uk/education/guides/zc499j6/revision/2](http://a.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
+**2つの配列間でのアラインメント**
 
 ### [UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
 
 [Swiss-Prot](https://ja.wikipedia.org/wiki/Swiss-Prot) タンパク質データベース
-
 
 ### [Viewing the UniProt webpage for a protein sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-the-uniprot-webpage-for-a-protein-sequence)
 
@@ -515,8 +501,8 @@ GC含量の移動プロット
 ### [Retrieving a UniProt protein sequence via the UniProt website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-via-the-uniprot-website)
 **UniProtのウェブサイトからタンパク質配列を取得**
 
-[ハンセン病（Leprosy）](https://ja.wikipedia.org/wiki/ハンセン病)の原因菌[*Mycobacterium leprae*（らい菌）](https://ja.wikipedia.org/wiki/らい菌)と
-[ブルーリ潰瘍（Buruli ulcer）](https://ja.wikipedia.org/wiki/ブルーリ潰瘍)の原因菌[*Mycobacterium ulcerans*](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)
+[ハンセン病（Leprosy）](https://ja.wikipedia.org/wiki/ハンセン病)の原因細菌[*Mycobacterium leprae*（らい菌）](https://ja.wikipedia.org/wiki/らい菌)と
+[ブルーリ潰瘍（Buruli ulcer）](https://ja.wikipedia.org/wiki/ブルーリ潰瘍)の原因細菌[*Mycobacterium ulcerans*](http://www.nih.go.jp/niid/ja/diseases/ha/buruli-ulcer/1366-idsc/iasr-topic/1793-dj3863.html)
 の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)タンパク質配列（UniProt accession は[Q9CD83](http://www.uniprot.org/uniprot/Q9CD83)と[A0PQ23](http://www.uniprot.org/uniprot/A0PQ23)）をFASTA形式（ファイル名"Q9CD83.fasta"と"A0PQ23.fasta"）で保存する。
 
 - [Using the UniProt basket | Train online](https://www.ebi.ac.uk/training/online/course/uniprot-exploring-protein-sequence-and-functional/exploring-uniprotkb-results-page/using-unip)
@@ -582,6 +568,14 @@ GC含量の移動プロット
 
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アライメント**
+
+**[ペアワイズシーケンスアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)**
+
+![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
+
+塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
+
+![http://www.bbc.co.uk/education/guides/zc499j6/revision/2](http://a.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
 
 [**グローバルアラインメントとローカルアラインメント**](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.82.B0.E3.83.AD.E3.83.BC.E3.83.90.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88.E3.81.A8.E3.83.AD.E3.83.BC.E3.82.AB.E3.83.AB.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)
 
@@ -680,18 +674,13 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Aligning UniProt sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#aligning-uniprot-sequences)
 **UniProt配列のアライメント**
 
-	library("seqinr")
-    leprae <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/Q9CD83.fasta")
-    ulcerans <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/A0PQ23.fasta")
-	lepraeseq <- leprae[[1]]
-	ulceransseq <- ulcerans[[1]]
-
-    # 文字ベクトルを文字列に変換 convert vectors of characters into strings
+    #　文字ベクトルを文字列に変換
+    # convert vectors of characters into strings
 	lepraeseqstring <- c2s(lepraeseq)     # Make a string that contains the sequence in "lepraeseq"
 	ulceransseqstring <- c2s(ulceransseq) # Make a string that contains the sequence in "ulceransseq"
 
-
-    # 大文字に変換 convert strings to uppercase 
+    # 大文字に変換
+    # convert strings to uppercase 
 	lepraeseqstring <- toupper(lepraeseqstring)
 	ulceransseqstring <- toupper(ulceransseqstring)
 	lepraeseqstring # Print out the content of "lepraeseqstring"
@@ -699,6 +688,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     # pairwiseAlignment
 	globalAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,
 		substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+
 	globalAlignLepraeUlcerans # Print out the optimal global alignment and its score
 
 結果は以下の通り:  
@@ -712,20 +702,21 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 **2つの配列間のアライメントの表示と出力**
 
     writePairwiseAlignments(globalAlignLepraeUlcerans)
-    writePairwiseAlignments(globalAlignLepraeUlcerans, file="~/Desktop/aln.txt")
+
+    writePairwiseAlignments(globalAlignLepraeUlcerans, file="./myAlignment.txt")
 
 ### [Pairwise local alignment of protein sequences using the Smith-Waterman algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-local-alignment-of-protein-sequences-using-the-smith-waterman-algorithm)
 **2つのタンパク質配列間のローカル・アライメント**
 
 	localAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,
-	substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
+		substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
+
 	localAlignLepraeUlcerans # Print out the optimal local alignment and its score
 
     writePairwiseAlignments(localAlignLepraeUlcerans)
 
 ### [Calculating the statistical significance of a pairwise global alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#calculating-the-statistical-significance-of-a-pairwise-global-alignment)
 **ペアワイズグローバルアラインメントの統計的有意性の計算**
-
 
 ### Summary
 
@@ -740,6 +731,5 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#exercises)
 演習
-
 
 ----------
