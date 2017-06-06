@@ -13,14 +13,14 @@ Last Update: 2017-06-06
 ## Table of Contents
 - [2017-05-30](#2017-05-30)
 - [Comparative Phylogenetics in R](#r-phylo)
-  - [HowTo/DataTreeManipulation](#DataTreeManipulation)
+  - [DataTreeManipulation](#DataTreeManipulation)
+- [Jun Inoue](#jun-inoue)
+  - [R_JI](#r_ji) R - 井上 潤
 - [biopapyrus](#biopapyrus)
   - [2015-05-04](#2015-05-04) 系統樹 ape ade4 | Rで系統樹を作成する方法
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
-- [Jun Inoue](#jun-inoue)
-  - [R_JI](#r_ji) R - 井上 潤
 
 ----------
 
@@ -109,22 +109,37 @@ Rを終了:
 ----------
 
 ## [r-phylo](https://www.r-phylo.org)
-Comparative Phylogenetics in R
-
 Phylogenetic comparative methods
 系統比較法
 
-- [HowTo/Table of Contents](https://www.r-phylo.org/wiki/HowTo/Table_of_Contents)
+### [HowTo/Table of Contents](https://www.r-phylo.org/wiki/HowTo/Table_of_Contents)
+3 December 2012
 
 ### [GettingStarted](http://www.r-phylo.org/wiki/HowTo/GettingStarted)
-http://www.r-phylo.org/wiki/HowTo/GettingStarted
+13 March 2008
 
+	# Installing R and Packages
 	install.packages("ape")
 	install.packages("geiger")
-
 	update.packages()
 
+### [Basics](https://www.r-phylo.org/wiki/HowTo/Basics)
+
+	# Loading packages
+	library(ape)
+	# Accessing help
+	library(help=ape)
+	?pic
+	help.search("phylogenetic")
+
+### 
+
+https://www.r-phylo.org/wiki/HowTo/InputtingTrees
+
+https://www.r-phylo.org/wiki/HowTo/InputtingData
+
 ### [DataTreeManipulation](https://www.r-phylo.org/wiki/HowTo/DataTreeManipulation)
+14 March 2008
 
 ![https://ja.wikipedia.org/wiki/ガラパゴスフィンチ属](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Geospiza_fuliginosa_976.jpg/250px-Geospiza_fuliginosa_976.jpg)
 
@@ -244,6 +259,26 @@ How do I calculate the distance from an internal node to the tips of an ultramet
 超距離 (ultrametric) 系統樹の内部節から末端節 (OTU) までの距離を計算
 
 	branching.times(geotree)
+
+----------
+## [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
+### [R_JI](http://www.geocities.jp/ancientfishtree/R_JI.html)
+**R - 井上 潤**
+2015 年 6 月 8 日　改訂
+
+ape: newick tree を描く
+
+    system("curl -O http://www.geocities.jp/ancientfishtree/NewFiles/drawTree_fol.tar.gz
+            tar xvzf drawTree_fol.tar.gz
+            find drawTree_fol")
+
+    setwd("./drawTree_fol")
+
+	source('drawTree.R')
+
+ape: node number を確認する
+
+http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_node_representing_the_most_recent_common_ancestor_of_a_pair_of_taxa.3F
 
 ----------
 ## [biopapyrus](https://biopapyrus.jp)
@@ -408,29 +443,6 @@ ade4 パッケージを利用して読み込む
 	lab<-c(rep(10,3),rep(11,2),rep(12,3), rep(13,7))　#印の番号を作成する
 	plot(wood.tr, "c", FALSE, font = 1, label.offset = 2,x.lim = 20, no.margin = TRUE)
 	tiplabels(pch =lab,col =lab, adj = 1.5, cex = 2)
-
-----------
-## [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
-### [R_JI](http://www.geocities.jp/ancientfishtree/R_JI.html)
-**R - 井上 潤**
-
-Package のインストール
-
-	install.packages("ape")
-
-ape: newick tree を描く
-
-    system("curl -O http://www.geocities.jp/ancientfishtree/NewFiles/drawTree_fol.tar.gz
-            tar xvzf drawTree_fol.tar.gz
-            find drawTree_fol")
-
-    setwd("./drawTree_fol")
-
-	source('drawTree.R')
-
-ape: node number を確認する
-
-http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_node_representing_the_most_recent_common_ancestor_of_a_pair_of_taxa.3F
 
 ----------
 
