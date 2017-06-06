@@ -1,4 +1,4 @@
-#cat("\n# This R script retrieves sequence data using SeqinR")
+cat("\n# This R script retrieves sequence data using SeqinR")
 #cat("\n#  Usage: Rscript --vanilla get_fasta.R ./Accession_List.txt \n\n")
 
 # Extract Command Line Arguments
@@ -28,3 +28,5 @@ write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+
 # Check Directory
 getwd()
 dir()
+
+cat("\n# Done.")
