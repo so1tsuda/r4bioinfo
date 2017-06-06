@@ -638,7 +638,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
 **2つのタンパク質配列間のグローバル・アライメント**
 
-置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM)
+アミノ酸置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM)
 
 ![https://en.wikipedia.org/wiki/BLOSUM](https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/BLOSUM62.gif/400px-BLOSUM62.gif)
 
@@ -665,10 +665,9 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ギャップ(`---`)は -10-8-8 = -26 のスコアが与えられる。
 
-- [バイオインフォマティクス (第3回) 榊原康文](http://www.dna.bio.keio.ac.jp/lecture/bioinfo/bioinformatics-3.pdf)
+- [バイオインフォマティクス (第3回) 榊原康文](https://www.dna.bio.keio.ac.jp/lecture/bioinfo/bioinformatics-3.pdf)
 - 2009.9.12 [バイオインフォマティクス基礎講座 配列解析 川端 猛](http://www.jst.go.jp/nbdc/bird/jinzai/literacy/streaming/h21_3_1.pdf)
 - [バイオインフォマティクス-ゲノム配列から機能解析へ-第3章3.4節配列アラインメントにおけるスコア行列とギャップペナルティの使用方法](http://qiita.com/kino-tohoku/items/d4e0441e7ed6222106fa)
-- [Bioinformaticsのお勉強: BLASTの置換行列を取ってきた☆](http://kappa-bioinformatics.blogspot.jp/2011/02/blast.html)
 
 ### [Aligning UniProt sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#aligning-uniprot-sequences)
 **UniProt配列のアライメント**
