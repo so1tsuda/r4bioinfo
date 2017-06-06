@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-05-31
+Last Update: 2017-06-06
 
 ----------
 
@@ -14,15 +14,16 @@ Last Update: 2017-05-31
 - [2017-05-30](#2017-05-30)
 - [Comparative Phylogenetics in R](#r-phylo)
   - [HowTo/DataTreeManipulation](#DataTreeManipulation)
-- [Jun Inoue](#jun-inoue)
-  - [R_JI](#r_ji) R - 井上 潤
 - [biopapyrus](#biopapyrus)
   - [2015-05-04](#2015-05-04) 系統樹 ape ade4 | Rで系統樹を作成する方法
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
+- [Jun Inoue](#jun-inoue)
+  - [R_JI](#r_ji) R - 井上 潤
 
 ----------
+
 ## 2017-05-30
 
 ### [Analysis of Phylogenetics and Evolution with R](https://github.com/haruosuz/books/tree/master/aper)
@@ -245,29 +246,6 @@ How do I calculate the distance from an internal node to the tips of an ultramet
 	branching.times(geotree)
 
 ----------
-## [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
-### [R_JI](http://www.geocities.jp/ancientfishtree/R_JI.html)
-**R - 井上 潤**
-
-Package のインストール
-
-	install.packages("ape")
-
-ape: newick tree を描く
-
-    system("curl -O http://www.geocities.jp/ancientfishtree/NewFiles/drawTree_fol.tar.gz
-            tar xvzf drawTree_fol.tar.gz
-            find drawTree_fol")
-
-    setwd("./drawTree_fol")
-
-	source('drawTree.R')
-
-ape: node number を確認する
-
-http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_node_representing_the_most_recent_common_ancestor_of_a_pair_of_taxa.3F
-
-----------
 ## [biopapyrus](https://biopapyrus.jp)
 ### 2015-05-04
 [系統樹 ape ade4 | Rで系統樹を作成する方法](https://stat.biopapyrus.net/graph/r-phylogenetic-tree.html)
@@ -276,16 +254,6 @@ http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_no
 
 	#install.packages("ape", dependencies = TRUE)
 	#install.packages("ade4", dependencies = TRUE)
-
-    packageVersion("ape")
-
-    library(help=ape)
-    library(help=ade4)
-
-    library(ape)
-    ls("package:ape")
-    library(ade4)
-    ls("package:ade4")
 
 ape パッケージを利用して読み込む
 
@@ -319,10 +287,6 @@ ade4 パッケージを利用して読み込む
     plot(tree)
 
 ![](https://stat.biopapyrus.net/media/r/ape-plot-basis.png)
-
-    help(edgelabels)
-    ?edgelabels
-    example(edgelabels)
 	
 	# Sample 1
 	plot(tree, main = "Sample 1")
@@ -446,6 +410,30 @@ ade4 パッケージを利用して読み込む
 	tiplabels(pch =lab,col =lab, adj = 1.5, cex = 2)
 
 ----------
+## [Jun Inoue](http://www.geocities.jp/ancientfishtree/index.html)
+### [R_JI](http://www.geocities.jp/ancientfishtree/R_JI.html)
+**R - 井上 潤**
+
+Package のインストール
+
+	install.packages("ape")
+
+ape: newick tree を描く
+
+    system("curl -O http://www.geocities.jp/ancientfishtree/NewFiles/drawTree_fol.tar.gz
+            tar xvzf drawTree_fol.tar.gz
+            find drawTree_fol")
+
+    setwd("./drawTree_fol")
+
+	source('drawTree.R')
+
+ape: node number を確認する
+
+http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_node_representing_the_most_recent_common_ancestor_of_a_pair_of_taxa.3F
+
+----------
+
 ## Execution environment
 
     > sessionInfo()
@@ -454,9 +442,11 @@ ade4 パッケージを利用して読み込む
     Running under: OS X Mavericks 10.9.5
 
 ----------
+
 ## Acknowledgements
 
 ----------
+
 ## References
 
 http://www.cis.doshisha.ac.jp/mjin/R/42/42.html
