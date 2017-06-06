@@ -685,12 +685,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 **UniProt配列のアライメント**
 
     library("seqinr")
-    leprae <- read.fasta(file = "Q9CD83.fasta")
-    ulcerans <- read.fasta(file = "A0PQ23.fasta")
-    #leprae <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")
-    #ulcerans <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")
-    lepraeseq <- leprae[[1]]
-    ulceransseq <- ulcerans[[1]]
+    leprae <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+    ulcerans <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
 
     # 文字ベクトルを文字列に変換
     # convert vectors of characters into strings
