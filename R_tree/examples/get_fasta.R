@@ -29,4 +29,4 @@ write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+
 getwd()
 dir()
 
-cat("\n# Done.")
+cat("\n# Done. \n")
