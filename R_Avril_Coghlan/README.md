@@ -575,7 +575,7 @@ GC含量の移動プロット
 
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
 
-[血小板由来成長因子](https://ja.wikipedia.org/wiki/血小板由来成長因子) (Platelet-Derived Growth Factor, PDGF) は、サル肉腫ウイルスの癌遺伝子v-sisと高い配列類似性を示し([Doolittle RF et al., 1983)](https://www.ncbi.nlm.nih.gov/pubmed/6304883))、発癌への関与が注目されている。
+ヒトの[血小板由来成長因子](https://ja.wikipedia.org/wiki/血小板由来成長因子) (Platelet-Derived Growth Factor, PDGF) は、[サル肉腫ウイルスの癌遺伝子v-sis](https://www.wikigenes.org/e/mesh/e/21827.html)とアミノ酸配列の類似性が高い([Doolittle RF et al., 1983)](https://www.ncbi.nlm.nih.gov/pubmed/6304883))ことから、発癌への関与が注目されている。
 
     # "sp|P01127|PDGFB_HUMAN Platelet-derived growth factor subunit B OS=Homo sapiens GN=PDGFB PE=1 SV=1"          
     # "sp|P01128|TSIS_WMSV PDGF-related-transforming protein sis OS=Woolly monkey sarcoma virus GN=V-SIS PE=3 SV=1"
