@@ -13,6 +13,9 @@ Last Update: 2017-06-06
 ## Table of Contents
 - [2017-05-30](#2017-05-30)
 - [Comparative Phylogenetics in R](#r-phylo)
+  - [GettingStarted](#gettingstarted)
+  - [Basics](#basics)
+  - []()
   - [DataTreeManipulation](#DataTreeManipulation)
 - [Jun Inoue](#jun-inoue)
   - [R_JI](#r_ji) R - 井上 潤
