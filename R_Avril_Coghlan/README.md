@@ -857,7 +857,8 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
 
     library(ape)
     mytree <- nj(mydist)
-    plot.phylo(root(mytree, outgroup = "Q8WS01", resolve.root = TRUE), main = "Phylogenetic Tree")
+    #mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)
+    plot.phylo(mytree, main = "Phylogenetic Tree")
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image11.png)
 
@@ -865,7 +866,7 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
 
 ### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
 
-    write.tree(mytree, file="myTree.newick")
+    write.tree(mytree, file="myNewick.tree")
 
 ### Summary
 
