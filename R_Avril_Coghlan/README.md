@@ -790,10 +790,6 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image8.png)
 
-https://github.com/haruosuz/DS4GD/blob/master/2017/CaseStudy.md#multiple-sequence-alignment
-https://github.com/haruosuz/books/tree/master/aper#37-sequence-alignment
-https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
-
     library(Biostrings)
     mySequences <- readAAStringSet(file = "phosphoproteins.fasta")
 
@@ -842,14 +838,12 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
     library("seqinr")
     retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]
 
+	# retrieve the sequences from UniProt:
 	seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")
     seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")
     seqs <- lapply(seqnames,  retrieve_seqs_uniprot)    
-
 	# write out the sequences to a FASTA file:
 	write.fasta(seqs, seqnames, file="fox1.fasta")
-
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image10.png)
 
     library(Biostrings)
     mySequences <- readAAStringSet(file = "fox1.fasta")
@@ -859,11 +853,13 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
     # convert msa for the seqinr package
     fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")
 
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image10.png)
+
     mydist <- dist.alignment(fox1aln)
 
     library(ape)
     mytree <- nj(mydist)
-    #mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)
+    mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)
     plot.phylo(mytree, main = "Phylogenetic Tree")
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image11.png)
@@ -878,5 +874,9 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
 ### Summary
 
 ### 
+
+https://github.com/haruosuz/DS4GD/blob/master/2017/CaseStudy.md#multiple-sequence-alignment
+https://github.com/haruosuz/books/tree/master/aper#37-sequence-alignment
+https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
 
 ----------
