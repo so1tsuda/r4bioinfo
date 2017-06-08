@@ -9,7 +9,7 @@ By Avril Coghlan
 - [DNA Sequence Statistics (2)](#dna-sequence-statistics-2)
 - [Sequence Databases](#sequence-databases)
 - [Pairwise Sequence Alignment](#pairwise-sequence-alignment)
-- [Multiple Alignment and Phylogenetic trees]()
+- [Multiple Alignment and Phylogenetic trees](#multiple-alignment-and-phylogenetic-trees)
 
 ----------
 
@@ -768,17 +768,22 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### Retrieving a list of sequences from UniProt
 
     library("seqinr")
+
+    # create a function to retrieve several sequences from UniProt
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]
+
     seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences
-    seqs <- lapply(seqnames, function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]] ) # Retrieve the sequences and store them in list variable "seqs"
-	length(seqs) # Print out the number of sequences retrieved
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"
+	length(seqs)      # Print out the number of sequences retrieved
 	seq1 <- seqs[[1]] # Get the 1st sequence
-	seq1[1:20] # Print out the first 20 letters of the 1st sequence
+	seq1[1:20]        # Print out the first 20 letters of the 1st sequence
 	seq2 <- seqs[[2]] # Get the 2nd sequence
-	seq2[1:20] # Print out the first 20 letters of the 2nd sequence
+	seq2[1:20]        # Print out the first 20 letters of the 2nd sequence
+
 	# write the sequences to a FASTA-format file
 	write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
 
-### 
+### Installing the CLUSTAL multiple alignment software
 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
 
@@ -792,7 +797,7 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
     #source("http://www.bioconductor.org/biocLite.R")
     #biocLite("msa")
     library(msa)
-    myAlignment <- msa(inputSeqs = mySequences, method = "ClustalW")
+    myAlignment <- msa(mySequences)
 
     # write an XStringSet object to a file
     writeXStringSet(unmasked(myAlignment), file = "myAlignment.fasta")
@@ -803,20 +808,18 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
     virusaln <- read.alignment(file = "myAlignment.fasta", format = "fasta")
 	virusaln$seq
 
-### 
-
 ### Viewing a long multiple alignment
 
     print(myAlignment, show="complete")
 
 ### Discarding very poorly conserved regions from an alignment
 
-### Calculating genetic distances between protein sequences
+### [Calculating genetic distances between protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-protein-sequences)
 
 	virusdist <- dist.alignment(virusaln) # Calculate the genetic distances
 	virusdist                             # Print out the genetic distance matrix
 
-### Calculating genetic distances between DNA/mRNA sequences
+### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
 
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
 
@@ -826,13 +829,39 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image9.png)
 
-### 
+### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 
-### 
+    library("seqinr")
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]
 
-### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
+	seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")
+    seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)    
 
-> write.tree(virusmRNAalntree, "virusmRNA.tre")
+	# write out the sequences to a FASTA file:
+	write.fasta(seqs, seqnames, file="fox1.fasta")
+
+    library(Biostrings)
+    mySequences <- readAAStringSet(file = "fox1.fasta")
+
+    library(msa)
+    myAlignment <- msa(mySequences)
+    # convert msa for the seqinr package
+    fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")
+
+    mydist <- dist.alignment(fox1aln)
+
+    library(ape)
+    mytree <- nj(mydist)
+    plot.phylo(root(mytree, outgroup = "Q8WS01", resolve.root = TRUE), main = "Phylogenetic Tree")
+
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
+
+### Building a phylogenetic tree for DNA or mRNA sequences
+
+### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
+
+    write.tree(mytree, file="myTree.newick")
 
 ### Summary
 
