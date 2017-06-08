@@ -787,6 +787,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
 
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image8.png)
+
 https://github.com/haruosuz/DS4GD/blob/master/2017/CaseStudy.md#multiple-sequence-alignment
 https://github.com/haruosuz/books/tree/master/aper#37-sequence-alignment
 https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
