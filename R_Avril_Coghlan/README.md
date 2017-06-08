@@ -796,8 +796,7 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
     library(Biostrings)
     mySequences <- readAAStringSet(file = "phosphoproteins.fasta")
 
-    #source("http://www.bioconductor.org/biocLite.R")
-    #biocLite("msa")
+    #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")
     library(msa)
     myAlignment <- msa(mySequences)
 
@@ -825,6 +824,7 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
 
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
 
+    #install.packages("ape")
     library(ape)
     mytree <- nj(virusdist)
 	plot.phylo(mytree,type="u")   # plot the unrooted phylogenetic tree
