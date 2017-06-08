@@ -843,6 +843,8 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
 	# write out the sequences to a FASTA file:
 	write.fasta(seqs, seqnames, file="fox1.fasta")
 
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image10.png)
+
     library(Biostrings)
     mySequences <- readAAStringSet(file = "fox1.fasta")
 
@@ -857,7 +859,7 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
     mytree <- nj(mydist)
     plot.phylo(root(mytree, outgroup = "Q8WS01", resolve.root = TRUE), main = "Phylogenetic Tree")
 
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image11.png)
 
 ### Building a phylogenetic tree for DNA or mRNA sequences
 
