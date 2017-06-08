@@ -759,13 +759,13 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#exercises)
 演習
 
-
 ----------
 
 ## [Multiple Alignment and Phylogenetic trees](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html)
 **多重配列アライメントと系統樹**
 
 ### Retrieving a list of sequences from UniProt
+**UniProtから複数の配列を取得**
 
     library("seqinr")
 
@@ -786,6 +786,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### Installing the CLUSTAL multiple alignment software
 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
+**CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アライメントの作成**
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image8.png)
 
@@ -804,18 +805,21 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
     writeXStringSet(unmasked(myAlignment), file = "myAlignment.fasta")
 
 ### [Reading a multiple alignment file into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#reading-a-multiple-alignment-file-into-r)
+**多重アライメントのファイルをRに読み込む**
 
     library(seqinr)
     virusaln <- read.alignment(file = "myAlignment.fasta", format = "fasta")
 	virusaln$seq
 
 ### Viewing a long multiple alignment
+**長い多重アライメントの表示**
 
     print(myAlignment, show="complete")
 
 ### Discarding very poorly conserved regions from an alignment
 
 ### [Calculating genetic distances between protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-protein-sequences)
+**タンパク質配列間の遺伝的距離を計算する**
 
 	virusdist <- dist.alignment(virusaln) # Calculate the genetic distances
 	virusdist                             # Print out the genetic distance matrix
@@ -823,6 +827,7 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
 ### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
 
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
+**タンパク質配列の無根系統樹の構築**
 
     #install.packages("ape")
     library(ape)
@@ -832,6 +837,7 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image9.png)
 
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
+**タンパク質配列の有根系統樹の構築**
 
     library("seqinr")
     retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]
@@ -865,6 +871,7 @@ https://github.com/haruosuz/r4bioinfo/tree/master/R_msa
 ### Building a phylogenetic tree for DNA or mRNA sequences
 
 ### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
+**系統樹をNewick形式ファイルとして保存する**
 
     write.tree(mytree, file="myNewick.tree")
 
