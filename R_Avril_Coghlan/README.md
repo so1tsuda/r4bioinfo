@@ -620,6 +620,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![https://ja.wikipedia.org/wiki/多重整列](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/RPLP0_90_ClustalW_aln.gif/575px-RPLP0_90_ClustalW_aln.gif)
 
+![https://ja.wikipedia.org/wiki/系統樹](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tree_of_life_ja.svg/350px-Tree_of_life_ja.svg.png)
+
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree)
 - [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
 - [分子系統学](https://ja.wikipedia.org/wiki/分子系統学) [Molecular phylogenetics](https://en.wikipedia.org/wiki/Molecular_phylogenetics)
@@ -629,9 +631,6 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
   - [系統トップ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop.html)
    - [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
 - [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
-- [新しい系統樹では細菌が圧倒的に優勢](http://www.natureasia.com/ja-jp/life-sci/research/10626) [A new view of the tree of life : Nature Microbiology](http://www.nature.com/articles/nmicrobiol201648)
-
-![](https://images.nature.com/m685/nature-fs/article-assets/npg/nmicrobiol/2016/nmicrobiol201648/images_hires/nmicrobiol201648-f2.jpg)
 
 ### Retrieving a list of sequences from UniProt
 **UniProtから複数の配列を取得**
