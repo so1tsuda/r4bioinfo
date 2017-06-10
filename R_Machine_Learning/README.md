@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-06-04
+Last Update: 2017-06-10
 
 ----------
 
@@ -9,7 +9,6 @@ Last Update: 2017-06-04
 [機械学習](https://ja.wikipedia.org/wiki/機械学習)
 
 ## Table of Contents
-- [KuboBook](#kubobook) データ解析のための統計モデリング入門
 - [TJO](#tjo)
   - [2015-11-26](#2015-11-26) ヒトの直感的理解は単変量モデルまで、直感を超えたければ多変量モデルへ
 - [JIN'S PAGE](#jins-page)
@@ -24,100 +23,6 @@ https://www.slideshare.net/Prunus1350/1-23146712
 はじめてのパターン認識 第1章 by @Prunus1350 #はじパタパターン認識
 Published on Jun 18, 2013
 
-----------
-
-# KuboBook
-
-https://twitter.com/KuboBook
-久保拓弥 (@KuboBook) | Twitter
-
-http://hosho.ees.hokudai.ac.jp/~kubo/ce/IwanamiBook.html
-生態学データ解析 - 本/データ解析のための統計モデリング入門
-
-[目次](http://hosho.ees.hokudai.ac.jp/~kubo/log/2012/img01/kuboTOC20120116.pdf)
-
-    curl -O http://hosho.ees.hokudai.ac.jp/~kubo/stat/iwanamibook/kubobook_2012.zip
-    #wget http://hosho.ees.hokudai.ac.jp/~kubo/stat/iwanamibook/jags/jags.zip
-
-## 2
-確率分布と統計モデルの最尤推定
-
-### 2.1
-例題:種子数の統計モデリング
-
-
-### 2.2
-データと確率分布の対応関係をながめる
-
-plot.data.R:prob <- dpois(y, lambda = 3.56)
-
-    hist(data, breaks = seq(-0.5, 9.5, 1)); lines(y, 50 * prob, type = "b")
-
-### 2.3
-ポアソン分布とは何か?
-
-### 2.4
-ポアソン分布のパラメーターの最尤推定
-
-
-#### 2.4.1
-擬似乱数と最尤推定値のばらつき
-
-
-### 2.5 統計モデルの要点:乱数発生・推定・予測
-#### 2.5.1 データ解析における推定・予測の役割
-### 2.6 確率分布の選びかた
-#### 2.6.1 もっと複雑な確率分布が必要か?
-#### 2.7 この章のまとめと参考文献
-
-## 3一般化線形モデル (GLM): ポアソン回帰
-### 3.1
-例題:個体ごとに平均種子数が異なる場合
-
-$find . -name "data3a.csv"
-./lrtest/data3a.csv
-./poisson/data3a.csv
-
-
-### 3.2
-観測されたデータの概要を調べる
-
-
-### 3.3
-統計モデリングの前にデータを図示する
-
-
-### 3.4 ポアソン回帰の統計モデル
-#### 3.4.1 線形予測子と対数リンク関数
-#### 3.4.2
-あてはめとあてはまりの良さ
-
-
-http://id.fnshr.info/2017/03/13/dena-conf-intv/
-DeNA に対する第三者委員会の調査報告書での信頼区間の説明｜Colorless Green Ideas
-
-#### 3.4.3
-ポアソン回帰モデルによる予測
-
-    # poisson/plot.data.R
-
-### 3.5
-説明変数が因子型の統計モデル
-
-    # poisson/COMMON.R
-
-### 3.6
-説明変数が数量型+因子型の統計モデル
-
-
-
-
-
-
-
-
-
-3. 6. 1 対数リンク関数のわかりやすさ: かけ算される効果 . . . 593. 7 「何でも正規分布」「何でも直線」には無理がある . . . . . . . . 62 3.8 この章のまとめと参考文献..................... 65
 ----------
 
 # [TJO](https://twitter.com/tjo_datasci)
