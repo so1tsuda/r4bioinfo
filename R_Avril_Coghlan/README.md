@@ -27,28 +27,40 @@ R言語入門
 [簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
 演算子
 
+	2*3
+	10-3
 
 [オブジェクトと代入（付値）](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/05.html)
 
+	x <- 2*3
+	x
 
 [ベクトル](http://stat.biopapyrus.net/vector/vector.html)  
 ベクトルの作成は関数`c()`を用いる。
 
+	myvector <- c(8, 6, 9, 10, 5)
+	myvector
 
 [ベクトル要素へのアクセス](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)  
 インデックス（添字）  
 
+	myvector[4]
 
 [リスト](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)  
 リストは異なる型（数値や文字列）のデータをまとめられる。
 リストの作成は関数`list()`を用いる。
 
+	mylist <- list(name="Fred", wife="Mary", myvector)
+	mylist
 
 `[[ ]]`はリスト内の要素（ベクトル）を取り出す。
 
+	mylist[[2]]
+	mylist[[3]]
 
 リストの要素に名前が付けられている場合、`$`記号でアクセスする。
 
+	mylist$wife
 
 `table()`関数
 
@@ -62,23 +74,32 @@ R言語入門
 [簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
 関数
 
+	log10(100)
 
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 
+	help(log10)
 
 標準偏差 standard deviation を計算する関数を探す
 
+	help.search("deviation")
+	RSiteSearch("deviation")
 
 ベクトルの値の平均
 
+	mean(myvector)
 
 [関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
 [関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)  
 
+	myfunction <- function(x) { return(20 + (x*x)) }
+	myfunction(10)
+	myfunction(25)
 
 Rを終了:  
 
     quit()
+	q()
 
 ### Links and Further Reading
 
@@ -107,9 +128,11 @@ https://cran.r-project.org/doc/manuals/R-intro.html
 
 [パッケージ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)`seqinr`を呼び出す:  
 
+	library("seqinr")
 
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 
+	help("library")
 
 Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/release/bioc/html/Biostrings.html)のインストール:  
 
@@ -183,6 +206,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     dengue <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/den1.fasta")
     dengueseq <- dengue[[1]]
 
+	write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
 
 [作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)の変更と確認:  
 
@@ -195,19 +219,25 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 `read.fasta()`関数でFASTA形式ファイル（den1.fasta）を読み込む:  
 
+	library("seqinr")
+	dengue <- read.fasta(file = "den1.fasta")
+	dengueseq <- dengue[[1]]
 
 変数`dengue`は[リスト](http://stat.biopapyrus.net/vector/list.html)。リストの1番目の要素を代入した
 変数`dengueseq`は塩基配列を含む[ベクトル](http://stat.biopapyrus.net/vector/vector.html)  
 以下のコマンドは、塩基配列の最初の50塩基を出力する:  
 
+	dengueseq[1:50]
 
 ### Length of a DNA sequence
 **DNA配列の長さ**
 
+	length(dengueseq)
 
 ### Base composition of a DNA sequence
 **DNA配列の塩基組成**
 
+	table(dengueseq)
 
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
 
@@ -217,6 +247,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
     (2240+2770)/(3426+2240+2770+2299)
 
+	GC(dengueseq)
 
 細菌のGC含量とゲノムサイズ
 
@@ -234,10 +265,19 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     help(count)
     count(s2c("atg"), 2)
 
+	count(dengueseq, 1)
+	count(dengueseq, 2)
 
+	denguetable <- count(dengueseq,1)
+	denguetable[[3]]
+	denguetable[["g"]]
 
 ### Summary
 
+	length()
+	table()
+	GC()
+	count()
 
 ### Links and Further Reading
 
@@ -254,25 +294,46 @@ Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinfor
 ### A little more introduction to R
 **続・R言語入門**
 
+	x <- 100
+	log10(x)
+	myvector <- c(30,16,303,99,11,111)
+	mean(myvector)
+	myvector[3]
 
 [Rで繰り返しを含む数列の生成（rep関数、seq関数）](http://tips-r.blogspot.jp/2014/05/repseq.html)
 
+	seq(1, 100, by = 1)
+	seq(1, 100, by = 2)
 
 [30. 繰り返し文](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)  
 for による繰り返し
 
+	for (i in 1:10) { print (i*i) }
 
+	avector <- c(2, 9, 100, 133)
+	for (i in avector) { print (i*i) }
 
+	for (i in seq(1, 10, by = 2)) { print (i*i) }
 
 [48. とりあえず plot()](R-Source)
 
+	myvector1 <- c(10, 15, 22, 35, 43)
+	myvector2 <- c(3, 3.2, 3.9, 4.1, 5.2)
+	plot(myvector1, myvector2, xlab="myvector1", ylab="myvector2")
+	plot(myvector1, myvector2, xlab="myvector1", ylab="myvector2", type="b")
 
 [関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
 [関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)  
 
+	myfunction <- function(x) { return(20 + (x*x)) }
+	myfunction(10)
+	myfunction(25)
+	myfunction
 
 `＃`の後が[コメント](http://yusuke-memo.blogspot.jp/2009/10/r.html)行となる。
 
+	x <- 100
+	log10(x) # Finds the log to the base 10 of variable x.
 
 ### [Reading sequence data with SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#reading-sequence-data-with-seqinr)
 Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)で
@@ -280,17 +341,29 @@ Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.
 
 DEN-1デング熱ウイルスのゲノム配列を取得する。
 
+	library("seqinr")                           # Load the SeqinR package.
     # system('curl -L "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text" > den1.fasta')
+	dengue <- read.fasta(file = "den1.fasta")   # Read in the file "den1.fasta".
     # dengue <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/den1.fasta")
+	dengueseq <- dengue[[1]]                    # Put the sequence in a vector called "dengueseq".
 
+	dengueseq[452:535]
 
 ### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
 GC含量の局所変動は、変異バイアスや[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)を示唆
 
+	# GC content of the sequence
+	GC(dengueseq)
 
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
 GC含量の移動解析
 
+	GC(dengueseq[1:2000])      # 塩基配列の 1-2000 番目のGC含量
+	GC(dengueseq[2001:4000])   # 塩基配列の 2001-4000 番目のGC含量
+	GC(dengueseq[4001:6000])   # 塩基配列の 4001-6000 番目のGC含量
+	GC(dengueseq[6001:8000])   # 塩基配列の 6001-8000 番目のGC含量
+	GC(dengueseq[8001:10000])  # 塩基配列の 8001-10000 番目のGC含量
+	GC(dengueseq[10001:10735]) # 塩基配列の 10001-10735 番目のGC含量
 
 ### [A sliding window plot of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)
 GC含量の移動プロット
@@ -302,7 +375,9 @@ GC含量の移動プロット
 [ウェブサイト](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-plot-of-gc-content)から
 `slidingwindowplot`関数をコピペして、以下の通り実行:  
 
+	slidingwindowplot(3000, dengueseq)
 
+	slidingwindowplot(300, dengueseq)
 
 `zoo`パッケージを使う:  
 
@@ -321,6 +396,7 @@ GC含量の移動プロット
 
 ![https://en.wikipedia.org/wiki/K-mer](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/K-mer-example.png/440px-K-mer-example.png)
 
+	count(dengueseq, 2)
 
 [ρ](https://ja.wikipedia.org/wiki/Ρ)統計量はDNA文字列の[観測値/期待値]を計算する。2連続塩基の場合、ρ値は次の通り計算される:  
 
@@ -334,6 +410,12 @@ GC含量の移動プロット
 
 ここで、"fGC", "fG", "fC"は、DNA配列中の文字列"GC", "G", "C"の頻度である。
 
+	count(dengueseq, 1) # Get the number of occurrences of 1-nucleotide DNA words
+	2770/(3426+2240+2770+2299) # Get fG
+	2240/(3426+2240+2770+2299) # Get fC
+	count(dengueseq, 2) # Get the number of occurrences of 2-nucleotide DNA words
+	500/(1108+720+890+708+901+523+261+555+976+500+787+507+440+497+832+529) # Get fGC
+	0.04658096/(0.2580345*0.2086633) # Get rho(GC)
 
 2連続塩基 "aa" "ac" "ag" "at" "ca" "cc" "cg" "ct" "ga" "gc" "gg" "gt" "ta" "tc" "tg" "tt" のρ値（観測値/期待値）を計算する:  
 
@@ -355,6 +437,11 @@ GC含量の移動プロット
 
 ### Summary
 
+	seq()
+	print()
+	plot()
+	numeric()
+	function()
 
 ### Links and Further Reading
 
@@ -371,21 +458,29 @@ GC含量の移動プロット
 ### [Querying the NCBI Database via R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#querying-the-ncbi-database-via-r)
 **Rを介してNCBIデータベースを照会する**
 
+	library("seqinr") # Load the SeqinR R package
+	choosebank()      # List all the sub-databases in ACNUC
 
+	choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
+	choosebank("refseq") # Specify that we want to search the 'refseq' ACNUC sub-database
     # query("RefSeqBact", "SP=Bacteria")
     #Error in query("RefSeqBact", "SP=Bacteria") : 
     #  invalid request:"unknown species at (^): \"SP
+	closebank()
 
+	choosebank("genbank")
     #> 	query("SchistosomamRNA", "SP=Schistosoma mansoni AND M=mrna")
     #Error in readLines(socket, n = nelem, ok = FALSE) : 
     #  too few lines read in readLines
     #In addition: Warning message:
     #In readLines(socket, n = nelem, ok = FALSE) :
     #  incomplete final line found on '->pbil.univ-lyon1.fr:5558'
+	closebank()
 
 #### [Example: finding the sequence for the DEN-1 Dengue virus genome](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#example-finding-the-sequence-for-the-den-1-dengue-virus-genome)
 **例：DEN-1デングウイルスゲノムの配列を取得**
 
+	choosebank("refseqViruses")
     Dengue1 <- query("Dengue1", "AC=NC_001477")
 
 ----------
@@ -436,16 +531,28 @@ GC含量の移動プロット
 
 `read.fasta()`関数で、FASTAファイルをRに読み込む:  
 
+	library("seqinr")
     # system("curl -O http://www.uniprot.org/uniprot/Q9CD83.fasta")
     # system("curl -O http://www.uniprot.org/uniprot/A0PQ23.fasta")
+	leprae <- read.fasta(file = "Q9CD83.fasta")
+	ulcerans <- read.fasta(file = "A0PQ23.fasta")
+	lepraeseq <- leprae[[1]]
+	ulceransseq <- ulcerans[[1]]
+	lepraeseq # Display the contents of the vector "lepraeseq"
 
 [How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
 
 ### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
 **SeqinRでUniProtのタンパク質配列を取得**
 
+	library("seqinr")
+	choosebank("swissprot")
     leprae <- query("leprae", "AC=Q9CD83")
+	lepraeseq <- getSequence(leprae$req[[1]])
     ulcerans <- query("ulcerans", "AC=A0PQ23")
+	ulceransseq <- getSequence(ulcerans$req[[1]])
+	closebank()
+	lepraeseq # Display the contents of "lepraeseq"
 
 ### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
 **ドットプロットで2つの配列を比較**
@@ -465,6 +572,7 @@ GC含量の移動プロット
 
 *M.leprae*と*M.ulcerans*のコリスミ酸リアーゼのタンパク質配列のドットプロットを作成する:  
 
+	dotPlot(lepraeseq, ulceransseq)
 
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
 
@@ -505,6 +613,9 @@ GC含量の移動プロット
 
 Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコアマトリックス(置換行列)を作る:  
 
+	library(Biostrings)
+	sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
+	sigma # Print out the matrix
 
 [**Gap penalty**](https://en.wikipedia.org/wiki/Gap_penalty)
 
@@ -517,9 +628,18 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 `pairwiseAlignment()`関数で、DNA配列("GAATTC"と"GATTA")間の最適なグローバルアライメントを見つける:  
 
+	s1 <- "GAATTC"
+	s2 <- "GATTA"
+	globalAligns1s2 <- pairwiseAlignment(s1, s2, substitutionMatrix = sigma, 
+			gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+	globalAligns1s2 # Print out the optimal alignment and its score
 
 出力結果:
 
+	Global PairwiseAlignmentsSingleSubject (1 of 1)
+	pattern: [1] GAATTC 
+	subject: [1] GA-TTA 
+	score: -3 
 
 このアライメントは、4個の一致(match)、1個の不一致(mismatch)、長さ1の1個のギャップ(gap)が含まれているので、スコアは (4\*2)+(1\*-1)+(1\*-10) = -3 となる。  
 【注意】gapOpening = -2, gapExtension = -8 は、ギャップの最初の位置は (-2-8=)-10 のスコアが割り当てられ、ギャップの後続の位置は -8 のスコアが与えられることを意味する。
@@ -535,13 +655,26 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![https://en.wikipedia.org/wiki/BLOSUM](https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/BLOSUM62.gif/400px-BLOSUM62.gif)
 
+	data(BLOSUM50)
+	BLOSUM50
 
+	data(package="Biostrings")
 
 タンパク質配列("PAWHEAE"と"HEAGAWGHEE")間の最適なグローバルアライメントを見つける:  
 
+	data(BLOSUM50)
+	s3 <- "PAWHEAE"
+	s4 <- "HEAGAWGHEE"
+	globalAligns3s4 <- pairwiseAlignment(s3, s4, substitutionMatrix = "BLOSUM50", 
+				gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
+	globalAligns3s4
 
 出力結果:
 
+	Global PairwiseAlignmentsSingleSubject (1 of 1)
+	pattern: [1] P---AWHEAE 
+	subject: [1] HEAGAWGHEE 
+	score: -5 
 
 ギャップ(`---`)は -10-8-8 = -26 のスコアが与えられる。
 
@@ -558,15 +691,27 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
     # 文字ベクトルを文字列に変換
     # convert vectors of characters into strings
+	lepraeseqstring <- c2s(lepraeseq)     # Make a string that contains the sequence in "lepraeseq"
+	ulceransseqstring <- c2s(ulceransseq) # Make a string that contains the sequence in "ulceransseq"
 
     # 大文字に変換
     # convert strings to uppercase 
+	lepraeseqstring <- toupper(lepraeseqstring)
+	ulceransseqstring <- toupper(ulceransseqstring)
+	lepraeseqstring # Print out the content of "lepraeseqstring"
 
     # pairwiseAlignment
+	globalAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,
+		substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
 
+	globalAlignLepraeUlcerans # Print out the optimal global alignment and its score
 
 出力結果:
 
+	Global PairwiseAlignmentsSingleSubject (1 of 1)
+	pattern: [1] MT-----NR--T---LSREEIRKLDRDLRILVATN...FQDTPREELDRCQYSNDIDTRSGDRFVLHGRVFKN 
+	subject: [1] MLAVLPEKREMTECHLSDEEIRKLNRDLRILIATN...FEDNSREEPIRHQRS--VGT-SA-R---SGRSICT 
+	score: 627 
 
 ### [Viewing a long pairwise alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-a-long-pairwise-alignment)
 **2つの配列間のアライメントの表示と出力**
@@ -578,7 +723,10 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Pairwise local alignment of protein sequences using the Smith-Waterman algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-local-alignment-of-protein-sequences-using-the-smith-waterman-algorithm)
 **2つのタンパク質配列間のローカル・アライメント**
 
+	localAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,
+		substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
 
+	localAlignLepraeUlcerans # Print out the optimal local alignment and its score
 
     writePairwiseAlignments(localAlignLepraeUlcerans)
 
@@ -587,11 +735,14 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#summary)
 
+	data()
+	?toupper
 
     library("seqinr")
     ?c2s
 
     library(Biostrings)
+	nucleotideSubstitutionMatrix()
     ?pairwiseAlignment
 
 ### Links and Further Reading
@@ -641,7 +792,14 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
     seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences
     seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"
+	length(seqs)      # Print out the number of sequences retrieved
+	seq1 <- seqs[[1]] # Get the 1st sequence
+	seq1[1:20]        # Print out the first 20 letters of the 1st sequence
+	seq2 <- seqs[[2]] # Get the 2nd sequence
+	seq2[1:20]        # Print out the first 20 letters of the 2nd sequence
 
+	# write the sequences to a FASTA-format file
+	write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
 
 ### Installing the CLUSTAL multiple alignment software
 
@@ -667,6 +825,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
     library(seqinr)
     virusaln <- read.alignment(file = "myAlignment.fasta", format = "fasta")
+	virusaln$seq
 
 ### Viewing a long multiple alignment
 **長い多重アライメントの表示**
@@ -678,6 +837,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Calculating genetic distances between protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-protein-sequences)
 **タンパク質配列間の遺伝的距離を計算する**
 
+	virusdist <- dist.alignment(virusaln) # Calculate the genetic distances
+	virusdist                             # Print out the genetic distance matrix
 
 ### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
 
@@ -687,6 +848,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     #install.packages("ape")
     library(ape)
     mytree <- nj(virusdist)
+	plot.phylo(mytree,type="u")   # plot the unrooted phylogenetic tree
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image9.png)
 
@@ -706,6 +868,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     library("seqinr")
     retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]
 
+	# retrieve the sequences from UniProt:
+	seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")
     seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")
     seqs <- lapply(seqnames,  retrieve_seqs_uniprot)   
     # write out the sequences to a FASTA file:
@@ -750,6 +914,9 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ### Summary
 
+	read.alignment()
+	dist.alignment()
+	dist.dna()
 
 ### Links and Further Reading
 
