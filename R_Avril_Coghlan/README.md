@@ -700,6 +700,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 	ulceransseqstring <- toupper(ulceransseqstring)
 	lepraeseqstring # Print out the content of "lepraeseqstring"
 
+    #library(Biostrings); data(BLOSUM50)
     # pairwiseAlignment
 	globalAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,
 		substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)
@@ -797,12 +798,14 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image8.png)
 
+    # Read an XStringSet object from a file
     library(Biostrings)
     mySequences <- readAAStringSet(file = "phosphoproteins.fasta")
 
+    # Multiple Sequence Alignment using ClustalW
     #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")
     library(msa)
-    myAlignment <- msa(mySequences)
+    myAlignment <- msa(mySequences, "ClustalW")
 
     # write an XStringSet object to a file
     writeXStringSet(unmasked(myAlignment), file = "myAlignment.fasta")
@@ -832,6 +835,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の無根系統樹の構築**
 
+    # construct a phylogenetic tree with the neighbor joining algorithm
     #install.packages("ape")
     library(ape)
     mytree <- nj(virusdist)
@@ -852,28 +856,31 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
 
+    # retrieve several sequences from UniProt
     library("seqinr")
     retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]
-
-	# retrieve the sequences from UniProt:
 	seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")
     seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")
-    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)   
-    # write out the sequences to a FASTA file:
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)
+
+    # write out the sequences to a FASTA file
     write.fasta(seqs, seqnames, file="fox1.fasta")
 
+    # Read an XStringSet object from a file
     library(Biostrings)
     mySequences <- readAAStringSet(file = "fox1.fasta")
 
+    # Multiple Sequence Alignment using ClustalW
     library(msa)
     myAlignment <- msa(mySequences)
+
     # convert msa for the seqinr package
     fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")
 
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image10.png)
-
+    # calculating genetic distances between protein sequences
     mydist <- dist.alignment(fox1aln)
 
+    # construct a phylogenetic tree with the neighbor joining algorithm
     library(ape)
     mytree <- nj(mydist)
     mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)
