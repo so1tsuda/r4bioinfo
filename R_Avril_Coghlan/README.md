@@ -764,9 +764,9 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ## [Multiple Alignment and Phylogenetic trees](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html)
 **多重配列アライメントと系統樹**
 
-- [多重整列](https://ja.wikipedia.org/wiki/多重整列) [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment)
-- [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree)
-- [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
+- [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) [多重整列](https://ja.wikipedia.org/wiki/多重整列) [マルチプルアライメント](http://bio-info.biz/article/ase_msa.html)
+- [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) [系統樹](https://ja.wikipedia.org/wiki/系統樹)
+- [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics) [系統学](https://ja.wikipedia.org/wiki/系統学) 
 
 ![http://etetoolkit.org/docs/2.3/tutorial/tutorial_phylogeny.html](http://etetoolkit.org/docs/2.3/_images/phylotree.png)
 
