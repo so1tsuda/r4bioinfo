@@ -769,7 +769,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 - [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) [系統樹](https://ja.wikipedia.org/wiki/系統樹)
 - [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics) [系統学](https://ja.wikipedia.org/wiki/系統学) 
 
-![http://etetoolkit.org/docs/2.3/tutorial/tutorial_phylogeny.html](http://etetoolkit.org/docs/2.3/_images/phylotree.png)
+![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
 ### Retrieving a list of sequences from UniProt
 **UniProtから複数の配列を取得**
