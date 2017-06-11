@@ -764,22 +764,11 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ## [Multiple Alignment and Phylogenetic trees](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html)
 **多重配列アライメントと系統樹**
 
-- [シーケンスアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント)
-  - [ペアワイズアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)
-  - [多重配列アライメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E5.A4.9A.E9.87.8D.E9.85.8D.E5.88.97.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.A1.E3.83.B3.E3.83.88)
 - [多重整列](https://ja.wikipedia.org/wiki/多重整列) [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment)
-
-![http://etetoolkit.org/docs/2.3/tutorial/tutorial_phylogeny.html](http://etetoolkit.org/docs/2.3/_images/phylotree.png)
-
 - [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree)
 - [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics)
-- [分子系統学](https://ja.wikipedia.org/wiki/分子系統学) [Molecular phylogenetics](https://en.wikipedia.org/wiki/Molecular_phylogenetics)
-- [平成21年度ゲノムリテラシー講座 分子系統解析 講義資料 (PDF)](http://www.jst.go.jp/nbdc/bird/jinzai/literacy/streaming/h21_4_3.pdf)
-- [授業/H24/進化生物学I/系統樹に関する基本用語 - 千葉大系統分類](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
-- [北村雄一のホームページ](http://www5b.biglobe.ne.jp/~hilihili/index.html)
-  - [系統トップ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop.html)
-   - [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
-- [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
+
+![http://etetoolkit.org/docs/2.3/tutorial/tutorial_phylogeny.html](http://etetoolkit.org/docs/2.3/_images/phylotree.png)
 
 ### Retrieving a list of sequences from UniProt
 **UniProtから複数の配列を取得**
