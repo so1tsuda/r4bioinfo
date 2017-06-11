@@ -832,6 +832,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
 
+[根を持つ系統樹を有根系統樹(rooted tree), 根を持たない系統樹を無根系統樹(unrooted tree)と呼ぶ。](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
+
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の無根系統樹の構築**
 
@@ -843,7 +845,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image9.png)
 
-系統樹で"Q5VKP1"と"P06747"がグループを形成し、"O56773"と"P0C569"がグループを形成している。
+系統樹で"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成している。
 
     # get sequence annotations
     unlist(getAnnot(seqs))
@@ -894,10 +896,10 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     # get sequence annotations
     unlist(getAnnot(seqs))
 
-    tr|Q9VT99|Q9VT99_DROME RNA-binding Fox protein 1, isoform J OS=Drosophila melanogaster GN=Rbfox1 PE=4 SV=3
-    tr|Q8WS01|Q8WS01_9NEOP Elongation factor-1 alpha (Fragment) OS=Kladothrips waterhousei GN=EF-1a PE=4 SV=1
     sp|Q10572|FOX1_CAEEL Sex determination protein fox-1 OS=Caenorhabditis elegans GN=fox-1 PE=1 SV=2
     tr|E3M2K8|E3M2K8_CAERE CRE-FOX-1 protein OS=Caenorhabditis remanei GN=Cre-fox-1 PE=4 SV=1
+    tr|Q8WS01|Q8WS01_9NEOP Elongation factor-1 alpha (Fragment) OS=Kladothrips waterhousei GN=EF-1a PE=4 SV=1
+    tr|Q9VT99|Q9VT99_DROME RNA-binding Fox protein 1, isoform J OS=Drosophila melanogaster GN=Rbfox1 PE=4 SV=3
 
 ### Building a phylogenetic tree for DNA or mRNA sequences
 
