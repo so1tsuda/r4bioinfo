@@ -891,7 +891,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image11.png)
 
 [外群](https://ja.wikipedia.org/wiki/外群)として"Q8WS01"を選択し、系統樹に根をつける。
-最初に外群("Q8WS01")と他の集団("Q9VT99", "Q10572", "E3M2K8")が分岐し、次に"Q9VT99"と他の集団("Q10572", "E3M2K8")が分岐したと推定される。
+最初に外群("Q8WS01")と他の集団が分岐し、次に"Q9VT99"と他の集団("Q10572", "E3M2K8")が分岐したと推定される。
 
     # get sequence annotations
     unlist(getAnnot(seqs))
