@@ -789,7 +789,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 	# write the sequences to a FASTA-format file
 	write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
 
-### Installing the CLUSTAL multiple alignment software
+### [Installing the CLUSTAL multiple alignment software](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#installing-the-clustal-multiple-alignment-software)
 
 [Clustal](https://ja.wikipedia.org/wiki/Clustal)は広く用いられている多重整列プログラムである。
 
@@ -817,12 +817,12 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     virusaln <- read.alignment(file = "myAlignment.fasta", format = "fasta")
 	virusaln$seq
 
-### Viewing a long multiple alignment
-**長い多重アライメントの表示**
+### [Viewing a long multiple alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#viewing-a-long-multiple-alignment)
+**多重アライメントの表示**
 
     print(myAlignment, show="complete")
 
-### Discarding very poorly conserved regions from an alignment
+### [Discarding very poorly conserved regions from an alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#discarding-very-poorly-conserved-regions-from-an-alignment)
 
 ### [Calculating genetic distances between protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-protein-sequences)
 **タンパク質配列間の遺伝的距離を計算する**
@@ -832,10 +832,10 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
 
-[根を持つ系統樹を有根系統樹(rooted tree), 根を持たない系統樹を無根系統樹(unrooted tree)と呼ぶ。](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
-
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の無根系統樹の構築**
+
+[根を持つ系統樹を有根系統樹(rooted tree), 根を持たない系統樹を無根系統樹(unrooted tree)と呼ぶ。](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
 
     # construct a phylogenetic tree with the neighbor joining algorithm
     #install.packages("ape")
@@ -901,12 +901,18 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     tr|Q8WS01|Q8WS01_9NEOP Elongation factor-1 alpha (Fragment) OS=Kladothrips waterhousei GN=EF-1a PE=4 SV=1
     tr|Q9VT99|Q9VT99_DROME RNA-binding Fox protein 1, isoform J OS=Drosophila melanogaster GN=Rbfox1 PE=4 SV=3
 
-### Building a phylogenetic tree for DNA or mRNA sequences
+- [線虫 Caenorhabditis elegans](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス)
+- [キイロショウジョウバエ Drosophila melanogaster](https://ja.wikipedia.org/wiki/キイロショウジョウバエ)
+
+### [Building a phylogenetic tree for DNA or mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-phylogenetic-tree-for-dna-or-mrna-sequences)
 
 ### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
 **系統樹をNewick形式ファイルとして保存する**
 
     write.tree(mytree, file="myNewick.tree")
+
+- Newick形式のファイルを修正して多分岐の系統樹を作成する - kiliwave http://kiliwave.hatenablog.com/entry/2016/11/16/205345
+- Newick書式から系統樹を描く - ryamadaの遺伝学・遺伝統計学メモ (id:ryamada22) http://d.hatena.ne.jp/ryamada22/20050513/1115948852
 
 ### Summary
 
@@ -920,3 +926,14 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 演習
 
 ----------
+
+http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語
+
+https://www.fifthdimension.jp/wiki.cgi
+田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法", 2010年度日本計量生物学会特別セッション『農学・生態学・進化学でのベイズ統計手法の応用に関する諸問題』. Preprint PDF: 20100522BiometricsJapanPreprint.pdf(5955)
+https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
+
+[SeaView](http://doua.prabi.fr/software/seaview)
+[使用法](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
+
+
