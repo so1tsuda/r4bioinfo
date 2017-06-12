@@ -774,6 +774,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### Retrieving a list of sequences from UniProt
 **UniProtから複数の配列を取得**
 
+[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の Phosphoprotein のタンパク質配列（UniProt accession は [P06747](http://www.uniprot.org/uniprot/P06747), [P0C569](http://www.uniprot.org/uniprot/P0C569), [O56773](http://www.uniprot.org/uniprot/O56773), [Q5VKP1](http://www.uniprot.org/uniprot/Q5VKP1)）を取得する:  
+
     library("seqinr")
     # create a function to retrieve several sequences from UniProt
     retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]
@@ -788,12 +790,6 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 	# write the sequences to a FASTA-format file
 	write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
-
-- リンタンパク質 Phosphoprotein
-  - [P06747](http://www.uniprot.org/uniprot/P06747) Rabies virus [狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス)
-  - [P0C569](http://www.uniprot.org/uniprot/P0C569) Mokola virus
-  - [O56773](http://www.uniprot.org/uniprot/O56773) Lagos bat virus
-  - [Q5VKP1](http://www.uniprot.org/uniprot/Q5VKP1) West Caucasian bat virus
 
 ### [Installing the CLUSTAL multiple alignment software](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#installing-the-clustal-multiple-alignment-software)
 
