@@ -77,11 +77,12 @@ Rを終了:
 ### Retrieving sequence data using R
 [はじけじゅ](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html)の例：
 カモノハシ（AJ311679）、ネズミ （X00686）、 ヒト（M10098）、 ニワトリ（AF173612）
-の配列をFASTA形式ファイル
-（ファイル名の例: 
+の配列をFASTA形式ファイルとして保存する。
+
+ファイル名の例: 
 [seq_20170531.fasta](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/seq_20170531.fasta), 
 [seq_20170613.fasta](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/seq_20170613.fasta)
-）として保存する。
+
 
 作業ディレクトリにファイル
 [get_fasta.R](https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_tree/examples/get_fasta.R)
