@@ -771,6 +771,13 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
+- [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
+- [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
+- [これが「棒の手紙」だ！](http://kokorohaitsumo15sai.la.coocan.jp/bonotegami.htm)
+- [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
+
+デモ
+
     # Multiple Sequence Alignment 多重配列アライメント
     #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")
     library(msa)
@@ -875,7 +882,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image9.png)
 
-系統樹で"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
+系統樹では、"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
 
 - [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
   - 枝長(branch length)　その枝で生じた変化の数。
@@ -886,12 +893,14 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
 
-線虫 fox-1 遺伝子は性決定に関わる。[線虫 Caenorhabditis elegans](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス), Caenorhabditis remanei, [Kladothrips waterhousei](http://what-when-how.com/insects/thrips-insects/), [キイロショウジョウバエ Drosophila melanogaster](https://ja.wikipedia.org/wiki/キイロショウジョウバエ) の 相同タンパク質配列（UniProt accession は 
+線虫 fox-1 遺伝子は性決定に関わる。
+[線虫 Caenorhabditis elegans](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス), Caenorhabditis remanei, [Kladothrips waterhousei](http://what-when-how.com/insects/thrips-insects/), [キイロショウジョウバエ Drosophila melanogaster](https://ja.wikipedia.org/wiki/キイロショウジョウバエ) の 相同タンパク質配列（UniProt accession は 
 [Q10572](http://www.uniprot.org/uniprot/Q10572), 
 [E3M2K8](http://www.uniprot.org/uniprot/E3M2K8), 
 [Q8WS01](http://www.uniprot.org/uniprot/Q8WS01), 
 [Q9VT99](http://www.uniprot.org/uniprot/Q9VT99)
 ）を取得し、多重配列アライメントに基づく有根系統樹を構築する。
+[外群](https://ja.wikipedia.org/wiki/外群)として"Q8WS01"を選択し、系統樹に根をつける。
 
     # retrieve several sequences from UniProt
     library("seqinr")
@@ -928,7 +937,6 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image11.png)
 
-[外群](https://ja.wikipedia.org/wiki/外群)として"Q8WS01"を選択し、系統樹に根をつける。
 最初に外群("Q8WS01")と他の集団が分岐し、次に"Q9VT99"と他の集団("Q10572", "E3M2K8")が分岐したと推定される。
 
 ### [Building a phylogenetic tree for DNA or mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-phylogenetic-tree-for-dna-or-mrna-sequences)
@@ -946,9 +954,14 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     # library(seqinr)
     ?read.alignment
     ?dist.alignment
+
+    # library(msa)
+    example(msa)
+
     # library(ape)
     ?dist.dna
     example(nj)
+    ?write.tree
 
 ### Links and Further Reading
 
