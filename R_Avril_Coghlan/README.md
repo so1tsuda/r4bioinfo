@@ -772,9 +772,9 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
 - [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
+- [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
 - [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
 - [これが「棒の手紙」だ！](http://kokorohaitsumo15sai.la.coocan.jp/bonotegami.htm)
-- [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
 
 デモ
 
