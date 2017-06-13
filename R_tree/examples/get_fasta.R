@@ -23,7 +23,7 @@ eutils.ncbi.fasta <- function(ACCESSION) read.fasta(file = paste0("https://eutil
 ld <- lapply(ACCESSIONs, eutils.ncbi.fasta)
 
 # Writing sequence data out as a FASTA file
-write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) (.+)", "\\2_\\1", getAnnot(ld)), sep="_"), file.out=paste0("seq_",format(Sys.time(), "%Y%m%d"),".fasta") )
+write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) ([^ ]+) (.+)", "\\2_\\3_\\1", getAnnot(ld)), sep="_"), file.out=paste0("seq_",format(Sys.time(), "%Y%m%d"),".fasta") )
 
 # Check Directory
 getwd()

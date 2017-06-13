@@ -1,398 +1,806 @@
-?dir
-getwd()#
-    dir()
-library(ape)#
+seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")#
+    seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)    #
 #
-    geotree <- read.nexus("http://www.r-phylo.org/w/images/0/02/Geospiza.nex")#
-    geodata <- read.table("http://www.r-phylo.org/w/images/5/5c/Geospiza.txt")
-plot.phylo(geotree)#
-	help(plot.phylo)#
-    example(plot.phylo)
-library(ape)#
+	# write out the sequences to a FASTA file:
+# write out the sequences to a FASTA file:#
+	write.fasta(seqs, seqnames, file="fox1.fasta")
+library(Biostrings)#
+    mySequences <- readAAStringSet(file = "fox1.fasta")#
+    library(msa)#
+    myAlignment <- msa(inputSeqs = mySequences, method = "ClustalW")
+library(Biostrings)#
+    mySequences <- readAAStringSet(file = "fox1.fasta")#
+    library(msa)#
+    myAlignment <- msa(mySequences)
+library(Biostrings)#
+    mySequences <- readAAStringSet(file = "fox1.fasta")#
+    library(msa)#
+    myAlignment <- msa(mySequences)#
 #
-    geotree <- read.nexus("http://www.r-phylo.org/w/images/0/02/Geospiza.nex")#
-    geodata <- read.table("http://www.r-phylo.org/w/images/5/5c/Geospiza.txt")
-plot.phylo(geotree)#
-	help(plot.phylo)
-par(mfrow=c(2,2))#
-    plot.phylo(geotree)#
-    plot.phylo(root(geotree, "fusca"))#
-    plot.phylo(ladderize(root(geotree, "fusca"), right = TRUE))#
-    plot.phylo(ladderize(root(geotree, "fusca"), right = FALSE))
-?di2multi
-collapsedgeotree <- di2multi(geotree, tol = 0.03) # tolerance#
+myAlignment2 <- msaConvert(myAlignment, type="seqinr::alignment")
+myAlignment2
+myAlignment
+myAlignmentmyAlignment
+myAlignment2
+library(Biostrings)#
+    mySequences <- readAAStringSet(file = "fox1.fasta")#
+    library(msa)#
+    myAlignment <- msa(mySequences)#
 #
-    par(mfrow=c(1,2))#
-    plot.phylo(geotree)#
-    plot.phylo(collapsedgeotree)
-geotree$tip.label
-plot.phylo(geotree)#
-	help(plot.phylo)
-geotree
-names(geotree)
-geotree$edge.length
-typeof(geotree)
-geotree
-str(geotree)
-names(geotree)
-geotree$edge
-geotree$Nnode
-str(geotree)
-geotree$edge.length
-geotree$tip.label
-root(geotree, "fusca")
-geotree
-root(geotree, "fusca")
-is.root(root(geotree, "fusca"))
-is.rooted(root(geotree, "fusca"))
-is.rooted(geotree, "fusca")
-is.rooted(geotree)
-compute.brlen(geotree, method="Grafen")$edge.length#
-    compute.brlen(geotree, 1)$edge.length#
-    compute.brlen(geotree, c(1, 2))$edge.length
-geotree$edge.length
-sum(geotree$edge.length)
-sum(compute.brlen(geotree, method="Grafen")$edge.length)
-par(mfrow=c(1,2))#
-    plot.phylo(geotree)#
-geotree$edge.length <- compute.brlen(geotree, method="Grafen")$edge.length#
-    plot.phylo(geotree)
-collapsedgeotree <- di2multi(geotree, tol = 0.03) # tolerance#
-#
-    par(mfrow=c(1,2))#
-    plot.phylo(geotree)#
-    plot.phylo(collapsedgeotree)
-library(ape)#
-#
-    geotree <- read.nexus("http://www.r-phylo.org/w/images/0/02/Geospiza.nex")#
-    geodata <- read.table("http://www.r-phylo.org/w/images/5/5c/Geospiza.txt")#
-#
-    str(geotree)
-collapsedgeotree <- di2multi(geotree, tol = 0.03) # tolerance#
-#
-    par(mfrow=c(1,2))#
-    plot.phylo(geotree)#
-    plot.phylo(collapsedgeotree)
-することを確認#
-#
-	library(geiger)#
-#
-	name.check(geotree, geodata)#
-	geotree <- drop.tip(geotree, "olivacea")#
-    name.check(geotree, geodata)
-?mrca
-?drop.tip
-node.leaves
-node.leaves()
-str(geotree)
-plot(geotree, show.node.label=TRUE)
-names(node.label)
-names(geotree)
-node.label
-node.labels
-nodelabels()
-plot.phylo(geotree)#
-    nodelabels()
-plot.phylo(geotree)
-nodelabels()
-plot.phylo(geotree)#
-    nodelabels()
-mrca(geotree)["pauper", "psittacula"]
-cladeA <- tips(geotree, 26)
-cladeA
-tips(geotree, 24)
-tips(geotree, 26)
-mrca(geotree)["pauper", "psittacula"]
-tips(geotree, 24)
-mrca(geotree)["pauper", "psittacula"]
-tips(geotree, mrca(geotree)["pauper", "psittacula"])
-cladeA <- tips(geotree, mrca(geotree)["pauper", "psittacula"])
-par(mfrow=c(1,2))#
-    plot.phylo(geotree)#
-    plot.phylo(drop.tip(geotree, cladeA))
-geotree$edge
-which.edge(geotree, cladeA)
-geotree$edge
-which.edge(geotree, cladeA)
-geotree$edge[which.edge(geotree, cladeA), ]
-par(mfrow=c(1,2))#
-    plot.phylo(geotree)
-plot.phylo(geotree)#
-    nodelabels()
-geotree$edge#
-#
-    geotree$edge[which.edge(geotree, cladeA), ]
-which.edge(geotree, cladeA)
-geotree$edge#
-#
-geotree$edge[which.edge(geotree, cladeA), ]
-mrca(geotree)["pauper", "parvulus"]
-plot.phylo(geotree)#
-nodelabels()
-geotree$tip
-((length(geotree$tip)+1):((length(geotree$tip)*2)-1))
-geotree$node.label
-mrca(geotree)["pauper", "parvulus"]#
-#
-geotree$node.label<-((length(geotree$tip)+1):((length(geotree$tip)*2)-1))#
-plot(geotree, show.node.label=TRUE)
-cophenetic(geotree)["pallida", "conirostris"]#
-cophenetic(geotree)
-dist.nodes(geotree)#
-	dist.nodes(geotree)[15, 20]
-cophenetic(geotree)["pallida", "conirostris"]#
-cophenetic(geotree)
-plot.phylo(geotree)#
-	help(plot.phylo)
-nodelabels()
-plot.phylo(geotree)#
-    nodelabels()
-dist.nodes(geotree)#
-	dist.nodes(geotree)[15, 20]
-str(geotree)
-geotree$tip.label
-which(    geotree$tip.label)
-dist.nodes(geotree)[1, 15]
-?compute.brlen
-compute.brlen(geotree, method = 1)$edge.length
-compute.brlen(geotree, method = c(1, 2))$edge.length
-par(mfrow=c(1,2))#
-    plot.phylo(geotree)#
-geotree$edge.length <- compute.brlen(geotree, method="Grafen")$edge.length#
-    plot.phylo(geotree)
-branching.times(geotree)#
-    geotree$node.label
-library(seqinr)
-488m
-488/60
-library(ape)
-example(nodelabels)
-# Check Directory#
-    getwd()#
-    dir()
-example(plot.phylog)
-library(ade4)
-example(plot.phylog)#
-	library(ade4)#
-	fh <- file("https://stat.biopapyrus.net/data/newick-format.txt", "r")#
-	tree <- newick2phylog(readLines(fh, 1))#
-#
-    plot(tree)
-library(ade4)#
-	fh <- file("https://stat.biopapyrus.net/data/newick-format.txt", "r")#
-	tree <- newick2phylog(readLines(fh, 1))#
-#
-    plot(tree)
-example(plot.phylog)
-library(ape)#
-	data(woodmouse)#
-	str(woodmouse)#
-	base.freq(woodmouse)
-wm.f<-t(as.data.frame(woodmouse))#
-	barplot(apply(wm.f,1,base.freq),las=2)
-library(ape)#
-	data(woodmouse)#
-	str(woodmouse)#
-	base.freq(woodmouse)#
-	wm.f<-t(as.data.frame(woodmouse))#
-	barplot(apply(wm.f,1,base.freq),las=2)
-woodmouse
-as.character(woodmouse)
-wm.f<-as.character(woodmouse)#
-#
-barplot(apply(wm.f,1,base.freq),las=2)
-wm.f<-t(as.character(woodmouse))#
-#
-barplot(apply(wm.f,1,base.freq),las=2)
-library(ape)#
-	data(woodmouse)#
-	str(woodmouse)#
-	base.freq(woodmouse)
-woodmouse
-as.alignment(woodmouse)
-names(woodmouse)
-apply(wm.f,1,base.freq),las=2
-apply(wm.f,1,base.freq)
-apply(woodmouse,1,base.freq)
-lapply(woodmouse,base.freq)
-barplot(lapply(woodmouse,base.freq),las=2)
-lapply(woodmouse,base.freq)
-sapply(woodmouse,base.freq)
-barplot(sapply(woodmouse,base.freq),las=2)
-rownames(sapply(woodmouse,base.freq))
-labels <- rownames(sapply(woodmouse,base.freq))#
-#
-barplot(sapply(woodmouse,base.freq),legend.text = labels,  las=2)
-barplot(sapply(woodmouse,base.freq))
-barplot(sapply(woodmouse,base.freq), las=2)
-b.f <- sapply(woodmouse,base.freq)#
-    barplot(b.f, las=2, legend.text = rownames(b.f))
-dist.dna(woodmouse[1:5,])
-dist.dna(woodmouse[1:5,])#
-	dist.dna(woodmouse[1:5,],model="GG95")
-wm.d<-dist.dna(woodmouse)#
-	wm.hc<-hclust(wm.d,"average")#
-	wm.phy<-as.phylo(wm.hc)#
-	plot(wm.phy)
-plot(wm.phy,type="c")	　#図(a)#
-	plot(wm.phy,type="c",use.edge.length = FALSE) 　#図(b)#
-	plot(wm.phy,type="r")	　#図(c)#
-	plot(wm.phy,type="u",use.edge.length = FALSE,lab4ut="axial")	　#図(d)
-par(mfrow=c(2,2))#
-	plot(wm.phy,type="c")	　#図(a)#
-	plot(wm.phy,type="c",use.edge.length = FALSE) 　#図(b)#
-	plot(wm.phy,type="r")	　#図(c)#
-	plot(wm.phy,type="u",use.edge.length = FALSE,lab4ut="axial")	　#図(d)
-wm.d<-dist.dna(woodmouse)#
-	wm.nj<-nj(wm.d)#
-	plot(wm.nj)
-plot(wm.nj,type="u",use.edge.length = FALSE,lab4ut="axial")
-?mst
-example(mst)
-?dist.gene
-3^4
-library(ape)#
-#
-library(seqinr)
-dir()
-getwd()
-dir()
-ACCESSIONs <- c("AJ311679", "X00686", "M10098", "AF173612")#
-#
-# Load SeqinR package#
-#install.packages("seqinr")#
+    # write an XStringSet object to a file#
+    writeXStringSet(unmasked(myAlignment), file = "myAlignment.fasta")
 library(seqinr)#
+    fox1aln <- read.alignment(file = "myAlignment.fasta", format = "fasta")#
+	fox1aln$seq
+print(myAlignment, show="complete")
+?dist.alignment
+?read.alignment
+fox1aln
+fox1aln$seq
+fox1aln
+library(seqinr)#
+    fox1aln <- read.alignment(file = "myAlignment.fasta", format = "fasta")#
+    mydist <- dist.alignment(fox1aln)#
+    mytree <- nj(mydist)
+?msaConvert
+library(msa)#
+    myAlignment <- msa(mySequences)#
+    # convert msa for the seqinr package#
+    fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")#
+    mydist <- dist.alignment(fox1aln)#
 #
-# Retrieving sequence data using SeqinR#
-eutils.ncbi.fasta <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), strip.desc = TRUE)[[1]]#
-ld <- lapply(ACCESSIONs, eutils.ncbi.fasta)#
-#
-# Writing sequence data out as a FASTA file#
-write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) (.+)", "\\2_\\1", getAnnot(ld)), sep="_"), file.out=paste0("hs_",format(Sys.time(), "%Y-%m-%d"),".fasta") )#
-#
-# Check Directory#
-getwd()#
-dir()
-system("ls")
-system("open .")
-system("grep '^>' hs_*.fasta")
-system("grep '^>' *.fasta")
-quit()
-dir()
-getwd()
-quit()
-q()
-qu()
-q
-x <- 1
-getwd()
-dir()
-?dir
-history
-history()
-dir()
-?dir
-getwd()
-library(ape)
-?install.packages
+    library(ape)#
+    mytree <- nj(mydist)
+mytree
+?root
 library(ape)#
+    mytree <- nj(mydist)#
+	plot.phylo(root(mytree, outgroup = "Q9VT99", resolve.root = TRUE))
+library(ape)#
+    mytree <- nj(mydist)#
+	plot.phylo(root(mytree, outgroup = "Q8WS01", resolve.root = TRUE))
+library(ape)#
+    mytree <- nj(mydist)#
+    plot.phylo(root(mytree, outgroup = "Q8WS01"))
+?root
+root(mytree, outgroup = "Q8WS01")
+root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)
+?root
+library(ape)#
+    mytree <- nj(mydist)#
+    plot.phylo(root(mytree, outgroup = "Q8WS01", resolve.root = TRUE))
+library(ape)#
+    mytree <- nj(mydist)#
+    par(mfrow = c(2,2))#
+    plot.phylo(root(mytree, outgroup = "Q8WS01", resolve.root = FALSE))#
+    plot.phylo(root(mytree, outgroup = "Q8WS01", resolve.root = TRUE))
+plot.phylo(root(mytree, outgroup = "Q8WS01", resolve.root = TRUE))
+library(ape)#
+    mytree <- nj(mydist)#
+    par(mfrow = c(2,2))#
+    plot.phylo(root(mytree, outgroup = "Q8WS01", resolve.root = TRUE), main = "Phylogenetic Tree")
+write.tree(mytree, file="myTree.newick")
+?write.tree
+write.tree(mytree, file="myNewick.tree")
+write.tree(mytree, file="myNewick.tre")
+write.tree(mytree, file="myNewick.tree")
+?root
+library(ape)#
+    mytree <- nj(mydist)#
+    #mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")
+mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")
+library(ape)#
+    mytree <- nj(mydist)#
+    #mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")
+mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")
+nchar('MSNLPKPAKPEPKPLRVTKSNTLITASYRLTLNEQRLILAAISKLDPRRPMPKKVSVSAVDYSDIYGVQLRHAYEQMKVAADELYERDIKTFDGSGMERKRWVDRAKYLDGEGRVELSFTIHVMPYLTMLYSKVTSYDLRRVACLDSSHSFRLFEMLMQFRKTGWAYIEVESLRVALGLSDAYQRFNNLRQRVIDPAVAELKTKSNLDVSYELRREGRKVIAIKFTFCDLAQLPLNLELDPEDLPPLPEYDPAEESEWLITKPLGELAEAQEAGLLFAVSAEEGEQPD')
+160/320
+(3+3+3)/3
+/Users/haruo/projects/shintani.masaki/2017-06-02/2017-06-02_uniref90tree/all_uniref90_blastp
+library(Biostrings)#
+mySequences <- readAAStringSet(file = "fox1.fasta")#
 #
-library(seqinr)
-?install.packages
+library(msa)#
+myAlignment <- msa(mySequences)#
+# convert msa for the seqinr package#
+fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")
+fox1aln
+library("seqinr")#
+#
+# create a function to retrieve several sequences from UniProt#
+retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#
+seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences#
+seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"#
+length(seqs)      # Print out the number of sequences retrieved#
+seq1 <- seqs[[1]] # Get the 1st sequence#
+seq1[1:20]        # Print out the first 20 letters of the 1st sequence#
+seq2 <- seqs[[2]] # Get the 2nd sequence#
+seq2[1:20]        # Print out the first 20 letters of the 2nd sequence#
+#
+# write the sequences to a FASTA-format file#
+write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
+library(ape)#
+    virusaln <- clustal(seqs)
+virusaln
+image(virusaln)
+plot(nj(virusaln))
+library(ape)#
+    virusaln <- clustal(seqs)#
+    image(virusaln)#
+#
+virusdist <- dist.alignment(virusaln)                            # Calculate the genetic distances#
+#
+virusdist                                                        # Print out the genetic distance matrix
+class(virusaln)
+library(ape)#
+    virusaln <- clustal(seqs)#
+    virusaln <- as.alignment(virusaln)#
+    image(virusaln)
+library(ape)#
+    virusaln <- clustal(seqs)#
+    image(virusaln)#
+    virusaln <- as.alignment(virusaln)#
+#
+virusdist <- dist.alignment(virusaln)
+library("seqinr")#
+#
+# create a function to retrieve several sequences from UniProt#
+retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#
+seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences#
+seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"#
+length(seqs)      # Print out the number of sequences retrieved#
+seq1 <- seqs[[1]] # Get the 1st sequence#
+seq1[1:20]        # Print out the first 20 letters of the 1st sequence#
+seq2 <- seqs[[2]] # Get the 2nd sequence#
+seq2[1:20]        # Print out the first 20 letters of the 2nd sequence#
+#
+# write the sequences to a FASTA-format file#
+write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
+library(ape)#
+    virusaln <- clustal(seqs)#
+    image(virusaln)#
+    virusaln <- as.alignment(virusaln)#
+#
+virusdist <- dist.alignment(virusaln)
+?clustal
+library(ape)
+?clustal
+clustal(seqs)
+library("seqinr")#
+#
+# create a function to retrieve several sequences from UniProt#
+retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#
+seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences#
+seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"#
+length(seqs)      # Print out the number of sequences retrieved#
+seq1 <- seqs[[1]] # Get the 1st sequence#
+seq1[1:20]        # Print out the first 20 letters of the 1st sequence#
+seq2 <- seqs[[2]] # Get the 2nd sequence#
+seq2[1:20]        # Print out the first 20 letters of the 2nd sequence#
+#
+# write the sequences to a FASTA-format file#
+write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
+clustal(seqs)
+seqs
+clustal(seqs)
+?clustal
+class(seqs)
+lapply(seqs, class)
+clustal(seqs)
+dist.alignment(as.alignment(virusaln))
+library(ape)#
+    virusaln <- clustal(seqs)#
+    virusaln <- as.alignment(virusaln)#
+    image(virusaln)
+library(ape)#
+    virusaln <- clustal(seqs)#
+    image(virusaln)#
+    virusaln <- as.alignment(virusaln)
+virusaln
+library(ape)#
+    virusaln <- clustal(seqs)#
+    image(virusaln)#
+    virusaln <- as.alignment(virusaln)
+virusaln
+dist.alignment(virusaln)
+seqs
+library(ape)#
+    virusaln <- clustal(seqs)#
+    image(virusaln)
+virsaln
+?clustal
+library(ape)#
+    virusaln <- ape::clustal(seqs)#
+    image(virusaln)
+library(ape)#
+    virusaln <- ape::clustal(seqs)
+virusaln
+ape::clustal
+library(ape)#
+    virusaln <- ape::clustal(seqs)#
+    image(virusaln)
+virusaln <- as.alignment(virusaln)
+virusaln
+library("seqinr")#
+    # create a function to retrieve several sequences from UniProt#
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#
+    seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"#
+    length(seqs)      # Print out the number of sequences retrieved#
+#
+    library(ape)#
+    # Creating a multiple alignment of protein using CLUSTAL#
+    virusaln <- ape::clustal(seqs)#
+    virusaln
+virusdist <- dist.alignment(fox1aln)#
+mytree <- nj(virusdist)
+virusdist <- dist.alignment(virusaln)#
+mytree <- nj(virusdist)
+virusaln <- as.alignment(virusaln)#
+virusdist <- dist.alignment(virusaln)
+library("seqinr")#
+    # create a function to retrieve several sequences from UniProt#
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#
+    seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"#
+    length(seqs)      # Print out the number of sequences retrieved#
+#
+    library(ape)#
+    # Creating a multiple alignment of protein using CLUSTAL#
+    virusaln <- ape::clustal(seqs)#
+    virusaln
+as.alignment(virusaln)
+virusaln <- as.alignment(virusaln)#
+virusdist <- dist.alignment(virusaln)
+library("seqinr")#
+    # create a function to retrieve several sequences from UniProt#
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#
+    seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"#
+    length(seqs)      # Print out the number of sequences retrieved#
+#
+    library(ape)#
+    # Creating a multiple alignment of protein using CLUSTAL#
+    virusaln <- ape::clustal(seqs)#
+    virusaln
+virusdist <- dist.alignment(virusaln)
+virusaln <- as.alignment(virusaln)#
+virusdist <- dist.alignment(virusaln)
+library("seqinr")#
+    # create a function to retrieve several sequences from UniProt#
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#
+    seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"#
+    length(seqs)      # Print out the number of sequences retrieved#
+#
+    library(ape)#
+    # Creating a multiple alignment of protein using CLUSTAL#
+    virusaln <- ape::clustal(seqs)#
+    virusaln
+class(seqs)
+seqs
+packageVersion("msa")
+library(seqinr)#
+    library(ape)#
+    library(Biostrings)#
+    library(msa)
 sessionInfo()
+library(help=msa)
+?msaPrettyPrint
+library(msa)
+?msaPrettyPrint
+example(msaPrettyPrint)
+library(help=ape)
 help(plot.phylo)
 example(plot.phylo)
-example(nodelabels)
-ACCESSIONs <- c("AJ311679", "X00686", "M10098", "AF173612")#
+?sessionInfo()
+？library
+?library
+?sessionInfo
+?install.packages
+library(Biostrings)#
+    mySequences <- readAAStringSet(file = "phosphoproteins.fasta")#
+#
+    #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")#
+    library(msa)#
+    myAlignment <- msa(mySequences)#
+#
+    # write an XStringSet object to a file#
+    writeXStringSet(unmasked(myAlignment), file = "myAlignment.fasta")
+?writeXStringSet
+library("seqinr")#
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#
+	# retrieve the sequences from UniProt:#
+	seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")#
+    seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)    #
+	# write out the sequences to a FASTA file:#
+	write.fasta(seqs, seqnames, file="fox1.fasta")#
+#
+    library(Biostrings)#
+    mySequences <- readAAStringSet(file = "fox1.fasta")#
+#
+    library(msa)#
+    myAlignment <- msa(mySequences)#
+    # convert msa for the seqinr package#
+    fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")
+mydist <- dist.alignment(fox1aln)#
+#
+    library(ape)#
+    mytree <- nj(mydist)#
+    mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")
+mySequences
+seqs
+unlist(getAnnot(seqs))
+?getAnnot
+unlist(getAnnot(seqs))#
+    # write out the sequences to a FASTA file:#
+    write.fasta(seqs, getAnnot(seqs), file="fox1.fasta")#
+#
+    library(Biostrings)#
+    mySequences <- readAAStringSet(file = "fox1.fasta")#
+#
+    library(msa)#
+    myAlignment <- msa(mySequences)#
+    # convert msa for the seqinr package#
+    fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")#
+#
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image10.png)#
+#
+    mydist <- dist.alignment(fox1aln)#
+#
+    library(ape)#
+    mytree <- nj(mydist)#
+    mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")
+mydist <- dist.alignment(fox1aln)#
+#
+    library(ape)#
+    mytree <- nj(mydist)#
+    mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")
+# retrieve the sequences from UniProt:#
+	seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")#
+    seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)   #
+    # get sequence annotations#
+    unlist(getAnnot(seqs))#
+    # write out the sequences to a FASTA file:#
+    write.fasta(seqs, getAnnot(seqs), file="fox1.fasta")#
+#
+    library(Biostrings)#
+    mySequences <- readAAStringSet(file = "fox1.fasta")#
+#
+    library(msa)#
+    myAlignment <- msa(mySequences)#
+    # convert msa for the seqinr package#
+    fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")
+mydist <- dist.alignment(fox1aln)#
+#
+    library(ape)#
+    mytree <- nj(mydist)#
+    mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")
+write.fasta(seqs, seqnames, file="fox1.fasta")#
+#
+    library(Biostrings)#
+    mySequences <- readAAStringSet(file = "fox1.fasta")#
+#
+    library(msa)#
+    myAlignment <- msa(mySequences)#
+    # convert msa for the seqinr package#
+    fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")
+mydist <- dist.alignment(fox1aln)#
+#
+    library(ape)#
+    mytree <- nj(mydist)#
+    mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")
+mytree$tips
+mytree$tip
+mytree <- root(mytree, outgroup = "Q9VT99", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")
+library(Biostrings)#
+    mySequences <- readAAStringSet(file = "phosphoproteins.fasta")#
+#
+    #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")#
+    library(msa)#
+    myAlignment <- msa(mySequences)#
+#
+    # write an XStringSet object to a file#
+    writeXStringSet(unmasked(myAlignment), file = "myAlignment.fasta")
+library(seqinr)#
+    virusaln <- read.alignment(file = "myAlignment.fasta", format = "fasta")#
+	virusaln$seq
+virusdist <- dist.alignment(virusaln) # Calculate the genetic distances#
+	virusdist                             # Print out the genetic distance matrix
+#install.packages("ape")#
+    library(ape)#
+    mytree <- nj(virusdist)#
+	plot.phylo(mytree,type="u")   # plot
+# get sequence annotations#
+    unlist(getAnnot(seqs))
+seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"#
+	length(seqs)      # Print out the number of sequences retrieved#
+	seq1 <- seqs[[1]] # Get the 1st sequence#
+	seq1[1:20]        # Print out the first 20 letters of the 1st sequence#
+	seq2 <- seqs[[2]] # Get the 2nd sequence#
+	seq2[1:20]        # Print out the first 20 letters of the 2nd sequence#
+#
+	# write the sequences to a FASTA-format file#
+	write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
+# get sequence annotations#
+    unlist(getAnnot(seqs))
+library(msa)#
+#
+	# multiple alignment of Hemoglobin alpha example sequences#
+	hemoSeq <- readAAStringSet(system.file("examples/HemoglobinAA.fasta", package="msa"))#
+	hemoAln <- msa(hemoSeq)#
+	hemoAln#
+#
+    # write Multiple Sequence Alignments to a file#
+    writeXStringSet(unmasked(hemoAln), file="hemoAln.fasta")#
+#
+    #install.packages("phangorn")#
+    library(phangorn) # read.aa # dist.ml#
+    # Read Amino Acid Sequences in a File#
+    aln <- read.aa(file = "hemoAln.fasta", format = "fasta")#
+    # Pairwise Distances from Sequences#
+    d <- dist.ml(aln, model="WAG")#
+#
+    # 非加重結合法 UPGMA (Unweighted Pair Group Method with Arithmetic mean)#
+    plot(as.phylo(hclust(d, "average")))
+?msa
+# compute a distance matrix using the dist.alignment() function from the seqinr package:#
+	virusdist <- dist.alignment(virusaln) # Calculate the genetic distances#
+	virusdist                             # Print out the genetic distance matrix
+?cor.test
+?readAAStringSet
+# retrieve several sequences from UniProt#
+    library("seqinr")#
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+	seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")#
+    seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)#
+#
+    # write out the sequences to a FASTA file#
+    write.fasta(seqs, seqnames, file="fox1.fasta")#
+#
+    library(Biostrings)#
+    mySequences <- readAAStringSet(file = "fox1.fasta")
+class(seqs)
+class(mySequences)
+seqs
+?msaConvert
+library(help="msa")
+globalAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,#
+	substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)#
+#
+globalAlignLepraeUlcerans # Print out the optimal global alignment and its score
+data(BLOSUM50)#
+BLOSUM50
+library(Biostrings)#
+data(BLOSUM50)
+library("seqinr")#
+    lepraeseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]#
+    ulceransseq <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]#
+#
+    # 文字ベクトルを文字列に変換#
+    # convert vectors of characters into strings#
+	lepraeseqstring <- c2s(lepraeseq)     # Make a string that contains the sequence in "lepraeseq"#
+	ulceransseqstring <- c2s(ulceransseq) # Make a string that contains the sequence in "ulceransseq"#
+#
+    # 大文字に変換#
+    # convert strings to uppercase #
+	lepraeseqstring <- toupper(lepraeseqstring)#
+	ulceransseqstring <- toupper(ulceransseqstring)#
+	lepraeseqstring # Print out the content of "lepraeseqstring"#
+#
+    # pairwiseAlignment#
+	globalAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,#
+		substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE)#
+#
+	globalAlignLepraeUlcerans # Print out the optimal global alignment and its score
+localAlignLepraeUlcerans <- pairwiseAlignment(lepraeseqstring, ulceransseqstring,#
+		substitutionMatrix = BLOSUM50, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")#
+#
+	localAlignLepraeUlcerans # Print out the optimal local alignment and its score#
+#
+    writePairwiseAlignments(localAlignLepraeUlcerans)
+localAlignLepraeUlcerans # Print out the optimal local alignment and its score
+# retrieve several sequences from UniProt#
+library("seqinr")#
+retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")#
+seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")#
+seqs <- lapply(seqnames,  retrieve_seqs_uniprot)#
+#
+# write out the sequences to a FASTA file#
+write.fasta(seqs, seqnames, file="fox1.fasta")#
+#
+# Read an XStringSet object from a file#
+library(Biostrings)#
+mySequences <- readAAStringSet(file = "fox1.fasta")#
+#
+# Multiple Sequence Alignment using ClustalW#
+library(msa)#
+myAlignment <- msa(mySequences)#
+#
+# convert msa for the seqinr package#
+fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")#
+#
+# calculating genetic distances between protein sequences#
+mydist <- dist.alignment(fox1aln)#
+#
+# construct a phylogenetic tree with the neighbor joining algorithm#
+library(ape)#
+mytree <- nj(mydist)#
+mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+plot.phylo(mytree, main = "Phylogenetic Tree")
+# get sequence annotations#
+unlist(getAnnot(seqs))
+library(msa)#
+	example(msa)
+ls("package:msa")
+library(ape)#
+	example(plot.phylo)
+?sort
+print(myAlignment, show="complete")
+library(seqinr)#
+    virusaln <- read.alignment(file = "myAlignment.fasta", format = "fasta")#
+	virusaln$seq
+print(myAlignment, show="complete")
+# Multiple Sequence Alignment using ClustalW#
+    #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")#
+    library(msa)#
+    myAlignment <- msa(mySequences, "ClustalW")
+# Read an XStringSet object from a file#
+    library(Biostrings)#
+    mySequences <- readAAStringSet(file = "phosphoproteins.fasta")#
+#
+    # Multiple Sequence Alignment using ClustalW#
+    #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")#
+    library(msa)#
+    myAlignment <- msa(mySequences, "ClustalW")
+myAlignment
+library(seqinr)#
+    virusaln <- read.alignment(file = "myAlignment.fasta", format = "fasta")#
+	virusaln$seq
+print(myAlignment, show="complete")
+virusdist <- dist.alignment(virusaln) # Calculate the genetic distances#
+	virusdist                             # Print out the genetic distance matrix
+# construct a phylogenetic tree with the neighbor joining algorithm#
+    #install.packages("ape")#
+    library(ape)#
+    mytree <- nj(virusdist)#
+	plot.phylo(mytree,type="u")   # plot the unrooted phylogenetic tree
+665.50 - 544.50
+library("seqinr")#
+    # create a function to retrieve several sequences from UniProt#
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#
+    seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"#
+	length(seqs)      # Print out the number of sequences retrieved#
+	seq1 <- seqs[[1]] # Get the 1st sequence#
+	seq1[1:20]        # Print out the first 20 letters of the 1st sequence#
+	seq2 <- seqs[[2]] # Get the 2nd sequence#
+	seq2[1:20]        # Print out the first 20 letters of the 2nd sequence#
+#
+	# write the sequences to a FASTA-format file#
+	write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
+# Read an XStringSet object from a file#
+    library(Biostrings)#
+    mySequences <- readAAStringSet(file = "phosphoproteins.fasta")#
+#
+    # Multiple Sequence Alignment using ClustalW#
+    #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")#
+    library(msa)#
+    myAlignment <- msa(mySequences, "ClustalW")#
+    myAlignment#
+#
+    # write an XStringSet object to a file#
+    writeXStringSet(unmasked(myAlignment), file = "myAlignment.fasta")
+library(seqinr)#
+    virusaln <- read.alignment(file = "myAlignment.fasta", format = "fasta")#
+	virusaln$seq
+virusaln
+virsaln
+virusaln
+names(virusaln)
+length(virusaln)
+library(seqinr)#
+    virusaln <- read.alignment(file = "myAlignment.fasta", format = "fasta")#
+    names(virusaln)#
+	virusaln$seq
+names(virusaln)
+virusaln$nb
+virusaln$nam
+virusaln$com
+virusaln$seq
+?dist.dna()
+?dist.dna
+library(ape)
+?dist.dna
+read.alignment()
+read.alignment
+read.alignment()
+library(seqinr)
+dist.alignment()
+dist.dna()
+virusdist <- dist.alignment(virusaln) # Calculate the genetic distances#
+virusdist                             # Print out the genetic distance matrix
+# construct a phylogenetic tree with the neighbor joining algorithm#
+    #install.packages("ape")#
+    library(ape)#
+    mytree <- nj(virusdist)#
+	plot.phylo(mytree,type="u")   # plot the unrooted phylogenetic tree
+?nj
+nj
+nj()
+?nj
+?dist.dna
+example(dist.dna)
+example(nj)
+example(dist.alignment)
+?dist.alignment
+?read.alignment
+# retrieve several sequences from UniProt#
+library("seqinr")#
+retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")#
+seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")#
+seqs <- lapply(seqnames,  retrieve_seqs_uniprot)#
+#
+# write out the sequences to a FASTA file#
+write.fasta(seqs, seqnames, file="fox1.fasta")#
+#
+# Read an XStringSet object from a file#
+library(Biostrings)#
+mySequences <- readAAStringSet(file = "fox1.fasta")#
+#
+# Multiple Sequence Alignment using ClustalW#
+library(msa)#
+myAlignment <- msa(mySequences)
+myAlignment
+library("seqinr")#
+    # create a function to retrieve several sequences from UniProt#
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#
+    seqnames <- c("P06747", "P0C569", "O56773", "Q5VKP1") # Make a vector containing the names of the sequences#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)      # Retrieve the sequences and store them in list variable "seqs"#
+	length(seqs)      # Print out the number of sequences retrieved#
+	seq1 <- seqs[[1]] # Get the 1st sequence#
+	seq1[1:20]        # Print out the first 20 letters of the 1st sequence#
+	seq2 <- seqs[[2]] # Get the 2nd sequence#
+	seq2[1:20]        # Print out the first 20 letters of the 2nd sequence#
+#
+	# write the sequences to a FASTA-format file#
+	write.fasta(seqs, seqnames, file="phosphoproteins.fasta")
+# Read an XStringSet object from a file#
+    library(Biostrings)#
+    mySequences <- readAAStringSet(file = "phosphoproteins.fasta")#
+#
+    # Multiple Sequence Alignment using ClustalW#
+    #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")#
+    library(msa)#
+    myAlignment <- msa(mySequences, "ClustalW")#
+    myAlignment
+# write an XStringSet object to a file#
+    writeXStringSet(unmasked(myAlignment), file = "virusaln.fasta")
+system("open .")
+write.tree(mytree, file="myNewick.tree")
+library(ape)
+write.tree(mytree, file="myNewick.tree")
+# retrieve several sequences from UniProt#
+    library("seqinr")#
+    retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+	#seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")#
+    seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")#
+    seqs <- lapply(seqnames,  retrieve_seqs_uniprot)#
+#
+    # write out the sequences to a FASTA file#
+    write.fasta(seqs, seqnames, file="fox1.fasta")#
+#
+    # Read an XStringSet object from a file#
+    library(Biostrings)#
+    mySequences <- readAAStringSet(file = "fox1.fasta")#
+#
+    # Multiple Sequence Alignment using ClustalW#
+    library(msa)#
+    myAlignment <- msa(mySequences)#
+#
+    # convert msa for the seqinr package#
+    fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")#
+#
+    # calculating genetic distances between protein sequences#
+    mydist <- dist.alignment(fox1aln)#
+#
+    # construct a phylogenetic tree with the neighbor joining algorithm#
+    library(ape)#
+    mytree <- nj(mydist)#
+    mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+    plot.phylo(mytree, main = "Phylogenetic Tree")#
+#
+    # get sequence annotations#
+    unlist(getAnnot(seqs))
+write.tree(mytree, file="myNewick.tree")
+write.tree
+?write.tree
+example(write.tree)
+library(msa)#
+    example(msa)
+library(msa)
+library(help=msa)
+library(msa)
+library(help=msa)
+example(msa)
+library(msa)#
+    example(msa)
+# retrieve several sequences from UniProt#
+library("seqinr")#
+retrieve_seqs_uniprot <- function(ACCESSION) read.fasta(file = paste0("http://www.uniprot.org/uniprot/",ACCESSION,".fasta"), seqtype = c("AA"), strip.desc = TRUE)[[1]]#
+#seqnames <- c("Q10572","E3M2K8","Q8WS01","E1FUV2","A8NSK3","Q9VT99")#
+seqnames <- c("Q10572","E3M2K8","Q8WS01","Q9VT99")#
+seqs <- lapply(seqnames,  retrieve_seqs_uniprot)#
+#
+# write out the sequences to a FASTA file#
+write.fasta(seqs, seqnames, file="fox1.fasta")#
+#
+# Read an XStringSet object from a file#
+library(Biostrings)#
+mySequences <- readAAStringSet(file = "fox1.fasta")#
+#
+# Multiple Sequence Alignment using ClustalW#
+library(msa)#
+myAlignment <- msa(mySequences)#
+#
+# convert msa for the seqinr package#
+fox1aln <- msaConvert(myAlignment, type="seqinr::alignment")#
+#
+# calculating genetic distances between protein sequences#
+mydist <- dist.alignment(fox1aln)#
+#
+# construct a phylogenetic tree with the neighbor joining algorithm#
+library(ape)#
+mytree <- nj(mydist)#
+mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)#
+plot.phylo(mytree, main = "Phylogenetic Tree")
+mytree
+names(mytree)
+mytree$tip.lable
+mytree$tip.label
+?root
+setwd("~/projects/r4bioinfo/R_tree/examples")#
+Accession_List <- "Accession_List.txt"
+dir()
+# Loading Data into R#
+ACCESSIONs <- read.table(Accession_List, stringsAsFactors=FALSE)[,1]#
 #
 # Load SeqinR package#
 #install.packages("seqinr")#
-library(seqinr)#
-#
+library(seqinr)
+ACCESSIONs
 # Retrieving sequence data using SeqinR#
 eutils.ncbi.fasta <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), strip.desc = TRUE)[[1]]#
-ld <- lapply(ACCESSIONs, eutils.ncbi.fasta)#
-#
-# Writing sequence data out as a FASTA file#
-write.fasta(sequences=ld, names=paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) (.+)", "\\2_\\1", getAnnot(ld)), sep="_"), file.out=paste0("hs_",format(Sys.time(), "%Y-%m-%d"),".fasta") )#
-#
-# Check Directory#
-getwd()#
-dir()
-2+7
-x <- 2 + 7
-x
-TRUE
-FALSE
-x
-y
-x
-y
-2+7#
-x <- 2 + 7#
-x
-x
-ls()
-n <- 5
-n
-ls()
-x <- "acgt"
-ls()
-str(n)
-str(x)
-?str
-n
-x
-str(x)
-rm(n)
-ls()
-?c
-c(1,2,3)
-c(5,6,7)
-c(2, 6.6, 9.6)
-x <- c(2, 6.6, 9.6)
-x
-1:10
-10:1
-x
-y
-y <- 2.2:6
-y
-x
-y
-c(x, y)
-1:10
-5:-5
-x <- c(2, 6.6, 9.6)
-x
-x <- c(2, 6.6666, 9.6)
-x
-x <- c(2, 6.6666, TRUE, FALSE)
-x
-x <- c(1, 2, TRUE, FALSE)
-x
-x <- c(1, 2, "a", "b")
-x
-z <- c("order", "family", "genus", "species")
-z
-length(z)
-z
-z[2]
-z[3]
-z[c(2,3)]
-c(2,3)
-z[c(2,3)]
-1:2
-1:3
-z[1:2]
-z
-c(1, 3)
-i <- c(1, 3)
-i
-z[i]
-z
-args
-#setwd("~/projects/r4bioinfo/R_tree/examples")#
-    source("get_fasta.R")
-setwd("~/projects/r4bioinfo/R_tree/examples")#
-    source("get_fasta.R")
+ld <- lapply(ACCESSIONs, eutils.ncbi.fasta)
+ls
+ld
+paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) (.+)", "\\2_\\1", getAnnot(ld)), sep="_")
+unlist(getAnnot(ld))
+paste(sprintf("%02d", 1:length(ld)), sub("([^ ]+) ([^ ]+) ([^ ]+) (.+)", "\\2_\\3_\\1", getAnnot(ld)), sep="_")
