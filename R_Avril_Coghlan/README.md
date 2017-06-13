@@ -784,7 +784,11 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
 **UniProtから複数の配列を取得**
 
-[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の Phosphoprotein のタンパク質配列（UniProt accession は [P06747](http://www.uniprot.org/uniprot/P06747), [P0C569](http://www.uniprot.org/uniprot/P0C569), [O56773](http://www.uniprot.org/uniprot/O56773), [Q5VKP1](http://www.uniprot.org/uniprot/Q5VKP1)）を取得し、FASTA形式で保存する:  
+[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の Phosphoprotein のタンパク質配列（UniProt accession は 
+[P06747](http://www.uniprot.org/uniprot/P06747), 
+[P0C569](http://www.uniprot.org/uniprot/P0C569), 
+[O56773](http://www.uniprot.org/uniprot/O56773), 
+[Q5VKP1](http://www.uniprot.org/uniprot/Q5VKP1)）を取得し、FASTA形式で保存する:  
 
     library("seqinr")
     # create a function to retrieve several sequences from UniProt
@@ -829,6 +833,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
     library(seqinr)
     virusaln <- read.alignment(file = "myAlignment.fasta", format = "fasta")
+    names(virusaln)
 	virusaln$seq
 
 ### [Viewing a long multiple alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#viewing-a-long-multiple-alignment)
@@ -844,12 +849,14 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 	virusdist <- dist.alignment(virusaln) # Calculate the genetic distances
 	virusdist                             # Print out the genetic distance matrix
 
+距離行列より、"O56773"と"P0C569"との間の遺伝的距離が最小（0.4142670）、"Q5VKP1"と"O56773"との間の遺伝的距離が最大（0.5067117）である。
+
 ### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
 
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の無根系統樹の構築**
 
-[根を持つ系統樹を有根系統樹(rooted tree), 根を持たない系統樹を無根系統樹(unrooted tree)と呼ぶ。](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
+タンパク質配列の距離行列に基づいて、[近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法) により系統樹を構築する。
 
     # construct a phylogenetic tree with the neighbor joining algorithm
     #install.packages("ape")
@@ -857,20 +864,29 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     mytree <- nj(virusdist)
 	plot.phylo(mytree,type="u")   # plot the unrooted phylogenetic tree
 
+    # get sequence annotations
+    unlist(getAnnot(seqs))
+
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image9.png)
 
 系統樹で"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
 
-    # get sequence annotations
-    unlist(getAnnot(seqs))
-
-    sp|P06747|PHOSP_RABVP Phosphoprotein OS=Rabies virus (strain Pasteur vaccins / PV) GN=P PE=1 SV=1
-    sp|P0C569|PHOSP_MOKV Phosphoprotein OS=Mokola virus GN=P PE=1 SV=1
-    sp|O56773|PHOSP_LBV Phosphoprotein OS=Lagos bat virus GN=P PE=2 SV=1
-    sp|Q5VKP1|PHOSP_WCBV Phosphoprotein OS=West Caucasian bat virus GN=P PE=2 SV=1
+- [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
+  - 枝長(branch length)　その枝で生じた変化の数。
+  - 根を持つ系統樹を有根系統樹(rooted tree), 根を持たない系統樹を無根系統樹(unrooted tree)と呼ぶ。
+  - 内群（ingroup）　今、系統推定の対象としているグループのこと。
+  - 外群 (outgoup)　内群に含まれない分類群はすべて外群（outgroup）になる。外群は通常、系統樹に根をつけるときに使われ、内群の姉妹群から複数のものを用いることが多い。
 
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
+
+線虫 fox-1 遺伝子は性決定に関わる。
+[線虫 Caenorhabditis elegans](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス), Caenorhabditis remanei, Kladothrips waterhousei, [キイロショウジョウバエ Drosophila melanogaster](https://ja.wikipedia.org/wiki/キイロショウジョウバエ) の 相同タンパク質配列（UniProt accession: 
+[Q10572](http://www.uniprot.org/uniprot/Q10572), 
+[E3M2K8](http://www.uniprot.org/uniprot/E3M2K8), 
+[Q8WS01](http://www.uniprot.org/uniprot/Q8WS01), 
+[Q9VT99](http://www.uniprot.org/uniprot/Q9VT99)
+）を取得し、多重配列アライメントに基づく有根系統樹を構築する。
 
     # retrieve several sequences from UniProt
     library("seqinr")
@@ -902,21 +918,13 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     mytree <- root(mytree, outgroup = "Q8WS01", resolve.root = TRUE)
     plot.phylo(mytree, main = "Phylogenetic Tree")
 
+    # get sequence annotations
+    unlist(getAnnot(seqs))
+
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image11.png)
 
 [外群](https://ja.wikipedia.org/wiki/外群)として"Q8WS01"を選択し、系統樹に根をつける。
 最初に外群("Q8WS01")と他の集団が分岐し、次に"Q9VT99"と他の集団("Q10572", "E3M2K8")が分岐したと推定される。
-
-    # get sequence annotations
-    unlist(getAnnot(seqs))
-
-    sp|Q10572|FOX1_CAEEL Sex determination protein fox-1 OS=Caenorhabditis elegans GN=fox-1 PE=1 SV=2
-    tr|E3M2K8|E3M2K8_CAERE CRE-FOX-1 protein OS=Caenorhabditis remanei GN=Cre-fox-1 PE=4 SV=1
-    tr|Q8WS01|Q8WS01_9NEOP Elongation factor-1 alpha (Fragment) OS=Kladothrips waterhousei GN=EF-1a PE=4 SV=1
-    tr|Q9VT99|Q9VT99_DROME RNA-binding Fox protein 1, isoform J OS=Drosophila melanogaster GN=Rbfox1 PE=4 SV=3
-
-- [線虫 Caenorhabditis elegans](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス)
-- [キイロショウジョウバエ Drosophila melanogaster](https://ja.wikipedia.org/wiki/キイロショウジョウバエ)
 
 ### [Building a phylogenetic tree for DNA or mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-phylogenetic-tree-for-dna-or-mrna-sequences)
 
@@ -930,9 +938,12 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ### Summary
 
-	read.alignment()
-	dist.alignment()
-	dist.dna()
+    # library(seqinr)
+    ?read.alignment
+    ?dist.alignment
+    # library(ape)
+    ?dist.dna
+    example(nj)
 
 ### Links and Further Reading
 
