@@ -880,8 +880,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
 
-線虫 fox-1 遺伝子は性決定に関わる。
-[線虫 Caenorhabditis elegans](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス), Caenorhabditis remanei, [Kladothrips waterhousei](http://what-when-how.com/insects/thrips-insects/), [キイロショウジョウバエ Drosophila melanogaster](https://ja.wikipedia.org/wiki/キイロショウジョウバエ) の 相同タンパク質配列（UniProt accession: 
+線虫 fox-1 遺伝子は性決定に関わる。[線虫 Caenorhabditis elegans](https://ja.wikipedia.org/wiki/カエノラブディティス・エレガンス), Caenorhabditis remanei, [Kladothrips waterhousei](http://what-when-how.com/insects/thrips-insects/), [キイロショウジョウバエ Drosophila melanogaster](https://ja.wikipedia.org/wiki/キイロショウジョウバエ) の 相同タンパク質配列（UniProt accession は 
 [Q10572](http://www.uniprot.org/uniprot/Q10572), 
 [E3M2K8](http://www.uniprot.org/uniprot/E3M2K8), 
 [Q8WS01](http://www.uniprot.org/uniprot/Q8WS01), 
