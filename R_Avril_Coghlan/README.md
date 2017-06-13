@@ -771,10 +771,20 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
-### Retrieving a list of sequences from UniProt
+    # Multiple Sequence Alignment 多重配列アライメント
+    #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")
+    library(msa)
+    example(msa)
+
+    # Phylogenetic trees 系統樹
+    #install.packages("ape")
+    library(ape)
+    example(plot.phylo)
+
+### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
 **UniProtから複数の配列を取得**
 
-[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の Phosphoprotein のタンパク質配列（UniProt accession は [P06747](http://www.uniprot.org/uniprot/P06747), [P0C569](http://www.uniprot.org/uniprot/P0C569), [O56773](http://www.uniprot.org/uniprot/O56773), [Q5VKP1](http://www.uniprot.org/uniprot/Q5VKP1)）を取得する:  
+[狂犬病ウイルス](https://ja.wikipedia.org/wiki/狂犬病ウイルス) Rabies virus, Mokola virus, Lagos bat virus, West Caucasian bat virus の Phosphoprotein のタンパク質配列（UniProt accession は [P06747](http://www.uniprot.org/uniprot/P06747), [P0C569](http://www.uniprot.org/uniprot/P0C569), [O56773](http://www.uniprot.org/uniprot/O56773), [Q5VKP1](http://www.uniprot.org/uniprot/Q5VKP1)）を取得し、FASTA形式で保存する:  
 
     library("seqinr")
     # create a function to retrieve several sequences from UniProt
@@ -793,7 +803,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ### [Installing the CLUSTAL multiple alignment software](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#installing-the-clustal-multiple-alignment-software)
 
-[Clustal](https://ja.wikipedia.org/wiki/Clustal)は広く用いられている多重整列プログラムである。
+多重整列プログラム
+[Clustal](https://ja.wikipedia.org/wiki/Clustal)
 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
 **CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アライメントの作成**
@@ -808,6 +819,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")
     library(msa)
     myAlignment <- msa(mySequences, "ClustalW")
+    myAlignment
 
     # write an XStringSet object to a file
     writeXStringSet(unmasked(myAlignment), file = "myAlignment.fasta")
@@ -847,7 +859,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image9.png)
 
-系統樹で"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成している。
+系統樹で"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
 
     # get sequence annotations
     unlist(getAnnot(seqs))
