@@ -765,20 +765,20 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ## [Multiple Alignment and Phylogenetic trees](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html)
 **多重配列アライメントと系統樹**
 
-- [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) [多重整列](https://ja.wikipedia.org/wiki/多重整列) [マルチプルアライメント](http://bio-info.biz/article/ase_msa.html)
-- [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) [系統樹](https://ja.wikipedia.org/wiki/系統樹)
-- [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics) [系統学](https://ja.wikipedia.org/wiki/系統学) 
+- [多重整列](https://ja.wikipedia.org/wiki/多重整列) [マルチプルアライメント](http://bio-info.biz/article/ase_msa.html) [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) 
+- [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) 
+- [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics) 
 
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
-R言語のデモ
+R言語デモ
 
-    # Multiple Sequence Alignment 多重配列アライメント
+    # 多重整列 # Multiple Sequence Alignment 
     #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")
     library(msa)
     example(msa)
 
-    # Phylogenetic trees 系統樹
+    # 系統樹 # Phylogenetic trees 
     #install.packages("ape")
     library(ape)
     example(plot.phylo)
