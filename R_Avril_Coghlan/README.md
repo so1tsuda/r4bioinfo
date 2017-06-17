@@ -771,12 +771,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
-- [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
-- [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
-- [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
-- [これが「棒の手紙」だ！](http://kokorohaitsumo15sai.la.coocan.jp/bonotegami.htm)
-
-デモ
+R言語のデモ
 
     # Multiple Sequence Alignment 多重配列アライメント
     #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")
@@ -970,7 +965,10 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ----------
 
-http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語
+- [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
+- [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
+- [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
+- [これが「棒の手紙」だ！](http://kokorohaitsumo15sai.la.coocan.jp/bonotegami.htm)
 
 https://www.fifthdimension.jp/wiki.cgi
 田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法", 2010年度日本計量生物学会特別セッション『農学・生態学・進化学でのベイズ統計手法の応用に関する諸問題』. Preprint PDF: 20100522BiometricsJapanPreprint.pdf(5955)
@@ -978,5 +976,4 @@ https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJap
 
 [SeaView](http://doua.prabi.fr/software/seaview)
 [使用法](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
-
 
