@@ -879,11 +879,13 @@ R言語デモ
 
 系統樹では、"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
 
-- [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
+[
+- 系統推定の基本用語
   - 枝長(branch length)　その枝で生じた変化の数。
   - 根を持つ系統樹を有根系統樹(rooted tree), 根を持たない系統樹を無根系統樹(unrooted tree)と呼ぶ。
   - 内群（ingroup）　今、系統推定の対象としているグループのこと。
   - 外群 (outgoup)　内群に含まれない分類群はすべて外群（outgroup）になる。外群は通常、系統樹に根をつけるときに使われ、内群の姉妹群から複数のものを用いることが多い。
+](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
 
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
@@ -929,8 +931,6 @@ R言語デモ
 
     # get sequence annotations
     unlist(getAnnot(seqs))
-
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image11.png)
 
 ### [Building a phylogenetic tree for DNA or mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-phylogenetic-tree-for-dna-or-mrna-sequences)
 
