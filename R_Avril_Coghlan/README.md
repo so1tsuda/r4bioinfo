@@ -719,7 +719,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
     writePairwiseAlignments(globalAlignLepraeUlcerans)
 
-    writePairwiseAlignments(globalAlignLepraeUlcerans, file="./myAlignment.txt")
+    writePairwiseAlignments(globalAlignLepraeUlcerans, file="globalAlignLepraeUlcerans.txt")
 
 ### [Pairwise local alignment of protein sequences using the Smith-Waterman algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-local-alignment-of-protein-sequences-using-the-smith-waterman-algorithm)
 **2つのタンパク質配列間のローカル・アライメント**
@@ -931,8 +931,6 @@ R言語デモ
     unlist(getAnnot(seqs))
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image11.png)
-
-最初に外群("Q8WS01")と他の集団が分岐し、次に"Q9VT99"と他の集団("Q10572", "E3M2K8")が分岐したと推定される。
 
 ### [Building a phylogenetic tree for DNA or mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-phylogenetic-tree-for-dna-or-mrna-sequences)
 
