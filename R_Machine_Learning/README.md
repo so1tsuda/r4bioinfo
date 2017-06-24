@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-06-10
+Last Update: 2017-06-24
 
 ----------
 
@@ -9,11 +9,48 @@ Last Update: 2017-06-10
 [機械学習](https://ja.wikipedia.org/wiki/機械学習)
 
 ## Table of Contents
+- TensorFlow
 - [TJO](#tjo)
   - [2015-11-26](#2015-11-26) ヒトの直感的理解は単変量モデルまで、直感を超えたければ多変量モデルへ
 - [JIN'S PAGE](#jins-page)
   - [Chap_31](#chap_31) Rとカーネル法
   - [Chap_32](#chap_32) Rと集団学習
+
+----------
+# TensorFlow
+
+## 2017-06-02
+http://tjo.hatenablog.com/entry/2017/06/02/190000
+RにTensorFlow + Kerasを実装した{keras}パッケージがやって来たので試してみた（追記2件あり） - 六本木で働くデータサイエンティストのブログ
+
+
+## 2017-03-22
+http://datalove.hatenadiary.jp/entry/ml/tensorflow/now-google-machine-learning-library-tensorflow-supports-r
+TensorFlow R を使ってみた ~ Google の機械学習ライブラリが R に対応 / Now Google's machine learning library TensorFlow supports R - datalove’s diary
+
+
+Collecting tensorflow
+  Could not find a version that satisfies the requirement tensorflow (from versions: )
+No matching distribution found for tensorflow
+
+## 2017-02-26
+http://ushi-goroshi.hatenablog.com/entry/2017/02/26/165305
+RでTensorFlow - 統計コンサルの議事メモ 
+
+##  2017-01-03
+http://qiita.com/yamano357/items/66272759fc29a5a2dd01
+とりいそぎ{PythonInR}でRからTensorFlowを動かしてみた by @yamano357 on @Qiita 
+
+## 2016-10-27
+http://qiita.com/yamano357/items/b6f566c9eb6f19538008
+{tensorflow}をirisデータで試してみる by @yamano357 on @Qiita 
+
+## 2016-10-05
+http://pracmper.blogspot.jp/2016/10/tensorflow-for-r-1.html
+TensorFlow for R を使ってみる (1)
+
+http://pracmper.blogspot.jp/2016/10/tensorflow-for-r2.html
+TensorFlow for Rを使ってみる(2)
 
 ----------
 
