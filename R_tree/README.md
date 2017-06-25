@@ -274,17 +274,15 @@ ade4 パッケージを利用して読み込む
     plot(tree)
 
 ![](https://stat.biopapyrus.net/media/r/ape-plot-basis.png)
+
     edgelabels(text = tree$edge.length)
 
 ![](https://stat.biopapyrus.net/media/r/ape-plot-edgelabel.png)
 
     nodelabels()
 
-
 ![](https://stat.biopapyrus.net/media/r/ape-plot-sortscale.png)
 
-
-![](https://stat.biopapyrus.net/media/r/ape-plot-scaleadjust.png)
 
 **ade4 を利用した系統樹作成**
 
