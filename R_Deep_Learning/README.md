@@ -269,36 +269,6 @@ https://www.ncbi.nlm.nih.gov/pubmed/26213851
 Nat Biotechnol. 2015 Aug;33(8):831-8.
 Predicting the sequence specificities of DNA- and RNA-binding proteins by deep learning.
 
-### Microbiome
-
-https://www.ncbi.nlm.nih.gov/pubmed/26589281
-Bioinformatics. 2016 Apr 1;32(7):1023-32. 
-Large-scale machine learning for metagenomics sequence classification.
-- k-mers
-
-https://www.ncbi.nlm.nih.gov/pubmed/26316190
-IEEE Trans Nanobioscience. 2015 Sep;14(6):608-16. 
-Multi-Layer and Recursive Neural Networks for Metagenomic Classification.
-- two deep learning methods: i) a deep belief network, and ii) a recursive neural network, 
-
-January 25, 2017
-https://www.hpcwire.com/2017/01/25/ucsd-venter-leverage-ml-study-microbiome/
-UCSD/Venter Institute Leverage ML to Study the Microbiome
-http://lsmarr.calit2.net/repository/IEEE_BigData_KEGGs_CAMERA_READY.pdf
-Using Machine Learning to Identify Major Shifts in Human Gut Microbiome Protein Family Abundance in Disease
-
-JULY 04, 2016
-http://alifar76.github.io/cnn-microbiome/
-Convolutional Neural Networks and Microbiome: An exploratory analysis – Ali A. Faruqi
-
-JUNE 27, 2016
-http://alifar76.github.io/diagnostic-platform/
-Diagnosis through deep learning: Using TensorFlow with microbiome data – Ali A. Faruqi
-
-1 Dec 2015
-https://arxiv.org/abs/1512.00397
-A New Approach for Scalable Analysis of Microbial Communities
-
 ### Riccardo Rizzo
 
 First Online: 31 July 2016
