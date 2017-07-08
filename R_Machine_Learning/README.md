@@ -167,6 +167,54 @@ https://www.ncbi.nlm.nih.gov/pubmed/26686880
 Nat Commun. 2015 Dec 21;6:10063. 
 Rapid antibiotic-resistance predictions from genome sequence data for Staphylococcus aureus and Mycobacterium tuberculosis.
 
+### Microbiology
+
+https://www.ncbi.nlm.nih.gov/pubmed/28051068
+Sci Rep. 2017 Jan 4;7:39194. doi: 10.1038/srep39194.
+PaPrBaG: A machine learning approach for the detection of novel pathogens from NGS data.
+Deneke C1, Rentzsch R1, Renard BY1.
+
+January 25, 2017
+https://www.hpcwire.com/2017/01/25/ucsd-venter-leverage-ml-study-microbiome/
+UCSD/Venter Institute Leverage ML to Study the Microbiome
+http://lsmarr.calit2.net/repository/IEEE_BigData_KEGGs_CAMERA_READY.pdf
+Using Machine Learning to Identify Major Shifts in Human Gut Microbiome Protein Family Abundance in Disease
+
+https://www.ncbi.nlm.nih.gov/pubmed/27400279
+PLoS Comput Biol. 2016 Jul 11;12(7):e1004977. doi: 10.1371/journal.pcbi.1004977. eCollection 2016 Jul.
+Machine Learning Meta-analysis of Large Metagenomic Datasets: Tools and Biological Insights.
+Pasolli E1, Truong DT1, Malik F2, Waldron L2, Segata N1.
+
+JULY 04, 2016
+http://alifar76.github.io/cnn-microbiome/
+Convolutional Neural Networks and Microbiome: An exploratory analysis – Ali A. Faruqi
+
+JUNE 27, 2016
+http://alifar76.github.io/diagnostic-platform/
+Diagnosis through deep learning: Using TensorFlow with microbiome data – Ali A. Faruqi
+
+2016-05-31
+https://www.degruyter.com/view/j/metgen.2016.1.issue-1/metgen-2016-0001/metgen-2016-0001.xml
+Machine learning for metagenomics: methods and tools : Metagenomics
+
+https://www.ncbi.nlm.nih.gov/pubmed/26589281
+Bioinformatics. 2016 Apr 1;32(7):1023-32. 
+Large-scale machine learning for metagenomics sequence classification.
+- k-mers
+
+https://www.ncbi.nlm.nih.gov/pubmed/26316190
+IEEE Trans Nanobioscience. 2015 Sep;14(6):608-16. 
+Multi-Layer and Recursive Neural Networks for Metagenomic Classification.
+- two deep learning methods: i) a deep belief network, and ii) a recursive neural network, 
+
+1 Dec 2015
+https://arxiv.org/abs/1512.00397
+A New Approach for Scalable Analysis of Microbial Communities
+
+2014
+https://link.springer.com/chapter/10.1007/978-3-662-44845-8_47
+Machine Learning Approaches for Metagenomics
+
 ----------
 
 メタゲノムのコドン使用
