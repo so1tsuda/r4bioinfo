@@ -117,6 +117,8 @@ https://cran.r-project.org/doc/manuals/R-intro.html
 ### [Using R for Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#using-r-for-bioinformatics)
 **R言語を用いたバイオインフォマティクス**
 
+![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
+
 ### [R packages for bioinformatics: Bioconductor and SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#r-packages-for-bioinformatics-bioconductor-and-seqinr)
 **バイオインフォマティクスのためのRパッケージ：BioconductorとSeqinR**
 
