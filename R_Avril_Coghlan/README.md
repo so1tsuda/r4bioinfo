@@ -114,10 +114,10 @@ https://cran.r-project.org/doc/manuals/R-intro.html
 
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
 
-### Using R for Bioinformatics
+### [Using R for Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#using-r-for-bioinformatics)
 **R言語を用いたバイオインフォマティクス**
 
-### R packages for bioinformatics: Bioconductor and SeqinR
+### [R packages for bioinformatics: Bioconductor and SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#r-packages-for-bioinformatics-bioconductor-and-seqinr)
 **バイオインフォマティクスのためのRパッケージ：BioconductorとSeqinR**
 
 [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
@@ -143,12 +143,12 @@ Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/relea
 
     library(Biostrings)
 
-### FASTA format
+### [FASTA format](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#fasta-format)
 **[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式**
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
-### The NCBI sequence database
+### [The NCBI sequence database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#the-ncbi-sequence-database)
 **[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース**
 
 ![http://www.ddbj.nig.ac.jp/insdc/insdc-j.html](http://www.ddbj.nig.ac.jp/wp-content/uploads/insdc_shoukai550_20130515.gif)  
@@ -168,7 +168,7 @@ Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/relea
 
 ![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
 
-### Retrieving genome sequence data via the NCBI website
+### [Retrieving genome sequence data via the NCBI website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-via-the-ncbi-website)
 **NCBIウェブサイトでゲノム配列データの検索**
 
 DEN-1デング熱ウイルスのDNA配列を検索するには、NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) にアクセスし、ウェブページ上部の検索ボックスにNCBI accession [ NC_001477 ] を入力して、"Search"ボタンを押す:  
@@ -192,14 +192,15 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
-### Retrieving genome sequence data using SeqinR
+### [Retrieving genome sequence data using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-using-seqinr)
 **Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)を用いて、ゲノム配列データを取得**
 
-    #choosebank("refseqViruses")
-    #query2 <- query("query2","AC=NC_001477")
-    #dengueseq <- getSequence(query2$req[[1]])
+    require("seqinr")
+    choosebank("refseqViruses")
+    query2 <- query("query2","AC=NC_001477")
+    dengueseq <- getSequence(query2$req[[1]])
 
-### Writing sequence data out as a FASTA file
+### [Writing sequence data out as a FASTA file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#writing-sequence-data-out-as-a-fasta-file)
 **配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
 
     library("seqinr")
@@ -214,7 +215,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     setwd("~")
     setwd("~/Downloads/")
 
-### Reading sequence data into R
+### [Reading sequence data into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#reading-sequence-data-into-r)
 **配列データをRに読み込む**
 
 `read.fasta()`関数でFASTA形式ファイル（den1.fasta）を読み込む:  
@@ -229,19 +230,19 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 	dengueseq[1:50]
 
-### Length of a DNA sequence
+### [Length of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#length-of-a-dna-sequence)
 **DNA配列の長さ**
 
 	length(dengueseq)
 
-### Base composition of a DNA sequence
+### [Base composition of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#base-composition-of-a-dna-sequence)
 **DNA配列の塩基組成**
 
 	table(dengueseq)
 
 ![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
 
-### GC Content of DNA
+### [GC Content of DNA](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#gc-content-of-dna)
 **DNAの[GC含量](https://ja.wikipedia.org/wiki/GC含量)**
 (G+C)/(A+T+G+C)
 
@@ -253,7 +254,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 ![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Inferring_horizontal_gene_transfer_average_GC_content.svg/400px-Inferring_horizontal_gene_transfer_average_GC_content.svg.png)
 
-### DNA words
+### [DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
 **連続塩基**
 
     words(length = 2)  #  dinucleotides 2連続塩基 
