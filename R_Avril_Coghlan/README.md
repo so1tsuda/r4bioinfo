@@ -197,10 +197,10 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ### [Retrieving genome sequence data using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-using-seqinr)
 **Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)を用いて、ゲノム配列データを取得**
 
-    require("seqinr")
-    choosebank("refseqViruses")
-    query2 <- query("query2","AC=NC_001477")
-    dengueseq <- getSequence(query2$req[[1]])
+    #require("seqinr")
+    #choosebank("refseqViruses")
+    #query2 <- query("query2","AC=NC_001477")
+    #dengueseq <- getSequence(query2$req[[1]])
 
 ### [Writing sequence data out as a FASTA file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#writing-sequence-data-out-as-a-fasta-file)
 **配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
