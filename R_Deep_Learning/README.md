@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-06-03
+Last Update: 2017-07-08
 
 ----------
 
@@ -234,6 +234,8 @@ What are the best packages for deep learning in R? - Quora
 
 ### Review
 
+https://twitter.com/hillbig/status/901972984239243264
+岡野原 大輔 on Twitter: "深層学習が生物学や医療分野でどのように活用され，問題があるかのまとめ。患者分類、診断、オミックス解析、創薬、薬剤耐性など広く扱う。生物画像や音声と比べて医療のデータ量は限られており，学習済みモデルの転用や転移学習などが重要となる。https://t.co/8YACVNdic5"
 https://greenelab.github.io/deep-review/
 Opportunities And Obstacles For Deep Learning In Biology And Medicine | bioRxiv
 May 28, 2017
