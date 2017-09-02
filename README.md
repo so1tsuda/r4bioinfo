@@ -1,7 +1,7 @@
 ----------
 
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-04-01
+Last Update: 2017-09-02
 
 ----------
 
@@ -154,8 +154,13 @@ Using the R SeqinR package
 Posted on May 9, 2013
 
 https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf
-Applied Statistics for Bioinformatics using RWim P. Krijnen
+Applied Statistics for Bioinformatics using R
+Wim P. Krijnen
 November 10, 2009
+
+## Unclassified
+https://twitter.com/h_okumura/status/903793374603354113
+Haruhiko Okumura on Twitter: "ずっと前に書いた「統計グラフの色」 https://t.co/ajrGsvMMDU にSim Daltonismを追記した。カラーユニバーサルデザイン推奨配色セットについても書いてあるのでぜひ一読を"
 
 ----------
 
