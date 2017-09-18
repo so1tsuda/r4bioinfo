@@ -8,17 +8,48 @@ Last Update: 2017-04-01
 # phytools
 phytools: Phylogenetic Tools for Comparative Biology (and Other Things)  
 by [Liam J. Revell](https://github.com/liamrevell)
-
 - [CRAN - Package phytools](https://cran.r-project.org/web/packages/phytools/index.html)
-- https://github.com/liamrevell/phytools
-- ブログ [blog](http://blog.phytools.org)
 - 論文 [Revell (2011) Methods in Ecology and Evolution. "phytools: an R package for phylogenetic comparative biology (and other things)"](http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.00169.x/abstract)  
 - 動画 2011-12-15 [Introduction to phytools and phangorn: Phylogenetics tools for R - YouTube](https://www.youtube.com/watch?v=_oEvbcmyVDQ)
+- ブログ [blog](http://blog.phytools.org)
 
 ----------
 
+http://blog.phytools.org
+Phylogenetic Tools for Comparative Biology
+
+----------
+2016-01-29
+
+http://blog.phytools.org/2016/01/new-function-for-phylogenetic-heat-map.html
+New function for phylogenetic heat map
+系統樹とヒートマップ
+
+	library(phytools)
+
+	## simulate a tree & some data
+	tree<-pbtree(n=26,tip.label=LETTERS[26:1])
+	X<-fastBM(tree,nsim=12)
+	phylo.heatmap(tree,X)
+
+	## for non-ultrametric trees:
+	tree<-rtree(n=40)
+	X<-fastBM(tree,nsim=20)
+	colnames(X)<-paste("trait",1:20)
+	phylo.heatmap(tree,X,fsize=c(0.8,0.8,1))
+
+![](https://www.google.co.jp/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiyw4SCnK7WAhUDGZQKHcjuDBoQjRwIBg&url=http%3A%2F%2Fblog.phytools.org%2F2016%2F01%2Fnew-function-for-phylogenetic-heat-map.html&psig=AFQjCNGyZYQwf7NA2tz5FCO56u4zrT3Irg&ust=1505806374374006)
+
+----------
+2016-12-16
+
+# [Una introducción a los métodos comparativos filogenéticos en R](http://www.phytools.org/Bariloche2016/)
+
+## [Exercise 1: Brief introduction to R](http://www.phytools.org/Bariloche2016/ex/1/Intro-to-R.html)
+練習1：R入門
+
 ## [Exercise 2: Introduction to phylogenies in R](http://www.phytools.org/Bariloche2016/ex/2/Intro-to-phylogenies.html)
-Rによる系統解析入門
+演習2：Rによる系統解析入門
 
 ### R phylogenetics packages
 Rの系統解析パッケージ
@@ -213,7 +244,6 @@ http://cwt.cb.k.u-tokyo.ac.jp/jconcept.html
 
 https://ja.wikipedia.org/wiki/二分木
 計算機科学でいう二分木（binary tree; 二進木、バイナリツリー）
-
 
 ----------
 
