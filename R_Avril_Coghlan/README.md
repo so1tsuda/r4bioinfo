@@ -16,7 +16,7 @@ By Avril Coghlan
 ## [How to install R and a Brief Introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html)
 R言語入門
 
-### Running R
+### [Running R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#running-r)
 
 [R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
 
@@ -27,29 +27,41 @@ R言語入門
 [簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
 演算子
 
+	# typing in commands
 	2*3
 	10-3
 
 [オブジェクトと代入（付値）](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/05.html)
 
+	# assign the value 2*3 to the variable x
 	x <- 2*3
+
+	# To view the contents of any R object, just type its name
 	x
 
 [ベクトル](http://stat.biopapyrus.net/vector/vector.html)  
 ベクトルの作成は関数`c()`を用いる。
 
+	# a vector consists of several elements. The elements in a vector are all of the same type (eg. numeric or characters), while lists may include elements such as characters as well as numeric quantities.
+	# To create a vector, we can use the c() (combine) function. For example, to create a vector called myvector that has elements with values 8, 6, 9, 10, and 5, we type:
 	myvector <- c(8, 6, 9, 10, 5)
+
+	# To see the contents of the variable myvector, we can just type its name:
 	myvector
 
 [ベクトル要素へのアクセス](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)  
 インデックス（添字）  
 
+	# The [1] is the index of the first element in the vector. We can extract any element of the vector by typing the vector name with the index of that element given in square brackets.
+	# get the value of the 4th element in the vector myvector
 	myvector[4]
 
 [リスト](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/23.html)  
 リストは異なる型（数値や文字列）のデータをまとめられる。
 リストの作成は関数`list()`を用いる。
 
+	# In contrast to a vector, a list can contain elements of different types, for example, both numeric and character elements.
+	# create a list mylist:
 	mylist <- list(name="Fred", wife="Mary", myvector)
 	mylist
 
