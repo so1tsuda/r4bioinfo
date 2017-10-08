@@ -42,17 +42,15 @@ R言語入門
 [ベクトル](http://stat.biopapyrus.net/vector/vector.html)  
 ベクトルの作成は関数`c()`を用いる。
 
-	# a vector consists of several elements. The elements in a vector are all of the same type (eg. numeric or characters), while lists may include elements such as characters as well as numeric quantities.
-	# To create a vector, we can use the c() (combine) function. For example, to create a vector called myvector that has elements with values 8, 6, 9, 10, and 5, we type:
+	# create a vector called myvector that has elements with values 8, 6, 9, 10, and 5:
 	myvector <- c(8, 6, 9, 10, 5)
 
-	# To see the contents of the variable myvector, we can just type its name:
+	# see the contents of the variable myvector:
 	myvector
 
 [ベクトル要素へのアクセス](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/13.html)  
 インデックス（添字）  
 
-	# The [1] is the index of the first element in the vector. We can extract any element of the vector by typing the vector name with the index of that element given in square brackets.
 	# get the value of the 4th element in the vector myvector
 	myvector[4]
 
@@ -67,49 +65,64 @@ R言語入門
 
 `[[ ]]`はリスト内の要素（ベクトル）を取り出す。
 
+	# extract the second and third elements from mylist:
 	mylist[[2]]
 	mylist[[3]]
 
 リストの要素に名前が付けられている場合、`$`記号でアクセスする。
 
+	# mylist$wife is the same as mylist[[2]]:
 	mylist$wife
+
+	# find the names of the named elements in a list
+	attributes(mylist)
 
 `table()`関数
 
+    # produce a table variable that contains the number of bases:
     mybases <- c("A", "C", "G", "T", "A")
     table(mybases)
+    # store the table variable produced by the function table(), and call the stored table “mytable”:
     mytable <- table(mybases)
     mytable
+    # access the 1st element in the table mytable (the number of base “A”):
     mytable[[1]]
     mytable[["A"]]
 
 [簡単な計算](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/03.html)  
 関数
 
+    # calculate the log to the base 10 of a number:
 	log10(100)
 
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 
+	# get help about a particular function
 	help(log10)
 
 標準偏差 standard deviation を計算する関数を探す
 
+	# search for all functions containing the word “deviation” in their description:
 	help.search("deviation")
 	RSiteSearch("deviation")
 
 ベクトルの値の平均
 
+	# calculate the average of the values in the vector myvector
 	mean(myvector)
 
 [関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
 [関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)  
 
+	# create a function to calculate the value of 20 plus square of some input number:
 	myfunction <- function(x) { return(20 + (x*x)) }
+	# use the function for different input numbers (eg. 10, 25):
 	myfunction(10)
 	myfunction(25)
 
 Rを終了:  
 
+	# To quit R, type:
     quit()
 	q()
 
