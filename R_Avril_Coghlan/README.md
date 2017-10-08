@@ -89,7 +89,7 @@ Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/relea
 リストは異なる型（数値や文字列）のデータをまとめられる。
 リストの作成は関数`list()`を用いる。
 
-	# In contrast to a vector, a list can contain elements of different types, for example, both numeric and character elements.
+	# In contrast to a vector, a list can contain elements of different types (e.g. both numeric and character elements).
 	# create a list mylist:
 	mylist <- list(name="Fred", wife="Mary", myvector)
 	mylist
@@ -108,7 +108,7 @@ Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/relea
 	# find the names of the named elements in a list
 	attributes(mylist)
 
-table 関数を使ったクロス集計](http://nshi.jp/contents/r/crosstab/)
+[table 関数を使ったクロス集計](http://nshi.jp/contents/r/crosstab/)
 
     # produce a table variable that contains the number of bases:
     mybases <- c("A", "C", "G", "T", "A")
