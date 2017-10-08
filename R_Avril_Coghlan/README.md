@@ -77,7 +77,7 @@ R言語入門
 	# find the names of the named elements in a list
 	attributes(mylist)
 
-`table()`関数
+table 関数を使ったクロス集計](http://nshi.jp/contents/r/crosstab/)
 
     # produce a table variable that contains the number of bases:
     mybases <- c("A", "C", "G", "T", "A")
