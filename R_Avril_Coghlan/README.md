@@ -16,6 +16,35 @@ By Avril Coghlan
 ## [How to install R and a Brief Introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html)
 R言語入門
 
+### [How to install an R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-an-r-package)
+
+[08. パッケージ・ライブラリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)
+
+[パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
+
+パッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)のインストール:  
+
+    # install the "seqinr" package
+    install.packages("seqinr")
+
+`seqinr`パッケージの呼び出し:  
+
+    # load the "seqinr" package into R
+    library(seqinr)
+
+### [How to install a Bioconductor R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-a-bioconductor-r-package)
+
+Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/release/bioc/html/Biostrings.html)のインストール:  
+
+    # install the Bioconductor package called "Biostrings"
+    source("https://bioconductor.org/biocLite.R")
+    biocLite("Biostrings")
+
+`Biostrings`パッケージの呼び出し:  
+
+    # load the "Biostrings" package into R
+    library(Biostrings)
+
 ### [Running R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#running-r)
 
 [R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
@@ -147,28 +176,15 @@ https://cran.r-project.org/doc/manuals/R-intro.html
 ### [R packages for bioinformatics: Bioconductor and SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#r-packages-for-bioinformatics-bioconductor-and-seqinr)
 **バイオインフォマティクスのためのRパッケージ：BioconductorとSeqinR**
 
-[パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
+`seqinr`パッケージの呼び出し:  
 
-パッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)のインストール:  
-
-    #install.packages("seqinr")
-
-[パッケージ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)`seqinr`を呼び出す:  
-
+	# load the “SeqinR” R package
 	library("seqinr")
 
 [ヘルプ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/07.html)
 
+	# ask for more information about the library() function
 	help("library")
-
-Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/release/bioc/html/Biostrings.html)のインストール:  
-
-    #source("https://bioconductor.org/biocLite.R")
-    #biocLite("Biostrings")
-
-`Biostrings`パッケージの呼び出し:  
-
-    library(Biostrings)
 
 ### [FASTA format](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#fasta-format)
 **[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式**
