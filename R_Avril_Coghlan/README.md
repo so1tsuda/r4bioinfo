@@ -18,9 +18,11 @@ R言語入門
 
 ### [Installing R packages](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r-packages)
 
-#### [How to install an R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-an-r-package)
+[08. パッケージ・ライブラリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)
 
 [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
+
+#### [How to install an R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-an-r-package)
 
 パッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)のインストール:  
 
