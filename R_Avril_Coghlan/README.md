@@ -274,7 +274,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 	GC(dengueseq)
 
 細菌のGC含量とゲノムサイズ
-
+https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer#Fig-2
 ![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Inferring_horizontal_gene_transfer_average_GC_content.svg/400px-Inferring_horizontal_gene_transfer_average_GC_content.svg.png)
 
 ### [DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
