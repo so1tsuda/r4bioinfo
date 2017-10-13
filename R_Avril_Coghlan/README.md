@@ -198,7 +198,7 @@ https://cran.r-project.org/doc/manuals/R-intro.html
 
 ![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
 
-配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションはそれぞれ  
+配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションは
 DEN-1 [NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477), 
 DEN-2 [NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474), 
 DEN-3 [NC_001475](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475), 
@@ -229,27 +229,14 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
 
 ### [Retrieving genome sequence data using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-using-seqinr)
-**Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)を用いて、ゲノム配列データを取得**
-
-    #require("seqinr")
-    #choosebank("refseqViruses")
-    #query2 <- query("query2","AC=NC_001477")
-    #dengueseq <- getSequence(query2$req[[1]])
 
 ### [Writing sequence data out as a FASTA file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#writing-sequence-data-out-as-a-fasta-file)
 **配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
 
     library("seqinr")
-    dengue <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/den1.fasta")
+    dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
     dengueseq <- dengue[[1]]
-
 	write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
-
-[作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)の変更と確認:  
-
-    getwd()
-    setwd("~")
-    setwd("~/Downloads/")
 
 ### [Reading sequence data into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#reading-sequence-data-into-r)
 **配列データをRに読み込む**
@@ -293,8 +280,8 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ### [DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
 **連続塩基**
 
-    words(length = 2)  #  dinucleotides 2連続塩基 
-    words(length = 3)  # trinucleotides 3連続塩基
+    words(length = 2) #  dinucleotides 2連続塩基 
+    words(length = 3) # trinucleotides 3連続塩基
 
 `count`関数で連続塩基のカウント
 
@@ -339,12 +326,14 @@ Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinfor
 
 [Rで繰り返しを含む数列の生成（rep関数、seq関数）](http://tips-r.blogspot.jp/2014/05/repseq.html)
 
+	# create a sequence of numbers
 	seq(1, 100, by = 1)
 	seq(1, 100, by = 2)
 
 [30. 繰り返し文](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/30.html)  
 for による繰り返し
 
+	# for loop to carry out the same command several times
 	for (i in 1:10) { print (i*i) }
 
 	avector <- c(2, 9, 100, 133)
@@ -354,6 +343,7 @@ for による繰り返し
 
 [48. とりあえず plot()](R-Source)
 
+	# plot a scatterplot of the values in myvector1 against the values in myvector2
 	myvector1 <- c(10, 15, 22, 35, 43)
 	myvector2 <- c(3, 3.2, 3.9, 4.1, 5.2)
 	plot(myvector1, myvector2, xlab="myvector1", ylab="myvector2")
@@ -362,6 +352,7 @@ for による繰り返し
 [関数の定義](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/31.html)  
 [関数の作り方 | functionによりRの関数を定義する方法](http://stat.biopapyrus.net/r/user-function.html)  
 
+	# create our own functions
 	myfunction <- function(x) { return(20 + (x*x)) }
 	myfunction(10)
 	myfunction(25)
@@ -369,6 +360,7 @@ for による繰り返し
 
 `＃`の後が[コメント](http://yusuke-memo.blogspot.jp/2009/10/r.html)行となる。
 
+	# writing the comment text after the “#” sign
 	x <- 100
 	log10(x) # Finds the log to the base 10 of variable x.
 
@@ -379,17 +371,15 @@ Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.
 DEN-1デング熱ウイルスのゲノム配列を取得する。
 
 	library("seqinr")                           # Load the SeqinR package.
-    # system('curl -L "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text" > den1.fasta')
 	dengue <- read.fasta(file = "den1.fasta")   # Read in the file "den1.fasta".
-    # dengue <- read.fasta(file = "https://raw.githubusercontent.com/haruosuz/r4bioinfo/master/R_Avril_Coghlan/examples/den1.fasta")
 	dengueseq <- dengue[[1]]                    # Put the sequence in a vector called "dengueseq".
 
-	dengueseq[452:535]
+	dengueseq[452:535] # obtain nucleotides 452-535 of the DEN-1 Dengue virus genome
 
 ### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
 GC含量の局所変動は、変異バイアスや[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)を示唆
 
-	# GC content of the sequence
+	# GC content of DNA sequence in the vector dengueseq
 	GC(dengueseq)
 
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
