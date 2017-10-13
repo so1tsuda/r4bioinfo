@@ -157,11 +157,7 @@ Rを終了:
     quit()
 	q()
 
-### Links and Further Reading
-
-https://cran.r-project.org/doc/contrib/Lemon-kickstart/
-
-https://cran.r-project.org/doc/manuals/R-intro.html
+### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#links-and-further-reading)
 
 ----------
 
@@ -303,7 +299,7 @@ https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer#Fig-2
 	GC()
 	count()
 
-### Links and Further Reading
+### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#links-and-further-reading)
 
 Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinformatics using R" by Krijnen (https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)
 
@@ -470,7 +466,7 @@ GC含量の移動プロット
 	numeric()
 	function()
 
-### Links and Further Reading
+### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#links-and-further-reading)
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#exercises)
 演習
@@ -773,7 +769,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 	nucleotideSubstitutionMatrix()
     ?pairwiseAlignment
 
-### Links and Further Reading
+### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#links-and-further-reading)
+
 - [配列の記載に用いる略号 | DDBJ](http://www.ddbj.nig.ac.jp/sub/code-j.html)
   - [核酸塩基コード](http://www.ddbj.nig.ac.jp/sub/code-j.html#nucleotide-1)
   - [アミノ酸コード](http://www.ddbj.nig.ac.jp/sub/code-j.html#amino-1)
