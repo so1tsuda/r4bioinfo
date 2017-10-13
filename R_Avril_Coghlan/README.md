@@ -199,10 +199,10 @@ https://cran.r-project.org/doc/manuals/R-intro.html
 ![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
 
 配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションは
-DEN-1 [NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477), 
-DEN-2 [NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474), 
-DEN-3 [NC_001475](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475), 
-DEN-4 [NC_002640](http://www.ncbi.nlm.nih.gov/nuccore/NC_002640)
+[NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)(DEN-1), 
+[NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474)(DEN-2), 
+[NC_001475](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475)(DEN-3), 
+[NC_002640](http://www.ncbi.nlm.nih.gov/nuccore/NC_002640)(DEN-4).
 
 ### [Retrieving genome sequence data via the NCBI website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-via-the-ncbi-website)
 **NCBIウェブサイトでゲノム配列データの検索**
