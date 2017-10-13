@@ -273,7 +273,7 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 	GC(dengueseq)
 
-細菌のGC含量とゲノムサイズ
+GC含量から水平伝播遺伝子を推定
 https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer#Fig-2
 ![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Inferring_horizontal_gene_transfer_average_GC_content.svg/400px-Inferring_horizontal_gene_transfer_average_GC_content.svg.png)
 
