@@ -298,8 +298,7 @@ https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer#Fig-2
 	denguetable[[3]]
 	denguetable[["g"]]
 
-### Summary
-
+### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#summary)
 	length()
 	table()
 	GC()
@@ -310,7 +309,9 @@ https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer#Fig-2
 Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinformatics using R" by Krijnen (https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#exercises)
-演習
+**演習**
+
+[回答例](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter_answers.html#dna-sequence-statistics-1)
 
 ----------
 
@@ -464,7 +465,7 @@ GC含量の移動プロット
 ゲノムの2連続塩基組成
 [Genome signature (dinucleotide relative abundances) of genomes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC17754/figure/F1/)
 
-### Summary
+### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#summary)
 
 	seq()
 	print()
@@ -475,7 +476,9 @@ GC含量の移動プロット
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#links-and-further-reading)
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#exercises)
-演習
+**演習**
+
+[回答例](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter_answers.html#dna-sequence-statistics-2)
 
 ----------
 
