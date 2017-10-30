@@ -1,14 +1,10 @@
-----------
-
 Haruo Suzuki (haruo[at]g-language[dot]org)  
 Last Update: 2017-10-30
 
 ----------
 
 # Statistics
-統計学
-
-----------
+**統計学**
 
 ## Table of Contents
 - [2017-10](#2017-10)
@@ -35,6 +31,7 @@ Published on Aug 30, 2013
 https://www.slideshare.net/motivic/tokyo-r-lt-25759212
 21世紀の手法対決 (MIC vs HSIC)
 
+    #install.packages("minerva")
 
 September 17, 2014
 https://www.r-bloggers.com/maximal-information-coefficient-part-ii/
