@@ -1,19 +1,19 @@
-----------
-
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-09-02
+Last Update: 2017-10-30
 
 ----------
 
 # R for Bioinformatics
 R言語を用いたバイオインフォマティクス
 
+## Table of Contents
 - [Avril Coghlan - Welcome to a Little Book of R for Bioinformatics!](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
 - [R for Deep Learning](https://github.com/haruosuz/r4bioinfo/tree/master/R_Deep_Learning)
 - [R for Machine Learning](https://github.com/haruosuz/r4bioinfo/tree/master/R_Machine_Learning)
 - [msa: an R package for multiple sequence alignment.](https://github.com/haruosuz/r4bioinfo/tree/master/R_msa)
 - [phangorn: Phylogenetic Analysis in R](https://github.com/haruosuz/r4bioinfo/tree/master/R_phangorn)
 - [phytools: Phylogenetic Tools for Comparative Biology (and Other Things)](https://github.com/haruosuz/r4bioinfo/tree/master/R_phytools)
+- [statistics](https://github.com/haruosuz/r4bioinfo/tree/master/R_statistics)
 - [tree](https://github.com/haruosuz/r4bioinfo/tree/master/R_tree)
 - [vegan: Community Ecology Package](https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan)
 - R_Wim_Krijnen.md: Wim P. Krijnen (2009) Applied Statistics for Bioinformatics using R
