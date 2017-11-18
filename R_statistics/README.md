@@ -12,7 +12,7 @@ Last Update: 2017-11-18
 - [biopapyrus](#biopapyrus)
 
 ----------
-## Fixed/Random Effects
+## Fixed or Random Effects
 
 https://mumu.jpn.ph/forest/computer/2016/03/30/3010/
 メタアナリシスのモデル | Dr.Clover's Computer Clinic
