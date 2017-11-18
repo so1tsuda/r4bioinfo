@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-10-30
+Last Update: 2017-11-18
 
 ----------
 
@@ -12,7 +12,30 @@ Last Update: 2017-10-30
 - [biopapyrus](#biopapyrus)
 
 ----------
+## Fixed/Random Effects
+
+https://mumu.jpn.ph/forest/computer/2016/03/30/3010/
+メタアナリシスのモデル | Dr.Clover's Computer Clinic
+
+2015年10月29日
+http://n-n-y.blogspot.jp/2015/10/fixed-effects-random-effects.html
+ぐちゃぐちゃのーと: 統計: Fixed Effects (固定効果) とRandom Effects (ランダム効果)
+
+2015年6月18日
+http://tarohmaru.web.fc2.com/R/GLM.html
+離散変数の固定／ランダム効果モデル
+2 Fixed Effects Model: ロジスティック回帰分析の固定効果モデルとランダム効果モデル
+
+2012-09-24
+http://hosho.ees.hokudai.ac.jp/~kubo/ce/RandomEffectsCrawley.html
+生態学データ解析 - ランダム効果とは?
+混合効果モデル (mixed effects models) がそう呼ばれている理由はその説明変数 に固定効果 (fixed effects) とランダム効果 (random effects) がまざっているからだ． これらはそれぞれ応答変数 y に対して
+- 固定効果 (fixed effects): y の平均にだけ影響およぼす (久保注: 正確には中央値に影響をおよぼす; その結果として平均値なども変わる)
+- ランダム効果 (random effects): y の分散 (ばらつき) にだけ影響およぼす (久保注: となるとこちらは中央値は変えないけどばらつきは変える，となるのかな?)
+
+----------
 ## 2017-11
+
 
 ### 2017-11-16
 
