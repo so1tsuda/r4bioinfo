@@ -32,7 +32,7 @@ http://www.noncode.org/download.php
     setwd("~/2013-05-09/")
     # Load the SeqinR package
     # Reading sequence data
-#ncrna <- read.fasta(file = "ncrna_noncode_v3.fa", strip.desc = TRUE)
+ #ncrna <- read.fasta(file = "ncrna_noncode_v3.fa", strip.desc = TRUE)
     pirna_index <- grep("piRNA",annotation,ignore.case=T, useBytes = TRUE)
  	#count the number of human piRNAs
  	length(pirna_human_annotation)
