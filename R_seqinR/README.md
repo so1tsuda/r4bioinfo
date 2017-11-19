@@ -7,6 +7,67 @@ Last Update: 2017-11-19
 - [CRAN - Package seqinr](https://cran.r-project.org/web/packages/seqinr/index.html)
 seqinr: Biological Sequences Retrieval and Analysis
 
+## Table of Contents
+- [2013-05-09](#2013-05-09)
+
+----------
+## 2013-05-09
+
+https://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/
+Using the R SeqinR package - Dave Tang's blog
+
+### Download data
+http://www.noncode.org/download.php
+
+![http://techacademy.jp/magazine/5155](http://static.techacademy.jp/magazine/wp-content/uploads/2015/01/ss-1-620x375.jpg)
+
+    #TODAY=$(date +%F); mkdir $TODAY; cd $TODAY
+    wget -c http://www.noncode.org/datadownload/ncrna_NONCODE[v3.0].fasta.tar.gz
+
+### Working with Data in R
+
+![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
+
+    # Set Working Directory
+    setwd("~/2013-05-09/")
+    # Load the SeqinR package
+    # Reading sequence data
+#ncrna <- read.fasta(file = "ncrna_noncode_v3.fa", strip.desc = TRUE)
+    pirna_index <- grep("piRNA",annotation,ignore.case=T, useBytes = TRUE)
+ 	#count the number of human piRNAs
+ 	length(pirna_human_annotation)
+ 	pirna_human_sequence <- getSequence(pirna_human)
+    table(mapply(function(x) return(x[10]), pirna_human_sequence))
+    table(mapply(function(x) return(x[1]), pirna_human_sequence))
+
+![](https://i0.wp.com/davetang.org/muse/wp-content/uploads/2013/05/human_pirna_length.png)
+
+### References
+
+http://apprize.info/data/bioinformatics/8.html
+A Rapid Introduction to the R Language - Practice: Bioinformatics Data Skills - Bioinformatics Data Skills (2015)
+mapply() is a multivariate version of sapply(): the function you pass to mapply() can take in and use multiple arguments. 
+
+
+#### NONCODE
+http://www.noncode.org
+
+https://www.ncbi.nlm.nih.gov/pubmed/26586799
+Nucleic Acids Res. 2016 Jan 4;44(D1):D203-8. doi: 10.1093/nar/gkv1252. Epub 2015 Nov 19.
+NONCODE 2016: an informative and valuable data source of long non-coding RNAs.
+
+https://integbio.jp/dbcatalog/record/nbdc00303
+NONCODE - Integbio データベースカタログ
+info 説明: 	あらゆる種類の非コードRNA（noncoding RNAs）のデータベース（tRNAとrRNAは除く）です。
+2016-03-14
+
+http://cell-innovation.nig.ac.jp/surfers/reference_data.html
+リファレンスデータ
+non-coding RNA
+
+http://cell-innovation.nig.ac.jp/surfers/long_non_coding_RNA_flow.html
+long non coding RNA解析フロー
+
 ----------
 ## Exercise 1
 
