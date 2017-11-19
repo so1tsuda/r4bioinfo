@@ -78,6 +78,84 @@ Rのバージョンとパッケージを確認:
 
 # References
 
+## R-bloggers
+https://www.r-bloggers.com/tag/bioinformatics/
+Bioinformatics | R-bloggers
+
+October 16, 2017
+https://www.r-bloggers.com/7-interactive-bioinformatics-plots-made-in-python-and-r/
+7 Interactive Bioinformatics Plots made in Python and R | R-bloggers
+
+February 1, 2017
+https://www.r-bloggers.com/staying-current-in-bioinformatics-genomics-2017-edition/
+Staying Current in Bioinformatics & Genomics: 2017 Edition | R-bloggers
+
+
+## R-statistics blog
+https://www.r-statistics.com
+R-statistics blog | Statistics with R, and open source stuff (software, data, community)
+
+https://www.r-statistics.com/tag/bioinformatics/
+Bioinformatics | R-statistics blog
+
+## Bioinformatics.ca
+https://bioinformatics.ca/workshops/2017/exploratory-analysis-biological-data-using-r-2017
+Exploratory Analysis of Biological Data using R (2017) | Bioinformatics.ca
+
+https://bioinformatics.ca/workshops/2016/exploratory-analysis-biological-data-using-r-2016
+
+https://bioinformatics.ca/workshops/2014/exploratory-analysis-biological-data-using-r-2014
+Exploratory Analysis of Biological Data using R (2014) | Bioinformatics.ca
+
+## Unclassified
+https://awesome-r.com/#awesome-r-bioinformatics
+Awesome R - Find Great R Packages
+
+http://monash-bioinformatics.squarespace.com/training/workshop-archive/2017/7/13/july-13th-2017-intro-to-r
+July 13th 2017: Intro to R — Bioinformatics
+
+
+https://twitter.com/h_okumura/status/903793374603354113
+Haruhiko Okumura on Twitter: "ずっと前に書いた「統計グラフの色」 https://t.co/ajrGsvMMDU にSim Daltonismを追記した。カラーユニバーサルデザイン推奨配色セットについても書いてあるのでぜひ一読を"
+9:35 PM - 1 Sep 2017
+
+https://www.ncbi.nlm.nih.gov/pubmed/25888166
+BMC Bioinformatics. 2015 Mar 
+micropan: an R-package for microbial pan-genomics.
+
+https://bioinformatics.ca/workshops/2017/introduction-r-2017
+Introduction to R (2017) | Bioinformatics.ca
+
+https://www.biostars.org/p/539/
+Recommend Your Favorite Introductory "R In Bioinformatics" Books And Resources
+
+http://pop-gen.eu/wordpress/statistics-in-bioinformatics-using-r
+Statistics in Bioinformatics using R | Population Genetics and Bioinformatics
+
+http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html
+Welcome to a Little Book of R for Bioinformatics! — Bioinformatics 0.1 documentation
+
+https://eeob-biodata.github.io/R-Data-Skills/
+R Data Skills for Bioinformatics: Welcome to the R part of the BCB546 course!
+Adapted by DV Lavrov (ISU). © 2016 Software Carpentry
+
+http://faculty.washington.edu/kenrice/bigr/
+R for large data & bioinformatics
+28 November 2013 to 29 November 2013
+Instructors: Thomas Lumley and Ken Rice
+
+https://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/
+Using the R SeqinR package
+Posted on May 9, 2013
+
+https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf
+Applied Statistics for Bioinformatics using R
+Wim P. Krijnen
+November 10, 2009
+
+
+## 日本語
+
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
 - [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
   - [01.セットアップ・参考文献](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/01.html)
@@ -91,7 +169,6 @@ Rのバージョンとパッケージを確認:
 - 2015-11-17 Windows版[R言語のインストールと動作確認](http://qiita.com/do_m_gatoru/items/f09ec198aa13f8aac68e)
 - [Windows用Rガイド](https://oku.edu.mie-u.ac.jp/~okumura/stat/R-win.html)
 
-## 日本語
 http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html
 (Rで)マイクロアレイデータ解析
 
@@ -130,37 +207,9 @@ http://tullbergia.at.webry.info/201007/article_4.html
 fastaファイルを一つにまとめる in R
 2010/07/29
 
-## 英語
-https://www.biostars.org/p/539/
-Recommend Your Favorite Introductory "R In Bioinformatics" Books And Resources
-
-http://pop-gen.eu/wordpress/statistics-in-bioinformatics-using-r
-Statistics in Bioinformatics using R | Population Genetics and Bioinformatics
-
-http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html
-Welcome to a Little Book of R for Bioinformatics! — Bioinformatics 0.1 documentation
-
-https://eeob-biodata.github.io/R-Data-Skills/
-R Data Skills for Bioinformatics: Welcome to the R part of the BCB546 course!
-Adapted by DV Lavrov (ISU). © 2016 Software Carpentry
-
-http://faculty.washington.edu/kenrice/bigr/
-R for large data & bioinformatics
-28 November 2013 to 29 November 2013
-Instructors: Thomas Lumley and Ken Rice
-
-https://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/
-Using the R SeqinR package
-Posted on May 9, 2013
-
-https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf
-Applied Statistics for Bioinformatics using R
-Wim P. Krijnen
-November 10, 2009
-
-## Unclassified
-https://twitter.com/h_okumura/status/903793374603354113
-Haruhiko Okumura on Twitter: "ずっと前に書いた「統計グラフの色」 https://t.co/ajrGsvMMDU にSim Daltonismを追記した。カラーユニバーサルデザイン推奨配色セットについても書いてあるのでぜひ一読を"
+http://tullbergia.at.webry.info/201006/article_2.html
+ギガシーケンサごっこ(1): shotgun配列を自作する A springtail's sigh/ウェブリブログ
+2010/06/17
 
 ----------
 
