@@ -23,6 +23,9 @@ http://www.noncode.org/download.php
 
     #TODAY=$(date +%F); mkdir $TODAY; cd $TODAY
     wget -c http://www.noncode.org/datadownload/ncrna_NONCODE[v3.0].fasta.tar.gz
+	tar -xzf *.tar.gz 
+	mv *.fasta ncrna_noncode_v3.fa
+	cat ncrna_noncode_v3.fa | grep "^>" | wc -l
 
 ### Working with Data in R
 
@@ -31,13 +34,46 @@ http://www.noncode.org/download.php
     # Set Working Directory
     setwd("~/2013-05-09/")
     # Load the SeqinR package
+	#install.packages("seqinr")
+	library("seqinr")
     # Reading sequence data
+	ncrna <- read.fasta(file = "ncrna_noncode_v3.fa")
+	#how many fasta sequences
+	length(ncrna)
+	n1 <- ncrna[[2]]
+	n1
+	#count number of nucleotides
+	count(n1,1)
+	#count number of dinucleotides
+	count(n1,2)
+	#GC content
+	GC(n1)
+	#Store the fasta header
+	annotation <- getAnnot(ncrna)
+	#count the number of piRNAs
     pirna_index <- grep("piRNA",annotation,ignore.case=T, useBytes = TRUE)
+	length(pirna_index)
+	pirna <- ncrna[pirna_index]
  	#count the number of human piRNAs
+	pirna_annotation <- getAnnot(pirna)
+	pirna_human_index <- grep("Homo",pirna_annotation,ignore.case=T)
+	length(pirna_human_index)
+	pirna_human <- pirna[pirna_human_index]
+	length(pirna_human)
+	#store human pirna annotation
+	pirna_human_annotation <- getAnnot(pirna_human)
  	length(pirna_human_annotation)
+	#write out as fasta
  	pirna_human_sequence <- getSequence(pirna_human)
+	write.fasta(pirna_human_sequence, pirna_human_annotation, 'human_pirna.fa')
+	#write a function to return the tenth base
     table(mapply(function(x) return(x[10]), pirna_human_sequence))
+	#write a function to return the first base
     table(mapply(function(x) return(x[1]), pirna_human_sequence))
+	#length distribution of all human piRNAs
+	table(getLength(pirna_human))
+	lengths <- table(getLength(pirna_human))
+	barplot(lengths, xlab="piRNA lengths", ylab="Frequency")
 
 ![](https://i0.wp.com/davetang.org/muse/wp-content/uploads/2013/05/human_pirna_length.png)
 
