@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-10-30
+Last Update: 2017-11-19
 
 ----------
 
@@ -10,10 +10,13 @@ R言語を用いたバイオインフォマティクス
 - [Avril Coghlan - Welcome to a Little Book of R for Bioinformatics!](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
 - [R for Deep Learning](https://github.com/haruosuz/r4bioinfo/tree/master/R_Deep_Learning)
 - [R for Machine Learning](https://github.com/haruosuz/r4bioinfo/tree/master/R_Machine_Learning)
+- [Wim P. Krijnen (2010) Applied Statistics for Bioinformatics using R](https://github.com/haruosuz/r4bioinfo/tree/master/R_Wim_Krijnen)
+- [R exercises](https://github.com/haruosuz/r4bioinfo/tree/master/R_exercises)
 - [msa: an R package for multiple sequence alignment.](https://github.com/haruosuz/r4bioinfo/tree/master/R_msa)
 - [phangorn: Phylogenetic Analysis in R](https://github.com/haruosuz/r4bioinfo/tree/master/R_phangorn)
 - [phytools: Phylogenetic Tools for Comparative Biology (and Other Things)](https://github.com/haruosuz/r4bioinfo/tree/master/R_phytools)
-- [statistics](https://github.com/haruosuz/r4bioinfo/tree/master/R_statistics)
+- [seqinr: Biological Sequences Retrieval and Analysis](https://github.com/haruosuz/r4bioinfo/tree/master/R_seqinR)
+- [R_statistics](https://github.com/haruosuz/r4bioinfo/tree/master/R_statistics)
 - [tree](https://github.com/haruosuz/r4bioinfo/tree/master/R_tree)
 - [vegan: Community Ecology Package](https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan)
 - R_Wim_Krijnen.md: Wim P. Krijnen (2009) Applied Statistics for Bioinformatics using R
@@ -78,6 +81,14 @@ Rのバージョンとパッケージを確認:
 
 # References
 
+
+28 November 2013 to 29 November 2013
+http://faculty.washington.edu/kenrice/bigr/
+R for Large Data & Bioinformatics
+http://faculty.washington.edu/kenrice/bigr/bigr-all.pdf
+For easier searching, here are all the slides in one document (PDF).
+
+
 ## R-bloggers
 https://www.r-bloggers.com/tag/bioinformatics/
 Bioinformatics | R-bloggers
@@ -90,13 +101,22 @@ February 1, 2017
 https://www.r-bloggers.com/staying-current-in-bioinformatics-genomics-2017-edition/
 Staying Current in Bioinformatics & Genomics: 2017 Edition | R-bloggers
 
+March 13, 2014
+https://www.r-bloggers.com/an-r-meta-book/
+An R "meta" book | R-bloggers
 
 ## R-statistics blog
+
+
 https://www.r-statistics.com
 R-statistics blog | Statistics with R, and open source stuff (software, data, community)
 
 https://www.r-statistics.com/tag/bioinformatics/
 Bioinformatics | R-statistics blog
+
+https://www.r-statistics.com/2015/08/dendextend-a-package-for-visualizing-adjusting-and-comparing-dendrograms-from-the-journal-bioinformatics/
+dendextend: a package for visualizing, adjusting, and comparing dendrograms (based on a paper from "bioinformatics") | R-statistics blog
+
 
 ## Bioinformatics.ca
 https://bioinformatics.ca/workshops/2017/exploratory-analysis-biological-data-using-r-2017
@@ -108,12 +128,12 @@ https://bioinformatics.ca/workshops/2014/exploratory-analysis-biological-data-us
 Exploratory Analysis of Biological Data using R (2014) | Bioinformatics.ca
 
 ## Unclassified
+
 https://awesome-r.com/#awesome-r-bioinformatics
 Awesome R - Find Great R Packages
 
 http://monash-bioinformatics.squarespace.com/training/workshop-archive/2017/7/13/july-13th-2017-intro-to-r
 July 13th 2017: Intro to R — Bioinformatics
-
 
 https://twitter.com/h_okumura/status/903793374603354113
 Haruhiko Okumura on Twitter: "ずっと前に書いた「統計グラフの色」 https://t.co/ajrGsvMMDU にSim Daltonismを追記した。カラーユニバーサルデザイン推奨配色セットについても書いてあるのでぜひ一読を"
