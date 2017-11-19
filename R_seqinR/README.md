@@ -19,7 +19,7 @@ Using the R SeqinR package - Dave Tang's blog
 ### Download data
 http://www.noncode.org/download.php
 
-![http://dtrace.org/blogs/brendan/2011/10/10/top-10-dtrace-scripts-for-mac-os-x/](http://dtrace.org/blogs/brendan/files/2011/09/macdtrace01.png)
+![http://dtrace.org/blogs/brendan/2011/10/10/top-10-dtrace-scripts-for-mac-os-x/](http://dtrace.org/blogs/brendan/files/2011/09/macdtrace02.png)
 
 ![http://techacademy.jp/magazine/5155](http://static.techacademy.jp/magazine/wp-content/uploads/2015/01/ss-1-620x375.jpg)
 
@@ -30,6 +30,8 @@ http://www.noncode.org/download.php
 	cat ncrna_noncode_v3.fa | grep "^>" | wc -l
 
 ### Working with Data in R
+
+![http://rstudio.github.io/packrat/starting.html](http://rstudio.github.io/packrat/images/rgui-mac.png)
 
 ![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
 
