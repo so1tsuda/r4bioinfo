@@ -495,7 +495,6 @@ GC含量の移動プロット
 
 	library("seqinr") # Load the SeqinR R package
 	choosebank()      # List all the sub-databases in ACNUC
-	# "genbank", "refseq", "refseqViruses"
 	choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
 	choosebank("refseq") # Specify that we want to search the 'refseq' ACNUC sub-database
 
@@ -522,13 +521,34 @@ GC含量の移動プロット
 	attr(Dengue1, "class")
 	dengueseq <- getSequence(Dengue1$req[[1]])
 	dengueseq[1:50]
+	annots <- getAnnot(Dengue1$req[[1]])
+	annots[1:20]
+	closebank()
 
+#### [Example: finding the sequences published in Nature 460:352-358](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#id8)
 
+	choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
+	query('naturepaper', 'R=Nature/460/352')
+	naturepaper$nelem
 
+> choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
+> query('naturepaper', 'R=Nature/460/352')
+Error in query("naturepaper", "R=Nature/460/352") : 
+  invalid request:"unknown reference at (^): \"R
 
-closebank()
+いまここ
 
+#### [Saving sequence data in a FASTA-format file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#saving-sequence-data-in-a-fasta-format-file)
 
+	choosebank("genbank")                             # select the ACNUC sub-database to be searched
+    humtRNAs <- query("humtRNAs", "SP=homo sapiens AND M=TRNA")   # specify the query
+	myseqs <- getSequence(humtRNAs)                   # get the sequences
+	mynames <- getName(humtRNAs)                      # get the names of the sequences
+	write.fasta(myseqs, mynames, file.out="humantRNAs.fasta")
+	closebank()
+
+### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#exercises)
+演習
 
 ----------
 
