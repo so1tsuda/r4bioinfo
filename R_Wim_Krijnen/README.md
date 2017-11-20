@@ -9,8 +9,8 @@ November 10, 2009
 
 ## Contents
 **目次**
-- [7. Cluster Analysis and Trees](#pairwise-sequence-alignment) クラスター分析
-- [9. Analyzing Sequences](#multiple-alignment-and-phylogenetic-trees) 配列解析
+- [7. Cluster Analysis and Trees](#chapter-7-cluster-analysis-and-trees) クラスター分析
+- [9. Analyzing Sequences](#chapter-9-analyzing-sequences) 配列解析
 
 ----------
 
@@ -22,9 +22,14 @@ November 10, 2009
 距離 
 
 Example 3. Euclidian distance
+[ユークリッド距離](https://ja.wikipedia.org/wiki/ユークリッド距離)
 
 	a <- c(1,1); b <- c(4,5)
 	sqrt(sum((a-b)^2))
+
+### 7.2 Two types of Cluster Analysis
+#### 7.2.1 Single Linkage
+#### 7.2.2 k-means
 
 ## Chapter 9. Analyzing Sequences
 配列解析
@@ -34,57 +39,75 @@ Example 3. Euclidian distance
 	library(seqinr)
 	choosebank()
 	choosebank("genbank")
-	query("ccnd","k=ccnd",virtual=TRUE)$nelem # 2
-	query("ccnd3hs","sp=homo sapiens AND k=ccnd3",virtual=TRUE)$nelem # 6
+	query("ccnd","k=ccnd",virtual=TRUE)$nelem
+	query("ccnd3hs","sp=homo sapiens AND k=ccnd3",virtual=TRUE)$nelem
 
 ### 9.2 Getting information on downloaded sequences
 
-Example 1.  
-
+Example 1.
+	# download sequences related to the species homo sapiens and a gene name like ”CCND3”.
 	choosebank("genbank")
-	ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
+    ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
 	ccnd3hs$nelem
+	# @ acts as a wildcard
 
-`@`はワイルドカード。関数`getName, getLength, getSequence, getTrans, getAnnot`。リストに関数`sapply`。
+`@`はワイルドカード。
+`sapply()`は、リストの各要素に関数を適用する。タンパク質配列の長さ（アミノ酸残基数）を求める:  
 
+    # Apply a Function over a List
+	# extracting the NCBI accession numbers
 	sapply(ccnd3hs$req, getName)
+    # get the length of the sequences
 	sapply(ccnd3hs$req, getLength)
+	# obtain the first sequence and print its first fifteen nucleotides
 	getSequence(ccnd3hs$req[[1]])[1:15]
+    # get its translation into amino acids
 	getTrans(ccnd3hs$req[[1]])[1:15]
+    # get its annotation from the corresponding web page:
 	getAnnot(ccnd3hs$req[[1]])
 
 ### 9.3 Computations on sequences
 
 Example 1. Frequencies of (di)nucleotides.  
+(2)連続塩基の度数
 
 	table(getSequence(ccnd3hs$req[[1]]))
 	count(getSequence(ccnd3hs$req[[1]]),2)
 
 Example 2. G + C percentage.  
+G+C含量
 
 	GC(getSequence(ccnd3hs$req[[1]]))
 	GC1(getSequence(ccnd3hs$req[[1]]))
 	GC2(getSequence(ccnd3hs$req[[1]]))
 	GC3(getSequence(ccnd3hs$req[[1]]))
 
+	# G + C fraction in a window of length 50 nt
 	GCperc <- double()
-	ccnd3 <- sapply(ccnd3hs$req, getSequence)
+    ccnd3 <- sapply(ccnd3hs$req, getSequence)
 	n <- length(ccnd3[[1]])
 	for (i in 1:(n - 50)) GCperc[i] <-  GC(ccnd3[[1]][i:(i+50)])
 	plot(GCperc,type="l")
 
+Figure 9.1: G + C fraction of sequence ”AF517525.CCND3” along a window of length 50 nt.
+
 Example 3. Rho and z-scores.  
+
 
 	round(rho(getSequence(ccnd3hs$req[[1]])),2)
 	round(zscore(getSequence(ccnd3hs$req[[1]]),modele='base'),2)
 
 Example 4. Comparing Amino acid frequencies.  
+アミノ酸の度数
 
 	tab <- table(getTrans(ccnd3hs$req[[1]]))
 	taborder <- tab[order(tab)]
 	names(taborder) <- aaa(names(taborder))
 	dotchart(taborder,pch=19,xlab="Stop and amino-acid-counts")
 	abline(v=1,lty=2)
+
+Figure 9.2: Frequency plot of amino acids from accession number AF517525.CCND3.
+#Figure 9.3: Frequency plot of amino acids from accession number AL160163.CCND3.
 
 Example 5. Isoelectric point.
 [等電点](https://ja.wikipedia.org/wiki/等電点)
@@ -95,6 +118,7 @@ protein molecular weight
 タンパク質の[分子量](https://ja.wikipedia.org/wiki/分子量)
 
 	pmw(getTrans(getSequence(ccnd3hs$req[[1]])))
+
 
 Example 6. Hydropathy score
 疎水度
@@ -128,7 +152,7 @@ Example 1. Pattern match.
 
 	library(seqinr)
 	choosebank("genbank")
-	ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
+    ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
 	ccnd3 <- sapply(ccnd3hs$req, getSequence)
 	ccnd3nr1 <- c2s(ccnd3[[1]]) # conversion of a vector of chars into a string
 	ccnd3nr1
@@ -208,7 +232,7 @@ Example 5. Comparing with random sequences.
 Example 6. Sliding window on Needleman-Wunsch scores. 
 
         library(seqinr); choosebank("genbank")
-	ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
+    ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
 	ccnd3 <- sapply(ccnd3hs$req, getSequence)
 	ccnd3transl <- sapply(ccnd3, getTrans)
 	x <- c2s(ccnd3transl[[1]])
@@ -233,11 +257,17 @@ Example 6. Sliding window on Needleman-Wunsch scores.
 ### 9.7 Exercises
 
 Page 249  
+
 Answers to exercises of Chapter 9: Analyzing Sequences
 
-Page 254  
+1. Writing to a FASTA file.
 
-- 9. Plot of codon usage.  
+2. Dotplot of sequences.
+
+
+Page 253
+
+9. Plot of codon usage.  
 
 	data(ec999)
     ec999.uco <- sapply(ec999, uco, index="eff")
@@ -246,6 +276,71 @@ Page 254
 
 ----------
 
+
+
+
+----------
+
+## Errata
+誤植
+
+- Page ***
+
+        ****
+
+should be:
+
+        ****
+
+
+- Page 174
+
+	query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
+
+should be:
+
+    ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
+
+- Page 177
+
+    ccnd3 <- sapply(ccnd3hs$req, getSequence)
+
+should be typed before:
+
+	n <- length(ccnd3[[1]])
+
+- Page 181
+
+        countPattern(subseq, ccnd3nr1, mismatch = 0)
+        matchPattern(subseq, ccnd3nr1, mismatch = 0)
+        matchPattern(subseq, ccnd3nr1, mismatch = 1)
+
+should be:
+
+        library(Biostrings)
+        countPattern(subseq, ccnd3nr1, max.mismatch = 0)
+        matchPattern(subseq, ccnd3nr1, max.mismatch = 0)
+        matchPattern(subseq, ccnd3nr1, max.mismatch = 1)
+
+- Page 188
+
+        choosebank("genbank"); library(seqinr)
+
+should be:
+
+        library(seqinr); choosebank("genbank")
+
+- Page 188
+
+	library(Biostrings)
+
+should be typed before:
+
+        pairwiseAlignment()
+
+- Page 189
+
+	read.fasta {seqinr}
 
 ----------
 
