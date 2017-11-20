@@ -1,4 +1,7 @@
+Haruo Suzuki (haruo[at]g-language[dot]org)  
+Last Update: 2017-11-19
 
+----------
 # [Welcome to a Little Book of R for Bioinformatics!](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
 By Avril Coghlan  
 
@@ -492,21 +495,19 @@ GC含量の移動プロット
 
 	library("seqinr") # Load the SeqinR R package
 	choosebank()      # List all the sub-databases in ACNUC
-
+	# "genbank", "refseq", "refseqViruses"
 	choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
 	choosebank("refseq") # Specify that we want to search the 'refseq' ACNUC sub-database
-    # query("RefSeqBact", "SP=Bacteria")
-    #Error in query("RefSeqBact", "SP=Bacteria") : 
-    #  invalid request:"unknown species at (^): \"SP
+
+    # search for GenBank sequences from Bacteria
+    choosebank("genbank")
+    GenBankBact <- query("GenBankBact", "SP=Bacteria")
+    GenBankBact
 	closebank()
 
+	# search for mRNA sequences from the parasitic worm Schistosoma mansoni 
 	choosebank("genbank")
-    #> 	query("SchistosomamRNA", "SP=Schistosoma mansoni AND M=mrna")
-    #Error in readLines(socket, n = nelem, ok = FALSE) : 
-    #  too few lines read in readLines
-    #In addition: Warning message:
-    #In readLines(socket, n = nelem, ok = FALSE) :
-    #  incomplete final line found on '->pbil.univ-lyon1.fr:5558'
+    SchistosomamRNA <- query("SchistosomamRNA", "SP=Schistosoma mansoni AND M=mrna")
 	closebank()
 
 #### [Example: finding the sequence for the DEN-1 Dengue virus genome](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#example-finding-the-sequence-for-the-den-1-dengue-virus-genome)
@@ -514,6 +515,20 @@ GC含量の移動プロット
 
 	choosebank("refseqViruses")
     Dengue1 <- query("Dengue1", "AC=NC_001477")
+	attributes(Dengue1)
+	Dengue1$nelem
+	Dengue1$req
+	attr(Dengue1, "names")
+	attr(Dengue1, "class")
+	dengueseq <- getSequence(Dengue1$req[[1]])
+	dengueseq[1:50]
+
+
+
+
+closebank()
+
+
 
 ----------
 
