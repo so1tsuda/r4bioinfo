@@ -7,10 +7,10 @@ Last Update: 2017-11-19
 R言語を用いたバイオインフォマティクス
 
 ## Table of Contents
-- [Avril Coghlan - Welcome to a Little Book of R for Bioinformatics!](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
+- [Avril Coghlan (2011) Welcome to a Little Book of R for Bioinformatics!](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
 - [R for Deep Learning](https://github.com/haruosuz/r4bioinfo/tree/master/R_Deep_Learning)
 - [R for Machine Learning](https://github.com/haruosuz/r4bioinfo/tree/master/R_Machine_Learning)
-- [Wim P. Krijnen (2010) Applied Statistics for Bioinformatics using R](https://github.com/haruosuz/r4bioinfo/tree/master/R_Wim_Krijnen)
+- [Wim P. Krijnen (2009) Applied Statistics for Bioinformatics using R](https://github.com/haruosuz/r4bioinfo/tree/master/R_Wim_Krijnen)
 - [R exercises](https://github.com/haruosuz/r4bioinfo/tree/master/R_exercises)
 - [msa: an R package for multiple sequence alignment.](https://github.com/haruosuz/r4bioinfo/tree/master/R_msa)
 - [phangorn: Phylogenetic Analysis in R](https://github.com/haruosuz/r4bioinfo/tree/master/R_phangorn)
@@ -19,7 +19,6 @@ R言語を用いたバイオインフォマティクス
 - [R_statistics](https://github.com/haruosuz/r4bioinfo/tree/master/R_statistics)
 - [tree](https://github.com/haruosuz/r4bioinfo/tree/master/R_tree)
 - [vegan: Community Ecology Package](https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan)
-- R_Wim_Krijnen.md: Wim P. Krijnen (2009) Applied Statistics for Bioinformatics using R
 
 ----------
 
