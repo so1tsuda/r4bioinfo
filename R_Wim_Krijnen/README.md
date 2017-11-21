@@ -10,8 +10,10 @@ November 10, 2009
 **目次**
 - [7. Cluster Analysis and Trees](#chapter-7-cluster-analysis-and-trees) クラスター分析
 - [9. Analyzing Sequences](#chapter-9-analyzing-sequences) 配列解析
+- [A. Answers to exercises](#) 
 
 ----------
+
 
 ## Chapter 7. Cluster Analysis and Trees
 クラスター分析
@@ -44,7 +46,7 @@ Example 3. Euclidian distance
 ### 9.2 Getting information on downloaded sequences
 
 **Example 1.**
-Let’s download sequences related to the species homo sapi- ens and a gene name like ”CCND3”.
+Let’s download sequences related to the species homo sapiens and a gene name like ”CCND3”.
 
 	# download sequences related to the species homo sapiens and a gene name like ”CCND3”.
 	choosebank("genbank")
@@ -97,6 +99,7 @@ Figure 9.1: G + C fraction of sequence ”AF517525.CCND3” along a window of le
 **Example 3.**
 Rho and z-scores.
 
+
 	round(rho(getSequence(ccnd3hs$req[[1]])),2)
 	round(zscore(getSequence(ccnd3hs$req[[1]]),modele='base'),2)
 
@@ -115,7 +118,7 @@ Figure 9.2: Frequency plot of amino acids from accession number AF517525.CCND3.
 #Figure 9.3: Frequency plot of amino acids from accession number AL160163.CCND3.
 
 **Example 5.**
-Isoelectric point.  
+Isoelectric point.
 [等電点](https://ja.wikipedia.org/wiki/等電点)
 
 	computePI(getTrans(ccnd3hs$req[[1]]))
@@ -127,7 +130,7 @@ protein molecular weight
 
 **Example 6.**
 Hydropathy score
-疎水度
+[疎水親水度](https://kotobank.jp/word/ハイドロパシー-169088)
 
 	ccnd3 <- sapply(ccnd3hs$req, getSequence)
 	ccnd3transl <- sapply(ccnd3, getTrans)
@@ -186,7 +189,7 @@ Basic recursion.
 **Example 2.**
 Dynamic programming of DNA sequences.
 動的計画法
-DNA配列 GAATTC と GATTA (Durbin et. al., 1998, p.18) のアラインメントのスコア
+DNA配列 GAATTC と GATTA (Durbin et. al., 1998, p.18) 間のアラインメントのスコア
 
 	library(seqinr)
 	x <- s2c("GAATTC"); y <- s2c("GATTA"); d <- 2
@@ -211,7 +214,7 @@ DNA配列 GAATTC と GATTA (Durbin et. al., 1998, p.18) のアラインメント
 **Example 3.**
 Programming Needleman-Wunsch. 
 
-2つのタンパク質配列 "PAWHEAE" と "HEAGAWGHEE" (Durbin et. al., 1998, p.21) 間の最適なグローバルアライメントを見つける。
+タンパク質配列 "PAWHEAE" と "HEAGAWGHEE" (Durbin et. al., 1998, p.21) 間の最適なグローバルアライメントを見つける。
 アミノ酸置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM) を用いる。
 
 	file <- "ftp://ftp.ncbi.nih.gov/blast/matrices/BLOSUM50"
@@ -237,11 +240,11 @@ Biostringsパッケージの`pairwiseAlignment()`関数を用いて、
 	  substitutionMatrix = "BLOSUM50",gapOpening = 0, gapExtension = -8,
 	  scoreOnly = FALSE)
 
-
-いまここ
+ランダムな塩基配列をつくる - yukke::note http://yukke.hateblo.jp/entry/2015/10/05/120924
 
 **Example 5.**
-Comparing with random sequences. 
+Comparing with random sequences.  
+ランダムな配列との比較
 
 	set.seed(0)
 	library(seqinr);library(Biostrings);data(BLOSUM50)
@@ -256,15 +259,18 @@ Comparing with random sequences.
 	sum(randallscore>1)/1000
 
 **Example 6.**
-Sliding window on Needleman-Wunsch scores. 
+Sliding window on Needleman-Wunsch scores.  
+グローバルアライメント・スコアの移動解析
 
-        library(seqinr); choosebank("genbank")
+    library(seqinr); choosebank("genbank")
     ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
 	ccnd3 <- sapply(ccnd3hs$req, getSequence)
 	ccnd3transl <- sapply(ccnd3, getTrans)
 	x <- c2s(ccnd3transl[[1]])
 	y <- c2s(ccnd3transl[[1]][50:70])
 	nwscore <- double() ; n <- length(ccnd3transl[[1]])
+
+    library(Biostrings)
 	for (i in 1:(n-21))
 	  nwscore[i] <-
 	  pairwiseAlignment(AAString(c2s(ccnd3transl[[1]][i:(i+20)])),
@@ -280,8 +286,13 @@ Sliding window on Needleman-Wunsch scores.
 
 ### 9.6 Overview and concluding remarks
 
-
 ### 9.7 Exercises
+
+----------
+
+## Appendix A
+Answers to exercises
+
 
 Page 249  
 
@@ -289,10 +300,41 @@ Answers to exercises of Chapter 9: Analyzing Sequences
 
 1. Writing to a FASTA file.
 
+    library(seqinr); choosebank("genbank")
+    ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
+	ccnd3 <- sapply(ccnd3hs$req, getSequence)
+    library(Biostrings)
+	x1 <- DNAStringSet(c2s(ccnd3[[1]]))
+
+    writeXStringSet(x1, file="ccnd3.fa", format="fasta", width=80)
+	ccnd3c2sn <- sapply(ccnd3, c2s)
+	x1 <- DNAStringSet(ccnd3c2sn)
+    writeXStringSet(x1, file="ccnd3n.fa", format="fasta", width=80)
+
+ヘルプ
+
+    library(help = Biostrings)
+    # XStringSet-io           Read/write an XStringSet object from/to a file
+    help("XStringSet-io")
+
+
 2. Dotplot of sequences.
 
+Page 250
+
+3. Local alignment.
+
+4. Probability of more extreme alignment score.
+
+5. Prochlorococcus marinus.
+
+6. Sequence equality.
+
+7. Conserved region.
 
 Page 253
+
+8. Plot of CG proportion from Celegans.
 
 9. Plot of codon usage.  
 
@@ -301,7 +343,7 @@ Page 253
     total <- rowSums(ec999.uco)
     dotchart.uco(total, main = "Codon usage in 999 coding sequences from E. coli")
 
-----------
+
 
 
 ----------
