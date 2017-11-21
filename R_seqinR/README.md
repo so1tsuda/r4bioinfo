@@ -84,11 +84,22 @@ http://www.noncode.org/download.php
     setwd("~/2013-05-09/")
     # Load the SeqinR package
     # Reading sequence data
+
+
+
+
+
     pirna_index <- grep("piRNA",annotation,ignore.case=T, useBytes = TRUE)
- 	length(pirna_human_annotation)
- 	pirna_human_sequence <- getSequence(pirna_human)
+
+
+
+    pirna_human_sequence <- getSequence(pirna_human)
+    write.fasta(pirna_human_sequence, pirna_human_annotation, 'human_pirna.fa')
+
     table(mapply(function(x) return(x[10]), pirna_human_sequence))
+
     table(mapply(function(x) return(x[1]), pirna_human_sequence))
+
 
 ### References
 
