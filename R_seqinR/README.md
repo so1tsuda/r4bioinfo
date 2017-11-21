@@ -10,9 +10,25 @@ seqinr: Biological Sequences Retrieval and Analysis
 - [CRAN - Package seqinr](https://cran.r-project.org/web/packages/seqinr/index.html)
 
 ## Table of Contents
+- [Installation](#installation)
 - [Exercise 1](#exercise-1)
 - [Exercise 2](#exercise-2)
 - [2013-05-09](#2013-05-09)
+
+----------
+## Installation
+
+[パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
+
+`seqinr`パッケージのインストール:  
+
+    # install the SeqinR package
+    install.packages("seqinr")
+
+`seqinr`パッケージの呼び出し:  
+
+    # load the SeqinR package into R
+    library(seqinr)
 
 ----------
 ## Exercise 1
@@ -60,7 +76,6 @@ Using the R SeqinR package - Dave Tang's blog
 ### Download data
 http://www.noncode.org/download.php
 
-    #TODAY=$(date +%F); mkdir $TODAY; cd $TODAY
     wget -c http://www.noncode.org/datadownload/ncrna_NONCODE[v3.0].fasta.tar.gz
 	tar -xzf *.tar.gz 
 	mv *.fasta ncrna_noncode_v3.fa
