@@ -295,7 +295,8 @@ Page 249
 
 Answers to exercises of Chapter 9: Analyzing Sequences
 
-1. Writing to a FASTA file.
+1. Writing to a FASTA file.  
+
 FASTA形式ファイルに書き出す
 
     library(seqinr); choosebank("genbank")
@@ -335,6 +336,7 @@ Page 253
 8. Plot of CG proportion from Celegans.
 
 9. Plot of codon usage.  
+
 コドン使用
 
 	data(ec999)
