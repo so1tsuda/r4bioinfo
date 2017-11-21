@@ -240,8 +240,6 @@ Biostringsパッケージの`pairwiseAlignment()`関数を用いて、
 	  substitutionMatrix = "BLOSUM50",gapOpening = 0, gapExtension = -8,
 	  scoreOnly = FALSE)
 
-ランダムな塩基配列をつくる - yukke::note http://yukke.hateblo.jp/entry/2015/10/05/120924
-
 **Example 5.**
 Comparing with random sequences.  
 ランダムな配列との比較
