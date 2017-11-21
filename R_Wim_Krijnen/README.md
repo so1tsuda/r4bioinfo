@@ -118,18 +118,18 @@ Figure 9.2: Frequency plot of amino acids from accession number AF517525.CCND3.
 #Figure 9.3: Frequency plot of amino acids from accession number AL160163.CCND3.
 
 **Example 5.**
-Isoelectric point.
+Isoelectric point.  
 [等電点](https://ja.wikipedia.org/wiki/等電点)
 
 	computePI(getTrans(ccnd3hs$req[[1]]))
 
-protein molecular weight
+protein molecular weight  
 タンパク質の[分子量](https://ja.wikipedia.org/wiki/分子量)
 
 	pmw(getTrans(getSequence(ccnd3hs$req[[1]])))
 
 **Example 6.**
-Hydropathy score
+Hydropathy score  
 [疎水親水度](https://kotobank.jp/word/ハイドロパシー-169088)
 
 	ccnd3 <- sapply(ccnd3hs$req, getSequence)
@@ -158,7 +158,7 @@ List of 544 physicochemical and biological properties for the 20 amino-acids
 ### 9.4 Matching patterns
 
 **Example 1.**
-Pattern match.
+Pattern match.  
 パターンマッチ
 
 	library(seqinr)
@@ -179,7 +179,7 @@ Pattern match.
 [ペアワイズアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)
 
 **Example 1.**
-Basic recursion.
+Basic recursion.  
 再帰
 
 	x<-double();x[1]<-1
@@ -187,8 +187,8 @@ Basic recursion.
 	x[10]
 
 **Example 2.**
-Dynamic programming of DNA sequences.
-動的計画法
+Dynamic programming of DNA sequences.  
+DNA配列の動的計画法  
 DNA配列 GAATTC と GATTA (Durbin et. al., 1998, p.18) 間のアラインメントのスコア
 
 	library(seqinr)
@@ -212,8 +212,7 @@ DNA配列 GAATTC と GATTA (Durbin et. al., 1998, p.18) 間のアラインメン
 [Needleman–Wunsch | グローバルアライメントを求めるアルゴリズム](https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html)
 
 **Example 3.**
-Programming Needleman-Wunsch. 
-
+Programming Needleman-Wunsch.  
 タンパク質配列 "PAWHEAE" と "HEAGAWGHEE" (Durbin et. al., 1998, p.21) 間の最適なグローバルアライメントを見つける。
 アミノ酸置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM) を用いる。
 
@@ -297,6 +296,7 @@ Page 249
 Answers to exercises of Chapter 9: Analyzing Sequences
 
 1. Writing to a FASTA file.
+FASTA形式ファイルに書き出す
 
     library(seqinr); choosebank("genbank")
     ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
@@ -335,14 +335,12 @@ Page 253
 8. Plot of CG proportion from Celegans.
 
 9. Plot of codon usage.  
+コドン使用
 
 	data(ec999)
     ec999.uco <- sapply(ec999, uco, index="eff")
     total <- rowSums(ec999.uco)
     dotchart.uco(total, main = "Codon usage in 999 coding sequences from E. coli")
-
-
-
 
 ----------
 
