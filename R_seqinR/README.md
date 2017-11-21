@@ -19,10 +19,6 @@ Using the R SeqinR package - Dave Tang's blog
 ### Download data
 http://www.noncode.org/download.php
 
-![http://dtrace.org/blogs/brendan/2011/10/10/top-10-dtrace-scripts-for-mac-os-x/](http://dtrace.org/blogs/brendan/files/2011/09/macdtrace02.png)
-
-![http://techacademy.jp/magazine/5155](http://static.techacademy.jp/magazine/wp-content/uploads/2015/01/ss-1-620x375.jpg)
-
     #TODAY=$(date +%F); mkdir $TODAY; cd $TODAY
     wget -c http://www.noncode.org/datadownload/ncrna_NONCODE[v3.0].fasta.tar.gz
 	tar -xzf *.tar.gz 
@@ -30,10 +26,6 @@ http://www.noncode.org/download.php
 	cat ncrna_noncode_v3.fa | grep "^>" | wc -l
 
 ### Working with Data in R
-
-![http://rstudio.github.io/packrat/starting.html](http://rstudio.github.io/packrat/images/rgui-mac.png)
-
-![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
 
     # Set Working Directory
     setwd("~/2013-05-09/")
@@ -78,8 +70,6 @@ http://www.noncode.org/download.php
 	table(getLength(pirna_human))
 	lengths <- table(getLength(pirna_human))
 	barplot(lengths, xlab="piRNA lengths", ylab="Frequency")
-
-![](https://i0.wp.com/davetang.org/muse/wp-content/uploads/2013/05/human_pirna_length.png)
 
 ### References
 
