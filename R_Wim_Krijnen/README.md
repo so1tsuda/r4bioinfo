@@ -2,9 +2,8 @@ Haruo Suzuki (haruo[at]g-language[dot]org)
 Last Update: 2017-11-19
 
 ----------
-# [Applied Statistics for Bioinformatics using R](https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)  
+# [Applied Statistics for Bioinformatics using R](https://cran.r-project.org/doc/contrib/Krijnen-IntroBioInfStatistics.pdf)
 Wim P. Krijnen  
-
 November 10, 2009  
 
 ## Contents
@@ -44,38 +43,42 @@ Example 3. Euclidian distance
 
 ### 9.2 Getting information on downloaded sequences
 
-Example 1.
+**Example 1.**
+Let’s download sequences related to the species homo sapi- ens and a gene name like ”CCND3”.
+
 	# download sequences related to the species homo sapiens and a gene name like ”CCND3”.
 	choosebank("genbank")
     ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
 	ccnd3hs$nelem
 	# @ acts as a wildcard
 
-`@`はワイルドカード。
+`@`はワイルドカード。  
 `sapply()`は、リストの各要素に関数を適用する。タンパク質配列の長さ（アミノ酸残基数）を求める:  
 
     # Apply a Function over a List
 	# extracting the NCBI accession numbers
 	sapply(ccnd3hs$req, getName)
-    # get the length of the sequences
+	# The length of the sequences 
 	sapply(ccnd3hs$req, getLength)
 	# obtain the first sequence and print its first fifteen nucleotides
 	getSequence(ccnd3hs$req[[1]])[1:15]
-    # get its translation into amino acids
+	# Its translation into amino acids
 	getTrans(ccnd3hs$req[[1]])[1:15]
-    # get its annotation from the corresponding web page:
+	# its annotation from the corresponding web page:
 	getAnnot(ccnd3hs$req[[1]])
 
 ### 9.3 Computations on sequences
 
-Example 1. Frequencies of (di)nucleotides.  
+**Example 1.**
+Frequencies of (di)nucleotides.  
 (2)連続塩基の度数
 
 	table(getSequence(ccnd3hs$req[[1]]))
 	count(getSequence(ccnd3hs$req[[1]]),2)
 
-Example 2. G + C percentage.  
-G+C含量
+**Example 2.**
+G + C percentage.  
+配列全体とコドン1,2,3文字目の[GC含量](https://ja.wikipedia.org/wiki/GC含量)
 
 	GC(getSequence(ccnd3hs$req[[1]]))
 	GC1(getSequence(ccnd3hs$req[[1]]))
@@ -91,13 +94,14 @@ G+C含量
 
 Figure 9.1: G + C fraction of sequence ”AF517525.CCND3” along a window of length 50 nt.
 
-Example 3. Rho and z-scores.  
-
+**Example 3.**
+Rho and z-scores.
 
 	round(rho(getSequence(ccnd3hs$req[[1]])),2)
 	round(zscore(getSequence(ccnd3hs$req[[1]]),modele='base'),2)
 
-Example 4. Comparing Amino acid frequencies.  
+**Example 4.**
+Comparing Amino acid frequencies.  
 アミノ酸の度数
 
 	tab <- table(getTrans(ccnd3hs$req[[1]]))
@@ -107,9 +111,11 @@ Example 4. Comparing Amino acid frequencies.
 	abline(v=1,lty=2)
 
 Figure 9.2: Frequency plot of amino acids from accession number AF517525.CCND3.
+
 #Figure 9.3: Frequency plot of amino acids from accession number AL160163.CCND3.
 
-Example 5. Isoelectric point.
+**Example 5.**
+Isoelectric point.  
 [等電点](https://ja.wikipedia.org/wiki/等電点)
 
 	computePI(getTrans(ccnd3hs$req[[1]]))
@@ -119,8 +125,8 @@ protein molecular weight
 
 	pmw(getTrans(getSequence(ccnd3hs$req[[1]])))
 
-
-Example 6. Hydropathy score
+**Example 6.**
+Hydropathy score
 疎水度
 
 	ccnd3 <- sapply(ccnd3hs$req, getSequence)
@@ -138,41 +144,49 @@ Example 6. Hydropathy score
 	names(res) <- NULL
 	return(res)
 	}
-
 	kdath <- linform(ccnd3transl, kdc)
 	print(kdath,digits=3)
 
-	data(aaindex)
-	aaindex
+List of 544 physicochemical and biological properties for the 20 amino-acids
+
+    data(aaindex)
+    aaindex
 
 ### 9.4 Matching patterns
 
-Example 1. Pattern match.
+**Example 1.**
+Pattern match.
 パターンマッチ
 
 	library(seqinr)
 	choosebank("genbank")
     ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
 	ccnd3 <- sapply(ccnd3hs$req, getSequence)
-	ccnd3nr1 <- c2s(ccnd3[[1]]) # conversion of a vector of chars into a string
+    # conversion of a vector of chars into a string
+	ccnd3nr1 <- c2s(ccnd3[[1]])
 	ccnd3nr1
 	subseq <- "cccggg"
 
+    library(Biostrings)
     countPattern(subseq, ccnd3nr1, max.mismatch = 0)
     matchPattern(subseq, ccnd3nr1, max.mismatch = 0)
     matchPattern(subseq, ccnd3nr1, max.mismatch = 1)
 
 ### 9.5 Pairwise alignments
+[ペアワイズアラインメント](https://ja.wikipedia.org/wiki/シーケンスアラインメント#.E3.83.9A.E3.82.A2.E3.83.AF.E3.82.A4.E3.82.BA.E3.82.A2.E3.83.A9.E3.82.A4.E3.83.B3.E3.83.A1.E3.83.B3.E3.83.88)
 
-Example 1. Basic recursion. 
+**Example 1.**
+Basic recursion.
 再帰
 
 	x<-double();x[1]<-1
 	for (i in 2:10) {x[i]<- 2*x[i-1]-10}
 	x[10]
 
-Example 2. Dynamic programming of DNA sequences. 
+**Example 2.**
+Dynamic programming of DNA sequences.
 動的計画法
+DNA配列 GAATTC と GATTA (Durbin et. al., 1998, p.18) のアラインメントのスコア
 
 	library(seqinr)
 	x <- s2c("GAATTC"); y <- s2c("GATTA"); d <- 2
@@ -191,9 +205,14 @@ Example 2. Dynamic programming of DNA sequences.
 		{F[i,j] <- max(c(F[i-1,j-1]+s[i-1,j-1],F[i-1,j]-d,F[i,j-1]-d))}
 	F
 
-- [Needleman–Wunsch | グローバルアライメントを求めるアルゴリズム](http://bi.biopapyrus.net/seq/needleman–wunsch.html)
 
-Example 3. Programming Needleman-Wunsch. 
+[Needleman–Wunsch | グローバルアライメントを求めるアルゴリズム](https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html)
+
+**Example 3.**
+Programming Needleman-Wunsch. 
+
+2つのタンパク質配列 "PAWHEAE" と "HEAGAWGHEE" (Durbin et. al., 1998, p.21) 間の最適なグローバルアライメントを見つける。
+アミノ酸置換行列 [BLOSUM (BLOcks SUbstitution Matrix)](https://en.wikipedia.org/wiki/BLOSUM) を用いる。
 
 	file <- "ftp://ftp.ncbi.nih.gov/blast/matrices/BLOSUM50"
 	BLOSUM50 <- as.matrix(read.table(file, check.names=FALSE))
@@ -208,14 +227,21 @@ Example 3. Programming Needleman-Wunsch.
 		{F[i,j] <- max(c(F[i-1,j-1]+s[i-1,j-1],F[i-1,j]-d,F[i,j-1]-d))}
 	F
 
-Example 4. Needleman-Wunsch. `pairwiseAlignment`関数
+**Example 4.**
+Needleman-Wunsch.
+Biostringsパッケージの`pairwiseAlignment()`関数を用いて、
+タンパク質配列 "PAWHEAE" と "HEAGAWGHEE" (Durbin et. al., 1998, p.21) 間の最適なグローバルアライメントを見つける。
 
 	library(Biostrings);data(BLOSUM50)
 	pairwiseAlignment(AAString("PAWHEAE"), AAString("HEAGAWGHEE"),
-	substitutionMatrix = "BLOSUM50",gapOpening = 0, gapExtension = -8,
-	scoreOnly = FALSE)
+	  substitutionMatrix = "BLOSUM50",gapOpening = 0, gapExtension = -8,
+	  scoreOnly = FALSE)
 
-Example 5. Comparing with random sequences. 
+
+いまここ
+
+**Example 5.**
+Comparing with random sequences. 
 
 	set.seed(0)
 	library(seqinr);library(Biostrings);data(BLOSUM50)
@@ -229,7 +255,8 @@ Example 5. Comparing with random sequences.
 	}
 	sum(randallscore>1)/1000
 
-Example 6. Sliding window on Needleman-Wunsch scores. 
+**Example 6.**
+Sliding window on Needleman-Wunsch scores. 
 
         library(seqinr); choosebank("genbank")
     ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
@@ -276,71 +303,6 @@ Page 253
 
 ----------
 
-
-
-
-----------
-
-## Errata
-誤植
-
-- Page ***
-
-        ****
-
-should be:
-
-        ****
-
-
-- Page 174
-
-	query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
-
-should be:
-
-    ccnd3hs <- query("ccnd3hs","sp=homo sapiens AND k=ccnd3@")
-
-- Page 177
-
-    ccnd3 <- sapply(ccnd3hs$req, getSequence)
-
-should be typed before:
-
-	n <- length(ccnd3[[1]])
-
-- Page 181
-
-        countPattern(subseq, ccnd3nr1, mismatch = 0)
-        matchPattern(subseq, ccnd3nr1, mismatch = 0)
-        matchPattern(subseq, ccnd3nr1, mismatch = 1)
-
-should be:
-
-        library(Biostrings)
-        countPattern(subseq, ccnd3nr1, max.mismatch = 0)
-        matchPattern(subseq, ccnd3nr1, max.mismatch = 0)
-        matchPattern(subseq, ccnd3nr1, max.mismatch = 1)
-
-- Page 188
-
-        choosebank("genbank"); library(seqinr)
-
-should be:
-
-        library(seqinr); choosebank("genbank")
-
-- Page 188
-
-	library(Biostrings)
-
-should be typed before:
-
-        pairwiseAlignment()
-
-- Page 189
-
-	read.fasta {seqinr}
 
 ----------
 
