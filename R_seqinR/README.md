@@ -85,7 +85,6 @@ http://www.noncode.org/download.php
     # Load the SeqinR package
     # Reading sequence data
     pirna_index <- grep("piRNA",annotation,ignore.case=T, useBytes = TRUE)
- 	#count the number of human piRNAs
  	length(pirna_human_annotation)
  	pirna_human_sequence <- getSequence(pirna_human)
     table(mapply(function(x) return(x[10]), pirna_human_sequence))
