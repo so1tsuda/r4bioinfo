@@ -146,11 +146,29 @@ http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html
 http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#intro_general_translate_seqinr
 イントロ | 一般 | 翻訳配列(translate)を取得(応用) | seqinr(Charif_2005)
 
+https://sites.google.com/site/rhandout/seqinr-package
+Seqinr package - rhandout
+
+http://slideplayer.com/slide/10596928/
+1 Introduction to R A Language and Environment for Statistical Computing, Graphics & Bioinformatics Introduction to R Lecture 4 - ppt download
+Published byAnnice Bell
+Modified about 1 year ago
+
+http://www.rpubs.com/vuongyenxuan/project
+RPubs - Genetic distance calculation and phylogenetic tree using R Studio
+Using R to Caculate Genetic Distance and Generate Phylogenetic tree
+Suzanne
+November 19, 2015
+
+https://stackoverflow.com/questions/26834908/seqinr-dotplot-change-axis
+r - seqinr dotplot - change axis - Stack Overflow
+3 years ago
+
 https://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/
 Using the R SeqinR package - Musings from an unlikely candidateMusings from an unlikely candidate
 
-http://blog.biogem.org/2013/05/dotplot-for-protein-sequences-using-r.html
-DotPlot for Protein Sequences using R ~ BioGem.Org
+http://www.biob.in/2013/05/dotplot-for-protein-sequences-using-r.html
+DotPlot for Protein Sequences using R ~ BioGem Blog
 
 May 29, 2012
 https://www.slideshare.net/pau_corral/seqinr-biological-data-handling
@@ -168,5 +186,18 @@ November 10, 2009
 
 https://sites.google.com/site/adversariaoftekijima/r/seqinr
 seqinr - 日々草(TEKの備忘録)
+
+https://www.ncbi.nlm.nih.gov/pubmed/15374859
+Bioinformatics. 2005 Feb 15;21(4):545-7. Epub 2004 Sep 16.
+Online synonymous codon usage analyses with the ade4 and seqinR packages.
+Charif D1, Thioulouse J, Lobry JR, Perrière G.
+
+http://pbil.univ-lyon1.fr/datasets/charif04/
+Online Synonymous Codon Usage Analyses with the ade4 and seqinR packages
+
+http://pbil.univ-lyon1.fr/members/lobry/repro/jme95/
+Lobry (1995) JME 40:326
+
+
 
 ----------
