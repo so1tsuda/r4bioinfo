@@ -3,12 +3,53 @@ Last Update: 2017-11-19
 
 ----------
 # SeqinR
+seqinr: Biological Sequences Retrieval and Analysis
+生物配列の検索と解析
+
 - [seqinr](http://seqinr.r-forge.r-project.org)
 - [CRAN - Package seqinr](https://cran.r-project.org/web/packages/seqinr/index.html)
-seqinr: Biological Sequences Retrieval and Analysis
 
 ## Table of Contents
+- [Exercise 1](#exercise-1)
+- [Exercise 2](#exercise-2)
 - [2013-05-09](#2013-05-09)
+
+----------
+## Exercise 1
+
+    library("seqinr")  # Loading "seqinr" package
+    x <- s2c("atgc")   # Create small data
+    x
+    length(x)          # Length of a DNA sequence
+    table(x)           # Base composition of a DNA sequence
+    GC(x)              # GC Content of DNA
+    count(x, word = 2) # Count oligomers
+
+----------
+## Exercise 2
+
+    # Loading seqinr package
+    library(seqinr)
+    # list the data sets in the "seqinr" package
+    data(package = "seqinr")
+    # A toy example of amino-acid counts in three proteins
+    data(toyaa)
+    # A toy example of codon counts in three coding sequences
+    data(toycodon)
+    # Fragment of the E. coli chromosome
+    example(m16j)
+    # 999 coding sequences from E. coli
+    data(ec999)
+    # to plot genetic code as in textbooks
+    tablecode()
+    # to translate coding sequences into proteins
+    getTrans(ec999)
+    # utility data for seqinr
+    SEQINR.UTIL
+    # To Get Some Protein Statistics
+    example(AAstat)
+    # Dot Plot Comparison of two sequences
+    example(dotPlot)
 
 ----------
 ## 2013-05-09
@@ -77,7 +118,6 @@ http://apprize.info/data/bioinformatics/8.html
 A Rapid Introduction to the R Language - Practice: Bioinformatics Data Skills - Bioinformatics Data Skills (2015)
 mapply() is a multivariate version of sapply(): the function you pass to mapply() can take in and use multiple arguments. 
 
-
 #### NONCODE
 http://www.noncode.org
 
@@ -98,44 +138,8 @@ http://cell-innovation.nig.ac.jp/surfers/long_non_coding_RNA_flow.html
 long non coding RNA解析フロー
 
 ----------
-## Exercise 1
-
-    library("seqinr")  # Loading "seqinr" package
-    x <- s2c("atgc")   # Create small data
-    x
-    length(x)          # Length of a DNA sequence
-    table(x)           # Base composition of a DNA sequence
-    GC(x)              # GC Content of DNA
-    count(x, word = 2) # Count oligomers
-
-----------
-## Exercise 2
-
-    # Loading seqinr package
-    library(seqinr)
-    # list the data sets in the "seqinr" package
-    data(package = "seqinr")
-    # A toy example of amino-acid counts in three proteins
-    data(toyaa)
-    # A toy example of codon counts in three coding sequences
-    data(toycodon)
-    # Fragment of the E. coli chromosome
-    example(m16j)
-    # 999 coding sequences from E. coli
-    data(ec999)
-    # to plot genetic code as in textbooks
-    tablecode()
-    # to translate coding sequences into proteins
-    getTrans(ec999)
-    # utility data for seqinr
-    SEQINR.UTIL
-    # To Get Some Protein Statistics
-    example(AAstat)
-    # Dot Plot Comparison of two sequences
-    example(dotPlot)
-
-----------
 # Acknowledgements
+
 I am grateful to Drs. Jean R. Lobry and Simon Penel for their advice on SeqinR.
 
 ----------
