@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-11-18
+Last Update: 2017-11-23
 
 ----------
 
@@ -7,16 +7,18 @@ Last Update: 2017-11-18
 **統計学**
 
 ## Table of Contents
-- [boxplot](#boxplot)
+- [violinplot](#violinplot)
 - [Fixed or Random Effects](#fixed-or-random-effects)
 - [2017-11](#2017-11)
 - [2017-10](#2017-10)
 - [2017-09](#2017-09)
 - [biopapyrus](#biopapyrus)
 
-
 ----------
-## boxplot
+## violinplot
+[バイオリン図](https://ja.wikipedia.org/wiki/バイオリン図)
+
+![https://en.wikipedia.org/wiki/Violin_plot](https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Violinplot-hiv-paper-plot-pathogens.svg/320px-Violinplot-hiv-paper-plot-pathogens.svg.png)
 
 2017.06.10
 https://stats.biopapyrus.jp/r/graph/violinplot.html
@@ -33,6 +35,9 @@ http://yyhhyy.hatenablog.com/entry/2016/08/20/220000
 
 
 
+2016/03/18
+https://www.karada-good.net/analyticsr/r-446
+Rで解析：補助プロットにバイオリンプロットはいかがでしょうか「vioplot」パッケージ
 
 
 
