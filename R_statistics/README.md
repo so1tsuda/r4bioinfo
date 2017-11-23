@@ -7,9 +7,38 @@ Last Update: 2017-11-18
 **統計学**
 
 ## Table of Contents
+- [boxplot](#boxplot)
+- [Fixed or Random Effects](#fixed-or-random-effects)
 - [2017-11](#2017-11)
 - [2017-10](#2017-10)
+- [2017-09](#2017-09)
 - [biopapyrus](#biopapyrus)
+
+
+----------
+## boxplot
+
+2017.06.10
+https://stats.biopapyrus.jp/r/graph/violinplot.html
+ヴァイオリンプロット
+
+
+2017-06-05
+http://d.hatena.ne.jp/MikuHatsune/20170605/1496667435
+violinplot の上半分だけ欲しい - 驚異のアニヲタ社会復帰への道
+
+2016-08-20
+http://yyhhyy.hatenablog.com/entry/2016/08/20/220000
+箱ひげ図とバイオリンプロットの印象の違い
+
+
+
+
+
+
+2012/08/31
+https://cis-jp.blogspot.jp/2012/08/blog-post_3858.html
+色々と考えてみる: 文系のための「数の可視化」（７）
 
 ----------
 ## Fixed or Random Effects
@@ -83,6 +112,16 @@ Maximal Information Coefficient (Part II)
 December 19, 2011
 https://www.r-bloggers.com/maximal-information-coefficient-mic/
 Maximal Information Coefficient (MIC) | R-bloggers
+
+----------
+## 2017-09
+
+2017年09月16日 | 統計学
+http://blog.goo.ne.jp/r-de-r/e/019d0afc8e702b044768dd8eeaed3dcf
+wilcox.test と wilcox_test 前者だったら残念ですね！ - 裏 RjpWiki
+どんな場合でも，coin ライブラリの wilcox_test を使おうということだ。
+wilcox.test は使わない。
+
 
 ----------
 ## [biopapyrus](https://biopapyrus.jp)
