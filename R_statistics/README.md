@@ -7,12 +7,83 @@ Last Update: 2017-11-23
 **統計学**
 
 ## Table of Contents
+- [Updates](#updates)
+  - [2017-11](#2017-11)
+  - [2017-09](#2017-09)
+- [ROC](#roc)
+- [MIC](#mic) Maximal information coefficient
 - [violinplot](#violinplot)
 - [Fixed or Random Effects](#fixed-or-random-effects)
-- [2017-11](#2017-11)
-- [2017-10](#2017-10)
-- [2017-09](#2017-09)
-- [biopapyrus](#biopapyrus)
+- [References](#references)
+  - [biopapyrus](#biopapyrus)
+
+----------
+## Updates
+### 2017-11
+### 2017-11-16
+
+https://twitter.com/kohske/status/930869204911194112
+kohske on Twitter: "思い出した、シンプソンのパラドックスだ。 https://t.co/jxIo1Ipngx https://t.co/W7R7mDc1eI"
+
+https://twitter.com/h_okumura/status/930651352052715521
+Haruhiko Okumura on Twitter: "労働時間と知的好奇心には，国レベルでは非常に強い負の相関があるが，個人レベルでは逆に正の相関がある https://t.co/N8Z00ljFfB"
+
+https://oku.edu.mie-u.ac.jp/~okumura/stat/piaac.html
+奥村 晴彦
+Last modified: 2017-11-15 13:15:29
+
+
+
+
+
+    # wh                0.001243   0.000180   6.904 5.08e-12 ***
+
+
+### 2017-09
+
+2017年09月16日 | 統計学
+http://blog.goo.ne.jp/r-de-r/e/019d0afc8e702b044768dd8eeaed3dcf
+wilcox.test と wilcox_test 前者だったら残念ですね！ - 裏 RjpWiki
+どんな場合でも，coin ライブラリの wilcox_test を使おうということだ。
+wilcox.test は使わない。
+
+----------
+## [ROC](https://ja.wikipedia.org/wiki/受信者操作特性)
+
+2017-05-27
+https://qiita.com/kenmatsu4/items/550b38f4fa31e9af6f4f
+【統計学】ROC曲線とは何か、アニメーションで理解する。
+
+2016-02-21
+https://oku.edu.mie-u.ac.jp/~okumura/stat/ROC.html
+ROC曲線
+
+----------
+## MIC
+https://en.wikipedia.org/wiki/Maximal_information_coefficient
+Maximal information coefficient
+
+2 years, 5 months ago
+https://stats.stackexchange.com/questions/157143/maximal-information-coefficient-mic
+correlation - maximal information coefficient - MIC - Cross Validated
+
+the coefficient is between 0 and 1, 
+
+0 implies statistically independent variables and 1 perfect (noiseless) functional relationship, up to the approximation determined by the parameter α
+
+September 17, 2014
+http://menugget.blogspot.jp/2014/09/maximal-information-coefficient-part-ii.html
+me nugget: Maximal Information Coefficient (Part II)
+
+December 19, 2011
+https://menugget.blogspot.jp/2011/12/maximal-information-coefficient-mic.html
+me nugget: Maximal Information Coefficient (MIC)
+
+Aug 30, 2013
+https://www.slideshare.net/motivic/tokyo-r-lt-25759212
+21世紀の手法対決 (MIC vs HSIC)
+
+    #install.packages("minerva")
 
 ----------
 ## violinplot
@@ -38,8 +109,6 @@ http://yyhhyy.hatenablog.com/entry/2016/08/20/220000
 2016/03/18
 https://www.karada-good.net/analyticsr/r-446
 Rで解析：補助プロットにバイオリンプロットはいかがでしょうか「vioplot」パッケージ
-
-
 
 2012/08/31
 https://cis-jp.blogspot.jp/2012/08/blog-post_3858.html
@@ -68,68 +137,9 @@ http://hosho.ees.hokudai.ac.jp/~kubo/ce/RandomEffectsCrawley.html
 - ランダム効果 (random effects): y の分散 (ばらつき) にだけ影響およぼす (久保注: となるとこちらは中央値は変えないけどばらつきは変える，となるのかな?)
 
 ----------
-## 2017-11
+## References
 
-
-### 2017-11-16
-
-https://twitter.com/kohske/status/930869204911194112
-kohske on Twitter: "思い出した、シンプソンのパラドックスだ。 https://t.co/jxIo1Ipngx https://t.co/W7R7mDc1eI"
-
-https://twitter.com/h_okumura/status/930651352052715521
-Haruhiko Okumura on Twitter: "労働時間と知的好奇心には，国レベルでは非常に強い負の相関があるが，個人レベルでは逆に正の相関がある https://t.co/N8Z00ljFfB"
-
-https://oku.edu.mie-u.ac.jp/~okumura/stat/piaac.html
-奥村 晴彦
-Last modified: 2017-11-15 13:15:29
-
-
-
-
-
-    # wh                0.001243   0.000180   6.904 5.08e-12 ***
-
-
-----------
-## 2017-10
-
-### MIC
-https://en.wikipedia.org/wiki/Maximal_information_coefficient
-Maximal information coefficient
-
-Published on Aug 30, 2013
-https://www.slideshare.net/motivic/tokyo-r-lt-25759212
-21世紀の手法対決 (MIC vs HSIC)
-
-    #install.packages("minerva")
-
-https://stats.stackexchange.com/questions/157143/maximal-information-coefficient-mic
-correlation - maximal information coefficient - MIC - Cross Validated
-
-the coefficient is between 0 and 1, 
-
-0 implies statistically independent variables and 1 perfect (noiseless) functional relationship, up to the approximation determined by the parameter α
-
-September 17, 2014
-https://www.r-bloggers.com/maximal-information-coefficient-part-ii/
-Maximal Information Coefficient (Part II) 
-
-December 19, 2011
-https://www.r-bloggers.com/maximal-information-coefficient-mic/
-Maximal Information Coefficient (MIC) | R-bloggers
-
-----------
-## 2017-09
-
-2017年09月16日 | 統計学
-http://blog.goo.ne.jp/r-de-r/e/019d0afc8e702b044768dd8eeaed3dcf
-wilcox.test と wilcox_test 前者だったら残念ですね！ - 裏 RjpWiki
-どんな場合でも，coin ライブラリの wilcox_test を使おうということだ。
-wilcox.test は使わない。
-
-
-----------
-## [biopapyrus](https://biopapyrus.jp)
+### [biopapyrus](https://biopapyrus.jp)
 
 https://stats.biopapyrus.jp
 biostatistics | バイオスタティスティクス | 生物統計学
@@ -137,21 +147,18 @@ biostatistics | バイオスタティスティクス | 生物統計学
 https://stats.biopapyrus.jp/r/
 R | R の使い方、グラフの書き方、ggplot の使い方
 
-----------
-## Execution environment
-
-    > R.version.string
-    "R version 3.3.3 (2017-03-06)"
-
-----------
-## References
-
 http://aoki2.si.gunma-u.ac.jp/taygeta/statistics.cgi
 統計学関連なんでもあり
 
 http://mjin.doshisha.ac.jp/R/
 JIN'S PAGE
 R、R言語、R環境・・・・・・
+
+----------
+## Execution environment
+
+    > R.version.string
+    "R version 3.3.3 (2017-03-06)"
 
 ----------
 
