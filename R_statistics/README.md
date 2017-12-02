@@ -56,7 +56,8 @@ Design of experiments
 https://ja.wikipedia.org/wiki/実験計画法
 品種・施肥量・圃場の3因子につき各3水準を設定するとしよう。一般には全部で 3 x 3 x 3 = 27 通りの実験が必要である。しかし、交互作用が無視できる場合には表2 に示すように9通りに減らすことができ、
 
-![](https://ja.wikipedia.org/wiki/ファイル:実験計画2.gif)
+![](https://upload.wikimedia.org/wikipedia/ja/thumb/2/2b/実験計画1.gif/220px-実験計画1.gif)
+![](https://upload.wikimedia.org/wikipedia/ja/thumb/6/69/実験計画2.gif/220px-実験計画2.gif)
 
 2017-02-05
 https://www.placeon.jp/blog/words/words_monozukuri/experimental_design/
