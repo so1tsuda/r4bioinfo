@@ -7,7 +7,7 @@ Last Update: 2017-11-19
 R言語を用いたバイオインフォマティクス
 
 ## Table of Contents
-- [Avril Coghlan (2011) Welcome to a Little Book of R for Bioinformatics!](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
+- [Avril Coghlan (2011) A Little Book of R for Bioinformatics](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
 - [R for Deep Learning](https://github.com/haruosuz/r4bioinfo/tree/master/R_Deep_Learning)
 - [R for Machine Learning](https://github.com/haruosuz/r4bioinfo/tree/master/R_Machine_Learning)
 - [Wim P. Krijnen (2009) Applied Statistics for Bioinformatics using R](https://github.com/haruosuz/r4bioinfo/tree/master/R_Wim_Krijnen)
@@ -19,6 +19,28 @@ R言語を用いたバイオインフォマティクス
 - [R_statistics](https://github.com/haruosuz/r4bioinfo/tree/master/R_statistics)
 - [tree](https://github.com/haruosuz/r4bioinfo/tree/master/R_tree)
 - [vegan: Community Ecology Package](https://github.com/haruosuz/r4bioinfo/tree/master/R_vegan)
+
+----------
+## Updates
+
+### 2017
+
+https://qiita.com/advent-calendar/2017/rlang
+R Advent Calendar 2017
+
+https://qiita.com/advent-calendar/2017/rstudio
+RStudio Advent Calendar 2017
+
+http://uribo.hatenablog.com/entry/2017/12/10/145149
+2017年度版 RStudioを使ったReproducible Research、補足ポエム - まだ厨二病
+
+2017/05/30
+http://lab-on.jp/article/23
+Excelはなぜ研究に向かないのか？Rに転換した方がいい理由
+
+2015年5月8日
+http://gihyo.jp/admin/serial/01/r-markdown
+R Markdownで楽々レポートづくり：連載｜gihyo.jp … 技術評論社
 
 ----------
 
@@ -80,6 +102,9 @@ Rのバージョンとパッケージを確認:
 
 # References
 
+Mon 27 Nov 2017
+https://training.csx.cam.ac.uk/bioinformatics/course/bioinfo-rintro
+Bioinformatics Training - course description: "An Introduction to Solving Biological Problems with R"
 
 28 November 2013 to 29 November 2013
 http://faculty.washington.edu/kenrice/bigr/
