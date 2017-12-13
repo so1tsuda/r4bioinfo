@@ -11,6 +11,7 @@ Last Update: 2017-12-02
   - [2017-11](#2017-11)
   - [2017-09](#2017-09)
 - [DoE](#doe)
+  - [Dummy](#dummy)
 - [ROC](#roc)
 - [MIC](#mic) Maximal information coefficient
 - [violinplot](#violinplot)
@@ -112,6 +113,34 @@ http://www.juse-p.co.jp/cgi-bin/html.pl5?i=ISBN978-4-8171-9371-1
 http://www.ec.kansai-u.ac.jp/user/arakit/RDOE.html
 RDOE
 
+04/2011
+http://www1.beuth-hochschule.de/FB_II/reports/Report-2011-004.pdf
+Tutorial for designing experiments using the R package RcmdrPlugin.DoE
+
+
+### Dummy
+擬水準
+
+http://www.ab.cyberhome.ne.jp/~t-nojima/RQE/ps12.html
+ダミー（擬水準）法と多水準作成法
+
+https://support.minitab.com/ja-jp/minitab/18/help-and-how-to/modeling-statistics/doe/supporting-topics/taguchi-designs/dummy-treatments-for-taguchi-designs/
+タグチ計画のダミー処理 - Minitab
+https://support.minitab.com/en-us/minitab/18/help-and-how-to/modeling-statistics/doe/supporting-topics/taguchi-designs/dummy-treatments-for-taguchi-designs/
+Dummy treatments for Taguchi designs - Minitab
+
+2012/07/04
+https://www.monodukuri.com/gihou/article/75
+直交表の技法解説記事 直交表で水準数が余る時、足りない時の対処法 - ものづくり.com
+「ダミー法」
+
+1994年
+http://ebsa.ism.ac.jp/ebooks/node/581
+農業実験計画法小史 | 電子図書システム
+http://ebsa.ism.ac.jp/ebooks/sites/default/files/ebook/581/pdf/ch03-12.pdf
+12. ４水準因子の L₃₂ 直交表へのわりつけ
+擬水準
+
 ----------
 ## [ROC](https://ja.wikipedia.org/wiki/受信者操作特性)
 
@@ -155,6 +184,10 @@ https://www.slideshare.net/motivic/tokyo-r-lt-25759212
 [バイオリン図](https://ja.wikipedia.org/wiki/バイオリン図)
 
 ![https://en.wikipedia.org/wiki/Violin_plot](https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Violinplot-hiv-paper-plot-pathogens.svg/320px-Violinplot-hiv-paper-plot-pathogens.svg.png)
+
+28 Nov 2017
+https://twitter.com/kyn02666/status/935668829203570688
+das Kino on Twitter: "violin plotはデータの位置が分かりにくいことがあって，最近はよほどデータが多くない限りgeom_pointかjitterを使うようにしていたが，sinaplotは両方の性質を持っているようで良さげ。sinaplotパッケージはggplot2ベースではないけど，ggfor… https://t.co/PVISlyMP1m"
 
 2017.06.10
 https://stats.biopapyrus.jp/r/graph/violinplot.html
