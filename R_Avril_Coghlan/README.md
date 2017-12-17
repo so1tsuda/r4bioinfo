@@ -927,47 +927,6 @@ R言語デモ
 
 距離行列より、"O56773"と"P0C569"との間の遺伝的距離が最小（0.4142670）、"Q5VKP1"と"O56773"との間の遺伝的距離が最大（0.5067117）である。
 
-### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
-**DNA/mRNA配列間の遺伝的距離を計算する**
-
-    library("seqinr")
-    # create a function to retrieve several nucleotide sequences from NCBI
-    retrieve_ncbi_fna <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), seqtype = c("DNA"), strip.desc = TRUE)[[1]]
-    
-	seqnames <- c("AF049118", "AF049114", "AF049119", "AF049115")  # Make a vector containing the names of the sequences
-    seqs <- lapply(seqnames, retrieve_ncbi_fna) # Retrieve the sequences and store them in list variable "seqs"
-
-    # get sequence annotations
-    unlist(getAnnot(seqs))
-
-	# write out the sequences to a FASTA-format file
-	write.fasta(seqs, seqnames, file="virusmRNA.fasta")
-
-    # Read an XStringSet object from a file
-    library(Biostrings)
-    mySequences <- readDNAStringSet(file = "virusmRNA.fasta")
-
-    # Multiple Sequence Alignment using ClustalW
-    library(msa)
-    myAlignment <- msa(mySequences)
-
-    # convert msa for the seqinr package
-    virusmRNAaln <- msaConvert(myAlignment, type="seqinr::alignment")
-
-    # calculate a genetic distance for DNA/mRNA sequences
-    library(ape)
-	virusmRNAalnbin <- as.DNAbin(virusmRNAaln) # Convert the alignment to "DNAbin" format
-	virusmRNAdist <- dist.dna(virusmRNAalnbin) # Calculate the genetic distance matrix
-	virusmRNAdist                              # Print out the genetic distance matrix
-
-### [Building a phylogenetic tree for DNA or mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-phylogenetic-tree-for-dna-or-mrna-sequences)
-**DNA/mRNA配列の系統樹の構築**
-
-    # construct a phylogenetic tree with the neighbor joining algorithm
-    library(ape)
-    mytree <- nj(virusmRNAdist)
-    plot.phylo(mytree, type="u") # plot the unrooted phylogenetic tree
-
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の無根系統樹の構築**
 
@@ -1040,13 +999,51 @@ R言語デモ
 ### [Saving a phylogenetic tree as a Newick-format tree file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#saving-a-phylogenetic-tree-as-a-newick-format-tree-file)
 **系統樹をNewick形式ファイルとして保存する**
 
-    write.tree(mytree, file="myNewick.tree")
+    write.tree(mytree, file="myNewick.tre")
 
 - Newick形式のファイルを修正して多分岐の系統樹を作成する - kiliwave http://kiliwave.hatenablog.com/entry/2016/11/16/205345
 - Newick書式から系統樹を描く - ryamadaの遺伝学・遺伝統計学メモ (id:ryamada22) http://d.hatena.ne.jp/ryamada22/20050513/1115948852
 
+### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
+**DNA/mRNA配列間の遺伝的距離を計算する**
 
+    library("seqinr")
+    # create a function to retrieve several nucleotide sequences from NCBI
+    retrieve_ncbi_fna <- function(ACCESSION) read.fasta(file = paste0("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=",ACCESSION,"&rettype=fasta&retmode=text"), seqtype = c("DNA"), strip.desc = TRUE)[[1]]
+    
+	seqnames <- c("AF049118", "AF049114", "AF049119", "AF049115")  # Make a vector containing the names of the sequences
+    seqs <- lapply(seqnames, retrieve_ncbi_fna) # Retrieve the sequences and store them in list variable "seqs"
 
+    # get sequence annotations
+    unlist(getAnnot(seqs))
+
+	# write out the sequences to a FASTA-format file
+	write.fasta(seqs, seqnames, file="virusmRNA.fasta")
+
+    # Read an XStringSet object from a file
+    library(Biostrings)
+    mySequences <- readDNAStringSet(file = "virusmRNA.fasta")
+
+    # Multiple Sequence Alignment using ClustalW
+    library(msa)
+    myAlignment <- msa(mySequences)
+
+    # convert msa for the seqinr package
+    virusmRNAaln <- msaConvert(myAlignment, type="seqinr::alignment")
+
+    # calculate a genetic distance for DNA/mRNA sequences
+    library(ape)
+	virusmRNAalnbin <- as.DNAbin(virusmRNAaln) # Convert the alignment to "DNAbin" format
+	virusmRNAdist <- dist.dna(virusmRNAalnbin) # Calculate the genetic distance matrix
+	virusmRNAdist                              # Print out the genetic distance matrix
+
+### [Building a phylogenetic tree for DNA or mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-phylogenetic-tree-for-dna-or-mrna-sequences)
+**DNA/mRNA配列の系統樹の構築**
+
+    # construct a phylogenetic tree with the neighbor joining algorithm
+    library(ape)
+    mytree <- nj(virusmRNAdist)
+    plot.phylo(mytree, type="u") # plot the unrooted phylogenetic tree
 
 ### Summary
 
