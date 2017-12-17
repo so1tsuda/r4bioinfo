@@ -31,6 +31,13 @@ R Advent Calendar 2017
 https://qiita.com/advent-calendar/2017/rstudio
 RStudio Advent Calendar 2017
 
+reproducib
+再現性
+
+December 14, 2017
+https://www.r-bloggers.com/archivist-boost-the-reproducibility-of-your-research/
+archivist: Boost the reproducibility of your research | R-bloggers
+
 http://uribo.hatenablog.com/entry/2017/12/10/145149
 2017年度版 RStudioを使ったReproducible Research、補足ポエム - まだ厨二病
 
