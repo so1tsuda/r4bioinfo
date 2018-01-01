@@ -1,8 +1,8 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-11-19
+Last Update: 2017-12-23
 
 ----------
-# [Welcome to a Little Book of R for Bioinformatics!](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
+# [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
 By Avril Coghlan  
 
 ## [Chapters in this Book](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/index.html#chapters-in-this-book)
@@ -17,13 +17,20 @@ By Avril Coghlan
 ----------
 
 ## [How to install R and a Brief Introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html)
-R言語入門
+**R言語入門**
+
+- [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
+- [R-Tips](http://cse.naro.affrc.go.jp/takezawa/r-tips/r.html)
+
+### [Installing R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r)
+
+- [R のインストール - RjpWiki](http://www.okadajp.org/RWiki/?R%20のインストール)
+- [01.セットアップ・参考文献](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/01.html)
 
 ### [Installing R packages](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#installing-r-packages)
 
-[08. パッケージ・ライブラリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)
-
-[パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
+- [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
+- [08. パッケージ・ライブラリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/08.html)
 
 #### [How to install an R package](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#how-to-install-an-r-package)
 
@@ -52,9 +59,16 @@ Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/relea
 
 ### [Running R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#running-r)
 
-[R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
+- [02. R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
 
+![](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/windows.gif)
 ![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
+
+Rを終了:  
+
+	# To quit R, type:
+    quit()
+	q()
 
 ### [A brief introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#a-brief-introduction-to-r)
 
@@ -153,12 +167,6 @@ Bioconductorパッケージ[`Biostrings`](http://bioconductor.org/packages/relea
 	# use the function for different input numbers (eg. 10, 25):
 	myfunction(10)
 	myfunction(25)
-
-Rを終了:  
-
-	# To quit R, type:
-    quit()
-	q()
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#links-and-further-reading)
 
@@ -887,8 +895,6 @@ R言語デモ
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
 **CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アライメントの作成**
 
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image8.png)
-
     # Read an XStringSet object from a file
     library(Biostrings)
     mySequences <- readAAStringSet(file = "phosphoproteins.fasta")
@@ -936,12 +942,10 @@ R言語デモ
     #install.packages("ape")
     library(ape)
     mytree <- nj(virusdist)
-	plot.phylo(mytree,type="u")   # plot the unrooted phylogenetic tree
+    plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 
     # get sequence annotations
     unlist(getAnnot(seqs))
-
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P5_image9.png)
 
 系統樹では、"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
 
@@ -1043,7 +1047,7 @@ R言語デモ
     # construct a phylogenetic tree with the neighbor joining algorithm
     library(ape)
     mytree <- nj(virusmRNAdist)
-    plot.phylo(mytree, type="u") # plot the unrooted phylogenetic tree
+    plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 
 ### Summary
 
@@ -1079,4 +1083,3 @@ https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJap
 
 [SeaView](http://doua.prabi.fr/software/seaview)
 [使用法](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
-
