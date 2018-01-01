@@ -39,7 +39,6 @@ Last Update: 2017-06-13
 [R の起動と終了](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html)  
 
 ![](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/windows.gif)
-
 ![http://cse.naro.affrc.go.jp/takezawa/r-tips/r/02.html](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/image/Mac.gif)
 
 Rを終了:  
