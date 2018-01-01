@@ -242,7 +242,7 @@ How do I calculate the distance from an internal node to the tips of an ultramet
 **R - 井上 潤**
 2015 年 6 月 8 日　改訂
 
-ape: newick tree を描く
+#### ape: newick tree を描く
 
     system("curl -O http://www.geocities.jp/ancientfishtree/NewFiles/drawTree_fol.tar.gz
             tar xvzf drawTree_fol.tar.gz
@@ -251,7 +251,11 @@ ape: newick tree を描く
     setwd("./drawTree_fol")
 
 
-ape: node number を確認する
+
+
+
+
+#### ape: node number を確認する
 
 http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_node_representing_the_most_recent_common_ancestor_of_a_pair_of_taxa.3F
 
