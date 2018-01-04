@@ -325,6 +325,10 @@ R言語 標準データセットの私的まとめ - Qiita
 attitude
 とある金融機関における各部署の職員の意識調査(attitude survey)データ。
 
+http://www.panrolling.com/books/wb/wb231.html
+Rとトレード ――確率と統計のガイドブック (ウイザードブックシリーズVol.231) 単行本 – 2015/12/12
+　金融データ分析を行ったり、モデル駆動のトレード戦略を構築するクオンツやトレーダーたちは、毎日どういったことをやっているのだろうか。
+
 2015/10/08
 http://sssslide.com/speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
 https://speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
