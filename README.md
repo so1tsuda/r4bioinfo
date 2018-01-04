@@ -1,10 +1,10 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-11-19
+Last Update: 2018-01-04
 
 ----------
 
 # R for Bioinformatics
-R言語を用いたバイオインフォマティクス
+Rによるバイオインフォマティクス
 
 ## Table of Contents
 - [Avril Coghlan (2011) A Little Book of R for Bioinformatics](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
@@ -204,7 +204,6 @@ Applied Statistics for Bioinformatics using R
 Wim P. Krijnen
 November 10, 2009
 
-
 ## 日本語
 
 - [R言語入門 (全13回) - プログラミングならドットインストール](http://dotinstall.com/lessons/basic_r)
@@ -263,4 +262,36 @@ http://tullbergia.at.webry.info/201006/article_2.html
 2010/06/17
 
 ----------
+### finance
+
+2015/10/08
+http://sssslide.com/speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
+https://speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
+"モダンなRで"金融データ解析の基礎 by Shinichi Takayanagi
+
+http://tjo.hatenablog.com/entry/2014/09/05/191033
+シリーズUseful R『戦略的データマイニング』『金融データ解析の基礎』ご恵贈いただきました - 六本木で働くデータサイエンティストのブログ
+
+http://www.kyoritsu-pub.co.jp/bookdetail/9784320123717
+金融データ解析の基礎 (シリーズ Useful R 8) 単行本 – 2014/8/9
+
+http://arbitrage.jpn.org/bookshelf/osaki-r-programming-for-finance/
+ファイナンスのためのRプログラミング
+
+http://www.kyoritsu-pub.co.jp/bookdetail/9784320110441
+ファイナンスのためのRプログラミング ―証券投資理論の実践に向けて― 単行本 – 2013/10/24
+大崎 秀一 (著),‎ 吉川 大介 (著)
+
+http://gihyo.jp/book/2012/978-4-7741-5315-5
+「R」でおもしろくなるファイナンスの統計学：書籍案内｜技術評論社
+
+「R」でおもしろくなるファイナンスの統計学 (知識ゼロでもわかる統計学) 単行本（ソフトカバー） – 2012/11/7
+
+http://yut.hatenablog.com/entry/20120730/1343605481
+2012-07-30
+R言語を用いた自己回帰モデルによる株価予測を試してみた
+
+----------
+
+
 
