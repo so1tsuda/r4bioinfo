@@ -262,6 +262,25 @@ http://tullbergia.at.webry.info/201006/article_2.html
 2010/06/17
 
 ----------
+### read.table
+
+http://cse.naro.affrc.go.jp/takezawa/r-tips/r/40.html
+40. ファイルからデータを読み込む
+ data01.txt
+http://cse.naro.affrc.go.jp/takezawa/r-tips/r/data/data01.txt
+
+http://takenaka-akio.org/doc/r_auto/chapter_02.html
+2. ひとつのファイルからデータを読み込む
+
+＞データファイル len_width.txt
+http://takenaka-akio.org/doc/r_auto/len_width.txt
+
+https://sites.google.com/site/webtextofr/data
+5. データの読み込み - 統計ソフトRの使い方
+n  読み込みI：タブ区切りテキストファイルからの読み込み
+n  読み込みII： CSVファイルからの読み込み
+
+----------
 ### finance
 
 https://qiita.com/FukuharaYohei/items/8e0ddd0af11132031355
