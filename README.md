@@ -289,7 +289,8 @@ http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html
 http://cse.naro.affrc.go.jp/takezawa/r-tips/r/45.html
 45. ファイルへのデータ出力
 
-	write.table(x = d, file = "len_width.txt", quote = F)
+	write.table(d, file = "len_width.txt", sep="\t", quote=FALSE, row.names=TRUE, col.names = NA)
+	write.csv(d, file="len_width.csv", row.names=TRUE)
 
 ----------
 ### finance
