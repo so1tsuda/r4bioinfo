@@ -269,6 +269,8 @@ R言語インストール(2018年 Windows) - Qiita
 
 	plot(cars)
 
+	plot(x = cars[,1], y = cars[,2])
+
 2015/10/08
 http://sssslide.com/speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
 https://speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
