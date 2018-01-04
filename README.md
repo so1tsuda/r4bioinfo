@@ -272,6 +272,9 @@ http://takenaka-akio.org/doc/r_auto/chapter_02.html
 2. ひとつのファイルからデータを読み込む
 - データファイル len_width.txt
 
+	filename <- "http://takenaka-akio.org/doc/r_auto/len_width.txt"
+	d <- read.table(file = filename, header = TRUE)
+
 https://sites.google.com/site/webtextofr/data
 5. データの読み込み - 統計ソフトRの使い方
 - 読み込みI：タブ区切りテキストファイルからの読み込み
