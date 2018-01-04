@@ -329,6 +329,11 @@ http://yut.hatenablog.com/entry/20120730/1343605481
 2012-07-30
 R言語を用いた自己回帰モデルによる株価予測を試してみた
 
+	UKgas
+	ts.plot( UKgas )
+	ar_result <- ar(UKgas)
+	pred_result <- predict( ar_result, n.ahead = 40 )
+
 ----------
 
 
