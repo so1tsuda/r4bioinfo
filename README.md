@@ -264,6 +264,10 @@ http://tullbergia.at.webry.info/201006/article_2.html
 ----------
 ### finance
 
+https://qiita.com/FukuharaYohei/items/8e0ddd0af11132031355
+R言語インストール(2018年 Windows) - Qiita
+
+
 2015/10/08
 http://sssslide.com/speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
 https://speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
