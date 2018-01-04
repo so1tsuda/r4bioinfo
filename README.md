@@ -262,7 +262,15 @@ http://tullbergia.at.webry.info/201006/article_2.html
 2010/06/17
 
 ----------
-### read.table
+### 2018-01-04
+
+https://qiita.com/FukuharaYohei/items/8e0ddd0af11132031355
+R言語インストール(2018年 Windows) - Qiita
+
+	plot(cars)
+	plot(x = cars[,1], y = cars[,2])
+
+#### read.table
 
 http://cse.naro.affrc.go.jp/takezawa/r-tips/r/40.html
 40. ファイルからデータを読み込む
@@ -279,28 +287,43 @@ https://sites.google.com/site/webtextofr/data
 - 読み込みI：タブ区切りテキストファイルからの読み込み
 - 読み込みII： CSVファイルからの読み込み
 
-http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html
-06. 作業ディレクトリの変更
-
-	getwd()
-
-	?setwd
-
 http://cse.naro.affrc.go.jp/takezawa/r-tips/r/45.html
 45. ファイルへのデータ出力
 
 	write.table(d, file = "len_width.txt", sep="\t", quote=FALSE, row.names=TRUE, col.names = NA)
 	write.csv(d, file="len_width.csv", row.names=TRUE)
 
+http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html
+06. 作業ディレクトリの変更
+
+	getwd()
+	?setwd
+
 ----------
 ### finance
 
-https://qiita.com/FukuharaYohei/items/8e0ddd0af11132031355
-R言語インストール(2018年 Windows) - Qiita
+https://www.trifields.jp/r-cran-task-view-empirical-finance-727
+R言語 CRAN Task View：経験的ファイナンス | トライフィールズ
 
-	plot(cars)
+http://datascience.jp/data.example.html
+Data Science Consortium
+金融
 
-	plot(x = cars[,1], y = cars[,2])
+リーマンショック以来，数理ファイナンス，金融工学の熱気も一段落したようですが，それはデリバティブ取引という一種のゲームの枠組みを支える役目が一段落しただけで，金融データの取り扱いとその解析，それにもとづくリスク管理といった基本的な流れはいまだに変わっていないと思います．
+
+金融時系列をいくつかの成分に分解するというアイディアは古くからありますが，局所回帰( lowess )をうまく使いこなせば， かなりのことが見えてきます．
+
+市場の休日，うるう年なども考慮したR データフレームのダンプ http://datascience.jp/yen.int/yen.int.R
+
+2017/10/4
+https://dmjtmj-stock.com/entry/2017/01/02/003045
+【R言語】 xtsパッケージでの時系列データ解析 | 株初心者が本気で儲けるブログ
+
+2016年12月26日
+https://qiita.com/wakuteka/items/95ac758070f6f4d89a96
+R言語 標準データセットの私的まとめ - Qiita
+attitude
+とある金融機関における各部署の職員の意識調査(attitude survey)データ。
 
 2015/10/08
 http://sssslide.com/speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
@@ -310,6 +333,9 @@ https://speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
 http://tjo.hatenablog.com/entry/2014/09/05/191033
 シリーズUseful R『戦略的データマイニング』『金融データ解析の基礎』ご恵贈いただきました - 六本木で働くデータサイエンティストのブログ
 
+http://d.hatena.ne.jp/hotoku/20140809/1407576274
+献本御礼：金融データ解析の基礎 - hotoku とは
+
 http://www.kyoritsu-pub.co.jp/bookdetail/9784320123717
 金融データ解析の基礎 (シリーズ Useful R 8) 単行本 – 2014/8/9
 
@@ -317,8 +343,9 @@ http://arbitrage.jpn.org/bookshelf/osaki-r-programming-for-finance/
 ファイナンスのためのRプログラミング
 
 http://www.kyoritsu-pub.co.jp/bookdetail/9784320110441
+ファイナンスのためのRプログラミング ―証券投資理論の実践に向けて― / 大崎 秀一　吉川 大介　著 | 共立出版
+
 ファイナンスのためのRプログラミング ―証券投資理論の実践に向けて― 単行本 – 2013/10/24
-大崎 秀一 (著),‎ 吉川 大介 (著)
 
 http://gihyo.jp/book/2012/978-4-7741-5315-5
 「R」でおもしろくなるファイナンスの統計学：書籍案内｜技術評論社
@@ -333,6 +360,11 @@ R言語を用いた自己回帰モデルによる株価予測を試してみた
 	ts.plot( UKgas )
 	ar_result <- ar(UKgas)
 	pred_result <- predict( ar_result, n.ahead = 40 )
+
+http://web.sfc.keio.ac.jp/~kogure/course/2008fall/fe/fe.html
+http://web.sfc.keio.ac.jp/~kogure/course/2008fall/fe/fe2008_4.pdf
+計量ファイナンス( 2008年秋学期) 第4回:10月27日
+コンピュータ実習1: ーR事始め+データベース紹介ー
 
 ----------
 
