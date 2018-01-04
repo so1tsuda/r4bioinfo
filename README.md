@@ -267,6 +267,7 @@ http://tullbergia.at.webry.info/201006/article_2.html
 https://qiita.com/FukuharaYohei/items/8e0ddd0af11132031355
 R言語インストール(2018年 Windows) - Qiita
 
+	plot(cars)
 
 2015/10/08
 http://sssslide.com/speakerdeck.com/stakaya/modannarde-jin-rong-detajie-xi-falseji-chu
