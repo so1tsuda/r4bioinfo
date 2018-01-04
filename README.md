@@ -279,6 +279,18 @@ https://sites.google.com/site/webtextofr/data
 - 読み込みI：タブ区切りテキストファイルからの読み込み
 - 読み込みII： CSVファイルからの読み込み
 
+http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html
+06. 作業ディレクトリの変更
+
+	getwd()
+
+	?setwd
+
+http://cse.naro.affrc.go.jp/takezawa/r-tips/r/45.html
+45. ファイルへのデータ出力
+
+	write(d, file="len_width.txt")
+
 ----------
 ### finance
 
