@@ -266,11 +266,10 @@ http://tullbergia.at.webry.info/201006/article_2.html
 
 http://cse.naro.affrc.go.jp/takezawa/r-tips/r/40.html
 40. ファイルからデータを読み込む
-- data01.txt
 
 http://takenaka-akio.org/doc/r_auto/chapter_02.html
 2. ひとつのファイルからデータを読み込む
-- データファイル len_width.txt
+データファイル len_width.txt
 
 	filename <- "http://takenaka-akio.org/doc/r_auto/len_width.txt"
 	d <- read.table(file = filename, header = TRUE)
