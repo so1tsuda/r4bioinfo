@@ -18,7 +18,7 @@ Last Update: 2018-01-21
 - [Jun Inoue](#jun-inoue)
   - [R_JI](#r_ji) R - 井上 潤
 - [biopapyrus](#biopapyrus)
-  - [2015-05-04](#2015-05-04) 系統樹 ape ade4 | Rで系統樹を作成する方法
+  - [2017-12-29](#2017-12-29) 系統樹 ape ade4 | Rで系統樹を作成する方法
 - [JIN'S PAGE](#jins-page)
   - [Chap_42](#chap_42) Rと系統樹(1)
   - [Chap_43](#chap_43) Rと系統樹(2)
@@ -292,7 +292,7 @@ http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_no
 
 ----------
 ## [biopapyrus](https://biopapyrus.jp)
-### 2017.12.29
+### 2017-12-29
 [系統樹 ape ade4 | R を利用した系統樹の描き方](https://stats.biopapyrus.jp/r/graph/phylogenetic-tree.html)
 
 #### ade4
