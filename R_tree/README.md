@@ -357,8 +357,6 @@ Error in text.default(XX, YY, text, adj = adj, col = col, ...) :
 	wm.phy<-as.phylo(wm.hc)
 	plot(wm.phy)
 
-![](http://mjin.doshisha.ac.jp/R/Chap_42/image12.jpg)
-
 (3)　関数 plot.phylo
 
     par(mfrow=c(2,2))
@@ -367,19 +365,14 @@ Error in text.default(XX, YY, text, adj = adj, col = col, ...) :
 	plot(wm.phy,type="r")	　#図(c)
 	plot(wm.phy,type="u",use.edge.length = FALSE,lab4ut="axial")	　#図(d)
 
-![](http://mjin.doshisha.ac.jp/R/Chap_42/image13.jpg)
-
 (4)　近隣結合法 (NJ: Neighbor-Joining)
 
 	wm.d<-dist.dna(woodmouse)
 	wm.nj<-nj(wm.d)
 	plot(wm.nj)
-
-![](http://mjin.doshisha.ac.jp/R/Chap_42/image14.jpg)
-
 	plot(wm.nj,type="u",use.edge.length = FALSE,lab4ut="axial")
 
-![](http://mjin.doshisha.ac.jp/R/Chap_42/image15.jpg)
+距離マトリックスを基に最小スパニング樹 (spanning tree) を作成する
 
     example(mst)
 
