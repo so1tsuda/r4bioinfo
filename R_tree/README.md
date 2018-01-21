@@ -307,8 +307,6 @@ http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_no
 	tree <- read.tree("https://stats.biopapyrus.jp/data/species_tree.txt")
     plot(tree)
 
-![](https://stats.biopapyrus.jp/media/ape-plot-basis.png)
-
 **エッジラベル**
 
 	# Sample 1
@@ -320,13 +318,10 @@ http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_no
 Error in text.default(XX, YY, text, adj = adj, col = col, ...) : 
   zero-length 'labels' specified
 
-![](https://stats.biopapyrus.jp/media/ape-plot-edgelabel.png)
-
 **ノードラベル**
 
 	plot(tree)
     nodelabels()
-
 
 ----------
 ## [JIN'S PAGE](http://mjin.doshisha.ac.jp/R/)
