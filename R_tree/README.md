@@ -1,7 +1,5 @@
-----------
-
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-06-13
+Last Update: 2018-01-21
 
 ----------
 
@@ -285,7 +283,7 @@ How do I calculate the distance from an internal node to the tips of an ultramet
 	# 系統樹を書いたときに，上にルートが来るようにする
 	MyTree <- ladderize(MyTree)
 	# 系統樹を書いたときに，下にルートが来るようにする
-	#MyTree <- ladderize(MyTree,FALSE)
+	MyTree <- ladderize(MyTree,FALSE)
 
 
 #### ape: node number を確認する
@@ -294,91 +292,41 @@ http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_no
 
 ----------
 ## [biopapyrus](https://biopapyrus.jp)
-### 2015-05-04
-[系統樹 ape ade4 | Rで系統樹を作成する方法](https://stat.biopapyrus.net/graph/r-phylogenetic-tree.html)
+### 2017.12.29
+[系統樹 ape ade4 | R を利用した系統樹の描き方](https://stats.biopapyrus.jp/r/graph/phylogenetic-tree.html)
 
-**系統樹データの読み込み**
-
-	#install.packages("ape", dependencies = TRUE)
-	#install.packages("ade4", dependencies = TRUE)
-
-ape パッケージを利用して読み込む
-
-	library(ape)
-	
-	# newick フォーマットの読み込み
-	nw <- read.tree("https://stat.biopapyrus.net/data/newick-format.txt")
-	
-	# nexus フォーマットの読み込み
-	nx <- read.nexus("https://stat.biopapyrus.net/data/nexus-format.txt")
-	
-	# データの読み込み
-	tree <- read.tree("https://stat.biopapyrus.net/data/newick-format.txt")
-	
-	# データの書き込み
-	write.tree(tree, file="new.tre")    # newick フォーマット
-	write.nexus(tree, file="new.nex")   # nexus フォーマット
-
-ade4 パッケージを利用して読み込む
+#### ade4
 
 	library(ade4)
-	
-	# ファイルを 1 行ずつ読んで、 newick2phylog で変換
-	fh <- file("https://stat.biopapyrus.net/data/newick-format.txt", "r")
-	tree <- newick2phylog(readLines(fh, 1))
+    tree <- newick2phylog("((A:0.3,B:0.2):0.4,C:0.6,D:0.8);")
+	plot(tree, cleaves = 2, cnodes = 2)
 
-**ape を利用した系統樹作成**
+#### ape
 
 	library(ape)
-	tree <- read.tree("https://stat.biopapyrus.net/data/newick-format.txt")
+	tree <- read.tree("https://stats.biopapyrus.jp/data/species_tree.txt")
     plot(tree)
 
-![](https://stat.biopapyrus.net/media/r/ape-plot-basis.png)
+![](https://stats.biopapyrus.jp/media/ape-plot-basis.png)
+
+**エッジラベル**
 
 	# Sample 1
 	plot(tree, main = "Sample 1")
     edgelabels(text = tree$edge.length)
 	
 	# Sample 2
-	# 最後の枝のみに距離情報をつける場合
-	plot(tree, main = "Sample 2")
-	
-	# 葉を持つ枝を特定して距離情報を代入する
-	lastEdgeLabel <- tree$edge.length * as.numeric(tree$edge[,1] > tree$edge[,2])
-	lastEdgeLabel <- ifelse(lastEdgeLabel == 0, NA, lastEdgeLabel)
-	lastEdgeLabel[1] <- tree$edge.length[1]
-	edgelabels(lastEdgeLabel, frame="none", bg="none")
 
-![](https://stat.biopapyrus.net/media/r/ape-plot-edgelabel.png)
+Error in text.default(XX, YY, text, adj = adj, col = col, ...) : 
+  zero-length 'labels' specified
+
+![](https://stats.biopapyrus.jp/media/ape-plot-edgelabel.png)
+
+**ノードラベル**
 
 	plot(tree)
     nodelabels()
-	
-	# ノードが右上がりになるようにソート（逆はright = FALSEを指定）
-	tree.sort <- ladderize(tree, right = TRUE)
-	plot(tree.sort, type = "phylogram")
-	
-	# 横軸の追加
-	axisPhylo()
-	
-	# スケールバーの追加
-	add.scale.bar(length=0.05)
 
-![](https://stat.biopapyrus.net/media/r/ape-plot-sortscale.png)
-
-	plot(tree, y.lim = c(-0.5, tree$Nnode + 1))
-	add.scale.bar(x=0, y = 0, length = 0.05)
-
-**ade4 を利用した系統樹作成**
-
-	# ade4パッケージの利用
-	library(ade4)
-	fh <- file("https://stat.biopapyrus.net/data/newick-format.txt", "r")
-	tree <- newick2phylog(readLines(fh, 1))
-	
-    plot(tree)
-
-    example(plot.phylog)
 
 ----------
 ## [JIN'S PAGE](http://mjin.doshisha.ac.jp/R/)
