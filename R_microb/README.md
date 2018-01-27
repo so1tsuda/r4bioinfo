@@ -9,6 +9,7 @@ Rによる微生物データ解析
 ## Table of Contents
 - [Updates](#updates)
   - [2018-01](#2018-01)
+- [Metacoder](#metacoder)
 - [microbiome](#microbiome)
 - [MAGNAMWAR](#MAGNAMWAR)
 - [theseus](#theseus)
@@ -21,6 +22,8 @@ Rによる微生物データ解析
 ## Updates
 ### 2018
 ### 2017
+### 2016
+### 2015
 
 ----------
 
@@ -31,6 +34,24 @@ http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
 
 ----------
 ## 
+
+
+----------
+## Metacoder
+
+Jan 23, 2018
+https://github.com/grunwaldlab/metacoder
+
+8 Jan 2018
+https://twitter.com/zacharyfoster19/status/950423225619554304
+Zachary Foster on Twitter: "metacoder 0.2.0 is on CRAN. Lots of new features and refinements. Check out https://t.co/zdiFcEPGB0 for an introduction. * parsing and filtering moved to https://t.co/YS8tGOBijP * label overlap avoidance * new parsers and writers * heat tree matrix plotting * and more! #rstats… https://t.co/sFDqYgRoSu"
+
+![](https://pbs.twimg.com/media/DTCTpgtV4AAKXV9.jpg)
+
+https://www.ncbi.nlm.nih.gov/pubmed/28222096
+PLoS Comput Biol. 2017 Feb 21;13(2):e1005404. doi: 10.1371/journal.pcbi.1005404. eCollection 2017 Feb.
+Metacoder: An R package for visualization and manipulation of community taxonomic diversity data.
+Foster ZS1, Sharpton TJ2,3,4, Grünwald NJ5.
 
 ----------
 ## microbiome
@@ -145,6 +166,18 @@ Short Tutorials for Metagenomic Analysis
 https://www.ncbi.nlm.nih.gov/pubmed/26791506
 Methods Mol Biol. 2016;1399:207-33. doi: 10.1007/978-1-4939-3369-3_13.
 MG-RAST, a Metagenomics Service for Analysis of Microbial Community Structure and Function.
+
+----------
+## phylogeo
+
+
+http://zachcp.github.io/phylogeo/
+phylogeo - Introduction
+
+https://www.ncbi.nlm.nih.gov/pubmed/25913208
+Bioinformatics. 2015 Sep 1;31(17):2909-11. doi: 10.1093/bioinformatics/btv269. Epub 2015 Apr 25.
+phylogeo: an R package for geographic analysis and visualization of microbiome data.
+Charlop-Powers Z1, Brady SF1.
 
 ----------
 ## micropan
