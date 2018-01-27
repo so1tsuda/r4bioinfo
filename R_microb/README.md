@@ -7,7 +7,15 @@ Last Update: 2018-01-27
 Rによる微生物データ解析
 
 ## Table of Contents
-- [Avril Coghlan (2011) A Little Book of R for Bioinformatics](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
+- [Updates](#updates)
+  - [2018-01](#2018-01)
+- [microbiome](#microbiome)
+- [MAGNAMWAR](#MAGNAMWAR)
+- [theseus](#theseus)
+- [MicrobiomeWorkflow](#MicrobiomeWorkflow)
+- [DADA2](#DADA2)
+- [phyloseq](#phyloseq)
+- [matR](#matR)
 
 ----------
 ## Updates
@@ -18,8 +26,50 @@ Rによる微生物データ解析
 
 http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
 (Rで)塩基配列解析
-解析 | 菌叢解析 | について (last modified 2017/06/04)
-解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
+- 解析 | 菌叢解析 | について (last modified 2017/06/04)
+- 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
+
+----------
+## 
+
+----------
+## microbiome
+
+https://www.bioconductor.org/packages/devel/bioc/vignettes/microbiome/inst/doc/vignette.html
+Introduction to the microbiome R package
+Leo Lahti, Sudarshan Shetty, et al.
+2018-01-22
+
+Jan 22, 2018
+https://github.com/microbiome/microbiome
+https://github.com/microbiome/microbiome/wiki/Installation
+
+https://bioconductor.org/packages/release/bioc/html/microbiome.html
+Bioconductor - microbiome
+Author: Leo Lahti [aut, cre], Sudarshan Shetty [aut], Jarkko Salojarvi [ctb]
+
+https://microbiome.github.io/microbiome/
+Introduction to the microbiome R package
+
+https://microbiome.github.io/microbiome/Tutorial.html
+Tutorial on Microbiome Data Analysis
+
+----------
+## MAGNAMWAR
+
+https://www.ncbi.nlm.nih.gov/pubmed/29342236
+Bioinformatics. 2018 Jan 12. doi: 10.1093/bioinformatics/bty001. [Epub ahead of print]
+MAGNAMWAR: An R package for genome-wide association studies of bacterial orthologs.
+Sexton CE1, Smith HZ1,2, Newell PD3, Douglas AE4, Chaston JM5.
+
+https://cran.r-project.org/web/packages/MAGNAMWAR/index.html
+MAGNAMWAR: A Pipeline for Meta-Genome Wide Association
+
+Chaston, J.M. et al. (2014) 
+http://mbio.asm.org/content/5/5/e01631-14
+Metagenome-Wide Association of Microbial Determinants of Host Phenotype in Drosophila melanogaster
+
+https://github.com/cran/MAGNAMWAR/blob/master/vignettes/using_mag.Rmd
 
 ----------
 ## theseus
@@ -33,6 +83,22 @@ library(phyloseq)
 library(ggplot2)
 
 data('WWTP_Impact')
+
+----------
+## MicrobiomeWorkflow
+
+https://github.com/spholmes/F1000_workflow
+
+http://web.stanford.edu/class/bios221/MicrobiomeWorkflowII.html
+https://bioconductor.org/help/course-materials/2017/BioC2017/Day1/Workshops/Microbiome/MicrobiomeWorkflowII.html
+25 July 2017
+
+https://www.ncbi.nlm.nih.gov/pubmed/27508062
+Version 2. F1000Res. 2016 Jun 24 [revised 2016 Nov 2];5:1492. eCollection 2016.
+Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses.
+Callahan BJ1, Sankaran K1, Fukuyama JA1, McMurdie PJ2, Holmes SP1.
+
+We provide examples of using the R packages dada2, phyloseq, DESeq2, ggplot2 and vegan
 
 ----------
 ## DADA2
@@ -60,43 +126,39 @@ https://sites.google.com/site/noteofpaediatricsurgery/r/phyloseq
 Phyloseq - Draft of Pediatric Surgery
 
 ----------
-## MAGNAMWAR
-https://www.ncbi.nlm.nih.gov/pubmed/29342236
-Bioinformatics. 2018 Jan 12. doi: 10.1093/bioinformatics/bty001. [Epub ahead of print]
-MAGNAMWAR: An R package for genome-wide association studies of bacterial orthologs.
-Sexton CE1, Smith HZ1,2, Newell PD3, Douglas AE4, Chaston JM5.
 
-https://cran.r-project.org/web/packages/MAGNAMWAR/index.html
-CRAN - Package MAGNAMWAR
-http://mbio.asm.org/content/5/5/e01631-14
-Metagenome-Wide Association of Microbial Determinants of Host Phenotype in Drosophila melanogaster
+## matR
+https://cran.r-project.org/web/packages/matR/index.html
 
-https://github.com/cran/MAGNAMWAR/blob/master/vignettes/using_mag.Rmd
-
-----------
-
-# matR
-http://mg-rast.github.io/matR/
-
-Metagenomics Analysis Tools: the matR package 
+https://mg-rast.github.io/matR/
+Metagenomics Analysis Tools: the matR package
 
 http://www.mcs.anl.gov/~braithwaite/library/matR/html/00Index.html
 
 R: metagenomics analysis tools for R
 
+
 http://www.mcs.anl.gov/~braithwaite/library/matR/doc/matR-user-manual.pdf
 
 Short Tutorials for Metagenomic Analysis 
 
-----------
-## MultiMeta
-https://cran.r-project.org/web/packages/MultiMeta/index.html
-MultiMeta: Meta-analysis of Multivariate Genome Wide Association Studies
+https://www.ncbi.nlm.nih.gov/pubmed/26791506
+Methods Mol Biol. 2016;1399:207-33. doi: 10.1007/978-1-4939-3369-3_13.
+MG-RAST, a Metagenomics Service for Analysis of Microbial Community Structure and Function.
 
-https://www.ncbi.nlm.nih.gov/pubmed/25908790
-Bioinformatics. 2015 Aug 15;31(16):2754-6. doi: 10.1093/bioinformatics/btv222. Epub 2015 Apr 22.
-MultiMeta: an R package for meta-analyzing multi-phenotype genome-wide association studies.
-Vuckovic D1, Gasparini P2, Soranzo N3, Iotchkova V4.
+----------
+## micropan
+https://cran.r-project.org/web/packages/micropan/index.html
+
+https://www.ncbi.nlm.nih.gov/pubmed/25888166
+BMC Bioinformatics. 2015 Mar 12;16:79. doi: 10.1186/s12859-015-0517-0.
+micropan: an R-package for microbial pan-genomics.
+
+Post-annotation analysis and visualization are also possible, directly through the web interface, or with tools like matR (metagenomic analysis tools for R, covered later in this chapter) that utilize the MG-RAST API ( http://api.metagenomics.anl.gov/api.html ) to easily download data from any stage in the MG-RAST processing pipeline. 
+
+	git clone https://github.com/cran/micropan
+	# micropan/inst/doc/casestudy.pdf
+	# micropan/inst/doc/vignette.pdf
 
 ----------
 
