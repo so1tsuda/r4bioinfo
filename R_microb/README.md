@@ -9,11 +9,13 @@ Rによる微生物データ解析
 ## Table of Contents
 - [Updates](#updates)
   - [2018-01](#2018-01)
+- [Tools-Microbiome-Anlaysis](#tools-microbiome-anlaysis)
+- [Microbiome Helper](microbiome_helper)
+- [MicrobiomeWorkflow](#MicrobiomeWorkflow)
 - [Metacoder](#metacoder)
 - [microbiome](#microbiome)
 - [MAGNAMWAR](#MAGNAMWAR)
 - [theseus](#theseus)
-- [MicrobiomeWorkflow](#MicrobiomeWorkflow)
 - [DADA2](#DADA2)
 - [phyloseq](#phyloseq)
 - [matR](#matR)
@@ -27,14 +29,47 @@ Rによる微生物データ解析
 
 ----------
 
+https://europepmc.org
+Europe PMC
+
 http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
 (Rで)塩基配列解析
 - 解析 | 菌叢解析 | について (last modified 2017/06/04)
 - 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
 
 ----------
-## 
+## Tools-Microbiome-Anlaysis
 
+https://microsud.github.io/Tools-Microbiome-Anlaysis/
+
+https://github.com/microsud/Tools-Microbiome-Anlaysis
+A list of R environment based tools for 16S rRNA gene data exploration, statistical analysis and visualization
+
+----------
+## Microbiome Helper
+
+https://github.com/LangilleLab/microbiome_helper/wiki
+
+https://www.ncbi.nlm.nih.gov/pubmed/28066818
+mSystems. 2017 Jan 3;2(1). pii: e00127-16. doi: 10.1128/mSystems.00127-16. eCollection 2017 Jan-Feb.
+Microbiome Helper: a Custom and Streamlined Workflow for Microbiome Research.
+Comeau AM1, Douglas GM1, Langille MG1.
+
+----------
+## MicrobiomeWorkflow
+
+https://github.com/spholmes/F1000_workflow
+
+http://web.stanford.edu/class/bios221/MicrobiomeWorkflowII.html
+https://bioconductor.org/help/course-materials/2017/BioC2017/Day1/Workshops/Microbiome/MicrobiomeWorkflowII.html
+25 July 2017
+
+https://www.ncbi.nlm.nih.gov/pubmed/27508062
+Version 2. F1000Res. 2016 Jun 24 [revised 2016 Nov 2];5:1492. eCollection 2016.
+Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses.
+Callahan BJ1, Sankaran K1, Fukuyama JA1, McMurdie PJ2, Holmes SP1.
+
+We provide examples of using the R packages dada2, phyloseq, DESeq2, ggplot2 and vegan
 
 ----------
 ## Metacoder
@@ -104,22 +139,6 @@ library(phyloseq)
 library(ggplot2)
 
 data('WWTP_Impact')
-
-----------
-## MicrobiomeWorkflow
-
-https://github.com/spholmes/F1000_workflow
-
-http://web.stanford.edu/class/bios221/MicrobiomeWorkflowII.html
-https://bioconductor.org/help/course-materials/2017/BioC2017/Day1/Workshops/Microbiome/MicrobiomeWorkflowII.html
-25 July 2017
-
-https://www.ncbi.nlm.nih.gov/pubmed/27508062
-Version 2. F1000Res. 2016 Jun 24 [revised 2016 Nov 2];5:1492. eCollection 2016.
-Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses.
-Callahan BJ1, Sankaran K1, Fukuyama JA1, McMurdie PJ2, Holmes SP1.
-
-We provide examples of using the R packages dada2, phyloseq, DESeq2, ggplot2 and vegan
 
 ----------
 ## DADA2
