@@ -29,9 +29,6 @@ Rによる微生物データ解析
 
 ----------
 
-https://europepmc.org
-Europe PMC
-
 http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
 (Rで)塩基配列解析
 - 解析 | 菌叢解析 | について (last modified 2017/06/04)
@@ -91,18 +88,25 @@ Foster ZS1, Sharpton TJ2,3,4, Grünwald NJ5.
 ----------
 ## microbiome
 
+https://bioconductor.org/packages/release/bioc/html/microbiome.html
+Bioconductor - microbiome
+
+	source("https://bioconductor.org/biocLite.R")
+	biocLite("microbiome")
+
+Warning message:
+package ‘microbiome’ is not available (for R version 3.3.3) 
+
+
 https://www.bioconductor.org/packages/devel/bioc/vignettes/microbiome/inst/doc/vignette.html
 Introduction to the microbiome R package
 Leo Lahti, Sudarshan Shetty, et al.
 2018-01-22
 
+
 Jan 22, 2018
 https://github.com/microbiome/microbiome
 https://github.com/microbiome/microbiome/wiki/Installation
-
-https://bioconductor.org/packages/release/bioc/html/microbiome.html
-Bioconductor - microbiome
-Author: Leo Lahti [aut, cre], Sudarshan Shetty [aut], Jarkko Salojarvi [ctb]
 
 https://microbiome.github.io/microbiome/
 Introduction to the microbiome R package
@@ -214,4 +218,25 @@ Post-annotation analysis and visualization are also possible, directly through t
 
 ----------
 
+R package, 
+DiversitySeq
 
+6:12 PM - 25 Nov 2017
+https://twitter.com/j_flan/status/934560569192939520
+Jessica_Flannery on Twitter: "Great visualizations for microbial diversity and explanation about why/how “diversity” can mean so many different things! https://t.co/Uqi4HEp2yZ"
+
+10:44 AM - 24 Nov 2017
+https://twitter.com/ProfWhelan/status/934085445847257088
+Kevin Whelan on Twitter: "Gut #microbiome: confused about sequencing, reads, a-diversity and B-diversity? This great review will answer a lot of questions - my vote f… https://t.co/2EQRk2foNz"
+
+6:12 AM - 21 Nov 2017
+https://twitter.com/Francesca_Fin_/status/932929811776983040
+Francesca Finotello on Twitter: "How to compute #diversity from #NGS data? #DiversitySeq: a package to estimate different diversity measures from NGS counts and to simulate… https://t.co/jdo57DbTFR"
+
+https://www.ncbi.nlm.nih.gov/pubmed/28025179
+Brief Bioinform. 2016 Dec 26. pii: bbw119. doi: 10.1093/bib/bbw119. [Epub ahead of print]
+Measuring the diversity of the human microbiota with targeted next-generation sequencing.
+Finotello F, Mastrorilli E, Di Camillo B.
+
+
+----------
