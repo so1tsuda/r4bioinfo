@@ -4,7 +4,7 @@ Last Update: 2018-02-11
 ----------
 # [R for Data Science](http://r4ds.had.co.nz)
 
-![](http://r4ds.had.co.nz/cover.png)
+![](https://covers.oreillystatic.com/images/0636920034407/cat.gif)
 
 - Welcome
 - [1 Introduction](#1-introduction)
@@ -93,7 +93,6 @@ ggplotの作成
 https://www.oreilly.co.jp/books/9784873118147/#toc
 目次
 
-
 ----------
 # References
 
@@ -106,18 +105,11 @@ R for Data Science - O'Reilly Media
 - https://www.amazon.com/dp/1491910399
 - https://github.com/hadley/r4ds
 
-http://garrettgman.github.io
-Table of Contents · Data Science with R
-Data Science with R by Garrett Grolemund
-
 ## Rではじめるデータサイエンス
-
-2017/10/25
-https://www.oreilly.co.jp/books/9784873118147/
 
 ![](https://www.oreilly.co.jp/books/images/picture978-4-87311-814-7.gif)
 
-[ https://www.amazon.co.jp/dp/487311814X/
+https://www.amazon.co.jp/dp/487311814X/
 
 5 Jan 2018
 https://twitter.com/f_nisihara/status/949227695908335616
@@ -130,3 +122,9 @@ http://twosquirrel.mints.ne.jp/?p=21629
 2017/12/15
 http://twosquirrel.mints.ne.jp/?p=21626
 「Rではじめるデータサイエンス」を写経（１）ggplot2
+
+2017/10/25
+https://www.oreilly.co.jp/books/9784873118147/
+
+----------
+
