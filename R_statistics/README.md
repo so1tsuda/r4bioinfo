@@ -89,9 +89,22 @@ https://www.slideshare.net/motivic/tokyo-r-lt-25759212
 https://twitter.com/kyn02666/status/935668829203570688
 das Kino on Twitter: "violin plotはデータの位置が分かりにくいことがあって，最近はよほどデータが多くない限りgeom_pointかjitterを使うようにしていたが，sinaplotは両方の性質を持っているようで良さげ。sinaplotパッケージはggplot2ベースではないけど，ggfor… https://t.co/PVISlyMP1m"
 
+2016/11/26
+https://www.karada-good.net/analyticsr/r-537
+Rで解析：ggplot2の表現が高まります「ggforce」パッケージ
+
+![](https://www.karada-good.net/wp/wp-content/uploads/2016/11/geom_sina-320x263.png)
+
+2017.11.27
+https://stats.biopapyrus.jp/r/graph/beeswarm.html
+ビースウォーム | 値を点としてグラフ上にプロットされる
+
+![](https://stats.biopapyrus.jp/media/beeswarm3.png)
+
 2017.06.10
 https://stats.biopapyrus.jp/r/graph/violinplot.html
-ヴァイオリンプロット
+ヴァイオリンプロット | 中央値、四分位点のほかに、データの分布密度も同時に確認できるプロット
+
 
 
 2017-06-05
@@ -103,7 +116,6 @@ http://yyhhyy.hatenablog.com/entry/2016/08/20/220000
 箱ひげ図とバイオリンプロットの印象の違い
 
 
-
 2016/03/18
 https://www.karada-good.net/analyticsr/r-446
 Rで解析：補助プロットにバイオリンプロットはいかがでしょうか「vioplot」パッケージ
@@ -111,6 +123,8 @@ Rで解析：補助プロットにバイオリンプロットはいかがでし�
 2012/08/31
 https://cis-jp.blogspot.jp/2012/08/blog-post_3858.html
 色々と考えてみる: 文系のための「数の可視化」（７）
+
+![](https://2.bp.blogspot.com/-YmvzBYCZsuI/UEBR9qPOr-I/AAAAAAAAA3E/dHoF9moqv30/s320/Rplot001.png)
 
 ----------
 ## Fixed or Random Effects
