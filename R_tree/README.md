@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-01-21
+Last Update: 2018-02-25
 
 ----------
 
@@ -24,6 +24,25 @@ Last Update: 2018-01-21
   - [Chap_43](#chap_43) Rと系統樹(2)
 
 ----------
+
+## Updates
+
+https://twitter.com/Rbloggers/status/967632877650436096
+R-bloggers on Twitter: "ggtree version of plotTree https://t.co/trcTAvdFb7 #rstats #DataScience"
+12:30 AM - 25 Feb 2018
+
+December 16, 2016
+https://www.r-bloggers.com/ggtree-version-of-plottree-2/
+ggtree version of plotTree | R-bloggers
+
+February 9, 2018
+https://www.r-bloggers.com/phylogeny-and-species-traits-predict-bird-detectability/
+Phylogeny and species traits predict bird detectability | R-bloggers
+
+![](https://i1.wp.com/github.com/borealbirds/lhreg/raw/master/tree.png)
+
+----------
+
 
 ## 2017-05-30
 
