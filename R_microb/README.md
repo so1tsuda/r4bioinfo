@@ -9,11 +9,11 @@ Rによる微生物データ解析
 ## Table of Contents
 - [Updates](#updates)
   - [2018-01](#2018-01)
+- [microbiome](#microbiome)
 - [Tools-Microbiome-Anlaysis](#tools-microbiome-anlaysis)
 - [Microbiome Helper](microbiome_helper)
 - [MicrobiomeWorkflow](#MicrobiomeWorkflow)
 - [Metacoder](#metacoder)
-- [microbiome](#microbiome)
 - [MAGNAMWAR](#MAGNAMWAR)
 - [theseus](#theseus)
 - [DADA2](#DADA2)
@@ -21,11 +21,47 @@ Rによる微生物データ解析
 - [matR](#matR)
 
 ----------
-## Updates
-### 2018
-### 2017
-### 2016
-### 2015
+
+http://rstudio-pubs-static.s3.amazonaws.com/3085_64c37369d17a4533b693465cbc22cc50.html
+Some bacterial genome analysis using R
+
+----------
+## FindMyFriends
+
+https://bioconductor.org/packages/release/bioc/html/FindMyFriends.html
+Bioconductor - FindMyFriends
+Microbial Comparative Genomics in R
+
+Pedersen TL (2016). FindMyFriends: Microbial Comparative Genomics in R. R package version 1.8.0, https://github.com/thomasp85/FindMyFriends.
+
+----------
+## microbiome
+
+https://bioconductor.org/packages/release/bioc/html/microbiome.html
+Bioconductor - microbiome
+
+	source("https://bioconductor.org/biocLite.R")
+	biocLite("microbiome")
+
+Warning message:
+package ‘microbiome’ is not available (for R version 3.3.3) 
+
+
+https://www.bioconductor.org/packages/devel/bioc/vignettes/microbiome/inst/doc/vignette.html
+https://bioconductor.org/packages/3.7/bioc/vignettes/microbiome/inst/doc/vignette.html
+Introduction to the microbiome R package
+Leo Lahti, Sudarshan Shetty, et al.
+2018-02-09
+
+Feb 10, 2018
+https://github.com/microbiome/microbiome
+https://github.com/microbiome/microbiome/wiki/Installation
+
+https://microbiome.github.io/microbiome/
+Introduction to the microbiome R package
+
+https://microbiome.github.io/microbiome/Tutorial.html
+Tutorial on Microbiome Data Analysis
 
 ----------
 
@@ -74,6 +110,8 @@ We provide examples of using the R packages dada2, phyloseq, DESeq2, ggplot2 and
 Jan 23, 2018
 https://github.com/grunwaldlab/metacoder
 
+	(time Rscript --vanilla scripts/my_metacoder.R &) >& log.metacoder.$(date +%F).txt
+
 8 Jan 2018
 https://twitter.com/zacharyfoster19/status/950423225619554304
 Zachary Foster on Twitter: "metacoder 0.2.0 is on CRAN. Lots of new features and refinements. Check out https://t.co/zdiFcEPGB0 for an introduction. * parsing and filtering moved to https://t.co/YS8tGOBijP * label overlap avoidance * new parsers and writers * heat tree matrix plotting * and more! #rstats… https://t.co/sFDqYgRoSu"
@@ -85,34 +123,6 @@ PLoS Comput Biol. 2017 Feb 21;13(2):e1005404. doi: 10.1371/journal.pcbi.1005404.
 Metacoder: An R package for visualization and manipulation of community taxonomic diversity data.
 Foster ZS1, Sharpton TJ2,3,4, Grünwald NJ5.
 
-----------
-## microbiome
-
-https://bioconductor.org/packages/release/bioc/html/microbiome.html
-Bioconductor - microbiome
-
-	source("https://bioconductor.org/biocLite.R")
-	biocLite("microbiome")
-
-Warning message:
-package ‘microbiome’ is not available (for R version 3.3.3) 
-
-
-https://www.bioconductor.org/packages/devel/bioc/vignettes/microbiome/inst/doc/vignette.html
-Introduction to the microbiome R package
-Leo Lahti, Sudarshan Shetty, et al.
-2018-01-22
-
-
-Jan 22, 2018
-https://github.com/microbiome/microbiome
-https://github.com/microbiome/microbiome/wiki/Installation
-
-https://microbiome.github.io/microbiome/
-Introduction to the microbiome R package
-
-https://microbiome.github.io/microbiome/Tutorial.html
-Tutorial on Microbiome Data Analysis
 
 ----------
 ## MAGNAMWAR
@@ -172,6 +182,25 @@ Phyloseq - Draft of Pediatric Surgery
 ----------
 
 ## matR
+
+https://github.com/MG-RAST/matR
+
+
+
+
+
+http://www.mcs.anl.gov/~braithwaite/library/matR/doc/matR-user-manual.pdf
+
+Short Tutorials for Metagenomic Analysis 
+
+1.2 Introduction to R . . 
+
+2    Examples
+
+3    Basics
+3.1    Data in an Annotation Matrix
+
+
 https://cran.r-project.org/web/packages/matR/index.html
 
 https://mg-rast.github.io/matR/
@@ -182,9 +211,6 @@ http://www.mcs.anl.gov/~braithwaite/library/matR/html/00Index.html
 R: metagenomics analysis tools for R
 
 
-http://www.mcs.anl.gov/~braithwaite/library/matR/doc/matR-user-manual.pdf
-
-Short Tutorials for Metagenomic Analysis 
 
 https://www.ncbi.nlm.nih.gov/pubmed/26791506
 Methods Mol Biol. 2016;1399:207-33. doi: 10.1007/978-1-4939-3369-3_13.
@@ -192,7 +218,6 @@ MG-RAST, a Metagenomics Service for Analysis of Microbial Community Structure an
 
 ----------
 ## phylogeo
-
 
 http://zachcp.github.io/phylogeo/
 phylogeo - Introduction
