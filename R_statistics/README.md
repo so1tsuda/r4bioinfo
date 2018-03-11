@@ -18,6 +18,15 @@ Last Update: 2017-12-02
 
 ----------
 ## Updates
+
+### GC skew
+
+https://twitter.com/hoxo_m/status/970197370548862977
+h(o x o_)m＜ わかりみ。 on Twitter: "“Rで簡単な変化点検知(changepointパッケージ) - RigelのR言語メモであーる(R言語だけとは言っていない)” https://t.co/NVruBqwjcb"
+
+https://speakerdeck.com/hoxom/bi-nu-nizhen-rarenaitamefalsebian-hua-jian-zhi-ru-men
+彼女に振られないための変化検知入門 // Speaker Deck
+
 ### 2017-12
 ### 2017-11
 
@@ -84,6 +93,9 @@ https://www.slideshare.net/motivic/tokyo-r-lt-25759212
 [バイオリン図](https://ja.wikipedia.org/wiki/バイオリン図)
 
 ![https://en.wikipedia.org/wiki/Violin_plot](https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Violinplot-hiv-paper-plot-pathogens.svg/320px-Violinplot-hiv-paper-plot-pathogens.svg.png)
+
+http://pediatricsurgery.hatenadiary.jp/entry/2018/03/04/133703
+ggplot2でviolin plotとdotplotの両方で可視化する - Note of Pediatric Surgery
 
 28 Nov 2017
 https://twitter.com/kyn02666/status/935668829203570688
