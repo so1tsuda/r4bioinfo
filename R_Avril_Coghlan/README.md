@@ -8,7 +8,7 @@ By Avril Coghlan
 ## [Chapters in this Book](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/index.html#chapters-in-this-book)
 **目次**
 - [How to install R and a Brief Introduction to R](#how-to-install-r-and-a-brief-introduction-to-r)
-- [Neglected Tropical diseases]()
+- [Neglected Tropical diseases](#neglected-tropical-diseases)
 - [DNA Sequence Statistics (1)](#dna-sequence-statistics-1)
 - [DNA Sequence Statistics (2)](#dna-sequence-statistics-2)
 - [Sequence Databases](#sequence-databases)
@@ -186,11 +186,15 @@ Rを終了:
 
 2015年10月 [neglected tropical diseases：バイオキーワード集｜実験医学online：羊土社](https://www.yodosha.co.jp/jikkenigaku/keyword/3519.html)
 
+![](https://www.yodosha.co.jp/book_img_detail/9784758103503.jpg)
+
 2015? [顧みられない熱帯病と三大感染症について | Eisai ATM Navigator](https://atm.eisai.co.jp/ntd/)
 
-![](https://atm.eisai.co.jp/ntd/img/index/who_photo.jpg)
+2017年8月 [人と微生物の深くて長い関係 | 日経サイエンス](http://www.nikkei-science.com/page/sci_book/bessatu/51221_prologue.html)
 
-[10億人を苦しめる 忘れられた熱帯病 | 日経サイエンス](http://www.nikkei-science.com/page/magazine/1004/201004_086.html)
+日本ではあまり馴染みがないが，公衆衛生の基盤が整っていない熱帯地域では，寄生虫や細菌・ウイルスによる感染症が蔓延し，人々の生活を脅かしている。「10億人を苦しめる忘れられた熱帯病」は，忘れられた熱帯病（Neglected tropical diseases，NTD）の撲滅に力を注いできたホッツ（Peter J. Hotez）による優れた総説である。
+
+2010年4月号 [10億人を苦しめる 忘れられた熱帯病 | 日経サイエンス](http://www.nikkei-science.com/page/magazine/1004/201004_086.html)
 
 ![](http://www.nikkei-science.com/wp-content/uploads/2010/03/201004_086.jpg)
 
@@ -229,7 +233,7 @@ Rを終了:
 
 ![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
 
-配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションは
+配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](#neglected-tropical-diseases)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションは
 [NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)(DEN-1), 
 [NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474)(DEN-2), 
 [NC_001475](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475)(DEN-3), 
