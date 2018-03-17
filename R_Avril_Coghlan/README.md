@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-12-23
+Last Update: 2018-03-17
 
 ----------
 # [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
@@ -8,6 +8,7 @@ By Avril Coghlan
 ## [Chapters in this Book](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/index.html#chapters-in-this-book)
 **目次**
 - [How to install R and a Brief Introduction to R](#how-to-install-r-and-a-brief-introduction-to-r)
+- [Neglected Tropical diseases]()
 - [DNA Sequence Statistics (1)](#dna-sequence-statistics-1)
 - [DNA Sequence Statistics (2)](#dna-sequence-statistics-2)
 - [Sequence Databases](#sequence-databases)
@@ -169,6 +170,29 @@ Rを終了:
 	myfunction(25)
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#links-and-further-reading)
+
+----------
+
+## [Neglected Tropical diseases](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter0.html)
+[顧みられない熱帯病](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)
+
+2017年04月21日 [FORTH｜新着情報｜顧みられない熱帯病に対する今までにない進展－WHO報告](http://www.forth.go.jp/topics/2017/04211319.html)
+
+2017-4-19 [顧みられない熱帯病(かえりみられないねったいびょう)とは - コトバンク](https://kotobank.jp/word/顧みられない熱帯病-1611483)
+
+2016年6月 [三大感染症および顧みられない熱帯病（Neglected Tropical Diseases, NTDs）｜持続可能な開発目標（Sustainable Development Goals, SDGs）｜グローバルヘルス｜日本製薬工業協会](http://www.jpma.or.jp/globalhealth/ntds/index.html)
+
+![](http://www.jpma.or.jp/globalhealth/ntds/img/img_index_01.png)
+
+2015年10月 [neglected tropical diseases：バイオキーワード集｜実験医学online：羊土社](https://www.yodosha.co.jp/jikkenigaku/keyword/3519.html)
+
+2015? [顧みられない熱帯病と三大感染症について | Eisai ATM Navigator](https://atm.eisai.co.jp/ntd/)
+
+![](https://atm.eisai.co.jp/ntd/img/index/who_photo.jpg)
+
+[10億人を苦しめる 忘れられた熱帯病 | 日経サイエンス](http://www.nikkei-science.com/page/magazine/1004/201004_086.html)
+
+![](http://www.nikkei-science.com/wp-content/uploads/2010/03/201004_086.jpg)
 
 ----------
 
