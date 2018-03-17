@@ -192,12 +192,9 @@ Rを終了:
 
 2017年8月 [人と微生物の深くて長い関係 | 日経サイエンス](http://www.nikkei-science.com/page/sci_book/bessatu/51221_prologue.html)
 
-日本ではあまり馴染みがないが，公衆衛生の基盤が整っていない熱帯地域では，寄生虫や細菌・ウイルスによる感染症が蔓延し，人々の生活を脅かしている。「[10億人を苦しめる忘れられた熱帯病](http://www.nikkei-science.com/page/magazine/1004/201004_086.html)」は，忘れられた熱帯病（Neglected tropical diseases，NTD）の撲滅に力を注いできたホッツ（Peter J. Hotez）による優れた総説である。
+日本ではあまり馴染みがないが，公衆衛生の基盤が整っていない熱帯地域では，寄生虫や細菌・ウイルスによる感染症が蔓延し，人々の生活を脅かしている。「[10億人を苦しめる忘れられた熱帯病](http://www.nikkei-science.com/page/magazine/1004/201004_086.html)」は，忘れられた熱帯病（Neglected tropical diseases，NTD）の撲滅に力を注いできたホッツ（Peter J. Hotez）による優れた総説である。この分野では，多くの線虫感染症の特効薬であるイベルメクチンを発見・実用化して[ノーベル生理学・医学賞を受賞した日本の大村智博士の貢献](http://www.nikkei-science.com/201512_024.html)も特筆されるべきものだ。
 
 ![](http://www.nikkei-science.com/wp-content/uploads/2010/03/201004_086.jpg)
-
-この分野では，多くの線虫感染症の特効薬であるイベルメクチンを発見・実用化して[ノーベル生理学・医学賞を受賞した日本の大村智博士の貢献](http://www.nikkei-science.com/201512_024.html)も特筆されるべきものだ。
-
 ![](http://www.nikkei-science.com/wp-content/uploads/2015/10/4b7bff74a24f2adbb078c5bbbfd49b31.jpg)
 
 [きっかけは偶然見つけた・・・微生物から病気治療薬(15/10/06) - YouTube](https://www.youtube.com/watch?v=0hVuxQXajcg)
