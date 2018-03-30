@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-03-17
+Last Update: 2018-03-30
 
 ----------
 # [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
@@ -193,8 +193,8 @@ Rを終了:
 2015? [顧みられない熱帯病と三大感染症について | Eisai ATM Navigator](https://atm.eisai.co.jp/ntd/)
 
 2017年8月 [人と微生物の深くて長い関係 | 日経サイエンス](http://www.nikkei-science.com/page/sci_book/bessatu/51221_prologue.html)
-
-日本ではあまり馴染みがないが，公衆衛生の基盤が整っていない熱帯地域では，寄生虫や細菌・ウイルスによる感染症が蔓延し，人々の生活を脅かしている。「[10億人を苦しめる忘れられた熱帯病](http://www.nikkei-science.com/page/magazine/1004/201004_086.html)」は，忘れられた熱帯病（Neglected tropical diseases，NTD）の撲滅に力を注いできたホッツ（Peter J. Hotez）による優れた総説である。この分野では，多くの線虫感染症の特効薬であるイベルメクチンを発見・実用化して[ノーベル生理学・医学賞を受賞した日本の大村智博士の貢献](http://www.nikkei-science.com/201512_024.html)も特筆されるべきものだ。
+- 2010年4月号 [10億人を苦しめる 忘れられた熱帯病](http://www.nikkei-science.com/page/magazine/1004/201004_086.html)
+- 2015年12月号 [熱帯病の特効薬　イベルメクチンへの道 | 日経サイエンス](http://www.nikkei-science.com/201512_024.html)
 
 ![](http://www.nikkei-science.com/wp-content/uploads/2010/03/201004_086.jpg)
 ![](http://www.nikkei-science.com/wp-content/uploads/2015/10/4b7bff74a24f2adbb078c5bbbfd49b31.jpg)
