@@ -173,6 +173,12 @@ Rを終了:
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html#links-and-further-reading)
 
+https://cran.r-project.org/doc/contrib/Lemon-kickstart/
+Kickstarting R
+
+https://cran.r-project.org/doc/manuals/R-intro.html
+An Introduction to R
+
 ----------
 
 ## [Neglected Tropical diseases](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter0.html)
