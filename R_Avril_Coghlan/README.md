@@ -5,6 +5,8 @@ Last Update: 2018-03-17
 # [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
 By Avril Coghlan  
 
+https://github.com/avrilcoghlan/LittleBookofRBioinformatics/blob/master/index.rst
+
 ## [Chapters in this Book](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/index.html#chapters-in-this-book)
 **目次**
 - [How to install R and a Brief Introduction to R](#how-to-install-r-and-a-brief-introduction-to-r)
