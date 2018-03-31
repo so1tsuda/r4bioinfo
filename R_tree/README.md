@@ -13,7 +13,6 @@ Last Update: 2018-02-25
 - [Comparative Phylogenetics in R](#r-phylo)
   - [GettingStarted](#gettingstarted)
   - [Basics](#basics)
-  - []()
   - [DataTreeManipulation](#DataTreeManipulation)
 - [Jun Inoue](#jun-inoue)
   - [R_JI](#r_ji) R - 井上 潤
@@ -26,6 +25,10 @@ Last Update: 2018-02-25
 ----------
 
 ## Updates
+
+https://twitter.com/phy_papers/status/968162251151622144
+phypapers on Twitter: "babette: BEAUti 2, BEAST2 and Tracer for R https://t.co/92QqtXY8lM"
+11:34 AM - 26 Feb 2018
 
 https://twitter.com/Rbloggers/status/967632877650436096
 R-bloggers on Twitter: "ggtree version of plotTree https://t.co/trcTAvdFb7 #rstats #DataScience"
@@ -41,8 +44,15 @@ Phylogeny and species traits predict bird detectability | R-bloggers
 
 ![](https://i1.wp.com/github.com/borealbirds/lhreg/raw/master/tree.png)
 
-----------
+January 22, 2018
+https://www.bioconductor.org/packages/3.7/bioc/vignettes/DECIPHER/inst/doc/ArtOfAlignmentInR.pdf
+The Art of Multiple Sequence Alignment in R
+Erik S. Wright
 
+2011/07/20
+http://www.statgenet.med.kyoto-u.ac.jp/wiki_tokyo/index.php/DNA配列を比較して系統樹推定をしてみる
+
+----------
 
 ## 2017-05-30
 
@@ -310,7 +320,72 @@ How do I calculate the distance from an internal node to the tips of an ultramet
 http://www.r-phylo.org/wiki/HowTo/DataTreeManipulation#How_can_I_identify_the_node_representing_the_most_recent_common_ancestor_of_a_pair_of_taxa.3F
 
 ----------
+
+
+2018-03-23
+https://lazappi.github.io/clustree/articles/clustree.html
+Plotting clustering trees • clustree
+
+
+
+http://leeswijzer.org/R/R-cluster.html
+http://cse.naro.affrc.go.jp/minaka/R/R-cluster.html
+クラスター分析の光と闇――なぜヒトは分類に憑かれるのか？――
+
+時空的に連続する外界を人間が理解するために，離散的なカテゴリー（類や群）を認知的に造りだしている
+認知カテゴリーと心理的本質主義　なぜ私たちは対象物を「カテゴリー化」するのか？　その理由は，多様な対象物をカテゴリーとして類別することにより，記憶の負担を軽減し，情報の貯蔵と検索の効率を上げられるからである．　連続的波長のスペクトルによって変化する色の離散的なカテゴリー（「赤」とか「緑」のように）を造ることで色彩のありさまを理解するように
+
+http://cse.naro.affrc.go.jp/minaka/R/clustering-04.pdf
+東北大学「生物統計学」集中講義資料 2004 年 7 月 8 ~ 9 日
+クラスター分析の光と闇 なぜヒトは分類に憑かれるのか? 三中信宏
+
+Gromov 積
+
+http://www.iu.a.u-tokyo.ac.jp/~kadota/r.html#book_transcriptome_321
+書籍 | トランスクリプトーム解析 | 3.2.1 クラスタリング(データ変換や距離の定義など) (last modified 2014/05/16)
+
+    in_f <- "http://www.iu.a.u-tokyo.ac.jp/~kadota/book/hoge1.txt"
+	data <- read.table(in_f, header=TRUE, row.names=1, sep="\t", quote="")
+	colnames(data) <- c(paste("G1_", 1:5, sep=""), paste("G2_", 1:5, sep=""))
+	data.dist <- as.dist(1 - cor(data, method = "spearman"))
+	out <- hclust(data.dist, method = "average")
+	plot(out)                              # 図3-1作成部分
+
+Feb 27, 2012
+https://www.slideshare.net/yuifu/ss-11776646
+距離まとめられませんでした
+Haruka Ozaki
+
+
+
+2017.12.29
+https://stats.biopapyrus.jp/r/graph/heatmap.html
+ヒートマップ | R で遺伝子発現量などをヒートマップに描く方法
+
+heatmap
+
+	x <- matrix(rnorm(100), ncol = 4)
+	colnames(x) <- paste0("lib", 1:ncol(x))
+	rownames(x) <- paste0("gene", 1:nrow(x))
+	head(x)
+	heatmap(x)
+	heatmap(x, Colv = NA)
+	heatmap(x, hclustfun = function(x) { hclust(x, method = "ward") })
+
+heatmap.2
+
+	library(gplots)
+	heatmap.2(x)
+
+regHeatmap
+
+	library(Heatplus)
+	regHM <- regHeatmap(x)
+	plot(regHM)
+
+----------
 ## [biopapyrus](https://biopapyrus.jp)
+
 ### 2017-12-29
 [系統樹 ape ade4 | R を利用した系統樹の描き方](https://stats.biopapyrus.jp/r/graph/phylogenetic-tree.html)
 
@@ -399,14 +474,64 @@ Error in text.default(XX, YY, text, adj = adj, col = col, ...) :
 **Rと系統樹(2)**
 
 1．系統樹のデザインと操作
+
 (1)　先端のデザイン
 
+	# 図1　関数 tiplabels の例
 	library(ape);data(woodmouse);
 	wood.dist<-dist.dna(woodmouse)
 	wood.tr<-nj(wood.dist)
 	lab<-c(rep(10,3),rep(11,2),rep(12,3), rep(13,7))　#印の番号を作成する
 	plot(wood.tr, "c", FALSE, font = 1, label.offset = 2,x.lim = 20, no.margin = TRUE)
 	tiplabels(pch =lab,col =lab, adj = 1.5, cex = 2)
+
+(2)　ノードのデザイン
+
+	# 図2　関数 nodelabels の例1
+	plot(wood.tr,no.margin = TRUE)
+	nodelabels(wood.tr$node.label,adj=0, cex=1.3)
+
+	# 図3　関数 nodelabels の例2
+	plot(wood.tr, use.edge.length = FALSE)
+	rs1 <- round(runif(13, 60, 100), 0) 
+	rs2 <- round(runif(13, 60, 100), 0)
+	rs3 <- round(runif(13, 60, 100), 0)
+	nodelabels(rs1, adj = -0.2, cex = 0.8, font = 2)
+	nodelabels(rs2, adj = c(1.2, 1), frame = "n", cex = 0.8, font = 3)
+	nodelabels(rs3, adj = c(1.2, -0.2), frame = "n", cex = 0.8)
+
+	# 図4　関数 nodelabels の例3
+	plot(wood.tr, "c",use.edge.length = FALSE)
+	nodelabels(thermo = runif(13), cex = .8)
+
+(3)	系統樹の分割とズーム
+
+	# 図5　系統樹の分割表示の例
+	col<-rep("black",nrow(wood.tr$edge))
+	col[1:5]<-"lightblue"
+	plot(wood.tr,edge.color=col, cex=1.3, edge.width=2)
+
+	# 図6　関数 zoom の使用例
+	data(chiroptera)
+	zoom.p<- list(grep("Plecotus", chiroptera$tip.label),　grep("Dobsonia", chiroptera$tip.label))
+	zoom(chiroptera, zoom.p, cex=1.5)
+
+2. パッケージ ade4
+
+	library(ade4); data(tithonia)
+	class(tithonia); length(tithonia)
+	tithonia[1]; tithonia[2]
+
+	tith2<- as.data.frame(tithonia[2])
+	tith.dis<-dist(tith2)
+	tith.hc<-hclust(tith.dis,"ave")
+	tith.phy<-hclust2phylog(tith.hc)
+	plot(tith.phy,clabel.n= 0.6, f = 0.75)	#図7を作成
+	radial.phylog(tith.phy)	#図8を作成
+
+3．データの形式と利用
+
+(1)　結果のオブジェクトのクラス
 
 ----------
 
