@@ -184,6 +184,8 @@ An Introduction to R
 ## [Neglected Tropical diseases](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter0.html)
 [顧みられない熱帯病](http://www.tm.nagasaki-u.ac.jp/multiplex/phase1/ntd.html)
 
+[顧みられない熱帯病情報 (@ntd_bu) | Twitter](https://twitter.com/ntd_bu)
+
 2017年04月21日 [FORTH｜新着情報｜顧みられない熱帯病に対する今までにない進展－WHO報告](http://www.forth.go.jp/topics/2017/04211319.html)
 
 2017-4-19 [顧みられない熱帯病(かえりみられないねったいびょう)とは - コトバンク](https://kotobank.jp/word/顧みられない熱帯病-1611483)
