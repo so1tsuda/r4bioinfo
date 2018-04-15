@@ -327,9 +327,10 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 	GC(dengueseq)
 
-GC含量から水平伝播遺伝子を推定
-https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer#Fig-2
-![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer](https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Inferring_horizontal_gene_transfer_average_GC_content.svg/400px-Inferring_horizontal_gene_transfer_average_GC_content.svg.png)
+遺伝子水平伝播を推定
+[Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
+
+![https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer#Fig-2](https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Inferring_horizontal_gene_transfer_average_GC_content.svg/400px-Inferring_horizontal_gene_transfer_average_GC_content.svg.png)
 
 ### [DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
 **連続塩基**
@@ -578,14 +579,27 @@ GC含量の移動プロット
 
 	choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
 	query('naturepaper', 'R=Nature/460/352')
-	naturepaper$nelem
 
-> choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
-> query('naturepaper', 'R=Nature/460/352')
-Error in query("naturepaper", "R=Nature/460/352") : 
-  invalid request:"unknown reference at (^): \"R
+	Error in query("naturepaper", "R=Nature/460/352") : 
+	  invalid request:"unknown reference at (^): \"R
 
-いまここ
+On Nov 27, 2017, Dr. Simon Penel <> wrote:
+
+ concerning the reference,
+
+I looked a the the article Nature/460/352 here:
+
+https://www.nature.com/articles/nature08160
+
+is seems that the accession given at the end of the article
+
+FN357292–FN376313 <http://www.ebi.ac.uk/cgi-bin/emblfetch?style=html&id=FN357292%96FN376313>
+
+is not present anymore  in GenBank
+
+https://www.ncbi.nlm.nih.gov/nuccore/FN357292
+
+all the best
 
 #### [Saving sequence data in a FASTA-format file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#saving-sequence-data-in-a-fasta-format-file)
 
@@ -610,7 +624,7 @@ Error in query("naturepaper", "R=Nature/460/352") :
 
 塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
 
-![http://www.bbc.co.uk/education/guides/zc499j6/revision/2](http://a.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
+![http://www.bbc.co.uk/education/guides/zc499j6/revision/2](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
 
 ### [UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
 
@@ -794,7 +808,6 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 
 ギャップ(`---`)は -10-8-8 = -26 のスコアが与えられる。
 
-- [バイオインフォマティクス (第3回) 榊原康文](https://www.dna.bio.keio.ac.jp/lecture/bioinfo/bioinformatics-3.pdf)
 - 2009.9.12 [バイオインフォマティクス基礎講座 配列解析 川端 猛](http://www.jst.go.jp/nbdc/bird/jinzai/literacy/streaming/h21_3_1.pdf)
 - [バイオインフォマティクス-ゲノム配列から機能解析へ-第3章3.4節配列アラインメントにおけるスコア行列とギャップペナルティの使用方法](http://qiita.com/kino-tohoku/items/d4e0441e7ed6222106fa)
 
@@ -1124,3 +1137,11 @@ https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJap
 
 [SeaView](http://doua.prabi.fr/software/seaview)
 [使用法](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
+
+----------
+
+# Acknowledgements
+
+I am grateful to Drs. Simon Penel and Jean R. Lobry for their advice on SeqinR.
+
+----------
