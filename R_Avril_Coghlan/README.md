@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-03-30
+Last Update: 2018-04-16
 
 ----------
 # [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
@@ -186,6 +186,8 @@ An Introduction to R
 
 [顧みられない熱帯病情報 (@ntd_bu) | Twitter](https://twitter.com/ntd_bu)
 
+Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.youtube.com/watch?v=sEHmXUvpHA4)
+
 2017年04月21日 [FORTH｜新着情報｜顧みられない熱帯病に対する今までにない進展－WHO報告](http://www.forth.go.jp/topics/2017/04211319.html)
 
 2017-4-19 [顧みられない熱帯病(かえりみられないねったいびょう)とは - コトバンク](https://kotobank.jp/word/顧みられない熱帯病-1611483)
@@ -206,10 +208,6 @@ An Introduction to R
 
 ![](http://www.nikkei-science.com/wp-content/uploads/2010/03/201004_086.jpg)
 ![](http://www.nikkei-science.com/wp-content/uploads/2015/10/4b7bff74a24f2adbb078c5bbbfd49b31.jpg)
-
-[きっかけは偶然見つけた・・・微生物から病気治療薬(15/10/06) - YouTube](https://www.youtube.com/watch?v=0hVuxQXajcg)
-
-Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.youtube.com/watch?v=sEHmXUvpHA4)
 
 ----------
 
