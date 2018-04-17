@@ -90,6 +90,10 @@ Rを終了:
 	# To view the contents of any R object, just type its name
 	x
 
+データ型：文字列(character)、実数(numeric)、論理値(logical)など
+[09. データの型](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/09.html)
+[25. データ型とデータ構造](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/25.html)
+
 [ベクトル](http://stat.biopapyrus.net/vector/vector.html)  
 ベクトルの作成は関数`c()`を用いる。
 
