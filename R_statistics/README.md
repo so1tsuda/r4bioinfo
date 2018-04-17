@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-12-02
+Last Update: 2018-04-17
 
 ----------
 
@@ -15,6 +15,7 @@ Last Update: 2017-12-02
 - [Fixed or Random Effects](#fixed-or-random-effects)
 - [References](#references)
   - [biopapyrus](#biopapyrus)
+- [Data](#data)
 
 ----------
 ## Updates
@@ -160,7 +161,6 @@ http://hosho.ees.hokudai.ac.jp/~kubo/ce/RandomEffectsCrawley.html
 - 固定効果 (fixed effects): y の平均にだけ影響およぼす (久保注: 正確には中央値に影響をおよぼす; その結果として平均値なども変わる)
 - ランダム効果 (random effects): y の分散 (ばらつき) にだけ影響およぼす (久保注: となるとこちらは中央値は変えないけどばらつきは変える，となるのかな?)
 
-
 ----------
 ## References
 
@@ -186,6 +186,17 @@ http://aoki2.si.gunma-u.ac.jp/taygeta/statistics.cgi
 http://mjin.doshisha.ac.jp/R/
 JIN'S PAGE
 R、R言語、R環境・・・・・・
+
+----------
+## Data
+
+2016年12月26日
+https://qiita.com/wakuteka/items/95ac758070f6f4d89a96
+R言語 標準データセットの私的まとめ - Qiita
+
+2012-02-14
+http://d.hatena.ne.jp/hoxo_m/20120214/p1
+統計を学びたい人へ贈る、統計解析に使えるデータセットまとめ - ほくそ笑む
 
 ----------
 ## Execution environment
