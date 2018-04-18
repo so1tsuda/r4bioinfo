@@ -241,18 +241,16 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 ### [FASTA format](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#fasta-format)
 **[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式**
 
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P1_image5.png)
-
 ### [The NCBI sequence database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#the-ncbi-sequence-database)
 **[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース**
 
 ![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
 
-配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](#neglected-tropical-diseases)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルスのDNA配列のNCBIアクセッションは
-[NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)(DEN-1), 
-[NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474)(DEN-2), 
-[NC_001475](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475)(DEN-3), 
-[NC_002640](http://www.ncbi.nlm.nih.gov/nuccore/NC_002640)(DEN-4).
+配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](#neglected-tropical-diseases)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルス (Dengue virus: DEN-1, DEN-2, DEN-3, DEN-4) のDNA配列のNCBIアクセッションは
+[NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477) (DEN-1), 
+[NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474) (DEN-2), 
+[NC_001475](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475) (DEN-3), 
+[NC_002640](http://www.ncbi.nlm.nih.gov/nuccore/NC_002640) (DEN-4).
 
 ### [Retrieving genome sequence data via the NCBI website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-via-the-ncbi-website)
 **NCBIウェブサイトでゲノム配列データの検索**
@@ -318,8 +316,6 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 **DNA配列の塩基組成**
 
 	table(dengueseq)
-
-![https://ja.wikipedia.org/wiki/GC含量](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/AT-GC.jpg/400px-AT-GC.jpg)
 
 ### [GC Content of DNA](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#gc-content-of-dna)
 **DNAの[GC含量](https://ja.wikipedia.org/wiki/GC含量)**
@@ -655,21 +651,15 @@ all the best
 
 ![](http://www.ebi.ac.uk/training/online/sites/ebi.ac.uk.training.online/files/user/4057/documents/screen_shot_2014-11-06_at_15.44.29.png)  
 
-[作業ディレクトリ](http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html)の変更と確認:  
-
-    getwd()
-    setwd("~")
-    setwd("~/Downloads/")
-
 `read.fasta()`関数で、FASTAファイルをRに読み込む:  
 
 	library("seqinr")
-    # system("curl -O http://www.uniprot.org/uniprot/Q9CD83.fasta")
-    # system("curl -O http://www.uniprot.org/uniprot/A0PQ23.fasta")
 	leprae <- read.fasta(file = "Q9CD83.fasta")
 	ulcerans <- read.fasta(file = "A0PQ23.fasta")
 	lepraeseq <- leprae[[1]]
 	ulceransseq <- ulcerans[[1]]
+    # lepraeseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q9CD83.fasta")[[1]]
+    # ulceransseq <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
 	lepraeseq # Display the contents of the vector "lepraeseq"
 
 [How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
@@ -687,10 +677,10 @@ all the best
 	lepraeseq # Display the contents of "lepraeseq"
 
 ### [Comparing two sequences using a dotplot](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#comparing-two-sequences-using-a-dotplot)
-**ドットプロットで2つの配列を比較**
+**[ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)で2つの配列を比較**
 
 タンパク質のアミノ酸配列や核酸の塩基配列の[相同性 (homology)](https://ja.wikipedia.org/wiki/相同)（共通の祖先に由来すること）は、配列類似性に基づいて判断される。
-[ドットプロット](https://ja.wikipedia.org/wiki/ドットプロット_%28バイオインフォマティクス%29)とは、2本の配列を比較するためのグラフである。
+ドットプロットとは、2本の配列を比較するためのグラフである。
 両軸に全く同じ配列をとれば、右上がりの対角線が現れる。
 
 テストデータで確認する:  
@@ -707,18 +697,6 @@ all the best
 	dotPlot(lepraeseq, ulceransseq)
 
 ![http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P4_image5.png)
-
-ヒトの[血小板由来成長因子](https://ja.wikipedia.org/wiki/血小板由来成長因子) (Platelet-Derived Growth Factor, PDGF) と [サル肉腫ウイルスの癌遺伝子 v-sis](https://www.wikigenes.org/e/mesh/e/21827.html) のアミノ酸配列は類似性が高い。([Doolittle RF et al., 1983](https://www.ncbi.nlm.nih.gov/pubmed/6304883))
-
-    # "sp|P01127|PDGFB_HUMAN Platelet-derived growth factor subunit B OS=Homo sapiens GN=PDGFB PE=1 SV=1"          
-    # "sp|P01128|TSIS_WMSV PDGF-related-transforming protein sis OS=Woolly monkey sarcoma virus GN=V-SIS PE=3 SV=1"
-
-    library("seqinr")
-    seq1 <- read.fasta(file = "http://www.uniprot.org/uniprot/P01127.fasta")[[1]]
-    seq2 <- read.fasta(file = "http://www.uniprot.org/uniprot/P01128.fasta")[[1]]
-
-    # Comparing two sequences using a dotplot
-    dotPlot(seq1, seq2)
 
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アライメント**
