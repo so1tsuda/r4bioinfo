@@ -244,13 +244,21 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 ### [The NCBI sequence database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#the-ncbi-sequence-database)
 **[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース**
 
-![https://ja.wikipedia.org/wiki/デング熱](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Dengue.jpg/250px-Dengue.jpg)
-
 配列データにはユニークな識別子（アクセッション *accession*）が割り当てられている。例えば、WHOが[顧みられない熱帯病 Neglected Tropical Diseases](#neglected-tropical-diseases)として挙げている[デング熱](https://ja.wikipedia.org/wiki/デング熱)を引き起こすウイルス (Dengue virus: DEN-1, DEN-2, DEN-3, DEN-4) のDNA配列のNCBIアクセッションは
 [NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477) (DEN-1), 
 [NC_001474](http://www.ncbi.nlm.nih.gov/nuccore/NC_001474) (DEN-2), 
 [NC_001475](http://www.ncbi.nlm.nih.gov/nuccore/NC_001475) (DEN-3), 
 [NC_002640](http://www.ncbi.nlm.nih.gov/nuccore/NC_002640) (DEN-4).
+
+2015年9月 [デング熱ストッパー | 日経サイエンス](http://www.nikkei-science.com/201509_046.html)
+自然界によく見られる細菌の助けを借りて，蚊によるデング熱の媒介を阻止する試みが始まっている。　
+
+![](https://pbs.twimg.com/media/DHWayFxXkAEKzM4.jpg)
+
+2002年7月 [細菌が操る性転換 | 日経サイエンス](http://www.nikkei-science.com/page/sci_book/bessatu/51221.html)
+昆虫などに広く寄生するボルバキア属の細菌は，寄生した相手を雄から雌に性転換させたり雄になる卵を殺したりする。また寄生相手の交配を妨害することさえある。
+
+![](https://pbs.twimg.com/media/DRoodFWVQAEesVG.jpg)
 
 ### [Retrieving genome sequence data via the NCBI website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-via-the-ncbi-website)
 **NCBIウェブサイトでゲノム配列データの検索**
@@ -623,6 +631,9 @@ all the best
 塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
 
 ![http://www.bbc.co.uk/education/guides/zc499j6/revision/2](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
+
+2009年4月 [多様性の源　複雑な生物を生む力 | 日経サイエンス](http://www.nikkei-science.com/page/magazine/0904/200904_036.html)
+変異
 
 ### [UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
 
