@@ -239,7 +239,7 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 	help("library")
 
 ### [FASTA format](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#fasta-format)
-**[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式**
+**[FASTA形式](http://quma.cdb.riken.jp/help/fastaHelp_j.html)**
 
 	> A06852 183 residues
 	MPRLFSYLLGVWLLLSQLPREIPGQSTNDFIKACGRELVRLWVEICGSVSWGRTALSLEE
