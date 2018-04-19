@@ -344,8 +344,6 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ゲノムサイズとGC含量との関係
 [Relationship between genome size and GC content for sequenced Bacterial and Archaeal genomes.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2704378/figure/pgen-1000565-g001/)
 
-![http://schaechter.asmblog.org/schaechter/2009/07/an-iconoclastic-endosymbiont.html](http://schaechter.asmblog.org/.a/6a00d8341c5e1453ef0115723c61fc970b-300wi)
-
 ![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2704378/bin/pgen.1000565.g001.jpg)
 
 遺伝子水平伝播を推定
