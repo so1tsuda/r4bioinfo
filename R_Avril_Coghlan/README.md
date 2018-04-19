@@ -339,21 +339,6 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 	GC(dengueseq)
 
-[西田洋巳 (2012) ゲノム塩基配列の偏りと生物機能](http://www.iu.a.u-tokyo.ac.jp/~hnishida/tokuron4.htm)
-
-ゲノムサイズとGC含量との関係
-[Relationship between genome size and GC content for sequenced Bacterial and Archaeal genomes.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2704378/figure/pgen-1000565-g001/)
-
-![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2704378/bin/pgen.1000565.g001.jpg)
-
-遺伝子水平伝播を推定
-[Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
-
-1998年4月 [自然界を渡り歩く細菌のDNA | 日経サイエンス](http://www.nikkei-science.com/page/magazine/9804/DNA.html)
-親から子へ遺伝情報が受け継がれるという遺伝学の基本原理では説明できない遺伝情報のやりとり「水平伝播」の発見のきっかけとその後の展開。
-
-![](https://pbs.twimg.com/media/DH0ul2wXsAEEZ8o.jpg)
-
 ### [DNA words](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#dna-words)
 **連続塩基**
 
@@ -372,6 +357,23 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 	denguetable <- count(dengueseq,1)
 	denguetable[[3]]
 	denguetable[["g"]]
+
+[Dutta C, Paul S. (2012) Microbial lifestyle and genome signatures.](https://www.ncbi.nlm.nih.gov/pubmed/23024607)
+
+[西田洋巳 (2012) ゲノム塩基配列の偏りと生物機能](http://www.iu.a.u-tokyo.ac.jp/~hnishida/tokuron4.htm)
+
+ゲノムサイズとGC含量との関係
+[Relationship between genome size and GC content for sequenced Bacterial and Archaeal genomes.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2704378/figure/pgen-1000565-g001/)
+
+![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2704378/bin/pgen.1000565.g001.jpg)
+
+遺伝子水平伝播を推定
+[Inferring horizontal gene transfer](https://en.wikipedia.org/wiki/Inferring_horizontal_gene_transfer)
+
+1998年4月 [自然界を渡り歩く細菌のDNA | 日経サイエンス](http://www.nikkei-science.com/page/magazine/9804/DNA.html)
+親から子へ遺伝情報が受け継がれるという遺伝学の基本原理では説明できない遺伝情報のやりとり「水平伝播」の発見のきっかけとその後の展開。
+
+![](https://pbs.twimg.com/media/DH0ul2wXsAEEZ8o.jpg)
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#summary)
 	length()
