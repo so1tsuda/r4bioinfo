@@ -376,10 +376,20 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ![](https://pbs.twimg.com/media/DH0ul2wXsAEEZ8o.jpg)
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#summary)
+
 	length()
 	table()
 	GC()
 	count()
+
+テストデータで確認する:  
+
+    # Create tests
+    x <- s2c("atgc")
+    length(x)
+    table(x)
+    GC(x)
+    count(x, 2)
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#links-and-further-reading)
 
