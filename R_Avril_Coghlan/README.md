@@ -298,8 +298,6 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     query2 <- query("query2","AC=NC_001477")
     dengueseq <- getSequence(query2$req[[1]])
 
-変数`dengue`は[リスト](http://stat.biopapyrus.net/vector/list.html)。リストの1番目の要素を代入した
-変数`dengueseq`は塩基配列を含む[ベクトル](http://stat.biopapyrus.net/vector/vector.html)  
 以下のコマンドは、塩基配列の最初の50塩基を出力する:  
 
 	dengueseq[1:50]
@@ -307,9 +305,6 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ### [Writing sequence data out as a FASTA file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#writing-sequence-data-out-as-a-fasta-file)
 **配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
 
-    library("seqinr")
-    dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
-    dengueseq <- dengue[[1]]
 	write.fasta(names="DEN-1", sequences=dengueseq, file.out="den1.fasta")
 
 ### [Reading sequence data into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#reading-sequence-data-into-r)
@@ -318,8 +313,12 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 `read.fasta()`関数でFASTA形式ファイル（den1.fasta）を読み込む:  
 
 	library("seqinr")
+    #dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
 	dengue <- read.fasta(file = "den1.fasta")
 	dengueseq <- dengue[[1]]
+
+変数`dengue`は[リスト](http://stat.biopapyrus.net/vector/list.html)。リストの1番目の要素を代入した
+変数`dengueseq`は塩基配列を含む[ベクトル](https://stats.biopapyrus.jp/r/basic/vector.html)  
 
 ### [Length of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#length-of-a-dna-sequence)
 **DNA配列の長さ**
@@ -333,8 +332,8 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 
 ### [GC Content of DNA](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#gc-content-of-dna)
 **DNAの[GC含量](https://ja.wikipedia.org/wiki/GC含量)**
-(G+C)/(A+T+G+C)
 
+    # (G+C)/(A+T+G+C)
     (2240+2770)/(3426+2240+2770+2299)
 
 	GC(dengueseq)
@@ -405,7 +404,7 @@ Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinfor
 ## [DNA Sequence Statistics (2)](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter2.html)
 **DNA配列の統計 (2)**
 
-### A little more introduction to R
+### [A little more introduction to R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-little-more-introduction-to-r)
 **続・R言語入門**
 
 	x <- 100
