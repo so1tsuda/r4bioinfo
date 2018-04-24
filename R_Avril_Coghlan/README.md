@@ -328,6 +328,8 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 ### [Base composition of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#base-composition-of-a-dna-sequence)
 **DNA配列の塩基組成**
 
+配列中の各ヌクレオチド（"a" "c" "g" "t"）の出現頻度を数える:  
+
 	table(dengueseq)
 
 ### [GC Content of DNA](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#gc-content-of-dna)
