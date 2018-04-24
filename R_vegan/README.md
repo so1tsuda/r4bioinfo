@@ -37,9 +37,7 @@ R: Community Ecology Package
 http://pediatricsurgery.hatenadiary.jp/entry/2018/01/07/122117
 {vegan}を使った菌叢解析の階層的クラスター分析とクラスタリング - Note of Pediatric Surgery
 
-library(tidyverse)
-library(vegan)
-data(dune)
+    Rscript --vanilla scripts/2018-01-07_pediatricsurgery.R
 
 ----------
 
