@@ -298,10 +298,6 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
     query2 <- query("query2","AC=NC_001477")
     dengueseq <- getSequence(query2$req[[1]])
 
-以下のコマンドは、塩基配列の最初の50塩基を出力する:  
-
-	dengueseq[1:50]
-
 ### [Writing sequence data out as a FASTA file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#writing-sequence-data-out-as-a-fasta-file)
 **配列データを[FASTA](http://quma.cdb.riken.jp/help/fastaHelp_j.html)形式ファイルとして書き出す**
 
@@ -318,7 +314,11 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 	dengueseq <- dengue[[1]]
 
 変数`dengue`は[リスト](http://stat.biopapyrus.net/vector/list.html)。リストの1番目の要素を代入した
-変数`dengueseq`は塩基配列を含む[ベクトル](https://stats.biopapyrus.jp/r/basic/vector.html)  
+変数`dengueseq`は塩基配列を含む[ベクトル](https://stats.biopapyrus.jp/r/basic/vector.html)
+
+以下のコマンドは、塩基配列の最初の50塩基を出力する:  
+
+	dengueseq[1:50]
 
 ### [Length of a DNA sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#length-of-a-dna-sequence)
 **DNA配列の長さ**
