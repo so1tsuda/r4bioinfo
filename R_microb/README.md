@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-01-27
+Last Update: 2018-04-29
 
 ----------
 
@@ -8,7 +8,9 @@ Rによる微生物データ解析
 
 ## Table of Contents
 - [Updates](#updates)
-  - [2018-01](#2018-01)
+  - [2018](#2018)
+- [FindMyFriends](#FindMyFriends)
+- [Rhea](#Rhea)
 - [microbiome](#microbiome)
 - [Tools-Microbiome-Anlaysis](#tools-microbiome-anlaysis)
 - [Microbiome Helper](microbiome_helper)
@@ -24,6 +26,25 @@ Rによる微生物データ解析
 
 http://rstudio-pubs-static.s3.amazonaws.com/3085_64c37369d17a4533b693465cbc22cc50.html
 Some bacterial genome analysis using R
+
+----------
+## Updates
+
+## 2018
+
+https://twitter.com/aquabolina/status/978657686911938560
+Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R for microbial ecologists? Particularly for 16S microbiome analysis, stats & visualisation of data (NMS plots, box plots, heat maps etc) #microbiome #R #mothur"
+11:39 AM - 27 Mar 2018
+
+
+----------
+## Rhea
+https://lagkouvardos.github.io/Rhea
+
+https://www.ncbi.nlm.nih.gov/pubmed/28097056
+PeerJ. 2017 Jan 11;5:e2836. doi: 10.7717/peerj.2836. eCollection 2017.
+Rhea: a transparent and modular R pipeline for microbial profiling based on 16S rRNA gene amplicons.
+Lagkouvardos I1, Fischer S1, Kumar N1, Clavel T1.
 
 ----------
 ## FindMyFriends
@@ -164,6 +185,8 @@ DADA2: High-resolution sample inference from Illumina amplicon data.
 Callahan BJ1, McMurdie PJ2, Rosen MJ3, Han AW2, Johnson AJ2, Holmes SP1.
 
 https://github.com/benjjneb/dada2
+
+![](https://benjjneb.github.io/dada2/tutorial_files/figure-html/bar-plot-1.png)
 
 ----------
 ## phyloseq
