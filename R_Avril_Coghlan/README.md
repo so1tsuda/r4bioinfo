@@ -309,8 +309,8 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 `read.fasta()`関数でFASTA形式ファイル（den1.fasta）を読み込む:  
 
 	library("seqinr")
-    #dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
 	dengue <- read.fasta(file = "den1.fasta")
+    #dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
 	dengueseq <- dengue[[1]]
 
 変数`dengue`は[リスト](http://stat.biopapyrus.net/vector/list.html)。リストの1番目の要素を代入した
@@ -459,21 +459,22 @@ for による繰り返し
 	log10(x) # Finds the log to the base 10 of variable x.
 
 ### [Reading sequence data with SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#reading-sequence-data-with-seqinr)
-Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)で
-配列データを読み込み
+Rパッケージ[`seqinr`](https://cran.r-project.org/web/packages/seqinr/index.html)で配列データを読み込み
 
-DEN-1デング熱ウイルスのゲノム配列を取得する。
+DEN-1デング熱ウイルスのゲノム配列を取得する:  
 
 	library("seqinr")                           # Load the SeqinR package.
 	dengue <- read.fasta(file = "den1.fasta")   # Read in the file "den1.fasta".
+    #dengue <- read.fasta(file = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_001477&rettype=fasta&retmode=text")
 	dengueseq <- dengue[[1]]                    # Put the sequence in a vector called "dengueseq".
 
-	dengueseq[452:535] # obtain nucleotides 452-535 of the DEN-1 Dengue virus genome
+    # obtain nucleotides 452-535 of DNA sequence stored in the vector `dengueseq`
+	dengueseq[452:535]
 
 ### [Local variation in GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#local-variation-in-gc-content)
 GC含量の局所変動は、変異バイアスや[水平伝播](https://ja.wikipedia.org/wiki/遺伝子の水平伝播)を示唆
 
-	# GC content of DNA sequence in the vector dengueseq
+    # GC content of DNA sequence stored in the vector `dengueseq`
 	GC(dengueseq)
 
 ### [A sliding window analysis of GC content](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#a-sliding-window-analysis-of-gc-content)
