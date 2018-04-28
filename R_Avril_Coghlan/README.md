@@ -1028,18 +1028,16 @@ R言語デモ
     # Phylogenetic diversity: "the sum of the lengths of all those branches"
     sum(mytree$edge.length)
 
-- [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
-  - 枝長(branch length)　その枝で生じた変化の数。
-  - 根を持つ系統樹を有根系統樹(rooted tree), 根を持たない系統樹を無根系統樹(unrooted tree)と呼ぶ。
-  - 内群（ingroup）　今、系統推定の対象としているグループのこと。
-  - 外群 (outgoup)　内群に含まれない分類群はすべて外群（outgroup）になる。外群は通常、系統樹に根をつけるときに使われ、内群の姉妹群から複数のものを用いることが多い。
+**[系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)**
+- 枝長(branch length)　その枝で生じた変化の数。
+- 根を持つ系統樹を有根系統樹(rooted tree), 根を持たない系統樹を無根系統樹(unrooted tree)と呼ぶ。
+- 内群（ingroup）　今、系統推定の対象としているグループのこと。
+- 外群 (outgoup)　内群に含まれない分類群はすべて外群（outgroup）になる。外群は通常、系統樹に根をつけるときに使われ、内群の姉妹群から複数のものを用いることが多い。
 
-系統学的多様性 phylogenetic diversity (PD): 系統樹の枝長の総和
+**系統学的多様性 phylogenetic diversity (PD): 系統樹の枝長の総和**
 - [Phylogenetic diversity - Wikipedia](https://en.wikipedia.org/wiki/Phylogenetic_diversity)
 - [論文の紹介： 生物多様性を進化系統学的な尺度で測る (情報：農業と環境 No.83 2007.3)](http://www.naro.affrc.go.jp/archive/niaes/magazine/083/mgzn08304.html)
 - [系統的多様性 - Draft of Pediatric Surgery](https://sites.google.com/site/noteofpaediatricsurgery/in-silico/meta16s/figtree/keitouteki)
-
-![](https://sites.google.com/site/noteofpaediatricsurgery/_/rsrc/1453701750611/in-silico/meta16s/figtree/keitouteki/スライド31.jpg?height=240&width=320)
 
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
