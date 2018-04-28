@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-04-16
+Last Update: 2018-04-28
 
 ----------
 # [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
@@ -375,6 +375,9 @@ DNA配列データをFASTA形式ファイルで保存するには、ウェブペ
 親から子へ遺伝情報が受け継がれるという遺伝学の基本原理では説明できない遺伝情報のやりとり「水平伝播」の発見のきっかけとその後の展開。
 
 ![](https://pbs.twimg.com/media/DH0ul2wXsAEEZ8o.jpg)
+
+http://www.nikkei-science.com/?p=14437
+細菌の遺伝子交換，ずっと頻繁～日経サイエンス2011年6月号より | 日経サイエンス
 
 ### [Summary](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#summary)
 
@@ -1011,7 +1014,7 @@ R言語デモ
 ### [Building an unrooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-an-unrooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の無根系統樹の構築**
 
-タンパク質配列の距離行列に基づいて、[近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法) により系統樹を構築する。
+タンパク質配列の距離行列に基づいて、[近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法) により系統樹を構築する。系統樹では、"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
 
     # construct a phylogenetic tree with the neighbor joining algorithm
     #install.packages("ape")
@@ -1022,13 +1025,21 @@ R言語デモ
     # get sequence annotations
     unlist(getAnnot(seqs))
 
-系統樹では、"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
+    # Phylogenetic diversity: "the sum of the lengths of all those branches"
+    sum(mytree$edge.length)
 
 - [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
   - 枝長(branch length)　その枝で生じた変化の数。
   - 根を持つ系統樹を有根系統樹(rooted tree), 根を持たない系統樹を無根系統樹(unrooted tree)と呼ぶ。
   - 内群（ingroup）　今、系統推定の対象としているグループのこと。
   - 外群 (outgoup)　内群に含まれない分類群はすべて外群（outgroup）になる。外群は通常、系統樹に根をつけるときに使われ、内群の姉妹群から複数のものを用いることが多い。
+
+系統学的多様性 phylogenetic diversity (PD): 系統樹の枝長の総和
+- [Phylogenetic diversity - Wikipedia](https://en.wikipedia.org/wiki/Phylogenetic_diversity)
+- [論文の紹介： 生物多様性を進化系統学的な尺度で測る (情報：農業と環境 No.83 2007.3)](http://www.naro.affrc.go.jp/archive/niaes/magazine/083/mgzn08304.html)
+- [系統的多様性 - Draft of Pediatric Surgery](https://sites.google.com/site/noteofpaediatricsurgery/in-silico/meta16s/figtree/keitouteki)
+
+![](https://sites.google.com/site/noteofpaediatricsurgery/_/rsrc/1453701750611/in-silico/meta16s/figtree/keitouteki/スライド31.jpg?height=240&width=320)
 
 ### [Building a rooted phylogenetic tree for protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#building-a-rooted-phylogenetic-tree-for-protein-sequences)
 **タンパク質配列の有根系統樹の構築**
