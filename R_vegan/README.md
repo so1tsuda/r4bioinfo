@@ -4,15 +4,11 @@ Last Update: 2018-04-22
 ----------
 
 # vegan
-群集生態学パッケージ
+群集生態学パッケージ  
 群集・植生生態学者のための序列化方法、多様性解析、その他の機能
 
 Jari Oksanen
 
-- [VEGAN](http://cc.oulu.fi/~jarioksa/softhelp/vegan.html)
-  - [Vegan tutorial (pdf file):](http://cc.oulu.fi/~jarioksa/opetus/metodi/vegantutor.pdf) 2015-06-10 Multivariate Analysis of Ecological Communities in R: vegan tutorial
-  - Vegan home page is http://vegan.r-forge.r-project.org/. 2013-01-04
-- [R: Community Ecology Package](http://cc.oulu.fi/~jarioksa/softhelp/vegan/html/)
 - 2018-04-14 [CRAN - Package vegan](https://cran.r-project.org/web/packages/vegan/index.html)
   - Reference manual: [vegan.pdf](https://cran.r-project.org/web/packages/vegan/vegan.pdf)
   - Vignettes:
@@ -21,8 +17,14 @@ Jari Oksanen
     - Introduction to ordination in vegan
     - Partition of Variation
     - vegan FAQ
+- [VEGAN](http://cc.oulu.fi/~jarioksa/softhelp/vegan.html)
+  - [Vegan tutorial (pdf file):](http://cc.oulu.fi/~jarioksa/opetus/metodi/vegantutor.pdf) 2015-06-10 Multivariate Analysis of Ecological Communities in R: vegan tutorial
+  - Vegan home page is http://vegan.r-forge.r-project.org/. 2013-01-04
+- [R: Community Ecology Package](http://cc.oulu.fi/~jarioksa/softhelp/vegan/html/)
 
-群集生態学パッケージ `vegan` のインストール、呼び出し、デモ:  
+----------
+
+`vegan`のインストール、呼び出し、デモ:  
 
     #install.packages("vegan")
     library(vegan)
@@ -95,7 +97,6 @@ RによるNMDSを用いた微生物群集構造解析 - yokaのblog
 2014-05-17
 http://d.hatena.ne.jp/fronori/20140517
 MDSとその愉快な仲間たち - 統計で迷子になる方法
-
 
 https://twitter.com/fronori/status/465902482246221824
 Tetsuo Ishikawa on Twitter: "微生物生態学でPCAではなくPCoAを使うのはなぜ？ https://t.co/EWaIp917ko この論文 http://t.co/4aTfUB8Ulr がオススメ。多変量解析の手法の比較や違いの説明が詳しい。テーブル１の生態学の中でも分野による違いも興味深い。"
