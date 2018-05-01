@@ -11,6 +11,7 @@ Last Update: 2018-04-17
   - [2017-11](#2017-11)
   - [2017-09](#2017-09)
 - [MIC](#mic) Maximal information coefficient
+- [sbj](#sbj) 生物工学会誌 –『間違いから学ぶ実践統計解析』
 - [violinplot](#violinplot)
 - [Fixed or Random Effects](#fixed-or-random-effects)
 - [References](#references)
@@ -88,6 +89,15 @@ https://www.slideshare.net/motivic/tokyo-r-lt-25759212
 21世紀の手法対決 (MIC vs HSIC)
 
     #install.packages("minerva")
+
+----------
+## sbj
+
+https://www.sbj.or.jp/sbj/sbj_tokei_kaiseki.html
+生物工学会誌 –『間違いから学ぶ実践統計解析』 | 公益社団法人 日本生物工学会
+第3回	データ数はいくつ必要	川瀬 雅也・松田 史生	(2016)
+https://www.sbj.or.jp/wp-content/uploads/file/sbj/9408/9408_tokei_kaiseki.pdf
+
 
 ----------
 ## violinplot
