@@ -19,15 +19,10 @@ Last Update: 2018-05-01
 
 ## QTL
 
-http://www.ism.ac.jp/~kuriki/paper/kuriki-up-r.pdf
-QTL 解析の統計モデルと検定の多重性調整
-栗木 哲∗
-このような統一的 な扱いは,Sen & Churchill (2001) により提案され,R/qtl (Broman, et al. (2003)) とし て実装されている.
-この並べ替え検定は直感的に分かりやすい方法であり,R/qtl などの多くのプログラム に実装されている.しかし次のような問題点がある.
-
-http://www.okadajp.org/RWiki/?Rでベイズ統計学
-- bqtl: ベイジアン QTL マッピング用の道具集
-- BayesQTLBIC: Bayesian multi-locus QTL analysis based on the BIC criterion
+https://www.ncbi.nlm.nih.gov/pubmed/27284200
+Science. 2016 Jun 10;352(6291):aad0189. doi: 10.1126/science.aad0189.
+Systems proteomics of liver mitochondria function.
+R/qtl (58). 
 
 20171112
 https://www.slideshare.net/HiromiKanegae/ngs-81948750
@@ -69,12 +64,15 @@ Bioinformatics. 2010 Dec 1;26(23):2990-2. doi: 10.1093/bioinformatics/btq565. Ep
 R/qtl: high-throughput multiple QTL mapping.
 Arends D1, Prins P, Jansen RC, Broman KW.
 
-https://www.ncbi.nlm.nih.gov/pubmed/27284200
-Science. 2016 Jun 10;352(6291):aad0189. doi: 10.1126/science.aad0189.
-Systems proteomics of liver mitochondria function.
+http://www.ism.ac.jp/~kuriki/paper/kuriki-up-r.pdf
+QTL 解析の統計モデルと検定の多重性調整
+栗木 哲∗
+このような統一的 な扱いは,Sen & Churchill (2001) により提案され,R/qtl (Broman, et al. (2003)) とし て実装されている.
+この並べ替え検定は直感的に分かりやすい方法であり,R/qtl などの多くのプログラム に実装されている.しかし次のような問題点がある.
 
-R/qtl (58). 
-58. D. Arends, P. Prins, R. C. Jansen, K. W. Broman, R/qtl: High- throughput multiple QTL mapping. Bioinformatics 26, 2990–2992 (2010). doi: 10.1093/bioinformatics/btq565; pmid: 20966004
+http://www.okadajp.org/RWiki/?Rでベイズ統計学
+- bqtl: ベイジアン QTL マッピング用の道具集
+- BayesQTLBIC: Bayesian multi-locus QTL analysis based on the BIC criterion
 
 ----------
 
