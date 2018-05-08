@@ -241,11 +241,7 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 ### [FASTA format](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#fasta-format)
 **[FASTA形式](http://quma.cdb.riken.jp/help/fastaHelp_j.html)**
 
-	> A06852 183 residues
-	MPRLFSYLLGVWLLLSQLPREIPGQSTNDFIKACGRELVRLWVEICGSVSWGRTALSLEE
-	PQLETGPPAETMPSSITKDAEILKMMLEFVPNLPQELKATLSERQPSLRELQQSASKDSN
-	LNFEEFKKIILNRQNEAEDKSLLELKNLGLDKHSRKKRLFRMTLSEKCCQVGCIRKDIAR
-	LC
+https://www.ncbi.nlm.nih.gov/search/?term=A06852
 
 ### [The NCBI sequence database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#the-ncbi-sequence-database)
 **[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース**
@@ -401,7 +397,6 @@ Chapter 9 “Analyzing Sequences” in the book "Applied statistics for bioinfor
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#exercises)
 **演習**
-
 [回答例](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter_answers.html#dna-sequence-statistics-1)
 
 ----------
@@ -436,6 +431,8 @@ for による繰り返し
 	for (i in seq(1, 10, by = 2)) { print (i*i) }
 
 [48. とりあえず plot()](R-Source)
+
+    par(family="Times")
 
 	# plot a scatterplot of the values in myvector1 against the values in myvector2
 	myvector1 <- c(10, 15, 22, 35, 43)
@@ -569,7 +566,6 @@ GC含量の移動プロット
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter2.html#exercises)
 **演習**
-
 [回答例](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter_answers.html#dna-sequence-statistics-2)
 
 ----------
@@ -650,7 +646,8 @@ all the best
 	closebank()
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#exercises)
-演習
+**演習**
+[回答例](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter_answers.html#sequence-databases)
 
 ----------
 
@@ -913,7 +910,8 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 - [Smith-Waterman | ローカルアラインメントを求めるアルゴリズム](https://bi.biopapyrus.jp/seq/alignment/smith-waterman.html)
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#exercises)
-演習
+**演習**
+[回答例](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter_answers.html#sequence-alignment)
 
 ----------
 
@@ -1090,8 +1088,8 @@ R言語デモ
 
     write.tree(mytree, file="myNewick.tre")
 
-- Newick形式のファイルを修正して多分岐の系統樹を作成する - kiliwave http://kiliwave.hatenablog.com/entry/2016/11/16/205345
-- Newick書式から系統樹を描く - ryamadaの遺伝学・遺伝統計学メモ (id:ryamada22) http://d.hatena.ne.jp/ryamada22/20050513/1115948852
+- [Newick形式のファイルを修正して多分岐の系統樹を作成する - kiliwave](http://kiliwave.hatenablog.com/entry/2016/11/16/205345)
+- [Newick書式から系統樹を描く - ryamadaの遺伝学・遺伝統計学メモ (id:ryamada22)](http://d.hatena.ne.jp/ryamada22/20050513/1115948852)
 
 ### [Calculating genetic distances between DNA/mRNA sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-dna-mrna-sequences)
 **DNA/mRNA配列間の遺伝的距離を計算する**
@@ -1152,8 +1150,9 @@ R言語デモ
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#exercises)
 **演習**
-
 [回答例](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter_answers.html#multiple-alignment-and-phylogenetic-trees)
+
+----------
 
 ----------
 
