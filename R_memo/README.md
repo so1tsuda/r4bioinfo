@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-05-01
+Last Update: 2018-05-08
 
 ----------
 
@@ -76,6 +76,9 @@ QTL 解析の統計モデルと検定の多重性調整
 http://www.okadajp.org/RWiki/?Rでベイズ統計学
 - bqtl: ベイジアン QTL マッピング用の道具集
 - BayesQTLBIC: Bayesian multi-locus QTL analysis based on the BIC criterion
+
+https://www.biostars.org/p/47725/
+Gwas Vs. Qtl Mapping?
 
 ----------
 
@@ -273,6 +276,57 @@ http://web.sfc.keio.ac.jp/~kogure/course/2008fall/fe/fe.html
 http://web.sfc.keio.ac.jp/~kogure/course/2008fall/fe/fe2008_4.pdf
 計量ファイナンス( 2008年秋学期) 第4回:10月27日
 コンピュータ実習1: ーR事始め+データベース紹介ー
+
+----------
+
+### 2018-01-05
+
+[初心者でもほぼ無料でR言語を勉強できるコンテンツ10選 - paiza開発日誌](http://paiza.hatenablog.com/entry/2015/06/04/%E5%88%9D%E5%BF%83%E8%80%85%E3%81%A7%E3%82%82%E3%81%BB%E3%81%BC%E7%84%A1%E6%96%99%E3%81%A7R%E8%A8%80%E8%AA%9E%E3%82%92%E5%8B%89%E5%BC%B7%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3)
+
+https://dotinstall.com/lessons/basic_r
+R言語入門 (全13回) - プログラミングならドットインストール
+
+
+### 2018-01-04
+
+https://qiita.com/FukuharaYohei/items/8e0ddd0af11132031355
+R言語インストール(2018年 Windows) - Qiita
+
+	plot(cars)
+	plot(x = cars[,1], y = cars[,2])
+
+http://cse.naro.affrc.go.jp/takezawa/r-tips/r/06.html
+06. 作業ディレクトリの変更
+
+	getwd()
+	?setwd
+
+#### read.table
+
+http://cse.naro.affrc.go.jp/takezawa/r-tips/r/40.html
+40. ファイルからデータを読み込む
+
+http://takenaka-akio.org/doc/r_auto/chapter_02.html
+2. ひとつのファイルからデータを読み込む
+データファイル len_width.txt
+
+	filename <- "http://takenaka-akio.org/doc/r_auto/len_width.txt"
+	d <- read.table(file = filename, header = TRUE)
+
+https://sites.google.com/site/webtextofr/data
+5. データの読み込み - 統計ソフトRの使い方
+- 読み込みI：タブ区切りテキストファイルからの読み込み
+- 読み込みII： CSVファイルからの読み込み
+
+#### write.table
+
+http://cse.naro.affrc.go.jp/takezawa/r-tips/r/45.html
+45. ファイルへのデータ出力
+
+	write.table(d, file = "len_width.txt", sep="\t", quote=FALSE, row.names=TRUE, col.names = NA)
+	write.csv(d, file="len_width.csv", row.names=TRUE)
+
+[Avril Coghlan (2011) A Little Book of R for Bioinformatics](https://github.com/haruosuz/r4bioinfo/tree/master/R_Avril_Coghlan)
 
 ----------
 
