@@ -1,24 +1,24 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2017-11-19
+Last Update: 2018-05-12
 
 ----------
 # SeqinR
-seqinr: Biological Sequences Retrieval and Analysis
 生物配列の検索と解析
-
-- [seqinr](http://seqinr.r-forge.r-project.org)
-- [CRAN - Package seqinr](https://cran.r-project.org/web/packages/seqinr/index.html)
+- [Welcome to SeqinR: Biological Sequences in R project!](http://seqinr.r-forge.r-project.org)
+- [CRAN - Package seqinr](https://cran.r-project.org/web/packages/seqinr/index.html): Biological Sequences Retrieval and Analysis
+  - 2017-08-01 Reference manual: [seqinr.pdf](https://cran.r-project.org/web/packages/seqinr/seqinr.pdf)
 
 ## Table of Contents
 - [Installation](#installation)
 - [Exercise 1](#exercise-1)
 - [Exercise 2](#exercise-2)
-- [2013-05-09](#2013-05-09) Using the R SeqinR package - Dave Tang's blog
+- [2017-08-03](#2017-08-03) Introduction to seqinR
+- [2013-05-09](#2013-05-09) SeqinR for NONCODE
+- [Acknowledgements](#acknowledgements)
+- [References](#references)
 
 ----------
 ## Installation
-
-[パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
 
 `seqinr`パッケージのインストール:  
 
@@ -29,6 +29,8 @@ seqinr: Biological Sequences Retrieval and Analysis
 
     # load the SeqinR package into R
     library(seqinr)
+
+- [パッケージ | RのパッケージをCRANからインストールする方法と利用方法](http://stat.biopapyrus.net/r/package-function.html)
 
 ----------
 ## Exercise 1
@@ -68,44 +70,27 @@ seqinr: Biological Sequences Retrieval and Analysis
     example(dotPlot)
 
 ----------
+## 2017-08-03
+[Introduction to seqinR](http://seqinr.r-forge.r-project.org/src/mainmatter/introduction.pdf)
+Pr. Jean R. Lobry
+
+----------
 ## 2013-05-09
 
 https://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/
 Using the R SeqinR package - Dave Tang's blog
 
-### Download data
-http://www.noncode.org/download.php
+Download data from http://www.noncode.org/download.php
 
     wget -c http://www.noncode.org/datadownload/ncrna_NONCODE[v3.0].fasta.tar.gz
 
-### Working with Data in R
-
-    # Set Working Directory
-    setwd("~/2013-05-09/")
-    # Load the SeqinR package
-    # Reading sequence data
-
-
-
-
+Now with the R analysis.
 
     pirna_index <- grep("piRNA",annotation,ignore.case=T, useBytes = TRUE)
-
-
-
     pirna_human_sequence <- getSequence(pirna_human)
     write.fasta(pirna_human_sequence, pirna_human_annotation, 'human_pirna.fa')
-
     table(mapply(function(x) return(x[10]), pirna_human_sequence))
-
     table(mapply(function(x) return(x[1]), pirna_human_sequence))
-
-
-### References
-
-http://apprize.info/data/bioinformatics/8.html
-A Rapid Introduction to the R Language - Practice: Bioinformatics Data Skills - Bioinformatics Data Skills (2015)
-mapply() is a multivariate version of sapply(): the function you pass to mapply() can take in and use multiple arguments. 
 
 #### NONCODE
 http://www.noncode.org
@@ -127,12 +112,12 @@ http://cell-innovation.nig.ac.jp/surfers/long_non_coding_RNA_flow.html
 long non coding RNA解析フロー
 
 ----------
-# Acknowledgements
+## Acknowledgements
 
 I am grateful to Drs. Jean R. Lobry and Simon Penel for their advice on SeqinR.
 
 ----------
-# References
+## References
 
 http://www.rdocumentation.org/packages/seqinr
 seqinr package | R Documentation
@@ -142,8 +127,6 @@ DNA Sequence Statistics using R: Team Project
 
 http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html
 (Rで)塩基配列解析
-(last modified 2017/11/13, since 2010)
-http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#intro_general_translate_seqinr
 イントロ | 一般 | 翻訳配列(translate)を取得(応用) | seqinr(Charif_2005)
 
 https://sites.google.com/site/rhandout/seqinr-package
@@ -163,9 +146,6 @@ November 19, 2015
 https://stackoverflow.com/questions/26834908/seqinr-dotplot-change-axis
 r - seqinr dotplot - change axis - Stack Overflow
 3 years ago
-
-https://davetang.org/muse/2013/05/09/using-the-r-seqinr-package/
-Using the R SeqinR package - Musings from an unlikely candidateMusings from an unlikely candidate
 
 http://www.biob.in/2013/05/dotplot-for-protein-sequences-using-r.html
 DotPlot for Protein Sequences using R ~ BioGem Blog
@@ -197,7 +177,5 @@ Online Synonymous Codon Usage Analyses with the ade4 and seqinR packages
 
 http://pbil.univ-lyon1.fr/members/lobry/repro/jme95/
 Lobry (1995) JME 40:326
-
-
 
 ----------
