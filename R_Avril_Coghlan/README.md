@@ -262,7 +262,7 @@ Apr 18, 2017 Bill Gates [Neglected Tropical Diseases - YouTube](https://www.yout
 ![](https://pbs.twimg.com/media/DRoodFWVQAEesVG.jpg)
 
 ### [Retrieving genome sequence data via the NCBI website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter1.html#retrieving-genome-sequence-data-via-the-ncbi-website)
-**NCBIウェブサイトでゲノム配列データの検索**
+**NCBIウェブサイトを介したゲノム配列データの検索**
 
 DEN-1デング熱ウイルスのDNA配列を検索するには、NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) にアクセスし、ウェブページ上部の検索ボックスにNCBI accession [ NC_001477 ] を入力して、"Search"ボタンを押す:  
 
@@ -588,16 +588,16 @@ GC含量の移動プロット
 ### [NCBI Sequence Format (NCBI Format)](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#ncbi-sequence-format-ncbi-format)
 
 - [GenBank形式](http://quma.cdb.riken.jp/help/gbHelp_j.html)
-- 2018-04-20 [DDBJ DDBJ 公開形式 (Flat file)](https://www.ddbj.nig.ac.jp/ddbj/flat-file.html)
+- [DDBJ DDBJ 公開形式 (Flat file)](https://www.ddbj.nig.ac.jp/ddbj/flat-file.html)
 - 2017.03.12 [DDBJ/GenBank | 核酸データベース](https://bi.biopapyrus.jp/db/genbank.html)
 
-[NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477) (Dengue virus 1, complete genome)
+例えば、DEN-1デング熱ウイルスのゲノム配列[NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)
 
 ### [RefSeq](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#refseq)
 
-- April 9, 2018. RefSeq Frequently Asked Questions (FAQ) [What is the difference between RefSeq and GenBank?](https://www.ncbi.nlm.nih.gov/books/NBK50679/#RefSeqFAQ.what_is_the_difference_between_1)
+- [What is the difference between RefSeq and GenBank?](https://www.ncbi.nlm.nih.gov/books/NBK50679/#RefSeqFAQ.what_is_the_difference_between_1)
 - 2017.03.12 [RefSeq | 重複のない生物の遺伝子データベース（ゲノムデータベース）](http://bi.biopapyrus.net/biodb/refseq.html)
-- 2016年4月25日 井上 潤 [RefSeq - JI](http://www.geocities.jp/ancientfishtree/RefSeq.html)
+- 井上 潤 [RefSeq - JI](http://www.geocities.jp/ancientfishtree/RefSeq.html)
 
 ### [Querying the NCBI Database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#querying-the-ncbi-database)
 **NCBIデータベースに照会する**
@@ -611,7 +611,7 @@ NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) 検索ボックスの入�
 
 - NC_001477[ACCN]
 - "Chlamydia trachomatis"[ORGN]
-- "Berriman M"[AU]
+- "Tomita M"[AU]
 - flagellin OR fibrinogen
 - "Mycobacterium leprae"[ORGN] AND dnaA
 - "Bacteria"[ORGN] AND srcdb_refseq[PROP]
@@ -640,7 +640,7 @@ NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) 検索ボックスの入�
 	closebank()
 
 #### [Example: finding the sequence for the DEN-1 Dengue virus genome](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#example-finding-the-sequence-for-the-den-1-dengue-virus-genome)
-**例：DEN-1デングウイルスゲノムの配列を取得**
+**例：DEN-1デング熱ウイルスのゲノム配列を取得**
 
 	choosebank("refseqViruses")
     Dengue1 <- query("Dengue1", "AC=NC_001477")
