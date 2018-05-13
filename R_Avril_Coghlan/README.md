@@ -612,19 +612,14 @@ ORIGIN
 
 [Search Field Descriptions for Sequence Database](https://www.ncbi.nlm.nih.gov/books/NBK49540/)
 
-https://www.ncbi.nlm.nih.gov/
-検索ボックス入力例
-- NC_001477[AC]
-- Nature[JOUR] AND 460[VOL] AND 352[PAGE]
+NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) 検索ボックスの入力例:
+
+- NC_001477[ACCN]
 - "Chlamydia trachomatis"[ORGN]
 - "Berriman M"[AU]
 - flagellin OR fibrinogen
 - "Mycobacterium leprae"[ORGN] AND dnaA
-- "Homo sapiens"[ORGN] AND "colon cancer"
-- "Homo sapiens"[ORGN] AND malaria
-- "Homo sapiens"[ORGN] AND biomol_mrna[PROP]
 - "Bacteria"[ORGN] AND srcdb_refseq[PROP]
-- "colon cancer" AND srcdb_refseq[PROP]
 
 #### [Example: finding the sequences published in Nature 460:352-358](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#example-finding-the-sequences-published-in-nature-460-352-358)
 
