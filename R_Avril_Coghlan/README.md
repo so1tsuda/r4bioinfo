@@ -576,9 +576,7 @@ GC含量の移動プロット
 ### [The NCBI Sequence Database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#the-ncbi-sequence-database)
 [NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース
 
-[塩基配列データベース構築の国際協調](https://www.ddbj.nig.ac.jp/insdc.html)
-
-![](https://www.ddbj.nig.ac.jp/images/center/insdc_shoukai.gif)
+[INSDC - DDBJ/EBI/NCBI国際塩基配列データベース](https://www.ddbj.nig.ac.jp/insdc.html)
 
 ### [Searching for an accession number in the NCBI database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#searching-for-an-accession-number-in-the-ncbi-database)
 **NCBIデータベースでアクセッション番号の検索**
