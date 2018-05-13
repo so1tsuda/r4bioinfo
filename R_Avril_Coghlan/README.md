@@ -587,17 +587,11 @@ GC含量の移動プロット
 
 ### [NCBI Sequence Format (NCBI Format)](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#ncbi-sequence-format-ncbi-format)
 
-![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P3_image2.png)
-
-    DEFINITION 
-    ORGANISM 
-    REFERENCE 
-    FEATURES 
-    ORIGIN 
-
 - [GenBank形式](http://quma.cdb.riken.jp/help/gbHelp_j.html)
 - 2018-04-20 [DDBJ DDBJ 公開形式 (Flat file)](https://www.ddbj.nig.ac.jp/ddbj/flat-file.html)
 - 2017.03.12 [DDBJ/GenBank | 核酸データベース](https://bi.biopapyrus.jp/db/genbank.html)
+
+[NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477) (Dengue virus 1, complete genome)
 
 ### [RefSeq](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#refseq)
 
