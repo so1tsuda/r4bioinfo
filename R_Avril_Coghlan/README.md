@@ -573,10 +573,63 @@ GC含量の移動プロット
 ## [Sequence Databases](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html)
 **配列データベース**
 
-### The NCBI Sequence Database
+### [The NCBI Sequence Database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#the-ncbi-sequence-database)
+[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース
+
+[塩基配列データベース構築の国際協調](https://www.ddbj.nig.ac.jp/insdc.html)
+
+![](https://www.ddbj.nig.ac.jp/images/center/insdc_shoukai.gif)
+
+### [Searching for an accession number in the NCBI database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#searching-for-an-accession-number-in-the-ncbi-database)
+**NCBIデータベースでアクセッション番号の検索**
+
+[DNA Sequence Statistics (1)](#dna-sequence-statistics-1)
+を参照されたい。
+
+### [NCBI Sequence Format (NCBI Format)](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#ncbi-sequence-format-ncbi-format)
+**[GenBank形式](http://quma.cdb.riken.jp/help/gbHelp_j.html)**
+
+- 2018-04-20 [DDBJ DDBJ 公開形式 (Flat file)](https://www.ddbj.nig.ac.jp/ddbj/flat-file.html)
+- 2017.03.12 [DDBJ/GenBank | 核酸データベース](https://bi.biopapyrus.jp/db/genbank.html)
+
+DEFINITION 
+ORGANISM 
+REFERENCE 
+FEATURES 
+ORIGIN 
+
+### [RefSeq](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#refseq)
+
+- [RefSeq - JI 井上 潤](http://www.geocities.jp/ancientfishtree/RefSeq.html)
+- [RefSeq | 重複のない生物の遺伝子データベース（ゲノムデータベース）](http://bi.biopapyrus.net/biodb/refseq.html)
+- [What is the difference between RefSeq and GenBank?](https://www.ncbi.nlm.nih.gov/books/NBK50679/#RefSeqFAQ.what_is_the_difference_between_1)
+
+### [Querying the NCBI Database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#querying-the-ncbi-database)
+**NCBIデータベースに照会する**
+
+### [Querying the NCBI Database via the NCBI Website](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#querying-the-ncbi-database-via-the-ncbi-website)
+**NCBIウェブサイト経由でNCBIデータベースを照会する**
+
+[Search Field Descriptions for Sequence Database](https://www.ncbi.nlm.nih.gov/books/NBK49540/)
+
+https://www.ncbi.nlm.nih.gov/
+検索ボックス入力例
+- NC_001477[AC]
+- Nature[JOUR] AND 460[VOL] AND 352[PAGE]
+- "Chlamydia trachomatis"[ORGN]
+- "Berriman M"[AU]
+- flagellin OR fibrinogen
+- "Mycobacterium leprae"[ORGN] AND dnaA
+- "Homo sapiens"[ORGN] AND "colon cancer"
+- "Homo sapiens"[ORGN] AND malaria
+- "Homo sapiens"[ORGN] AND biomol_mrna[PROP]
+- "Bacteria"[ORGN] AND srcdb_refseq[PROP]
+- "colon cancer" AND srcdb_refseq[PROP]
+
+#### [Example: finding the sequences published in Nature 460:352-358](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#example-finding-the-sequences-published-in-nature-460-352-358)
 
 ### [Querying the NCBI Database via R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#querying-the-ncbi-database-via-r)
-**Rを介してNCBIデータベースを照会する**
+**Rを介してNCBIデータベースに問い合わせる**
 
 	library("seqinr") # Load the SeqinR R package
 	choosebank()      # List all the sub-databases in ACNUC
@@ -613,28 +666,8 @@ GC含量の移動プロット
 #### [Example: finding the sequences published in Nature 460:352-358](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#id8)
 
 	choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
-	query('naturepaper', 'R=Nature/460/352')
 
-	Error in query("naturepaper", "R=Nature/460/352") : 
-	  invalid request:"unknown reference at (^): \"R
-
-On Nov 27, 2017, Dr. Simon Penel <> wrote:
-
- concerning the reference,
-
-I looked a the the article Nature/460/352 here:
-
-https://www.nature.com/articles/nature08160
-
-is seems that the accession given at the end of the article
-
-FN357292–FN376313 <http://www.ebi.ac.uk/cgi-bin/emblfetch?style=html&id=FN357292%96FN376313>
-
-is not present anymore  in GenBank
-
-https://www.ncbi.nlm.nih.gov/nuccore/FN357292
-
-all the best
+On Apr 23, 2018, Dr. Simon Penel <> wrote:
 
 #### [Saving sequence data in a FASTA-format file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#saving-sequence-data-in-a-fasta-format-file)
 
