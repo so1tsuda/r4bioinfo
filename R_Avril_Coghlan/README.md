@@ -591,7 +591,7 @@ GC含量の移動プロット
 - [DDBJ DDBJ 公開形式 (Flat file)](https://www.ddbj.nig.ac.jp/ddbj/flat-file.html)
 - 2017.03.12 [DDBJ/GenBank | 核酸データベース](https://bi.biopapyrus.jp/db/genbank.html)
 
-例えば、DEN-1デング熱ウイルスのゲノム配列（NCBIアクセッション[NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)）のNCBIエントリーは、以下のように見える：
+例えば、DEN-1デング熱ウイルスのゲノム配列（NCBIアクセッション[NC_001477](http://www.ncbi.nlm.nih.gov/nuccore/NC_001477)）のGenBank Format
 
 ![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P3_image2.png)
 
