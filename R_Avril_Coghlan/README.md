@@ -577,6 +577,8 @@ GC含量の移動プロット
 
 [INSDC - DDBJ/EBI/NCBI国際塩基配列データベース](https://www.ddbj.nig.ac.jp/insdc.html)
 
+![](https://www.ddbj.nig.ac.jp/images/center/insdc_shoukai.gif)
+
 ### [Searching for an accession number in the NCBI database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#searching-for-an-accession-number-in-the-ncbi-database)
 **NCBIデータベースでアクセッション番号の検索**
 
@@ -584,6 +586,8 @@ GC含量の移動プロット
 を参照されたい。
 
 ### [NCBI Sequence Format (NCBI Format)](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#ncbi-sequence-format-ncbi-format)
+
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P3_image2.png)
 
     DEFINITION 
     ORGANISM 
@@ -617,6 +621,8 @@ NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) 検索ボックスの入�
 - flagellin OR fibrinogen
 - "Mycobacterium leprae"[ORGN] AND dnaA
 - "Bacteria"[ORGN] AND srcdb_refseq[PROP]
+
+![](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/_images/P3_image5.png)
 
 #### [Example: finding the sequences published in Nature 460:352-358](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#example-finding-the-sequences-published-in-nature-460-352-358)
 
