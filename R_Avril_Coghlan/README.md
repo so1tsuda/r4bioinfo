@@ -573,7 +573,7 @@ GC含量の移動プロット
 **配列データベース**
 
 ### [The NCBI Sequence Database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#the-ncbi-sequence-database)
-[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース
+**[NCBI](https://ja.wikipedia.org/wiki/国立生物工学情報センター)配列データベース**
 
 [INSDC - DDBJ/EBI/NCBI国際塩基配列データベース](https://www.ddbj.nig.ac.jp/insdc.html)
 
@@ -584,15 +584,16 @@ GC含量の移動プロット
 を参照されたい。
 
 ### [NCBI Sequence Format (NCBI Format)](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#ncbi-sequence-format-ncbi-format)
-- [GenBank形式](http://quma.cdb.riken.jp/help/gbHelp_j.html)
-- 2018-04-20 [DDBJ DDBJ 公開形式 (Flat file)](https://www.ddbj.nig.ac.jp/ddbj/flat-file.html)
-- 2017.03.12 [DDBJ/GenBank | 核酸データベース](https://bi.biopapyrus.jp/db/genbank.html)
 
     DEFINITION 
     ORGANISM 
     REFERENCE 
     FEATURES 
     ORIGIN 
+
+- [GenBank形式](http://quma.cdb.riken.jp/help/gbHelp_j.html)
+- 2018-04-20 [DDBJ DDBJ 公開形式 (Flat file)](https://www.ddbj.nig.ac.jp/ddbj/flat-file.html)
+- 2017.03.12 [DDBJ/GenBank | 核酸データベース](https://bi.biopapyrus.jp/db/genbank.html)
 
 ### [RefSeq](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#refseq)
 
