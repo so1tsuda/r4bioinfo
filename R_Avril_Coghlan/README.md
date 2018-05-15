@@ -677,23 +677,32 @@ ACNUC (http://doua.prabi.fr/databases/acnuc)
     # search for GenBank sequences from Bacteria
     choosebank("genbank")
     GenBankBact <- query("GenBankBact", "SP=Bacteria")
-	closebank() # close the connection to the ACNUC sub-database that you were searching,
+	closebank() # close the connection to the ACNUC sub-database
 
 	# search for mRNA sequences from the parasitic worm Schistosoma mansoni 
 	choosebank("genbank")
     SchistosomamRNA <- query("SchistosomamRNA", "SP=Schistosoma mansoni AND M=mrna")
 	closebank()
 
+> SchistosomamRNA <- query("SchistosomamRNA", "SP=Schistosoma mansoni AND M=mrna")
+Error in readLines(socket, n = nelem, ok = FALSE) : 
+  too few lines read in readLines
+In addition: Warning message:
+In readLines(socket, n = nelem, ok = FALSE) :
+  incomplete final line found on '->pbil.univ-lyon1.fr:5558'
+
 #### [Example: finding the sequence for the DEN-1 Dengue virus genome](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#example-finding-the-sequence-for-the-den-1-dengue-virus-genome)
 **例：DEN-1デング熱ウイルスのゲノム配列を取得**
 
 	choosebank("refseqViruses")
     Dengue1 <- query("Dengue1", "AC=NC_001477")
+
 	attributes(Dengue1)
 	Dengue1$nelem
 	Dengue1$req
 	attr(Dengue1, "names")
 	attr(Dengue1, "class")
+
 	dengueseq <- getSequence(Dengue1$req[[1]])
 	dengueseq[1:50]
 	annots <- getAnnot(Dengue1$req[[1]])
@@ -706,18 +715,22 @@ ACNUC (http://doua.prabi.fr/databases/acnuc)
 
 #### [Saving sequence data in a FASTA-format file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#saving-sequence-data-in-a-fasta-format-file)
 
-	choosebank("genbank")                             # select the ACNUC sub-database to be searched
+	choosebank("genbank")                                     # select the ACNUC sub-database to be searched
     humtRNAs <- query("humtRNAs", "SP=homo sapiens AND M=TRNA")   # specify the query
-	myseqs <- getSequence(humtRNAs)                   # get the sequences
-	mynames <- getName(humtRNAs)                      # get the names of the sequences
+	myseqs <- getSequence(humtRNAs)                           # get the sequences
+	mynames <- getName(humtRNAs)                              # get the names of the sequences
 	write.fasta(myseqs, mynames, file.out="humantRNAs.fasta")
 	closebank()
 
 ### [Finding the genome sequence for a particular species](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#finding-the-genome-sequence-for-a-particular-species)
 
+NCBI Genome website (http://www.ncbi.nlm.nih.gov/sites/entrez?db=Genome)
+
 ### [How many genomes have been sequenced, or are being sequenced now?](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#how-many-genomes-have-been-sequenced-or-are-being-sequenced-now)
 
-[Genome List - Genome - NCBI](https://www.ncbi.nlm.nih.gov/genome/browse#!/overview/)
+NCBI Genome List (https://www.ncbi.nlm.nih.gov/genome/browse#!/overview/)
+
+Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#exercises)
 **演習**
