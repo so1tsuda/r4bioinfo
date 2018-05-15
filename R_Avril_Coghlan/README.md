@@ -635,7 +635,7 @@ GC含量の移動プロット
 
 NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) 検索ボックスの入力例:
 
-- NC_001477[ACCN]
+- NC_001477[AC]
 - "Chlamydia trachomatis"[ORGN]
 - "Berriman M"[AU]
 - flagellin OR fibrinogen
@@ -664,16 +664,20 @@ as an alternative for example you may use
 ### [Querying the NCBI Database via R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#querying-the-ncbi-database-via-r)
 **Rを介してNCBIデータベースに問い合わせる**
 
+ACNUC (http://doua.prabi.fr/databases/acnuc)
+
 	library("seqinr") # Load the SeqinR R package
 	choosebank()      # List all the sub-databases in ACNUC
+
+	help(query)
+
 	choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
 	choosebank("refseq") # Specify that we want to search the 'refseq' ACNUC sub-database
 
     # search for GenBank sequences from Bacteria
     choosebank("genbank")
     GenBankBact <- query("GenBankBact", "SP=Bacteria")
-    GenBankBact
-	closebank()
+	closebank() # close the connection to the ACNUC sub-database that you were searching,
 
 	# search for mRNA sequences from the parasitic worm Schistosoma mansoni 
 	choosebank("genbank")
