@@ -617,11 +617,25 @@ GC含量の移動プロット
 
 [Search Field Descriptions for Sequence Database](https://www.ncbi.nlm.nih.gov/books/NBK49540/)
 
+- [Accession]	[ACCN]
+- [Organism]	[ORGN]
+- [Properties]	[PROP]
+- [Journal]	[JOUR]
+- [Volume]	[VOL]
+- [Page Number]	[PAGE]
+- [Author]	[AU] [AUTH]
+
+“AND”で検索タグを組み合わせる。例えば、真菌由​​来の全てのmRNA配列を検索:  
+- Fungi[ORGN] AND biomol_mRNA[PROP]
+
+“OR”で検索タグを組み合わせる。例えば、真菌または細菌の全てのmRNA配列を検索:  
+- (Fungi[ORGN] OR Bacteria[ORGN]) AND biomol_mRNA[PROP]
+
 NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) 検索ボックスの入力例:
 
 - NC_001477[ACCN]
 - "Chlamydia trachomatis"[ORGN]
-- "Tomita M"[AU]
+- "Berriman M"[AU]
 - flagellin OR fibrinogen
 - "Mycobacterium leprae"[ORGN] AND dnaA
 - "Bacteria"[ORGN] AND srcdb_refseq[PROP]
