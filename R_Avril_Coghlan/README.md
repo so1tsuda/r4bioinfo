@@ -604,7 +604,7 @@ GC含量の移動プロット
 [Table 1. RefSeq accession numbers and molecule types.](https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/)
 
 | Accession prefix | Molecule type | Comment |
-|:----------------:|:---------:|:---------:|
+|:----------------:|:-------------:|:-------:|
 | NC_ | Genomic | Complete genomic molecule, usually reference assembly |
 | NM_ | mRNA | Protein-coding transcripts (usually curated) |
 | NP_ | Protein | Associated with an NM_ or NC_ accession |
@@ -617,13 +617,15 @@ GC含量の移動プロット
 
 [Search Field Descriptions for Sequence Database](https://www.ncbi.nlm.nih.gov/books/NBK49540/)
 
-- [Accession]	[ACCN]
-- [Organism]	[ORGN]
-- [Properties]	[PROP]
-- [Journal]	[JOUR]
-- [Volume]	[VOL]
-- [Page Number]	[PAGE]
-- [Author]	[AU] [AUTH]
+| Search Field | Short Field |
+|:------------:|:-----------:|
+| [Accession]	 | [ACCN] | 
+| [Organism]	 | [ORGN] | 
+| [Properties]	 | [PROP] | 
+| [Journal]	 | [JOUR] | 
+| [Volume]	 | [VOL] | 
+| [Page Number]	 | [PAGE] | 
+| [Author]	 | [AU]	[AUTH] | 
 
 “AND”で検索タグを組み合わせる。例えば、真菌由​​来の全てのmRNA配列を検索:  
 - Fungi[ORGN] AND biomol_mRNA[PROP]
