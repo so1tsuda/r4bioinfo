@@ -646,6 +646,11 @@ NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) 検索ボックスの入�
 
 #### [Example: finding the sequences published in Nature 460:352-358](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#example-finding-the-sequences-published-in-nature-460-352-358)
 
+On Apr 23, 2018, Dr. Simon Penel <> wrote:
+
+as an alternative for example you may use
+- Nature[JOUR] AND 420[VOL] AND 563[PAGE]
+
 ### [Querying the NCBI Database via R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#querying-the-ncbi-database-via-r)
 **Rを介してNCBIデータベースに問い合わせる**
 
@@ -685,7 +690,14 @@ NCBIウェブサイト (https://www.ncbi.nlm.nih.gov) 検索ボックスの入�
 
 	choosebank("genbank") # Specify that we want to search the 'genbank' ACNUC sub-database
 
-On Apr 23, 2018, Dr. Simon Penel <> wrote:
+On Nov 27, 2017, Dr. Simon Penel <> wrote:
+ concerning the reference,
+I looked a the the article Nature/460/352 here:
+https://www.nature.com/articles/nature08160
+is seems that the accession given at the end of the article
+FN357292–FN376313 <http://www.ebi.ac.uk/cgi-bin/emblfetch?style=html&id=FN357292%96FN376313>
+is not present anymore  in GenBank
+https://www.ncbi.nlm.nih.gov/nuccore/FN357292
 
 #### [Saving sequence data in a FASTA-format file](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#saving-sequence-data-in-a-fasta-format-file)
 
