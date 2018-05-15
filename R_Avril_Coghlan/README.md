@@ -605,9 +605,9 @@ GC含量の移動プロット
 
 |:----------------:|:---------:|:---------:|
 | Accession prefix | Molecule type | Comment |
-| NC_ | Genomic | Complete genomic molecule, usually reference assembly
-| NM_ | mRNA | Protein-coding transcripts (usually curated)
-| NP_ | Protein | Associated with an NM_ or NC_ accession
+| NC_ | Genomic | Complete genomic molecule, usually reference assembly |
+| NM_ | mRNA | Protein-coding transcripts (usually curated) |
+| NP_ | Protein | Associated with an NM_ or NC_ accession |
 
 ### [Querying the NCBI Database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#querying-the-ncbi-database)
 **NCBIデータベースに照会する**
