@@ -598,8 +598,16 @@ GC含量の移動プロット
 ### [RefSeq](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#refseq)
 
 - [What is the difference between RefSeq and GenBank?](https://www.ncbi.nlm.nih.gov/books/NBK50679/#RefSeqFAQ.what_is_the_difference_between_1)
-- 2017.03.12 [RefSeq | 重複のない生物の遺伝子データベース（ゲノムデータベース）](http://bi.biopapyrus.net/biodb/refseq.html)
+- 2017.03.12 [RefSeq | 詳細な注釈づけられている冗長性のない核酸データベース](https://bi.biopapyrus.jp/db/refseq.html)
 - 井上 潤 [RefSeq - JI](http://www.geocities.jp/ancientfishtree/RefSeq.html)
+
+[Table 1. RefSeq accession numbers and molecule types.](https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/)
+
+|:----------------:|:---------:|:---------:|
+| Accession prefix | Molecule type | Comment |
+| NC_ | Genomic | Complete genomic molecule, usually reference assembly
+| NM_ | mRNA | Protein-coding transcripts (usually curated)
+| NP_ | Protein | Associated with an NM_ or NC_ accession
 
 ### [Querying the NCBI Database](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#querying-the-ncbi-database)
 **NCBIデータベースに照会する**
@@ -672,6 +680,12 @@ On Apr 23, 2018, Dr. Simon Penel <> wrote:
 	write.fasta(myseqs, mynames, file.out="humantRNAs.fasta")
 	closebank()
 
+### [Finding the genome sequence for a particular species](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#finding-the-genome-sequence-for-a-particular-species)
+
+### [How many genomes have been sequenced, or are being sequenced now?](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#how-many-genomes-have-been-sequenced-or-are-being-sequenced-now)
+
+[Genome List - Genome - NCBI](https://www.ncbi.nlm.nih.gov/genome/browse#!/overview/)
+
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter3.html#exercises)
 **演習**
 [回答例](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter_answers.html#sequence-databases)
@@ -697,8 +711,6 @@ On Apr 23, 2018, Dr. Simon Penel <> wrote:
 [Swiss-Prot](https://ja.wikipedia.org/wiki/Swiss-Prot) タンパク質データベース
 
 ### [Viewing the UniProt webpage for a protein sequence](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#viewing-the-uniprot-webpage-for-a-protein-sequence)
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Mycobacterium_leprae.jpeg/200px-Mycobacterium_leprae.jpeg)
 
 [*Mycobacterium leprae*（らい菌）](https://ja.wikipedia.org/wiki/らい菌)の[コリスミ酸リアーゼ](https://ja.wikipedia.org/wiki/コリスミ酸リアーゼ)（chorismate lyase）タンパク質配列を検索するには、UniProtウェブサイト (http://www.uniprot.org) にアクセスし、ウェブページ上部の検索ボックスにUniProt accession [ [Q9CD83](http://www.uniprot.org/uniprot/Q9CD83) ] を入力して、"Search"ボタンを押す:  
 
@@ -730,7 +742,7 @@ On Apr 23, 2018, Dr. Simon Penel <> wrote:
     # ulceransseq <- read.fasta(file = "http://www.uniprot.org/uniprot/A0PQ23.fasta")[[1]]
 	lepraeseq # Display the contents of the vector "lepraeseq"
 
-[How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
+- [How can I access resources on this web site programmatically?](http://www.uniprot.org/help/programmatic_access)
 
 ### [Retrieving a UniProt protein sequence using SeqinR](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#retrieving-a-uniprot-protein-sequence-using-seqinr)
 **SeqinRでUniProtのタンパク質配列を取得**
