@@ -846,7 +846,8 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
     GAATTC
     GA-TTA
 
-**scoring matrix (substitution matrix)**
+*scoring matrix (substitution matrix)*
+[置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
 
 Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコアマトリックス(置換行列)を作る:  
 
@@ -881,9 +882,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 このアライメントは、4個の一致(match)、1個の不一致(mismatch)、長さ1の1個のギャップ(gap)が含まれているので、スコアは (4\*2)+(1\*-1)+(1\*-10) = -3 となる。  
 【注意】gapOpening = -2, gapExtension = -8 は、ギャップの最初の位置は (-2-8=)-10 のスコアが割り当てられ、ギャップの後続の位置は -8 のスコアが与えられることを意味する。
 
-- [Needleman–Wunsch | グローバルアライメントを求めるアルゴリズム](https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html)
-
-![https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html](http://bi.biopapyrus.net/media/nw-005.png)
+![https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html](https://bi.biopapyrus.jp/media/nw-005.png)
 
 ### [Pairwise global alignment of protein sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-protein-sequences-using-the-needleman-wunsch-algorithm)
 **2つのタンパク質配列間のグローバル・アライメント**
@@ -914,9 +913,6 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 	score: -5 
 
 ギャップ(`---`)は -10-8-8 = -26 のスコアが与えられる。
-
-- 2009.9.12 [バイオインフォマティクス基礎講座 配列解析 川端 猛](http://www.jst.go.jp/nbdc/bird/jinzai/literacy/streaming/h21_3_1.pdf)
-- [バイオインフォマティクス-ゲノム配列から機能解析へ-第3章3.4節配列アラインメントにおけるスコア行列とギャップペナルティの使用方法](http://qiita.com/kino-tohoku/items/d4e0441e7ed6222106fa)
 
 ### [Aligning UniProt sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#aligning-uniprot-sequences)
 **UniProt配列のアライメント**
@@ -983,16 +979,6 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
     ?pairwiseAlignment
 
 ### [Links and Further Reading](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#links-and-further-reading)
-
-- [配列の記載に用いる略号 | DDBJ](http://www.ddbj.nig.ac.jp/sub/code-j.html)
-  - [核酸塩基コード](http://www.ddbj.nig.ac.jp/sub/code-j.html#nucleotide-1)
-  - [アミノ酸コード](http://www.ddbj.nig.ac.jp/sub/code-j.html#amino-1)
-- [2-1. 配列解析基礎 Basic Sequence Analysis 坊農 秀雅](http://www.iu.a.u-tokyo.ac.jp/~kadota/bioinfo_ngs_sokushu_2014/20140905_2-1_bono.pdf)
-- [Aritalab:Lecture/Bioinformatics/Alignment - Metabolomics.JP](http://metabolomics.jp/wiki/Aritalab:Lecture/Bioinformatics/Alignment)
-- [置換行列 | スコアマトリックスの作り方](https://bi.biopapyrus.jp/seq/score-matrix.html)
-- [アラインメント | 核酸あるいはアミノ酸配列を複数並べ類縁度を可視化](https://bi.biopapyrus.jp/seq/alignment/)
-- [Needleman–Wunsch | グローバルアライメントを求めるアルゴリズム](https://bi.biopapyrus.jp/seq/alignment/needleman–wunsch.html)
-- [Smith-Waterman | ローカルアラインメントを求めるアルゴリズム](https://bi.biopapyrus.jp/seq/alignment/smith-waterman.html)
 
 ### [Exercises](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#exercises)
 **演習**
