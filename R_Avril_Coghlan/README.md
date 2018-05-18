@@ -745,12 +745,13 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
 
 ![https://ja.wikipedia.org/wiki/シーケンスアラインメント](https://upload.wikimedia.org/wikipedia/commons/8/86/Zinc-finger-seq-alignment2.png)
 
-塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)
-
-![http://www.bbc.co.uk/education/guides/zc499j6/revision/2](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
-
 2009年4月 [多様性の源　複雑な生物を生む力 | 日経サイエンス](http://www.nikkei-science.com/page/magazine/0904/200904_036.html)
-変異
+
+[変異](https://ja.wikipedia.org/wiki/突然変異)
+
+[塩基の置換(Substitution)、挿入(Insertion)、欠失(Deletion)](http://www.bbc.co.uk/education/guides/zc499j6/revision/2)
+
+![](https://bam.files.bbci.co.uk/bam/live/content/zdjy4wx/large)
 
 ### [UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#uniprot)
 
