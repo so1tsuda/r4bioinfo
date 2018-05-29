@@ -816,6 +816,7 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
     # Create tests
     x <- s2c("atgc")
     par(mfrow=c(2,2))
+    par(family="mono")
     dotPlot(x,x)
     dotPlot(x,rev(x))
     dotPlot(x,rep(x,2))
