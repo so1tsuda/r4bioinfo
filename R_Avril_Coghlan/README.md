@@ -840,6 +840,12 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
     # Comparing two sequences using a dotplot
     dotPlot(seq1, seq2)
 
+[ジョロウグモ](https://ja.wikipedia.org/wiki/ジョロウグモ)*Nephila clavata*の[卵嚢](https://kotobank.jp/word/卵嚢-148216) Cylindrical Spidroin (CySp)
+[Cylindrical silk protein 1 (CySp1)](http://www.uniprot.org/uniprot/Q2V0S3)
+
+    myseq <- read.fasta(file = "http://www.uniprot.org/uniprot/Q2V0S3.fasta")[[1]]
+    dotPlot(myseq, myseq)
+
 ### [Pairwise global alignment of DNA sequences using the Needleman-Wunsch algorithm](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter4.html#pairwise-global-alignment-of-dna-sequences-using-the-needleman-wunsch-algorithm)
 **2つのDNA配列間のグローバル・アライメント**
 
