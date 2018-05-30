@@ -863,7 +863,7 @@ Genomes OnLine Database (GOLD) (https://gold.jgi.doe.gov/)
     GAATTC
     GATT-A
 
-以下のアラインメントのスコアは、2 + 2 + (-2) + 2 + 2 + (-1) = 5
+以下のアラインメントのスコアは？
 
     GAATTC
     GA-TTA
