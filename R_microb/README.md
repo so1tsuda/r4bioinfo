@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-04-29
+Last Update: 2018-06-20
 
 ----------
 
@@ -9,10 +9,10 @@ Rによる微生物データ解析
 ## Table of Contents
 - [Updates](#updates)
   - [2018](#2018)
+- [Tools-Microbiome-Anlaysis](#tools-microbiome-anlaysis)
 - [FindMyFriends](#FindMyFriends)
 - [Rhea](#Rhea)
 - [microbiome](#microbiome)
-- [Tools-Microbiome-Anlaysis](#tools-microbiome-anlaysis)
 - [Microbiome Helper](microbiome_helper)
 - [MicrobiomeWorkflow](#MicrobiomeWorkflow)
 - [Metacoder](#metacoder)
@@ -21,6 +21,9 @@ Rによる微生物データ解析
 - [DADA2](#DADA2)
 - [phyloseq](#phyloseq)
 - [matR](#matR)
+- [phylogeo](#phylogeo)
+- [micropan](#micropan)
+- [mcaGUI](#mcaGUI)
 
 ----------
 
@@ -36,6 +39,16 @@ https://twitter.com/aquabolina/status/978657686911938560
 Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R for microbial ecologists? Particularly for 16S microbiome analysis, stats & visualisation of data (NMS plots, box plots, heat maps etc) #microbiome #R #mothur"
 11:39 AM - 27 Mar 2018
 
+2018-02-14
+http://userweb.eng.gla.ac.uk/umer.ijaz/projects/microbiomeSeq_Tutorial.html
+microbiomeSeq: An R package for microbial community analysis in an environmental context
+
+----------
+## Tools-Microbiome-Anlaysis
+
+Jun 14, 2018
+https://github.com/microsud/Tools-Microbiome-Anlaysis
+A list of R environment based tools for 16S rRNA gene data exploration, statistical analysis and visualization
 
 ----------
 ## Rhea
@@ -90,14 +103,6 @@ http://www.iu.a.u-tokyo.ac.jp/~kadota/r_seq.html#about_analysis_microbiome
 (Rで)塩基配列解析
 - 解析 | 菌叢解析 | について (last modified 2017/06/04)
 - 解析 | 菌叢解析 | phyloseq(McMurdie_2012) (last modified 2014/05/29)
-
-----------
-## Tools-Microbiome-Anlaysis
-
-https://microsud.github.io/Tools-Microbiome-Anlaysis/
-
-https://github.com/microsud/Tools-Microbiome-Anlaysis
-A list of R environment based tools for 16S rRNA gene data exploration, statistical analysis and visualization
 
 ----------
 ## Microbiome Helper
@@ -202,6 +207,11 @@ Demo: phyloseq – An R package for microbiome census data
 https://sites.google.com/site/noteofpaediatricsurgery/r/phyloseq
 Phyloseq - Draft of Pediatric Surgery
 
+http://deneflab.github.io/MicrobeMiseq/demos/mothur_2_phyloseq.html
+Microbial Community Diversity Analysis Tutorial with Phyloseq
+Author: Michelle Berry
+Updated: April 14, 2016
+
 ----------
 
 ## matR
@@ -239,6 +249,7 @@ https://www.ncbi.nlm.nih.gov/pubmed/26791506
 Methods Mol Biol. 2016;1399:207-33. doi: 10.1007/978-1-4939-3369-3_13.
 MG-RAST, a Metagenomics Service for Analysis of Microbial Community Structure and Function.
 
+
 ----------
 ## phylogeo
 
@@ -263,6 +274,16 @@ Post-annotation analysis and visualization are also possible, directly through t
 	git clone https://github.com/cran/micropan
 	# micropan/inst/doc/casestudy.pdf
 	# micropan/inst/doc/vignette.pdf
+
+----------
+## mcaGUI
+
+http://www.bioconductor.org/packages/release/bioc/html/mcaGUI.html
+
+https://www.ncbi.nlm.nih.gov/pubmed/22692220
+Bioinformatics. 2012 Aug 15;28(16):2198-9. doi: 10.1093/bioinformatics/bts338. Epub 2012 Jun 12.
+mcaGUI: microbial community analysis R-Graphical User Interface (GUI).
+Copeland WK1, Krishnan V, Beck D, Settles M, Foster JA, Cho KC, Day M, Hickey R, Schütte UM, Zhou X, Williams CJ, Forney LJ, Abdo Z.
 
 ----------
 
