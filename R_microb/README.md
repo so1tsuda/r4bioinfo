@@ -9,6 +9,8 @@ Rによる微生物データ解析
 ## Table of Contents
 - [Updates](#updates)
   - [2018](#2018)
+- [MLSTar](#mlstar)
+- [Biomartr](#biomartr)
 - [Tools-Microbiome-Anlaysis](#tools-microbiome-anlaysis)
 - [FindMyFriends](#FindMyFriends)
 - [Rhea](#Rhea)
@@ -42,6 +44,38 @@ Emily Hornett on Twitter: "Can anyone recommend a good book/online tutorial on R
 2018-02-14
 http://userweb.eng.gla.ac.uk/umer.ijaz/projects/microbiomeSeq_Tutorial.html
 microbiomeSeq: An R package for microbial community analysis in an environmental context
+
+----------
+## MLSTar
+
+https://github.com/iferres/MLSTar
+iferres/MLSTar: An easy way of MLSTyping your genomes in R.
+
+https://www.ncbi.nlm.nih.gov/pubmed/29922519
+PeerJ. 2018 Jun 15;6:e5098. doi: 10.7717/peerj.5098. eCollection 2018.
+MLSTar: automatic multilocus sequence typing of bacterial genomes in R.
+Ferrés I1, Iraola G1,2.
+
+----------
+## Biomartr
+
+https://github.com/cran/biomartr
+Genomic Data Retrieval with R
+
+https://cran.r-project.org/web/packages/biomartr/index.html
+biomartr: Genomic Data Retrieval
+
+Vignettes:	Ensembl BioMart Examples
+NCBI Database Retrieval
+Functional Annotation
+Introduction
+Meta-Genome Retrieval
+Sequence Retrieval
+
+https://www.ncbi.nlm.nih.gov/pubmed/28110292
+Bioinformatics. 2017 Apr 15;33(8):1216-1217. doi: 10.1093/bioinformatics/btw821.
+Biomartr: genomic data retrieval with R.
+Drost HG, Paszkowski J.
 
 ----------
 ## Tools-Microbiome-Anlaysis
