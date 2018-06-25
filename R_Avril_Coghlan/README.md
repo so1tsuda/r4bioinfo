@@ -1058,9 +1058,10 @@ R言語デモ
 多重整列プログラム
 [Clustal](https://ja.wikipedia.org/wiki/Clustal)
 
-[プログラムのダウンロード](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html#programs)
-- [clustalw-2.1-macosx.dmg](http://www.clustal.org/download/current/clustalw-2.1-macosx.dmg)
-- [SeaView](http://doua.prabi.fr/software/seaview_data/seaview4.zip)
+はじけじゅ [プログラムのダウンロード](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html#programs)
+
+- http://www.clustal.org/ | [clustalw-2.1-macosx.dmg](http://www.clustal.org/download/current/clustalw-2.1-macosx.dmg)
+- http://doua.prabi.fr/software/seaview | [seaview4.zip](http://doua.prabi.fr/software/seaview_data/seaview4.zip)
 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
 **CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アライメントの作成**
