@@ -56,6 +56,18 @@ PeerJ. 2018 Jun 15;6:e5098. doi: 10.7717/peerj.5098. eCollection 2018.
 MLSTar: automatic multilocus sequence typing of bacterial genomes in R.
 Ferrés I1, Iraola G1,2.
 
+	git clone https://github.com/iferres/MLSTar
+
+my_MLSTar/scripts/my_MLSTar.R
+
+x <- doMLST(
+
+##### take a long time...
+##### take forever...
+
+	(time Rscript --vanilla scripts/my_MLSTar.R &) >& log.MLSTar.$(date +%F).txt
+
+
 ----------
 ## Biomartr
 
@@ -343,3 +355,22 @@ Finotello F, Mastrorilli E, Di Camillo B.
 
 
 ----------
+## QuasR
+
+https://bioconductor.org/packages/release/bioc/html/QuasR.html
+Quantify and Annotate Short Reads in R
+
+30 April, 2018
+https://www.bioconductor.org/packages/release/bioc/vignettes/QuasR/inst/doc/QuasR.html
+An introduction to QuasR
+
+https://www.ncbi.nlm.nih.gov/pubmed/25417205
+Bioinformatics. 2015 Apr 1;31(7):1130-2. doi: 10.1093/bioinformatics/btu781. Epub 2014 Nov 21.
+QuasR: quantification and annotation of short reads in R.
+Gaidatzis D1, Lerch A1, Hahne F2, Stadler MB1.
+
+
+
+----------
+
+
