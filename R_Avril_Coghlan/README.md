@@ -431,7 +431,7 @@ for による繰り返し
 
 [48. とりあえず plot()](R-Source)
 
-    par(family="Times")
+    par(family="mono")
 
 	# plot a scatterplot of the values in myvector1 against the values in myvector2
 	myvector1 <- c(10, 15, 22, 35, 43)
@@ -1131,6 +1131,7 @@ http://molevol.cmima.csic.es/castresana/Gblocks.html
     #install.packages("ape")
     library(ape)
     mytree <- nj(mydist)
+    par(family="mono")
     plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 
     # get sequence annotations
