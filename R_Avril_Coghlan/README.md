@@ -1145,6 +1145,9 @@ http://molevol.cmima.csic.es/castresana/Gblocks.html
 - [論文の紹介： 生物多様性を進化系統学的な尺度で測る (情報：農業と環境 No.83 2007.3)](http://www.naro.affrc.go.jp/archive/niaes/magazine/083/mgzn08304.html)
 - [系統的多様性 - Draft of Pediatric Surgery](https://sites.google.com/site/noteofpaediatricsurgery/in-silico/meta16s/figtree/keitouteki)
 
+http://www.saitou-naruya-laboratory.org/meetings/NJ50000_jpn.html
+斎藤・根井(1987)近隣結合法論文の引用件数５万件越えを祝う特別シンポジウム
+
 http://www.geocities.jp/ancientfishtree/R_JI.html
 R - 井上 潤
 ape: BS 値付き NJ tree を求める
@@ -1248,6 +1251,7 @@ boot.phylo
     # construct a phylogenetic tree with the neighbor joining algorithm
     library(ape)
     mytree <- nj(virusmRNAdist)
+    par(family="mono")
     plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 
 ### Summary
