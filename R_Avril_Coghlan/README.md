@@ -1,5 +1,5 @@
 Haruo Suzuki (haruo[at]g-language[dot]org)  
-Last Update: 2018-04-28
+Last Update: 2018-06-26
 
 ----------
 # [A Little Book of R For Bioinformatics](http://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/index.html)  
@@ -1077,17 +1077,17 @@ R言語デモ
     myAlignment
 
     # write an XStringSet object to a file
-    writeXStringSet(unmasked(myAlignment), file = "virusaln.fasta")
+    writeXStringSet(unmasked(myAlignment), file = "myaln.fasta")
 
-    system("open .")
+    #system("open .")
 
 ### [Reading a multiple alignment file into R](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#reading-a-multiple-alignment-file-into-r)
 **多重アライメントのファイルをRに読み込む**
 
     library(seqinr)
-    virusaln <- read.alignment(file = "virusaln.fasta", format = "fasta")
-    names(virusaln)
-	virusaln$seq
+    myaln <- read.alignment(file = "myaln.fasta", format = "fasta")
+    names(myaln)
+    myaln$seq
 
 ### [Viewing a long multiple alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#viewing-a-long-multiple-alignment)
 **多重アライメントの表示**
@@ -1095,12 +1095,29 @@ R言語デモ
     print(myAlignment, show="complete")
 
 ### [Discarding very poorly conserved regions from an alignment](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#discarding-very-poorly-conserved-regions-from-an-alignment)
+**アラインメントから保存度の低い領域を破棄する**
+
+Trimming a multiple sequence alignment by discarding columns with too many gaps.
+
+多重配列アライメントからギャップの多い列を破棄する
+
+    #install.packages("microseq")
+    #help(package="microseq")
+    library(microseq)
+    msa <- readFasta(in.file = "myaln.fasta")
+    print(nchar(msa$Sequence))
+    msa.trimmed <- msaTrim(msa = msa, gap.end = 0.5, gap.mid = 0.9)
+    print(nchar(msa.trimmed$Sequence))
+    writeFasta(fdta = msa.trimmed, out.file = "msa.trimmed.fasta", width = 80)
+    #myaln <- read.alignment(file = "msa.trimmed.fasta", format = "fasta")
+
+http://molevol.cmima.csic.es/castresana/Gblocks.html
 
 ### [Calculating genetic distances between protein sequences](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#calculating-genetic-distances-between-protein-sequences)
 **タンパク質配列間の遺伝的距離を計算する**
 
-	virusdist <- dist.alignment(virusaln) # Calculate the genetic distances
-	virusdist                             # Print out the genetic distance matrix
+    mydist <- dist.alignment(myaln) # Calculate the genetic distances
+    mydist                          # Print out the genetic distance matrix
 
 距離行列より、"O56773"と"P0C569"との間の遺伝的距離が最小（0.4142670）、"Q5VKP1"と"O56773"との間の遺伝的距離が最大（0.5067117）である。
 
@@ -1112,7 +1129,7 @@ R言語デモ
     # construct a phylogenetic tree with the neighbor joining algorithm
     #install.packages("ape")
     library(ape)
-    mytree <- nj(virusdist)
+    mytree <- nj(mydist)
     plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 
     # get sequence annotations
