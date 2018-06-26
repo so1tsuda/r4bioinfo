@@ -1143,6 +1143,11 @@ http://molevol.cmima.csic.es/castresana/Gblocks.html
 - [論文の紹介： 生物多様性を進化系統学的な尺度で測る (情報：農業と環境 No.83 2007.3)](http://www.naro.affrc.go.jp/archive/niaes/magazine/083/mgzn08304.html)
 - [系統的多様性 - Draft of Pediatric Surgery](https://sites.google.com/site/noteofpaediatricsurgery/in-silico/meta16s/figtree/keitouteki)
 
+http://www.geocities.jp/ancientfishtree/R_JI.html
+R - 井上 潤
+ape: BS 値付き NJ tree を求める
+boot.phylo
+
 [系統推定の基本用語](http://nesseiken.info/Chiba_lab/index.php?cmd=read&page=授業%2FH24%2F進化生物学I%2F系統樹に関する基本用語)
 - 枝長(branch length)　その枝で生じた変化の数。
 - 根を持つ系統樹を有根系統樹(rooted tree), 根を持たない系統樹を無根系統樹(unrooted tree)と呼ぶ。
