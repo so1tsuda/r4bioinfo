@@ -1029,6 +1029,7 @@ R言語デモ
     # 系統樹 Phylogenetic trees
     #install.packages("ape")
     library(ape)
+    par(family="mono")
     example(plot.phylo)
 
 ### [Retrieving a list of sequences from UniProt](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#retrieving-a-list-of-sequences-from-uniprot)
