@@ -1018,6 +1018,7 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
 R言語デモ
+    par(family="mono")
 
     # 多重整列 Multiple Sequence Alignment
     #source("http://www.bioconductor.org/biocLite.R"); biocLite("msa")
