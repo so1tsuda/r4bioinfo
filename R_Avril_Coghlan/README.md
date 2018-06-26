@@ -1011,10 +1011,6 @@ Biostringsパッケージの`nucleotideSubstitutionMatrix()`関数でスコア�
 ## [Multiple Alignment and Phylogenetic trees](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html)
 **多重配列アライメントと系統樹**
 
-- [多重整列](https://ja.wikipedia.org/wiki/多重整列) [マルチプルアライメント](http://bio-info.biz/article/ase_msa.html) [Multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) 
-- [系統樹](https://ja.wikipedia.org/wiki/系統樹) [Phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree) 
-- [系統学](https://ja.wikipedia.org/wiki/系統学) [Phylogenetics](https://en.wikipedia.org/wiki/Phylogenetics) 
-
 ![https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html](https://bioinf.comav.upv.es/courses/biotech3/static/phylogeny/phylo_msa.png)
 
 R言語デモ
@@ -1058,10 +1054,8 @@ R言語デモ
 多重整列プログラム
 [Clustal](https://ja.wikipedia.org/wiki/Clustal)
 
-はじけじゅ [プログラムのダウンロード](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html#programs)
-
-- http://www.clustal.org/ | [clustalw-2.1-macosx.dmg](http://www.clustal.org/download/current/clustalw-2.1-macosx.dmg)
-- http://doua.prabi.fr/software/seaview | [seaview4.zip](http://doua.prabi.fr/software/seaview_data/seaview4.zip)
+- [Clustal Omega, ClustalW and ClustalX Multiple Sequence Alignment](http://www.clustal.org/) | [clustalw-2.1-macosx.dmg](http://www.clustal.org/download/current/clustalw-2.1-macosx.dmg)
+- [SeaView - Multiplatform GUI for molecular phylogeny](http://doua.prabi.fr/software/seaview) | [seaview4.zip](http://doua.prabi.fr/software/seaview_data/seaview4.zip)
 
 ### [Creating a multiple alignment of protein, DNA or mRNA sequences using CLUSTAL](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/chapter5.html#creating-a-multiple-alignment-of-protein-dna-or-mrna-sequences-using-clustal)
 **CLUSTALを用いたタンパク質/DNA/mRNA配列の多重アライメントの作成**
@@ -1276,13 +1270,17 @@ boot.phylo
 - [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
 - [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
 - [これが「棒の手紙」だ！](http://kokorohaitsumo15sai.la.coocan.jp/bonotegami.htm)
+- MEGA
+  - [MEGA: Molecular Evolutionary Genetics Analysis software](http://evolgen.biol.se.tmu.ac.jp/MEGA/)
+  - [分子系統樹作成方法](http://evolgen.biol.se.tmu.ac.jp/MEGA/tree-protocol.htm)
+  - 2017-11-06 [MEGA7を使って配列のアラインメント・系統解析を行う 統合TV(togotv)](http://togotv.dbcls.jp/20171106.html)
+- 仲田崇志
+  - はじけじゅ [プログラムのダウンロード](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html#programs)
+  - [SeaView を用いたアラインメント編集](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
 
 https://www.fifthdimension.jp/wiki.cgi
 田辺晶史, 2010, "ベイジアンMCMCによる生物間系統関係の推定法", 2010年度日本計量生物学会特別セッション『農学・生態学・進化学でのベイズ統計手法の応用に関する諸問題』. Preprint PDF: 20100522BiometricsJapanPreprint.pdf(5955)
 https://www.fifthdimension.jp/wiki.cgi?page=FrontPage&file=20100522BiometricsJapanPreprint%2Epdf&action=ATTACH
-
-[SeaView](http://doua.prabi.fr/software/seaview)
-[使用法](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
 
 ----------
 
