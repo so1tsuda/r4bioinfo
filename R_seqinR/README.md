@@ -46,6 +46,7 @@ Last Update: 2018-05-12
 ----------
 ## Exercise 2
 
+
     # Loading seqinr package
     library(seqinr)
     # list the data sets in the "seqinr" package
