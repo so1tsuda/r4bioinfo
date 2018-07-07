@@ -1127,11 +1127,12 @@ http://molevol.cmima.csic.es/castresana/Gblocks.html
 
 タンパク質配列の距離行列に基づいて、[近隣結合法 NJ (Neighbor-Joining)](https://ja.wikipedia.org/wiki/近隣結合法) により系統樹を構築する。系統樹では、"Q5VKP1"と"P06747"が群を形成し、"O56773"と"P0C569"が群を形成した。
 
+    par(family="mono")
+
     # construct a phylogenetic tree with the neighbor joining algorithm
     #install.packages("ape")
     library(ape)
     mytree <- nj(mydist)
-    par(family="mono")
     plot.phylo(mytree, type="unrooted") # plot the unrooted phylogenetic tree
 
     # get sequence annotations
@@ -1282,10 +1283,6 @@ boot.phylo
 - [系統学と進化のあれこれ](http://www5b.biglobe.ne.jp/~hilihili/keitou/keitoutop02.html)
 - [archief voor stambomen 系統樹ハンターの狩猟記録](http://leeswijzer.hatenablog.com)
 - [これが「棒の手紙」だ！](http://kokorohaitsumo15sai.la.coocan.jp/bonotegami.htm)
-- MEGA
-  - [MEGA: Molecular Evolutionary Genetics Analysis software](http://evolgen.biol.se.tmu.ac.jp/MEGA/)
-  - [分子系統樹作成方法](http://evolgen.biol.se.tmu.ac.jp/MEGA/tree-protocol.htm)
-  - 2017-11-06 [MEGA7を使って配列のアラインメント・系統解析を行う 統合TV(togotv)](http://togotv.dbcls.jp/20171106.html)
 - 仲田崇志
   - はじけじゅ [プログラムのダウンロード](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/hajikeju2.html#programs)
   - [SeaView を用いたアラインメント編集](http://www2.tba.t-com.ne.jp/nakada/takashi/phylogeny/seaview2.html)
